@@ -1,0 +1,407 @@
+{
+  "flatpak_flathub": {
+    "id": "org.gnome.TextEditor",
+    "ref": "app/org.gnome.TextEditor/x86_64/stable",
+    "commit": "8effd3457368016ed2bcb2a7b7c5058938c7ad949050d282c4337951a9",
+    "app_download_mb": 1.4,
+    "app_installed_mb": 2.5,
+    "runtime_ref": "runtime/org.gnome.Platform/x86_64/51",
+    "runtime_download_mb": 432.8,
+    "runtime_installed_gb": 1.1,
+    "permissoes_contexto": {
+      "shared": [
+        "ipc"
+      ],
+      "sockets": [
+        "fallback-x11",
+        "wayland"
+      ],
+      "devices": [
+        "dri"
+      ],
+      "filesystems": [
+        "xdg-run/gvfsd",
+        "host",
+        "xdg-run/gvfs"
+      ]
+    }
+  },
+  "ostree_deduplicacao": {
+    "commit_v1": "41b16d914c4246f39a62ea3f64e903b7d5e8746444e5ab4cd64fdf1a23d5f361",
+    "commit_v2": "148886dd3d0f0343ed24dbc3356bf8c68f10a26698db33fcb4a27d6c1d3a7c64",
+    "inode_lib_v1": 10495777,
+    "inode_lib_v2": 10495777,
+    "mesmo_inode_arquivo_inalterado": true,
+    "hardlink_count_lib": 3,
+    "inode_versao_txt_v1": 10495779,
+    "inode_versao_txt_v2": 10495782,
+    "inodes_distintos_arquivo_alterado": true
+  },
+  "bubblewrap_isolamento": {
+    "sem_bind_da_pasta": {
+      "returncode": 1,
+      "stderr": "cat: /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/comparacao.txt: No such file or directory",
+      "bloqueado": true
+    },
+    "com_ro_bind_leitura": {
+      "returncode": 0,
+      "leitura_permitida": true
+    },
+    "com_ro_bind_escrita": {
+      "returncode": 1,
+      "stderr": "/run/current-system/sw/bin/sh: line 1: /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/resultado-ro.txt: Read-only file system",
+      "escrita_bloqueada": true
+    },
+    "com_rw_bind_escrita": {
+      "returncode": 0,
+      "stdout": "Projeto: Gerenciadores de pacotes\nTeste: abrir, editar e salvar\nResultado: concluído",
+      "escrita_permitida": true
+    },
+    "tempo_execucao_hello_em_bwrap_ms": {
+      "repeticoes": [
+        7.81,
+        7.72,
+        7.8
+      ],
+      "media": 7.78,
+      "mediana": 7.8,
+      "desvio_padrao": 0.05
+    },
+    "strace_hello_em_bwrap": {
+      "total_calls": 963,
+      "total_errors": 390,
+      "syscalls": {
+        "wait4": {
+          "calls": 3,
+          "errors": 2
+        },
+        "openat": {
+          "calls": 338,
+          "errors": 269
+        },
+        "clone": {
+          "calls": 2,
+          "errors": 0
+        },
+        "newfstatat": {
+          "calls": 157,
+          "errors": 101
+        },
+        "mmap": {
+          "calls": 44,
+          "errors": 0
+        },
+        "pivot_root": {
+          "calls": 2,
+          "errors": 0
+        },
+        "execve": {
+          "calls": 2,
+          "errors": 0
+        },
+        "prctl": {
+          "calls": 91,
+          "errors": 4
+        },
+        "read": {
+          "calls": 35,
+          "errors": 0
+        },
+        "close": {
+          "calls": 92,
+          "errors": 0
+        },
+        "mprotect": {
+          "calls": 12,
+          "errors": 0
+        },
+        "fstat": {
+          "calls": 23,
+          "errors": 0
+        },
+        "getdents64": {
+          "calls": 6,
+          "errors": 0
+        },
+        "write": {
+          "calls": 8,
+          "errors": 0
+        },
+        "brk": {
+          "calls": 7,
+          "errors": 0
+        },
+        "rt_sigprocmask": {
+          "calls": 5,
+          "errors": 0
+        },
+        "capset": {
+          "calls": 3,
+          "errors": 0
+        },
+        "unshare": {
+          "calls": 1,
+          "errors": 0
+        },
+        "munmap": {
+          "calls": 2,
+          "errors": 0
+        },
+        "getrandom": {
+          "calls": 4,
+          "errors": 0
+        },
+        "fcntl": {
+          "calls": 4,
+          "errors": 0
+        },
+        "chdir": {
+          "calls": 6,
+          "errors": 2
+        },
+        "access": {
+          "calls": 3,
+          "errors": 3
+        },
+        "eventfd2": {
+          "calls": 2,
+          "errors": 0
+        },
+        "statfs": {
+          "calls": 2,
+          "errors": 2
+        },
+        "prlimit64": {
+          "calls": 2,
+          "errors": 0
+        },
+        "umount2": {
+          "calls": 2,
+          "errors": 0
+        },
+        "poll": {
+          "calls": 1,
+          "errors": 0
+        },
+        "getuid": {
+          "calls": 2,
+          "errors": 0
+        },
+        "arch_prctl": {
+          "calls": 2,
+          "errors": 0
+        },
+        "rseq": {
+          "calls": 2,
+          "errors": 0
+        },
+        "set_robust_list": {
+          "calls": 3,
+          "errors": 0
+        },
+        "set_tid_address": {
+          "calls": 2,
+          "errors": 0
+        },
+        "signalfd4": {
+          "calls": 1,
+          "errors": 0
+        },
+        "ioctl": {
+          "calls": 2,
+          "errors": 1
+        },
+        "fchdir": {
+          "calls": 1,
+          "errors": 0
+        },
+        "capget": {
+          "calls": 1,
+          "errors": 0
+        },
+        "rt_sigaction": {
+          "calls": 1,
+          "errors": 0
+        },
+        "umask": {
+          "calls": 2,
+          "errors": 0
+        },
+        "getgid": {
+          "calls": 1,
+          "errors": 0
+        },
+        "geteuid": {
+          "calls": 1,
+          "errors": 0
+        },
+        "getpid": {
+          "calls": 5,
+          "errors": 0
+        },
+        "socket": {
+          "calls": 2,
+          "errors": 0
+        },
+        "sendto": {
+          "calls": 2,
+          "errors": 0
+        },
+        "recvfrom": {
+          "calls": 2,
+          "errors": 0
+        },
+        "bind": {
+          "calls": 1,
+          "errors": 0
+        },
+        "mkdir": {
+          "calls": 3,
+          "errors": 0
+        },
+        "readlink": {
+          "calls": 10,
+          "errors": 2
+        },
+        "mount": {
+          "calls": 17,
+          "errors": 0
+        },
+        "futex": {
+          "calls": 1,
+          "errors": 0
+        },
+        "mkdirat": {
+          "calls": 7,
+          "errors": 0
+        },
+        "symlinkat": {
+          "calls": 6,
+          "errors": 0
+        },
+        "openat2": {
+          "calls": 15,
+          "errors": 0
+        },
+        "faccessat2": {
+          "calls": 4,
+          "errors": 4
+        },
+        "mount_setattr": {
+          "calls": 8,
+          "errors": 0
+        }
+      }
+    }
+  },
+  "snap_inspecao_real": {
+    "arquivo": "gnome-text-editor_53.snap",
+    "versao": "48.3",
+    "revisao": 53,
+    "base": "core24",
+    "confinement": "strict",
+    "sha3_384_verificado": "c43a5a1c72aca4d7980ae87b187b267f6883fa3149a7383f210f3f10b84a83093372c5b9ccf2d47a823d0603aacd94b6",
+    "sha3_384_coincide_catalogo": true,
+    "tamanho_snap_bytes": 1118208,
+    "tamanho_snap_mib": 1.07,
+    "tamanho_descompactado_bytes": 3124861,
+    "tamanho_descompactado_mib": 2.98,
+    "inodes_squashfs": 540,
+    "arquivos_extraidos": 338,
+    "plugs_declarados": [
+      "desktop",
+      "desktop-legacy",
+      "gsettings",
+      "opengl",
+      "wayland",
+      "x11",
+      "home",
+      "cups"
+    ],
+    "content_snaps_requeridos": [
+      "gnome-46-2404",
+      "gpu-2404 (mesa-2404)",
+      "gtk-3-themes",
+      "icon-themes",
+      "sound-themes"
+    ],
+    "core24_download_mib": 66.84,
+    "comparacao_compressao_squashfs": {
+      "xz": {
+        "tamanho_imagem_bytes": 851968,
+        "tamanho_imagem_kib": 832.0,
+        "razao_compressao_vs_descompactado": 0.273,
+        "tempo_compressao_ms": {
+          "repeticoes": [
+            145.24,
+            146.08,
+            145.49
+          ],
+          "media": 145.6,
+          "mediana": 145.49,
+          "desvio_padrao": 0.43
+        },
+        "tempo_extracao_ms": {
+          "repeticoes": [
+            26.18,
+            28.07,
+            32.94
+          ],
+          "media": 29.06,
+          "mediana": 28.07,
+          "desvio_padrao": 3.49
+        }
+      },
+      "zstd": {
+        "tamanho_imagem_bytes": 929792,
+        "tamanho_imagem_kib": 908.0,
+        "razao_compressao_vs_descompactado": 0.298,
+        "tempo_compressao_ms": {
+          "repeticoes": [
+            107.43,
+            104.14,
+            102.61
+          ],
+          "media": 104.73,
+          "mediana": 104.14,
+          "desvio_padrao": 2.46
+        },
+        "tempo_extracao_ms": {
+          "repeticoes": [
+            17.0,
+            16.54,
+            16.26
+          ],
+          "media": 16.6,
+          "mediana": 16.54,
+          "desvio_padrao": 0.37
+        }
+      },
+      "gzip": {
+        "tamanho_imagem_bytes": 1060864,
+        "tamanho_imagem_kib": 1036.0,
+        "razao_compressao_vs_descompactado": 0.339,
+        "tempo_compressao_ms": {
+          "repeticoes": [
+            80.08,
+            73.83,
+            76.85
+          ],
+          "media": 76.92,
+          "mediana": 76.85,
+          "desvio_padrao": 3.13
+        },
+        "tempo_extracao_ms": {
+          "repeticoes": [
+            17.15,
+            17.47,
+            16.91
+          ],
+          "media": 17.18,
+          "mediana": 17.15,
+          "desvio_padrao": 0.28
+        }
+      }
+    }
+  }
+}

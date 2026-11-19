@@ -1,0 +1,405 @@
+=== Consulta ao repositório Flathub (Flatpak 1.18.4) ===
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+[Código de saída: 0 | Tempo: 586.62 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.gnome.TextEditor
+            ID: org.gnome.TextEditor
+           Ref: app/org.gnome.TextEditor/x86_64/stable
+          Arch: x86_64
+        Branch: stable
+    Collection: org.flathub.Stable
+ Download Size: 1.4 MB
+Installed Size: 2.5 MB
+       Runtime: org.gnome.Platform/x86_64/51
+           Sdk: org.gnome.Sdk/x86_64/51
+
+        Commit: 8effd3457368016ed2bcb2a7b7c5058938c7ad949050d282c4337951a91941a4
+        Parent: 76ecd1d6e9ecfa26f6939c54eec4e9db3491fce949c8808bdee9fb55758a1a91
+       Subject: Merge pull request #56 from flathub/update-master-502031e (688c4b571983)
+          Date: 2026-11-08 08:12:45 +0000
+[Código de saída: 0 | Tempo: 191.81 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user --show-metadata flathub org.gnome.TextEditor
+[Application]
+name=org.gnome.TextEditor
+runtime=org.gnome.Platform/x86_64/51
+sdk=org.gnome.Sdk/x86_64/51
+command=gnome-text-editor
+
+[Context]
+shared=ipc;
+sockets=fallback-x11;wayland;
+devices=dri;
+filesystems=xdg-run/gvfsd;host;xdg-run/gvfs;
+
+[Session Bus Policy]
+org.gtk.vfs.*=talk
+org.freedesktop.FileManager1=talk
+
+[Extension org.gnome.TextEditor.Locale]
+directory=share/runtime/locale
+autodelete=true
+locale-subset=true
+
+[Extension org.gnome.TextEditor.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=org.gnome.TextEditor.Locale;org.gnome.TextEditor.Debug;org.gnome.TextEditor.Sources;
+[Código de saída: 0 | Tempo: 201.52 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.gnome.Platform/x86_64/51
+            ID: org.gnome.Platform
+           Ref: runtime/org.gnome.Platform/x86_64/51
+          Arch: x86_64
+        Branch: 51
+    Collection: org.flathub.Stable
+ Download Size: 432.8 MB
+Installed Size: 1.1 GB
+
+        Commit: f48b9eb43a30cfe42ddc485a32b4417f278f6ced5d4326fb9327ac450a0971bb
+        Parent: 17fff143b0851dbc888a3874a88c308c4c9eb82a859b3474298aaed020627b65
+       Subject: Build of the GNOME Runtime from: 51.1-62-gbd59b2dad
+          Date: 2026-11-18 03:07:33 +0000
+[Código de saída: 0 | Tempo: 213.73 ms]
+
+=== Experimento OSTree (commits, checkouts e deduplicação via hardlinks/inodes) ===
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree init --repo=/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/ostree-repo --mode=bare-user
+[Código de saída: 0 | Tempo: 15.31 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree commit --repo=/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/ostree-repo --branch=app/x86_64/stable --subject=Commit v1 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/tree-v1
+41b16d914c4246f39a62ea3f64e903b7d5e8746444e5ab4cd64fdf1a23d5f361
+[Código de saída: 0 | Tempo: 40.02 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree commit --repo=/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/ostree-repo --branch=app/x86_64/stable --subject=Commit v2 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/tree-v2
+148886dd3d0f0343ed24dbc3356bf8c68f10a26698db33fcb4a27d6c1d3a7c64
+[Código de saída: 0 | Tempo: 19.94 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree checkout --repo=/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/ostree-repo -U 41b16d914c4246f39a62ea3f64e903b7d5e8746444e5ab4cd64fdf1a23d5f361 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v1
+[Código de saída: 0 | Tempo: 13.72 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree checkout --repo=/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/ostree-repo -U 148886dd3d0f0343ed24dbc3356bf8c68f10a26698db33fcb4a27d6c1d3a7c64 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v2
+[Código de saída: 0 | Tempo: 13.22 ms]
+
+$ stat -c %i %h %s %n /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v1/libcompartilhada.bin /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v2/libcompartilhada.bin /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v1/versao.txt /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v2/versao.txt
+10495777 3 262144 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v1/libcompartilhada.bin
+10495777 3 262144 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v2/libcompartilhada.bin
+10495779 2 11 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v1/versao.txt
+10495782 2 11 /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/checkout-v2/versao.txt
+[Código de saída: 0 | Tempo: 3.08 ms]
+
+=== Testes práticos de acesso a arquivos com Bubblewrap (bwrap 0.13.1) ===
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all /run/current-system/sw/bin/cat /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/comparacao.txt
+[stderr]
+cat: /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/comparacao.txt: No such file or directory
+[Código de saída: 1 | Tempo: 7.77 ms]
+
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --ro-bind /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc /run/current-system/sw/bin/cat /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/comparacao.txt
+Projeto: Gerenciadores de pacotes
+Teste: abrir, editar e salvar
+Resultado: aguardando
+[Código de saída: 0 | Tempo: 7.71 ms]
+
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --ro-bind /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc /run/current-system/sw/bin/sh -c printf "Resultado: bloqueado\n" > "/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/resultado-ro.txt"
+[stderr]
+/run/current-system/sw/bin/sh: line 1: /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/resultado-ro.txt: Read-only file system
+[Código de saída: 1 | Tempo: 9.34 ms]
+
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc /run/current-system/sw/bin/sh -c sed "s/aguardando/concluído/" "/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/comparacao.txt" > "/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/resultado-bwrap.txt" && cat "/home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/comparacao-doc/resultado-bwrap.txt"
+Projeto: Gerenciadores de pacotes
+Teste: abrir, editar e salvar
+Resultado: concluído
+[Código de saída: 0 | Tempo: 14.58 ms]
+
+$ /nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace -c -f /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all /nix/store/sd779x86bjaqxj2lzh2jsir4h0zjz6d1-hello-2.12.3/bin/hello
+Hello, world!
+[stderr]
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 1059279 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 1059287 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 31.44    0.003601        1200         3         2 wait4
+ 19.75    0.002262           6       338       269 openat
+ 13.09    0.001499         749         2           clone
+ 10.37    0.001188           7       157       101 newfstatat
+  4.69    0.000537          12        44           mmap
+  3.81    0.000436         218         2           pivot_root
+  3.37    0.000386         193         2           execve
+  2.97    0.000340           3        91         4 prctl
+  1.62    0.000185           5        35           read
+  1.62    0.000185           2        92           close
+  1.29    0.000148          12        12           mprotect
+  0.83    0.000095           4        23           fstat
+  0.78    0.000089          14         6           getdents64
+  0.36    0.000041           5         8           write
+  0.34    0.000039           5         7           brk
+  0.31    0.000035           7         5           rt_sigprocmask
+  0.25    0.000029           9         3           capset
+  0.24    0.000027          27         1           unshare
+  0.23    0.000026          13         2           munmap
+  0.23    0.000026           6         4           getrandom
+  0.22    0.000025           6         4           fcntl
+  0.22    0.000025           4         6         2 chdir
+  0.21    0.000024           8         3         3 access
+  0.20    0.000023          11         2           eventfd2
+  0.19    0.000022          11         2         2 statfs
+  0.17    0.000019           9         2           prlimit64
+  0.15    0.000017           8         2           umount2
+  0.13    0.000015          15         1           poll
+  0.11    0.000013           6         2           getuid
+  0.10    0.000012           6         2           arch_prctl
+  0.10    0.000012           6         2           rseq
+  0.10    0.000011           3         3           set_robust_list
+  0.09    0.000010           5         2           set_tid_address
+  0.08    0.000009           9         1           signalfd4
+  0.06    0.000007           3         2         1 ioctl
+  0.06    0.000007           7         1           fchdir
+  0.06    0.000007           7         1           capget
+  0.05    0.000006           6         1           rt_sigaction
+  0.05    0.000006           3         2           umask
+  0.04    0.000005           5         1           getgid
+  0.04    0.000005           5         1           geteuid
+  0.00    0.000000           0         5           getpid
+  0.00    0.000000           0         2           socket
+  0.00    0.000000           0         2           sendto
+  0.00    0.000000           0         2           recvfrom
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         3           mkdir
+  0.00    0.000000           0        10         2 readlink
+  0.00    0.000000           0        17           mount
+  0.00    0.000000           0         1           futex
+  0.00    0.000000           0         7           mkdirat
+  0.00    0.000000           0         6           symlinkat
+  0.00    0.000000           0        15           openat2
+  0.00    0.000000           0         4         4 faccessat2
+  0.00    0.000000           0         8           mount_setattr
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.011454          11       963       390 total
+[Código de saída: 0 | Tempo: 42.52 ms]
+
+=== Inspeção real do pacote gnome-text-editor_53.snap (SquashFS 4.0) ===
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -s /tmp/gnome-text-editor_53.snap
+Found a valid SQUASHFS 4:0 superblock on /tmp/gnome-text-editor_53.snap.
+Creation or last append time Fri May 30 07:19:27 2025
+Filesystem size 1116013 bytes (1089.86 Kbytes / 1.06 Mbytes)
+Compression xz
+Block size 131072
+Filesystem is exportable via NFS
+Inodes are compressed
+Data is compressed
+Uids/Gids (Id table) are compressed
+Fragments are not stored
+Xattrs are not stored
+Duplicates are removed
+Number of fragments 0
+Number of inodes 540
+Number of ids 1
+[Código de saída: 0 | Tempo: 2.26 ms]
+
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -cat /tmp/gnome-text-editor_53.snap meta/snap.yaml
+name: gnome-text-editor
+title: Text Editor
+version: '48.3'
+summary: Edit text files
+description: GNOME Text Editor is a simple text editor focused on a pleasing default
+  experience.
+license: GPL-3.0-or-later
+architectures:
+- amd64
+base: core24
+assumes:
+- command-chain
+- snapd2.43
+apps:
+  gnome-text-editor:
+    command: usr/bin/gnome-text-editor
+    common-id: org.gnome.TextEditor.desktop
+    plugs:
+    - desktop
+    - desktop-legacy
+    - gsettings
+    - opengl
+    - wayland
+    - x11
+    - home
+    - cups
+    command-chain:
+    - snap/command-chain/gpu-2404-wrapper
+    - snap/command-chain/desktop-launch
+confinement: strict
+grade: stable
+environment:
+  SNAP_DESKTOP_RUNTIME: $SNAP/gnome-platform
+  GTK_USE_PORTAL: '1'
+  LD_LIBRARY_PATH: ${SNAP_LIBRARY_PATH}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}:$SNAP/usr/lib:$SNAP/usr/lib/x86_64-linux-gnu
+  PATH: $SNAP/usr/sbin:$SNAP/usr/bin:$SNAP/sbin:$SNAP/bin:$PATH
+plugs:
+  desktop:
+    mount-host-font-cache: false
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes
+  gnome-46-2404:
+    interface: content
+    target: $SNAP/gnome-platform
+    default-provider: gnome-46-2404
+  gpu-2404:
+    interface: content
+    target: $SNAP/gpu-2404
+    default-provider: mesa-2404
+slots:
+  gnome-text-editor:
+    interface: dbus
+    bus: session
+    name: org.gnome.TextEditor
+hooks:
+  configure:
+    command-chain:
+    - snap/command-chain/hooks-configure-fonts
+    plugs:
+    - desktop
+layout:
+  /usr/share/gnome-text-editor:
+    bind: $SNAP/usr/share/gnome-text-editor
+  /usr/lib/x86_64-linux-gnu/webkit2gtk-4.0:
+    bind: $SNAP/gnome-platform/usr/lib/x86_64-linux-gnu/webkit2gtk-4.0
+  /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1:
+    bind: $SNAP/gnome-platform/usr/lib/x86_64-linux-gnu/webkit2gtk-4.1
+  /usr/share/xml/iso-codes:
+    bind: $SNAP/gnome-platform/usr/share/xml/iso-codes
+  /usr/share/libdrm:
+    bind: $SNAP/gpu-2404/libdrm
+  /usr/share/drirc.d:
+    symlink: $SNAP/gpu-2404/drirc.d
+  /usr/share/X11/XErrorDB:
+    symlink: $SNAP/gpu-2404/X11/XErrorDB
+links:
+  donation:
+  - https://www.gnome.org/donate/
+  issues:
+  - https://gitlab.gnome.org/GNOME/gnome-text-editor/issues
+  source-code:
+  - https://gitlab.gnome.org/GNOME/gnome-text-editor
+  website:
+  - https://apps.gnome.org/TextEditor/
+[Código de saída: 0 | Tempo: 4.19 ms]
+
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -d /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/snap-extracted /tmp/gnome-text-editor_53.snap
+Parallel unsquashfs: Using 12 processors
+338 inodes (306 blocks) to write
+
+
+[===============================================================|] 644/644 100%
+
+created 298 files
+created 202 directories
+created 40 symlinks
+created 0 devices
+created 0 fifos
+created 0 sockets
+created 0 hardlinks
+[Código de saída: 0 | Tempo: 33.49 ms]
+
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-flatpak-snap-0sz2y2xh/snap-extracted/usr/bin/gnome-text-editor | grep -E 'NEEDED|RUNPATH|RPATH'
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgio-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgobject-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libglib-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtk-4.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpango-1.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcairo.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtksourceview-5.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libadwaita-1.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libspelling-1.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libeditorconfig.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+[Código de saída: 0 | Tempo: 7.22 ms]
+
+Comparação experimental SquashFS (xz vs zstd vs gzip): {
+  "xz": {
+    "tamanho_imagem_bytes": 851968,
+    "tamanho_imagem_kib": 832.0,
+    "razao_compressao_vs_descompactado": 0.273,
+    "tempo_compressao_ms": {
+      "repeticoes": [
+        145.24,
+        146.08,
+        145.49
+      ],
+      "media": 145.6,
+      "mediana": 145.49,
+      "desvio_padrao": 0.43
+    },
+    "tempo_extracao_ms": {
+      "repeticoes": [
+        26.18,
+        28.07,
+        32.94
+      ],
+      "media": 29.06,
+      "mediana": 28.07,
+      "desvio_padrao": 3.49
+    }
+  },
+  "zstd": {
+    "tamanho_imagem_bytes": 929792,
+    "tamanho_imagem_kib": 908.0,
+    "razao_compressao_vs_descompactado": 0.298,
+    "tempo_compressao_ms": {
+      "repeticoes": [
+        107.43,
+        104.14,
+        102.61
+      ],
+      "media": 104.73,
+      "mediana": 104.14,
+      "desvio_padrao": 2.46
+    },
+    "tempo_extracao_ms": {
+      "repeticoes": [
+        17.0,
+        16.54,
+        16.26
+      ],
+      "media": 16.6,
+      "mediana": 16.54,
+      "desvio_padrao": 0.37
+    }
+  },
+  "gzip": {
+    "tamanho_imagem_bytes": 1060864,
+    "tamanho_imagem_kib": 1036.0,
+    "razao_compressao_vs_descompactado": 0.339,
+    "tempo_compressao_ms": {
+      "repeticoes": [
+        80.08,
+        73.83,
+        76.85
+      ],
+      "media": 76.92,
+      "mediana": 76.85,
+      "desvio_padrao": 3.13
+    },
+    "tempo_extracao_ms": {
+      "repeticoes": [
+        17.15,
+        17.47,
+        16.91
+      ],
+      "media": 17.18,
+      "mediana": 17.15,
+      "desvio_padrao": 0.28
+    }
+  }
+}

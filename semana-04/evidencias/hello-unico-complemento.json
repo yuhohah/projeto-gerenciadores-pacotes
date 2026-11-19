@@ -1,0 +1,111 @@
+{
+  "debian_hello_elf": "/.\n/usr\n/usr/bin\n/usr/bin/hello\n/usr/share\n/usr/share/doc\n/usr/share/doc/hello\n/usr/share/doc/hello/NEWS.gz\n/usr/share/doc/hello/changelog.Debian.gz\n/usr/share/doc/hello/changelog.gz\n/usr/share/doc/hello/copyright\n/usr/share/info\n/usr/share/info/hello.info.gz\n/usr/share/locale\n/usr/share/locale/bg\n/usr/share/locale/bg/LC_MESSAGES\n/usr/share/locale/bg/LC_MESSAGES/hello.mo\n/usr/share/locale/ca\n/usr/share/locale/ca/LC_MESSAGES\n/usr/share/locale/ca/LC_MESSAGES/hello.mo\n/usr/share/locale/da\n/usr/share/locale/da/LC_MESSAGES\n/usr/share/locale/da/LC_MESSAGES/hello.mo\n/usr/share/locale/de\n/usr/share/locale/de/LC_MESSAGES\n/usr/share/locale/de/LC_MESSAGES/hello.mo\n/usr/share/locale/el\n/usr/share/locale/el/LC_MESSAGES\n/usr/share/locale/el/LC_MESSAGES/hello.mo\n/usr/share/locale/eo\n/usr/share/locale/eo/LC_MESSAGES\n/usr/share/locale/eo/LC_MESSAGES/hello.mo\n/usr/share/locale/es\n/usr/share/locale/es/LC_MESSAGES\n/usr/share/locale/es/LC_MESSAGES/hello.mo\n/usr/share/locale/et\n/usr/share/locale/et/LC_MESSAGES\n/usr/share/locale/et/LC_MESSAGES/hello.mo\n/usr/share/locale/eu\n/usr/share/locale/eu/LC_MESSAGES\n/usr/share/locale/eu/LC_MESSAGES/hello.mo\n/usr/share/locale/fa\n/usr/share/locale/fa/LC_MESSAGES\n/usr/share/locale/fa/LC_MESSAGES/hello.mo\n/usr/share/locale/fi\n/usr/share/locale/fi/LC_MESSAGES\n/usr/share/locale/fi/LC_MESSAGES/hello.mo\n/usr/share/locale/fr\n/usr/share/locale/fr/LC_MESSAGES\n/usr/share/locale/fr/LC_MESSAGES/hello.mo\n/usr/share/locale/ga\n/usr/share/locale/ga/LC_MESSAGES\n/usr/share/locale/ga/LC_MESSAGES/hello.mo\n/usr/share/locale/gl\n/usr/share/locale/gl/LC_MESSAGES\n/usr/share/locale/gl/LC_MESSAGES/hello.mo\n/usr/share/locale/he\n/usr/share/locale/he/LC_MESSAGES\n/usr/share/locale/he/LC_MESSAGES/hello.mo\n/usr/share/locale/hr\n/usr/share/locale/hr/LC_MESSAGES\n/usr/share/locale/hr/LC_MESSAGES/hello.mo\n/usr/share/locale/hu\n/usr/share/locale/hu/LC_MESSAGES\n/usr/share/locale/hu/LC_MESSAGES/hello.mo\n/usr/share/locale/id\n/usr/share/locale/id/LC_MESSAGES\n/usr/share/locale/id/LC_MESSAGES/hello.mo\n/usr/share/locale/it\n/usr/share/locale/it/LC_MESSAGES\n/usr/share/locale/it/LC_MESSAGES/hello.mo\n/usr/share/locale/ja\n/usr/share/locale/ja/LC_MESSAGES\n/usr/share/locale/ja/LC_MESSAGES/hello.mo\n/usr/share/locale/ka\n/usr/share/locale/ka/LC_MESSAGES\n/usr/share/locale/ka/LC_MESSAGES/hello.mo\n/usr/share/locale/ko\n/usr/share/locale/ko/LC_MESSAGES\n/usr/share/locale/ko/LC_MESSAGES/hello.mo\n/usr/share/locale/lv\n/usr/share/locale/lv/LC_MESSAGES\n/usr/share/locale/lv/LC_MESSAGES/hello.mo\n/usr/share/locale/ms\n/usr/share/locale/ms/LC_MESSAGES\n/usr/share/locale/ms/LC_MESSAGES/hello.mo\n/usr/share/locale/nb\n/usr/share/locale/nb/LC_MESSAGES\n/usr/share/locale/nb/LC_MESSAGES/hello.mo\n/usr/share/locale/nl\n/usr/share/locale/nl/LC_MESSAGES\n/usr/share/locale/nl/LC_MESSAGES/hello.mo\n/usr/share/locale/nn\n/usr/share/locale/nn/LC_MESSAGES\n/usr/share/locale/nn/LC_MESSAGES/hello.mo\n/usr/share/locale/pl\n/usr/share/locale/pl/LC_MESSAGES\n/usr/share/locale/pl/LC_MESSAGES/hello.mo\n/usr/share/locale/pt\n/usr/share/locale/pt/LC_MESSAGES\n/usr/share/locale/pt/LC_MESSAGES/hello.mo\n/usr/share/locale/pt_BR\n/usr/share/locale/pt_BR/LC_MESSAGES\n/usr/share/locale/pt_BR/LC_MESSAGES/hello.mo\n/usr/share/locale/ro\n/usr/share/locale/ro/LC_MESSAGES\n/usr/share/locale/ro/LC_MESSAGES/hello.mo\n/usr/share/locale/ru\n/usr/share/locale/ru/LC_MESSAGES\n/usr/share/locale/ru/LC_MESSAGES/hello.mo\n/usr/share/locale/sk\n/usr/share/locale/sk/LC_MESSAGES\n/usr/share/locale/sk/LC_MESSAGES/hello.mo\n/usr/share/locale/sl\n/usr/share/locale/sl/LC_MESSAGES\n/usr/share/locale/sl/LC_MESSAGES/hello.mo\n/usr/share/locale/sr\n/usr/share/locale/sr/LC_MESSAGES\n/usr/share/locale/sr/LC_MESSAGES/hello.mo\n/usr/share/locale/sv\n/usr/share/locale/sv/LC_MESSAGES\n/usr/share/locale/sv/LC_MESSAGES/hello.mo\n/usr/share/locale/th\n/usr/share/locale/th/LC_MESSAGES\n/usr/share/locale/th/LC_MESSAGES/hello.mo\n/usr/share/locale/tr\n/usr/share/locale/tr/LC_MESSAGES\n/usr/share/locale/tr/LC_MESSAGES/hello.mo\n/usr/share/locale/uk\n/usr/share/locale/uk/LC_MESSAGES\n/usr/share/locale/uk/LC_MESSAGES/hello.mo\n/usr/share/locale/vi\n/usr/share/locale/vi/LC_MESSAGES\n/usr/share/locale/vi/LC_MESSAGES/hello.mo\n/usr/share/locale/zh_CN\n/usr/share/locale/zh_CN/LC_MESSAGES\n/usr/share/locale/zh_CN/LC_MESSAGES/hello.mo\n/usr/share/locale/zh_TW\n/usr/share/locale/zh_TW/LC_MESSAGES\n/usr/share/locale/zh_TW/LC_MESSAGES/hello.mo\n/usr/share/man\n/usr/share/man/man1\n/usr/share/man/man1/hello.1.gz\n---READELF---\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n---LDD---\n\tlinux-vdso.so.1 (0x0000749eba822000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000749eba61a000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000749eba824000)\n---RUN---\nhello (GNU Hello) \n\n",
+  "nix_hello_path": "/nix/store/sd779x86bjaqxj2lzh2jsir4h0zjz6d1-hello-2.12.3",
+  "nix_hello_elf": " 0x0000000000000001 (NEEDED)             Biblioteca partilhada: [libc.so.6]\n 0x000000000000001d (RUNPATH)            Runpath da biblioteca: [/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib]\n---LDD---\n\tlinux-vdso.so.1 (0x00007e6f3ed28000)\n\tlibc.so.6 => /nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib/libc.so.6 (0x00007e6f3ea00000)\n\t/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib/ld-linux-x86-64.so.2 => /nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib64/ld-linux-x86-64.so.2 (0x00007e6f3ed2a000)\n",
+  "nix_hello_add_ms": {
+    "runs": [
+      40.25,
+      41.78,
+      41.81
+    ],
+    "mean": 41.28,
+    "stdev": 0.89
+  },
+  "nix_hello_rollback_ms": {
+    "runs": [
+      35.29,
+      34.33,
+      34.48
+    ],
+    "mean": 34.7,
+    "stdev": 0.52
+  },
+  "ostree_hello_inode": {
+    "rev1": "74eec73eedcea8afe6558f073bf25f96f01a08c79e34cace0ba63394317b8fe5",
+    "rev2": "bced831c46d3ceaa95a1831e585e2d3d26b54121be813aeac09bfd0171548384",
+    "inode_bin_v1": 10495848,
+    "inode_bin_v2": 10495848,
+    "same_inode_bin": true,
+    "nlink_bin": 3,
+    "inode_man_v1": 10495853,
+    "inode_man_v2": 10495856,
+    "same_inode_man": false
+  },
+  "squashfs_hello": {
+    "xz": {
+      "unpacked_bytes": 252587,
+      "unpacked_kib": 246.67,
+      "size_bytes": 65536,
+      "size_kib": 64.0,
+      "ratio": 0.259,
+      "compress_ms": {
+        "runs": [
+          49.46,
+          50.61,
+          50.33
+        ],
+        "mean": 50.13,
+        "stdev": 0.6
+      },
+      "uncompress_ms": {
+        "runs": [
+          10.03,
+          10.05,
+          10.33
+        ],
+        "mean": 10.14,
+        "stdev": 0.17
+      }
+    },
+    "zstd": {
+      "unpacked_bytes": 252587,
+      "unpacked_kib": 246.67,
+      "size_bytes": 69632,
+      "size_kib": 68.0,
+      "ratio": 0.276,
+      "compress_ms": {
+        "runs": [
+          39.19,
+          34.4,
+          39.55
+        ],
+        "mean": 37.71,
+        "stdev": 2.88
+      },
+      "uncompress_ms": {
+        "runs": [
+          9.99,
+          10.18,
+          10.41
+        ],
+        "mean": 10.19,
+        "stdev": 0.21
+      }
+    },
+    "gzip": {
+      "unpacked_bytes": 252587,
+      "unpacked_kib": 246.67,
+      "size_bytes": 73728,
+      "size_kib": 72.0,
+      "ratio": 0.292,
+      "compress_ms": {
+        "runs": [
+          36.03,
+          35.4,
+          39.18
+        ],
+        "mean": 36.87,
+        "stdev": 2.03
+      },
+      "uncompress_ms": {
+        "runs": [
+          10.83,
+          10.5,
+          9.93
+        ],
+        "mean": 10.42,
+        "stdev": 0.46
+      }
+    }
+  }
+}

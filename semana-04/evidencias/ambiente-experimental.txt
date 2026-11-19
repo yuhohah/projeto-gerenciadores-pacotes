@@ -1,0 +1,31 @@
+$ uname -a
+Linux nixos-btw 7.3.4 #1-NixOS SMP PREEMPT_DYNAMIC @1794334210 x86_64 GNU/Linux
+[Código de saída: 0 | Tempo: 3.07 ms]
+
+$ nixos-version --json
+{"kernelVersion":"7.3.4","nixosVersion":"26.11.20261111.d4f25a3","nixpkgsRevision":"d4f25a3e562008648d45bcf2d70bcc7422cad84e","specialisations":[]}
+[Código de saída: 0 | Tempo: 6.96 ms]
+
+$ lscpu | grep -E 'Architecture|Model name|CPU\(s\):|Thread|Core'
+Architecture:                            x86_64
+CPU(s):                                  12
+Model name:                              AMD Ryzen 5 2600 Six-Core Processor
+Thread(s) per core:                      2
+Core(s) per socket:                      6
+NUMA node0 CPU(s):                       0-11
+[Código de saída: 0 | Tempo: 12.11 ms]
+
+$ free -b
+               total        used        free      shared  buff/cache   available
+Mem:     16668938240  7927070720  1861136384   203907072  7437586432  8741867520
+Swap:    16924008448     6602752 16917405696
+[Código de saída: 0 | Tempo: 3.09 ms]
+
+$ df -B1 /
+Filesystem        1B-blocks         Used    Available Use% Mounted on
+/dev/nvme0n1p6 365913493504 233983160320 113267937280  68% /
+[Código de saída: 0 | Tempo: 2.82 ms]
+
+LSM ativos (/sys/kernel/security/lsm): lockdown,capability,landlock,yama,bpf,ima
+
+Controladores cgroup v2 (/sys/fs/cgroup/cgroup.controllers): cpuset cpu io memory hugetlb pids rdma misc dmem

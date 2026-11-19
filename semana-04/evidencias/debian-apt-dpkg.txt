@@ -1,0 +1,1013 @@
+$ docker run --rm -v /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-debian-cache-0z879tx9:/cache debian:trixie-slim bash -c 
+set -e
+cat /etc/os-release
+apt-get --version | head -n 1
+dpkg --version | head -n 1
+apt-get update -qq
+apt-cache policy tmux hello gnome-text-editor
+apt-cache depends tmux
+apt-cache depends hello
+apt-get install --download-only -y tmux hello
+ls -la /var/cache/apt/archives/*.deb
+cp /var/cache/apt/archives/*.deb /cache/
+apt-get install -s gnome-text-editor | grep -E "Inst |upgraded,"
+
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.7
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+apt 3.0.4 (amd64)
+Debian 'dpkg' package management program version 1.22.22 (amd64).
+tmux:
+  Installed: (none)
+  Candidate: 3.5a-3
+  Version table:
+     3.5a-3 500
+        500 http://deb.debian.org/debian trixie/main amd64 Packages
+hello:
+  Installed: (none)
+  Candidate: 2.10-5
+  Version table:
+     2.10-5 500
+        500 http://deb.debian.org/debian trixie/main amd64 Packages
+gnome-text-editor:
+  Installed: (none)
+  Candidate: 48.3-3
+  Version table:
+     48.3-3 500
+        500 http://deb.debian.org/debian trixie/main amd64 Packages
+tmux
+  Depends: libc6
+  Depends: libevent-core-2.1-7t64
+  Depends: libjemalloc2
+  Depends: libsystemd0
+  Depends: libtinfo6
+hello
+  Depends: libc6
+  Conflicts: <hello-traditional>
+  Breaks: <hello-debhelper>
+  Replaces: <hello-debhelper>
+  Replaces: <hello-traditional>
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libevent-core-2.1-7t64 libjemalloc2
+The following NEW packages will be installed:
+  hello libevent-core-2.1-7t64 libjemalloc2 tmux
+0 upgraded, 4 newly installed, 0 to remove and 1 not upgraded.
+Need to get 951 kB of archives.
+After this operation, 2735 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 hello amd64 2.10-5 [53.2 kB]
+Get:2 http://deb.debian.org/debian-security trixie-security/main amd64 libevent-core-2.1-7t64 amd64 2.1.13-stable-1~deb13u1 [133 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libjemalloc2 amd64 5.3.0-3 [274 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 tmux amd64 3.5a-3 [490 kB]
+Fetched 951 kB in 1s (767 kB/s)
+Download complete and in download only mode
+-rw-r--r-- 1 root root  53228 Apr 16  2025 /var/cache/apt/archives/hello_2.10-5_amd64.deb
+-rw-r--r-- 1 root root 132868 Sep  9 05:49 /var/cache/apt/archives/libevent-core-2.1-7t64_2.1.13-stable-1~deb13u1_amd64.deb
+-rw-r--r-- 1 root root 274324 Mar  3  2025 /var/cache/apt/archives/libjemalloc2_5.3.0-3_amd64.deb
+-rw-r--r-- 1 root root 490296 Feb  7  2025 /var/cache/apt/archives/tmux_3.5a-3_amd64.deb
+0 upgraded, 211 newly installed, 0 to remove and 1 not upgraded.
+Inst libsystemd-shared (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Inst libapparmor1 (4.1.0-1 Debian:13.7/stable [amd64])
+Inst systemd (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Inst systemd-sysv (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Inst libdbus-1-3 (1.16.2-2 Debian:13.7/stable [amd64])
+Inst dbus-bin (1.16.2-2 Debian:13.7/stable [amd64])
+Inst dbus-session-bus-common (1.16.2-2 Debian:13.7/stable [all])
+Inst libexpat1 (2.9.0-1~deb13u1 Debian-Security:13/stable-security [amd64])
+Inst dbus-daemon (1.16.2-2 Debian:13.7/stable [amd64])
+Inst adduser (3.152 Debian:13.7/stable [all])
+Inst dbus-system-bus-common (1.16.2-2 Debian:13.7/stable [all])
+Inst dbus (1.16.2-2 Debian:13.7/stable [amd64])
+Inst linux-sysctl-defaults (4.12.1 Debian:13.7/stable [all])
+Inst libncursesw6 (6.5+20250216-2 Debian:13.7/stable [amd64])
+Inst libproc2-0 (2:4.0.4-9 Debian:13.7/stable [amd64])
+Inst procps (2:4.0.4-9 Debian:13.7/stable [amd64])
+Inst openssl (3.5.7-1~deb13u3 Debian-Security:13/stable-security [amd64])
+Inst ca-certificates (20250419+deb13u1 Debian-Security:13/stable-security [all])
+Inst krb5-locales (1.21.3-5+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [all])
+Inst libnss-systemd (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Inst libpam-systemd (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Inst systemd-timesyncd (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Inst libgdk-pixbuf2.0-common (2.42.12+dfsg-4+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [all])
+Inst libatomic1 (14.2.0-19 Debian:13.7/stable [amd64])
+Inst libffi8 (3.4.8-2 Debian:13.7/stable [amd64])
+Inst libglib2.0-0t64 (2.84.4-3~deb13u5 Debian:13.7/stable [amd64])
+Inst libxml2 (2.12.7+dfsg+really2.9.14-2.1+deb13u3 Debian:13.7/stable [amd64])
+Inst shared-mime-info (2.4-5+b2 Debian:13.7/stable [amd64])
+Inst libjpeg62-turbo (1:2.1.5-4 Debian:13.7/stable [amd64])
+Inst libpng16-16t64 (1.6.48-1+deb13u6 Debian-Security:13/stable-security [amd64])
+Inst libdeflate0 (1.23-2 Debian:13.7/stable [amd64])
+Inst libjbig0 (2.1-6.1+b2 Debian:13.7/stable [amd64])
+Inst liblerc4 (4.0.0+ds-5 Debian:13.7/stable [amd64])
+Inst libsharpyuv0 (1.5.0-0.1 Debian:13.7/stable [amd64])
+Inst libwebp7 (1.5.0-0.1 Debian:13.7/stable [amd64])
+Inst libtiff6 (4.7.0-3+deb13u3 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libgdk-pixbuf-2.0-0 (2.42.12+dfsg-4+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst gtk-update-icon-cache (4.18.6+ds-2 Debian:13.7/stable [amd64])
+Inst hicolor-icon-theme (0.18-2 Debian:13.7/stable [all])
+Inst adwaita-icon-theme (48.1-1 Debian:13.7/stable [all])
+Inst libaspell15 (0.60.8.1-4 Debian:13.7/stable [amd64])
+Inst libtext-iconv-perl (1.7-8+b4 Debian:13.7/stable [amd64])
+Inst emacsen-common (3.0.8 Debian:13.7/stable [all])
+Inst dictionaries-common (1.30.10 Debian:13.7/stable [all])
+Inst aspell (0.60.8.1-4 Debian:13.7/stable [amd64])
+Inst aspell-en (2020.12.07-0-1 Debian:13.7/stable [all])
+Inst dbus-user-session (1.16.2-2 Debian:13.7/stable [amd64])
+Inst libdconf1 (0.40.0-5 Debian:13.7/stable [amd64])
+Inst dconf-service (0.40.0-5 Debian:13.7/stable [amd64])
+Inst dconf-gsettings-backend (0.40.0-5 Debian:13.7/stable [amd64])
+Inst libdevmapper1.02.1 (2:1.02.205-2 Debian:13.7/stable [amd64]) []
+Inst dmsetup (2:1.02.205-2 Debian:13.7/stable [amd64])
+Inst hunspell-en-us (1:2020.12.07-4 Debian:13.7/stable [all])
+Inst libhunspell-1.7-0 (1.7.2+really1.7.2-10+b4 Debian:13.7/stable [amd64])
+Inst libenchant-2-2 (2.8.2+dfsg1-3 Debian:13.7/stable [amd64])
+Inst enchant-2 (2.8.2+dfsg1-3 Debian:13.7/stable [amd64])
+Inst libbrotli1 (1.1.0-2+deb13u1 Debian-Security:13/stable-security [amd64])
+Inst libfreetype6 (2.13.3+dfsg-1+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst fonts-dejavu-mono (2.37-8 Debian:13.7/stable [all])
+Inst fonts-dejavu-core (2.37-8 Debian:13.7/stable [all])
+Inst fontconfig-config (2.15.0-2.3 Debian:13.7/stable [amd64])
+Inst libfontconfig1 (2.15.0-2.3 Debian:13.7/stable [amd64])
+Inst fontconfig (2.15.0-2.3 Debian:13.7/stable [amd64])
+Inst libunistring5 (1.3-2 Debian:13.7/stable [amd64])
+Inst libidn2-0 (2.3.8-2 Debian:13.7/stable [amd64])
+Inst libp11-kit0 (0.25.5-3 Debian:13.7/stable [amd64])
+Inst libtasn1-6 (4.20.0-2+deb13u1 Debian:13.7/stable [amd64])
+Inst libgnutls30t64 (3.8.9-3+deb13u4 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libkrb5support0 (1.21.3-5+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libcom-err2 (1.47.2-3+b12 Debian:13.7/stable [amd64])
+Inst libk5crypto3 (1.21.3-5+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libkeyutils1 (1.6.3-6 Debian:13.7/stable [amd64])
+Inst libkrb5-3 (1.21.3-5+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libgssapi-krb5-2 (1.21.3-5+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libsasl2-modules-db (2.1.28+dfsg1-9 Debian:13.7/stable [amd64])
+Inst libsasl2-2 (2.1.28+dfsg1-9 Debian:13.7/stable [amd64])
+Inst libldap2 (2.6.10+dfsg-1 Debian:13.7/stable [amd64])
+Inst libnghttp2-14 (1.64.0-1.1+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libnghttp3-9 (1.8.0-1 Debian:13.7/stable [amd64])
+Inst libngtcp2-16 (1.11.0-1+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libngtcp2-crypto-gnutls8 (1.11.0-1+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libpsl5t64 (0.21.2-1.1+b1 Debian:13.7/stable [amd64])
+Inst librtmp1 (2.4+20151223.gitfa8646d.1-2+b5 Debian:13.7/stable [amd64])
+Inst libssh2-1t64 (1.11.1-1+deb13u2 Debian:13.7/stable [amd64])
+Inst libcurl3t64-gnutls (8.14.1-2+deb13u7 Debian-Security:13/stable-security [amd64])
+Inst libstemmer0d (2.2.0-4+b2 Debian:13.7/stable [amd64])
+Inst libxmlb2 (0.3.22-1 Debian:13.7/stable [amd64])
+Inst libyaml-0-2 (0.2.5-2 Debian:13.7/stable [amd64])
+Inst libappstream5 (1.0.5-1 Debian:13.7/stable [amd64])
+Inst libfribidi0 (1.0.16-1 Debian:13.7/stable [amd64])
+Inst libgraphene-1.0-0 (1.10.8-5 Debian:13.7/stable [amd64])
+Inst libpixman-1-0 (0.44.0-3 Debian:13.7/stable [amd64])
+Inst libxau6 (1:1.0.11-1 Debian:13.7/stable [amd64])
+Inst libxdmcp6 (1:1.1.5-1 Debian:13.7/stable [amd64])
+Inst libxcb1 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libx11-data (2:1.8.12-1 Debian:13.7/stable [all])
+Inst libx11-6 (2:1.8.12-1 Debian:13.7/stable [amd64])
+Inst libxcb-render0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxcb-shm0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxext6 (2:1.3.4-1+b3 Debian:13.7/stable [amd64])
+Inst libxrender1 (1:0.9.12-1 Debian:13.7/stable [amd64])
+Inst libcairo2 (1.18.4-1+b1 Debian:13.7/stable [amd64])
+Inst libcairo-gobject2 (1.18.4-1+b1 Debian:13.7/stable [amd64])
+Inst liblzo2-2 (2.10-3+b1 Debian:13.7/stable [amd64])
+Inst libcairo-script-interpreter2 (1.18.4-1+b1 Debian:13.7/stable [amd64])
+Inst libcloudproviders0 (0.3.6-2 Debian:13.7/stable [amd64])
+Inst liblcms2-2 (2.16-2+deb13u2 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libcolord2 (1.4.7-3 Debian:13.7/stable [amd64])
+Inst libavahi-common-data (0.8-16 Debian:13.7/stable [amd64])
+Inst libavahi-common3 (0.8-16 Debian:13.7/stable [amd64])
+Inst libavahi-client3 (0.8-16 Debian:13.7/stable [amd64])
+Inst libcups2t64 (2.4.10-3+deb13u2 Debian:13.7/stable [amd64])
+Inst libepoxy0 (1.5.10-2 Debian:13.7/stable [amd64])
+Inst libgraphite2-3 (1.3.14-2+deb13u1 Debian:13.7/stable [amd64])
+Inst libharfbuzz0b (10.2.0-1+deb13u1 Debian:13.7/stable [amd64])
+Inst libharfbuzz-subset0 (10.2.0-1+deb13u1 Debian:13.7/stable [amd64])
+Inst libthai-data (0.1.29-2 Debian:13.7/stable [all])
+Inst libdatrie1 (0.2.13-3+b1 Debian:13.7/stable [amd64])
+Inst libthai0 (0.1.29-2+b1 Debian:13.7/stable [amd64])
+Inst libpango-1.0-0 (1.56.3-1 Debian:13.7/stable [amd64])
+Inst libpangoft2-1.0-0 (1.56.3-1 Debian:13.7/stable [amd64])
+Inst libpangocairo-1.0-0 (1.56.3-1 Debian:13.7/stable [amd64])
+Inst libvulkan1 (1.4.309.0-1 Debian:13.7/stable [amd64])
+Inst libwayland-client0 (1.23.1-3 Debian:13.7/stable [amd64])
+Inst libwayland-egl1 (1.23.1-3 Debian:13.7/stable [amd64])
+Inst libxfixes3 (1:6.0.0-2+b4 Debian:13.7/stable [amd64])
+Inst libxcursor1 (1:1.2.3-1 Debian:13.7/stable [amd64])
+Inst libxdamage1 (1:1.1.6-1+b2 Debian:13.7/stable [amd64])
+Inst libxi6 (2:1.8.2-1 Debian:13.7/stable [amd64])
+Inst libxinerama1 (2:1.1.4-3+b4 Debian:13.7/stable [amd64])
+Inst xkb-data (2.42-1 Debian:13.7/stable [all])
+Inst libxkbcommon0 (1.7.0-2 Debian:13.7/stable [amd64])
+Inst libxrandr2 (2:1.5.4-1+b3 Debian:13.7/stable [amd64])
+Inst libglvnd0 (1.7.0-1+b2 Debian:13.7/stable [amd64])
+Inst libgles2 (1.7.0-1+b2 Debian:13.7/stable [amd64])
+Inst libgtk-4-common (4.18.6+ds-2 Debian:13.7/stable [all])
+Inst libgtk-4-1 (4.18.6+ds-2 Debian:13.7/stable [amd64])
+Inst libadwaita-1-0 (1.7.6-1~deb13u1 Debian:13.7/stable [amd64])
+Inst libeditorconfig0 (0.12.9+~0.17.1-1 Debian:13.7/stable [amd64])
+Inst libgtksourceview-5-common (5.16.0-1 Debian:13.7/stable [all])
+Inst libgtksourceview-5-0 (5.16.0-1 Debian:13.7/stable [amd64])
+Inst libicu76 (76.1-4 Debian:13.7/stable [amd64])
+Inst libspelling-common (0.4.8-1 Debian:13.7/stable [all])
+Inst libspelling-1-2 (0.4.8-1 Debian:13.7/stable [amd64])
+Inst gnome-text-editor (48.3-3 Debian:13.7/stable [amd64])
+Inst libdrm-common (2.4.124-2 Debian:13.7/stable [all])
+Inst libdrm2 (2.4.124-2 Debian:13.7/stable [amd64])
+Inst libwayland-server0 (1.23.1-3 Debian:13.7/stable [amd64])
+Inst libdrm-amdgpu1 (2.4.124-2 Debian:13.7/stable [amd64])
+Inst libpciaccess0 (0.17-3+b3 Debian:13.7/stable [amd64])
+Inst libdrm-intel1 (2.4.124-2 Debian:13.7/stable [amd64])
+Inst libelf1t64 (0.192-4 Debian:13.7/stable [amd64])
+Inst libedit2 (3.1-20250104-1 Debian:13.7/stable [amd64])
+Inst libz3-4 (4.13.3-1 Debian:13.7/stable [amd64])
+Inst libllvm19 (1:19.1.7-3+b1 Debian:13.7/stable [amd64])
+Inst libsensors-config (1:3.6.2-2 Debian:13.7/stable [all])
+Inst libsensors5 (1:3.6.2-2 Debian:13.7/stable [amd64])
+Inst libx11-xcb1 (2:1.8.12-1 Debian:13.7/stable [amd64])
+Inst libxcb-dri3-0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxcb-present0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxcb-randr0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxcb-sync1 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxcb-xfixes0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxshmfence1 (1.3.3-1 Debian:13.7/stable [amd64])
+Inst mesa-libgallium (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])
+Inst libgbm1 (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])
+Inst libegl-mesa0 (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])
+Inst libegl1 (1.7.0-1+b2 Debian:13.7/stable [amd64])
+Inst libxcb-glx0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Inst libxxf86vm1 (1:1.1.4-1+b4 Debian:13.7/stable [amd64])
+Inst libgl1-mesa-dri (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])
+Inst libglx-mesa0 (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])
+Inst libglx0 (1.7.0-1+b2 Debian:13.7/stable [amd64])
+Inst libgl1 (1.7.0-1+b2 Debian:13.7/stable [amd64])
+Inst libcap2-bin (1:2.75-10+deb13u1+b3 Debian:13.7/stable [amd64])
+Inst libgstreamer1.0-0 (1.26.2-2 Debian:13.7/stable [amd64])
+Inst liborc-0.4-0t64 (1:0.4.41-1 Debian:13.7/stable [amd64])
+Inst iso-codes (4.18.0-1 Debian:13.7/stable [all])
+Inst libgstreamer-plugins-base1.0-0 (1.26.2-1+deb13u2 Debian-Security:13/stable-security [amd64])
+Inst libgudev-1.0-0 (238-6 Debian:13.7/stable [amd64])
+Inst libwayland-cursor0 (1.23.1-3 Debian:13.7/stable [amd64])
+Inst libgstreamer-gl1.0-0 (1.26.2-1+deb13u2 Debian-Security:13/stable-security [amd64])
+Inst gstreamer1.0-gl (1.26.2-1+deb13u2 Debian-Security:13/stable-security [amd64])
+Inst libcdparanoia0 (3.10.2+debian-14+b1 Debian:13.7/stable [amd64])
+Inst libogg0 (1.3.5-3+b2 Debian:13.7/stable [amd64])
+Inst libopus0 (1.5.2-2 Debian:13.7/stable [amd64])
+Inst libtheoradec1 (1.2.0~alpha1+dfsg-6 Debian:13.7/stable [amd64])
+Inst libtheoraenc1 (1.2.0~alpha1+dfsg-6 Debian:13.7/stable [amd64])
+Inst libvisual-0.4-0 (0.4.2-2+b2 Debian:13.7/stable [amd64])
+Inst libvorbis0a (1.3.7-3 Debian:13.7/stable [amd64])
+Inst libvorbisenc2 (1.3.7-3 Debian:13.7/stable [amd64])
+Inst gstreamer1.0-plugins-base (1.26.2-1+deb13u2 Debian-Security:13/stable-security [amd64])
+Inst libjson-c5 (0.18+ds-1 Debian:13.7/stable [amd64])
+Inst libcryptsetup12 (2:2.7.5-2 Debian:13.7/stable [amd64])
+Inst libdav1d7 (1.5.1-1 Debian:13.7/stable [amd64])
+Inst libgdk-pixbuf2.0-bin (2.42.12+dfsg-4+deb13u1 Debian:13.7/stable, Debian-Security:13/stable-security [amd64])
+Inst libglib2.0-data (2.84.4-3~deb13u5 Debian:13.7/stable [all])
+Inst libgpm2 (1.20.7-11+b2 Debian:13.7/stable [amd64])
+Inst libgtk-4-bin (4.18.6+ds-2 Debian:13.7/stable [amd64])
+Inst libgtk-4-media-gstreamer (4.18.6+ds-2 Debian:13.7/stable [amd64])
+Inst libkmod2 (34.2-2 Debian:13.7/stable [amd64])
+Inst libldap-common (2.6.10+dfsg-1 Debian:13.7/stable [all])
+Inst libpam-cap (1:2.75-10+deb13u1+b3 Debian:13.7/stable [amd64])
+Inst librsvg2-2 (2.60.0+dfsg-1+deb13u1 Debian-Security:13/stable-security [amd64])
+Inst librsvg2-common (2.60.0+dfsg-1+deb13u1 Debian-Security:13/stable-security [amd64])
+Inst libsasl2-modules (2.1.28+dfsg1-9 Debian:13.7/stable [amd64])
+Inst mesa-vulkan-drivers (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])
+Inst psmisc (23.7-2 Debian:13.7/stable [amd64])
+Inst publicsuffix (20250328.1952-0.1 Debian:13.7/stable [all])
+Inst systemd-cryptsetup (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Inst xdg-user-dirs (0.18-2 Debian:13.7/stable [amd64])
+[Código de saída: 0 | Tempo: 11609.71 ms]
+
+$ docker run --rm -v /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-debian-cache-0z879tx9:/cache:ro debian:trixie-slim bash -c 
+set -e
+TMUX_DEB=$(ls /cache/tmux_*.deb)
+HELLO_DEB=$(ls /cache/hello_*.deb)
+echo "=== Estrutura ar do pacote .deb (dpkg-deb / formato ar) ==="
+dpkg-deb -I "$TMUX_DEB"
+dpkg-deb -c "$TMUX_DEB"
+dpkg-deb -I "$HELLO_DEB"
+dpkg-deb -c "$HELLO_DEB"
+
+=== Estrutura ar do pacote .deb (dpkg-deb / formato ar) ===
+ new Debian package, version 2.0.
+ size 490296 bytes: control archive=1464 bytes.
+    1056 bytes,    21 lines      control
+     711 bytes,    11 lines      md5sums
+     366 bytes,     9 lines   *  postinst             #!/bin/sh
+ Package: tmux
+ Version: 3.5a-3
+ Architecture: amd64
+ Maintainer: Sebastien Delafond <seb@debian.org>
+ Installed-Size: 1209
+ Depends: libc6 (>= 2.38), libevent-core-2.1-7t64 (>= 2.1.8-stable), libjemalloc2 (>= 2.1.1), libsystemd0 (>= 221), libtinfo6 (>= 6.5)
+ Section: admin
+ Priority: optional
+ Homepage: https://github.com/tmux/tmux/wiki
+ Description: terminal multiplexer
+  tmux enables a number of terminals (or windows) to be accessed and
+  controlled from a single terminal like screen. tmux runs as a
+  server-client system. A server is created automatically when necessary
+  and holds a number of sessions, each of which may have a number of
+  windows linked to it. Any number of clients may connect to a session,
+  or the server may be controlled by issuing commands with tmux.
+  Communication takes place through a socket, by default placed in /tmp.
+  Moreover tmux provides a consistent and well-documented command
+  interface, with the same syntax whether used interactively, as a key
+  binding, or from the shell. It offers a choice of vim or Emacs key
+  layouts.
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/bin/
+-rwxr-xr-x root/root   1094216 2025-02-07 17:25 ./usr/bin/tmux
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/lib/
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/lib/tmpfiles.d/
+-rw-r--r-- root/root        14 2024-10-05 08:35 ./usr/lib/tmpfiles.d/tmux.conf
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/debianutils/
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/debianutils/shells.d/
+-rw-r--r-- root/root        14 2025-02-07 17:25 ./usr/share/debianutils/shells.d/tmux
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/doc/
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/doc/tmux/
+-rw-r--r-- root/root       312 2025-02-07 17:25 ./usr/share/doc/tmux/NEWS.Debian.gz
+-rw-r--r-- root/root      2193 2024-10-05 05:57 ./usr/share/doc/tmux/README
+-rw-r--r-- root/root      4266 2025-02-07 17:25 ./usr/share/doc/tmux/changelog.Debian.gz
+-rw-r--r-- root/root     51351 2024-10-05 06:00 ./usr/share/doc/tmux/changelog.gz
+-rw-r--r-- root/root      9452 2025-02-07 17:21 ./usr/share/doc/tmux/copyright
+-rw-r--r-- root/root      1819 2024-08-04 08:59 ./usr/share/doc/tmux/example_tmux.conf
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/lintian/
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/lintian/overrides/
+-rw-r--r-- root/root        14 2024-10-05 08:35 ./usr/share/lintian/overrides/tmux
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/man/
+drwxr-xr-x root/root         0 2025-02-07 17:25 ./usr/share/man/man1/
+-rw-r--r-- root/root     50067 2025-02-07 17:25 ./usr/share/man/man1/tmux.1.gz
+ new Debian package, version 2.0.
+ size 53228 bytes: control archive=1872 bytes.
+     757 bytes,    20 lines      control
+    3601 bytes,    49 lines      md5sums
+ Package: hello
+ Version: 2.10-5
+ Architecture: amd64
+ Maintainer: Santiago Vila <sanvila@debian.org>
+ Installed-Size: 280
+ Depends: libc6 (>= 2.38)
+ Conflicts: hello-traditional
+ Breaks: hello-debhelper (<< 2.9)
+ Replaces: hello-debhelper (<< 2.9), hello-traditional
+ Section: devel
+ Priority: optional
+ Homepage: https://www.gnu.org/software/hello/
+ Description: example package based on GNU hello
+  The GNU hello program produces a familiar, friendly greeting.  It
+  allows non-programmers to use a classic computer science tool which
+  would otherwise be unavailable to them.
+  .
+  Seriously, though: this is an example of how to do a Debian package.
+  It is the Debian version of the GNU Project's `hello world' program
+  (which is itself an example for the GNU Project).
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/bin/
+-rwxr-xr-x root/root     35544 2025-04-16 09:50 ./usr/bin/hello
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/doc/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/doc/hello/
+-rw-r--r-- root/root      1868 2014-11-16 11:51 ./usr/share/doc/hello/NEWS.gz
+-rw-r--r-- root/root       977 2025-04-16 09:50 ./usr/share/doc/hello/changelog.Debian.gz
+-rw-r--r-- root/root      4493 2014-11-16 12:00 ./usr/share/doc/hello/changelog.gz
+-rw-r--r-- root/root      2264 2025-04-16 08:00 ./usr/share/doc/hello/copyright
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/info/
+-rw-r--r-- root/root     11670 2025-04-16 09:50 ./usr/share/info/hello.info.gz
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/bg/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/bg/LC_MESSAGES/
+-rw-r--r-- root/root      1316 2025-04-16 09:50 ./usr/share/locale/bg/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ca/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ca/LC_MESSAGES/
+-rw-r--r-- root/root      2809 2025-04-16 09:50 ./usr/share/locale/ca/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/da/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/da/LC_MESSAGES/
+-rw-r--r-- root/root      2747 2025-04-16 09:50 ./usr/share/locale/da/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/de/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/de/LC_MESSAGES/
+-rw-r--r-- root/root      3518 2025-04-16 09:50 ./usr/share/locale/de/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/el/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/el/LC_MESSAGES/
+-rw-r--r-- root/root      3329 2025-04-16 09:50 ./usr/share/locale/el/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/eo/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/eo/LC_MESSAGES/
+-rw-r--r-- root/root      2541 2025-04-16 09:50 ./usr/share/locale/eo/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/es/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/es/LC_MESSAGES/
+-rw-r--r-- root/root      3413 2025-04-16 09:50 ./usr/share/locale/es/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/et/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/et/LC_MESSAGES/
+-rw-r--r-- root/root      2620 2025-04-16 09:50 ./usr/share/locale/et/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/eu/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/eu/LC_MESSAGES/
+-rw-r--r-- root/root       753 2025-04-16 09:50 ./usr/share/locale/eu/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/fa/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/fa/LC_MESSAGES/
+-rw-r--r-- root/root       849 2025-04-16 09:50 ./usr/share/locale/fa/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/fi/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/fi/LC_MESSAGES/
+-rw-r--r-- root/root      2576 2025-04-16 09:50 ./usr/share/locale/fi/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/fr/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/fr/LC_MESSAGES/
+-rw-r--r-- root/root      3515 2025-04-16 09:50 ./usr/share/locale/fr/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ga/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ga/LC_MESSAGES/
+-rw-r--r-- root/root      1142 2025-04-16 09:50 ./usr/share/locale/ga/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/gl/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/gl/LC_MESSAGES/
+-rw-r--r-- root/root      3527 2025-04-16 09:50 ./usr/share/locale/gl/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/he/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/he/LC_MESSAGES/
+-rw-r--r-- root/root       710 2025-04-16 09:50 ./usr/share/locale/he/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/hr/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/hr/LC_MESSAGES/
+-rw-r--r-- root/root      2927 2025-04-16 09:50 ./usr/share/locale/hr/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/hu/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/hu/LC_MESSAGES/
+-rw-r--r-- root/root      3682 2025-04-16 09:50 ./usr/share/locale/hu/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/id/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/id/LC_MESSAGES/
+-rw-r--r-- root/root      3354 2025-04-16 09:50 ./usr/share/locale/id/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/it/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/it/LC_MESSAGES/
+-rw-r--r-- root/root       700 2025-04-16 09:50 ./usr/share/locale/it/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ja/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ja/LC_MESSAGES/
+-rw-r--r-- root/root       705 2025-04-16 09:50 ./usr/share/locale/ja/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ka/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ka/LC_MESSAGES/
+-rw-r--r-- root/root       898 2025-04-16 09:50 ./usr/share/locale/ka/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ko/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ko/LC_MESSAGES/
+-rw-r--r-- root/root      1201 2025-04-16 09:50 ./usr/share/locale/ko/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/lv/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/lv/LC_MESSAGES/
+-rw-r--r-- root/root      3475 2025-04-16 09:50 ./usr/share/locale/lv/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ms/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ms/LC_MESSAGES/
+-rw-r--r-- root/root      1167 2025-04-16 09:50 ./usr/share/locale/ms/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/nb/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/nb/LC_MESSAGES/
+-rw-r--r-- root/root      3331 2025-04-16 09:50 ./usr/share/locale/nb/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/nl/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/nl/LC_MESSAGES/
+-rw-r--r-- root/root      3499 2025-04-16 09:50 ./usr/share/locale/nl/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/nn/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/nn/LC_MESSAGES/
+-rw-r--r-- root/root       731 2025-04-16 09:50 ./usr/share/locale/nn/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/pl/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/pl/LC_MESSAGES/
+-rw-r--r-- root/root      3361 2025-04-16 09:50 ./usr/share/locale/pl/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/pt/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/pt/LC_MESSAGES/
+-rw-r--r-- root/root       460 2025-04-16 09:50 ./usr/share/locale/pt/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/pt_BR/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/pt_BR/LC_MESSAGES/
+-rw-r--r-- root/root      3393 2025-04-16 09:50 ./usr/share/locale/pt_BR/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ro/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ro/LC_MESSAGES/
+-rw-r--r-- root/root       735 2025-04-16 09:50 ./usr/share/locale/ro/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ru/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/ru/LC_MESSAGES/
+-rw-r--r-- root/root      4226 2025-04-16 09:50 ./usr/share/locale/ru/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sk/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sk/LC_MESSAGES/
+-rw-r--r-- root/root      3361 2025-04-16 09:50 ./usr/share/locale/sk/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sl/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sl/LC_MESSAGES/
+-rw-r--r-- root/root      3438 2025-04-16 09:50 ./usr/share/locale/sl/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sr/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sr/LC_MESSAGES/
+-rw-r--r-- root/root      4129 2025-04-16 09:50 ./usr/share/locale/sr/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sv/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/sv/LC_MESSAGES/
+-rw-r--r-- root/root      1092 2025-04-16 09:50 ./usr/share/locale/sv/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/th/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/th/LC_MESSAGES/
+-rw-r--r-- root/root      5017 2025-04-16 09:50 ./usr/share/locale/th/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/tr/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/tr/LC_MESSAGES/
+-rw-r--r-- root/root      2861 2025-04-16 09:50 ./usr/share/locale/tr/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/uk/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/uk/LC_MESSAGES/
+-rw-r--r-- root/root      4531 2025-04-16 09:50 ./usr/share/locale/uk/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/vi/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/vi/LC_MESSAGES/
+-rw-r--r-- root/root      3863 2025-04-16 09:50 ./usr/share/locale/vi/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/zh_CN/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/zh_CN/LC_MESSAGES/
+-rw-r--r-- root/root      2603 2025-04-16 09:50 ./usr/share/locale/zh_CN/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/zh_TW/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/locale/zh_TW/LC_MESSAGES/
+-rw-r--r-- root/root      2754 2025-04-16 09:50 ./usr/share/locale/zh_TW/LC_MESSAGES/hello.mo
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/man/
+drwxr-xr-x root/root         0 2025-04-16 09:50 ./usr/share/man/man1/
+-rw-r--r-- root/root       790 2025-04-16 09:50 ./usr/share/man/man1/hello.1.gz
+[Código de saída: 0 | Tempo: 297.46 ms]
+
+$ docker run --rm --cap-add=SYS_PTRACE -v /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-debian-cache-0z879tx9:/cache:ro -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+mkdir -p /tmp/debs
+cp /cache/*.deb /tmp/debs/
+rm -f /tmp/debs/hello_*.deb
+echo "=== strace dpkg -i tmux (+ dependencias) ==="
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace -c -f dpkg -i /tmp/debs/*.deb >/dev/null
+echo "=== Consultas dpkg para tmux ==="
+dpkg -l tmux
+dpkg -L tmux
+dpkg -S /usr/bin/tmux
+head -n 10 /var/lib/dpkg/info/tmux.md5sums
+echo "=== Vinculacao dinamica ELF de /usr/bin/tmux ==="
+/nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d /usr/bin/tmux | grep -E "NEEDED|RUNPATH|RPATH"
+ldd /usr/bin/tmux
+
+=== strace dpkg -i tmux (+ dependencias) ===
+=== Consultas dpkg para tmux ===
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version      Architecture Description
++++-==============-============-============-=================================
+ii  tmux           3.5a-3       amd64        terminal multiplexer
+/.
+/usr
+/usr/bin
+/usr/bin/tmux
+/usr/lib
+/usr/lib/tmpfiles.d
+/usr/lib/tmpfiles.d/tmux.conf
+/usr/share
+/usr/share/debianutils
+/usr/share/debianutils/shells.d
+/usr/share/debianutils/shells.d/tmux
+/usr/share/doc
+/usr/share/doc/tmux
+/usr/share/doc/tmux/NEWS.Debian.gz
+/usr/share/doc/tmux/README
+/usr/share/doc/tmux/changelog.Debian.gz
+/usr/share/doc/tmux/changelog.gz
+/usr/share/doc/tmux/copyright
+/usr/share/doc/tmux/example_tmux.conf
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/tmux
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/tmux.1.gz
+tmux: /usr/bin/tmux
+86c902c57584557b215ff97c2fd8e1d6  usr/bin/tmux
+ff0556b415f3e459d5f6fc83c401e3d5  usr/lib/tmpfiles.d/tmux.conf
+2d47d89cd364b31d0f2875c6c528b792  usr/share/debianutils/shells.d/tmux
+4a8292c8235c376c1e8dfff1751af513  usr/share/doc/tmux/NEWS.Debian.gz
+9fea0c51f01d982209f96895b975d41d  usr/share/doc/tmux/README
+74d573ab25560ca62c878742c8ebf28e  usr/share/doc/tmux/changelog.Debian.gz
+4f27fcda644fd973fd9beeb2a1bcc528  usr/share/doc/tmux/changelog.gz
+28073b5916e29fba1f2adfa991a0dc35  usr/share/doc/tmux/copyright
+0b9b6d961029a2611795658e0c618549  usr/share/doc/tmux/example_tmux.conf
+3c11c414e497d66564f223b62b35e079  usr/share/lintian/overrides/tmux
+=== Vinculacao dinamica ELF de /usr/bin/tmux ===
+ 0x0000000000000001 (NEEDED)             Shared library: [libsystemd.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libtinfo.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libevent_core-2.1.so.7]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libresolv.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libjemalloc.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+	linux-vdso.so.1 (0x00007139cd50d000)
+	libsystemd.so.0 => /lib/x86_64-linux-gnu/libsystemd.so.0 (0x00007139cd2d9000)
+	libtinfo.so.6 => /lib/x86_64-linux-gnu/libtinfo.so.6 (0x00007139cd2a3000)
+	libevent_core-2.1.so.7 => /lib/x86_64-linux-gnu/libevent_core-2.1.so.7 (0x00007139cd26d000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007139cd17d000)
+	libresolv.so.2 => /lib/x86_64-linux-gnu/libresolv.so.2 (0x00007139cd169000)
+	libjemalloc.so.2 => /lib/x86_64-linux-gnu/libjemalloc.so.2 (0x00007139cd03b000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007139cce47000)
+	libcap.so.2 => /lib/x86_64-linux-gnu/libcap.so.2 (0x00007139cce3b000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007139cd50f000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007139ccbd5000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007139ccba6000)
+[stderr]
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 13 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 14 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 15 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 16 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 17 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 18 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 19 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 20 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 21 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 22 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 23 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 24 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 25 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 26 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 27 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 28 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 29 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 30 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 31 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 32 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 33 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 34 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 35 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 36 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 37 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 38 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 39 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 40 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 41 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 42 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 43 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 44 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 45 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 46 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 47 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 48 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 49 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 50 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 51 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 52 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 53 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 54 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 55 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 56 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 57 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 58 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 59 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 60 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 61 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 62 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 63 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 64 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 65 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 66 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 67 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 68 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 69 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 70 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 71 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 72 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 73 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 74 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 75 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 76 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 77 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 78 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 79 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 80 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 81 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 82 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 83 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 84 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 85 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 69.37    0.127682        1160       110        43 wait4
+  4.27    0.007862         131        60           clone
+  3.73    0.006865          10       642        21 openat
+  2.83    0.005210          52       100        45 execve
+  2.50    0.004608          19       240        10 futex
+  2.06    0.003793           6       570       145 newfstatat
+  1.95    0.003586           3       984           read
+  1.93    0.003544           4       780           mmap
+  1.83    0.003361           3       935           close
+  1.27    0.002343           6       371           write
+  0.83    0.001525          10       144           munmap
+  0.75    0.001377           2       493           fstat
+  0.70    0.001281          15        81           fsync
+  0.65    0.001193          15        77        25 rename
+  0.61    0.001124          29        38           getdents64
+  0.52    0.000961           4       235           mprotect
+  0.43    0.000790          27        29         3 unlink
+  0.41    0.000760           3       243           rt_sigprocmask
+  0.28    0.000509          39        13           vfork
+  0.27    0.000503           2       192           fcntl
+  0.26    0.000481           2       185           brk
+  0.26    0.000478           5        95        95 rmdir
+  0.19    0.000358          14        24           ftruncate
+  0.18    0.000339           3       107        27 ioctl
+  0.15    0.000274          45         6           unlinkat
+  0.13    0.000233           6        36           pipe2
+  0.12    0.000230           2        80           dup2
+  0.12    0.000226           2        90        37 lseek
+  0.11    0.000209           1       108           pread64
+  0.11    0.000194          32         6           mkdir
+  0.09    0.000158         158         1           link
+  0.09    0.000157           5        28           utimensat
+  0.08    0.000146           1       115           set_robust_list
+  0.08    0.000139           2        61           rseq
+  0.07    0.000138           3        37           rt_sigreturn
+  0.07    0.000137           2        61        60 access
+  0.07    0.000123           5        21           fchown
+  0.06    0.000116           2        55           getrandom
+  0.06    0.000111           4        25           fchmod
+  0.06    0.000103           3        33        30 readlink
+  0.05    0.000101           1        55           arch_prctl
+  0.05    0.000099           1        55           set_tid_address
+  0.05    0.000093           1        55           prlimit64
+  0.04    0.000076           1        49           rt_sigaction
+  0.04    0.000072           3        20        20 connect
+  0.03    0.000059           2        20           socket
+  0.02    0.000038           1        20           umask
+  0.02    0.000031           5         6           madvise
+  0.02    0.000031          10         3           fdatasync
+  0.02    0.000030           6         5           fchownat
+  0.01    0.000023           2         8           sync_file_range
+  0.01    0.000022           3         6           chdir
+  0.01    0.000022           5         4           chmod
+  0.01    0.000022           1        15        12 statfs
+  0.01    0.000020           3         6         6 clone3
+  0.01    0.000016           5         3           chown
+  0.01    0.000014           0        16           geteuid
+  0.01    0.000013           4         3           fstatfs
+  0.01    0.000012           1         8           getuid
+  0.01    0.000010           5         2           fchmodat
+  0.00    0.000008           1         6           sched_getaffinity
+  0.00    0.000004           4         1         1 faccessat2
+  0.00    0.000003           0         5           getgid
+  0.00    0.000003           0         4           getegid
+  0.00    0.000003           1         3         3 mkdirat
+  0.00    0.000000           0         4           getpid
+  0.00    0.000000           0         1           symlink
+  0.00    0.000000           0         1           lchown
+  0.00    0.000000           0         4           getppid
+  0.00    0.000000           0         2           renameat
+  0.00    0.000000           0         1           readlinkat
+  0.00    0.000000           0         2         2 renameat2
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.184052          23      7904       585 total
+[Código de saída: 0 | Tempo: 596.35 ms]
+
+$ docker run --rm --cap-add=SYS_PTRACE -v /home/luan/.t3/userdata/antigravity-tmp/fac626ef26bd/run-jyEX7i/so-debian-cache-0z879tx9:/cache:ro -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+echo "=== strace dpkg -i hello ==="
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace -c -f dpkg -i /cache/hello_*.deb >/dev/null
+echo "=== Consultas dpkg para hello ==="
+dpkg -l hello
+dpkg -L hello
+dpkg -S /usr/bin/hello
+/usr/bin/hello --version | head -n 2
+echo "=== Vinculacao dinamica ELF de /usr/bin/hello ==="
+/nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d /usr/bin/hello | grep -E "NEEDED|RUNPATH|RPATH"
+ldd /usr/bin/hello
+
+=== strace dpkg -i hello ===
+=== Consultas dpkg para hello ===
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||/ Name           Version      Architecture Description
++++-==============-============-============-==================================
+ii  hello          2.10-5       amd64        example package based on GNU hello
+/.
+/usr
+/usr/bin
+/usr/bin/hello
+/usr/share
+/usr/share/doc
+/usr/share/doc/hello
+/usr/share/doc/hello/NEWS.gz
+/usr/share/doc/hello/changelog.Debian.gz
+/usr/share/doc/hello/changelog.gz
+/usr/share/doc/hello/copyright
+/usr/share/info
+/usr/share/info/hello.info.gz
+/usr/share/locale
+/usr/share/locale/bg
+/usr/share/locale/bg/LC_MESSAGES
+/usr/share/locale/bg/LC_MESSAGES/hello.mo
+/usr/share/locale/ca
+/usr/share/locale/ca/LC_MESSAGES
+/usr/share/locale/ca/LC_MESSAGES/hello.mo
+/usr/share/locale/da
+/usr/share/locale/da/LC_MESSAGES
+/usr/share/locale/da/LC_MESSAGES/hello.mo
+/usr/share/locale/de
+/usr/share/locale/de/LC_MESSAGES
+/usr/share/locale/de/LC_MESSAGES/hello.mo
+/usr/share/locale/el
+/usr/share/locale/el/LC_MESSAGES
+/usr/share/locale/el/LC_MESSAGES/hello.mo
+/usr/share/locale/eo
+/usr/share/locale/eo/LC_MESSAGES
+/usr/share/locale/eo/LC_MESSAGES/hello.mo
+/usr/share/locale/es
+/usr/share/locale/es/LC_MESSAGES
+/usr/share/locale/es/LC_MESSAGES/hello.mo
+/usr/share/locale/et
+/usr/share/locale/et/LC_MESSAGES
+/usr/share/locale/et/LC_MESSAGES/hello.mo
+/usr/share/locale/eu
+/usr/share/locale/eu/LC_MESSAGES
+/usr/share/locale/eu/LC_MESSAGES/hello.mo
+/usr/share/locale/fa
+/usr/share/locale/fa/LC_MESSAGES
+/usr/share/locale/fa/LC_MESSAGES/hello.mo
+/usr/share/locale/fi
+/usr/share/locale/fi/LC_MESSAGES
+/usr/share/locale/fi/LC_MESSAGES/hello.mo
+/usr/share/locale/fr
+/usr/share/locale/fr/LC_MESSAGES
+/usr/share/locale/fr/LC_MESSAGES/hello.mo
+/usr/share/locale/ga
+/usr/share/locale/ga/LC_MESSAGES
+/usr/share/locale/ga/LC_MESSAGES/hello.mo
+/usr/share/locale/gl
+/usr/share/locale/gl/LC_MESSAGES
+/usr/share/locale/gl/LC_MESSAGES/hello.mo
+/usr/share/locale/he
+/usr/share/locale/he/LC_MESSAGES
+/usr/share/locale/he/LC_MESSAGES/hello.mo
+/usr/share/locale/hr
+/usr/share/locale/hr/LC_MESSAGES
+/usr/share/locale/hr/LC_MESSAGES/hello.mo
+/usr/share/locale/hu
+/usr/share/locale/hu/LC_MESSAGES
+/usr/share/locale/hu/LC_MESSAGES/hello.mo
+/usr/share/locale/id
+/usr/share/locale/id/LC_MESSAGES
+/usr/share/locale/id/LC_MESSAGES/hello.mo
+/usr/share/locale/it
+/usr/share/locale/it/LC_MESSAGES
+/usr/share/locale/it/LC_MESSAGES/hello.mo
+/usr/share/locale/ja
+/usr/share/locale/ja/LC_MESSAGES
+/usr/share/locale/ja/LC_MESSAGES/hello.mo
+/usr/share/locale/ka
+/usr/share/locale/ka/LC_MESSAGES
+/usr/share/locale/ka/LC_MESSAGES/hello.mo
+/usr/share/locale/ko
+/usr/share/locale/ko/LC_MESSAGES
+/usr/share/locale/ko/LC_MESSAGES/hello.mo
+/usr/share/locale/lv
+/usr/share/locale/lv/LC_MESSAGES
+/usr/share/locale/lv/LC_MESSAGES/hello.mo
+/usr/share/locale/ms
+/usr/share/locale/ms/LC_MESSAGES
+/usr/share/locale/ms/LC_MESSAGES/hello.mo
+/usr/share/locale/nb
+/usr/share/locale/nb/LC_MESSAGES
+/usr/share/locale/nb/LC_MESSAGES/hello.mo
+/usr/share/locale/nl
+/usr/share/locale/nl/LC_MESSAGES
+/usr/share/locale/nl/LC_MESSAGES/hello.mo
+/usr/share/locale/nn
+/usr/share/locale/nn/LC_MESSAGES
+/usr/share/locale/nn/LC_MESSAGES/hello.mo
+/usr/share/locale/pl
+/usr/share/locale/pl/LC_MESSAGES
+/usr/share/locale/pl/LC_MESSAGES/hello.mo
+/usr/share/locale/pt
+/usr/share/locale/pt/LC_MESSAGES
+/usr/share/locale/pt/LC_MESSAGES/hello.mo
+/usr/share/locale/pt_BR
+/usr/share/locale/pt_BR/LC_MESSAGES
+/usr/share/locale/pt_BR/LC_MESSAGES/hello.mo
+/usr/share/locale/ro
+/usr/share/locale/ro/LC_MESSAGES
+/usr/share/locale/ro/LC_MESSAGES/hello.mo
+/usr/share/locale/ru
+/usr/share/locale/ru/LC_MESSAGES
+/usr/share/locale/ru/LC_MESSAGES/hello.mo
+/usr/share/locale/sk
+/usr/share/locale/sk/LC_MESSAGES
+/usr/share/locale/sk/LC_MESSAGES/hello.mo
+/usr/share/locale/sl
+/usr/share/locale/sl/LC_MESSAGES
+/usr/share/locale/sl/LC_MESSAGES/hello.mo
+/usr/share/locale/sr
+/usr/share/locale/sr/LC_MESSAGES
+/usr/share/locale/sr/LC_MESSAGES/hello.mo
+/usr/share/locale/sv
+/usr/share/locale/sv/LC_MESSAGES
+/usr/share/locale/sv/LC_MESSAGES/hello.mo
+/usr/share/locale/th
+/usr/share/locale/th/LC_MESSAGES
+/usr/share/locale/th/LC_MESSAGES/hello.mo
+/usr/share/locale/tr
+/usr/share/locale/tr/LC_MESSAGES
+/usr/share/locale/tr/LC_MESSAGES/hello.mo
+/usr/share/locale/uk
+/usr/share/locale/uk/LC_MESSAGES
+/usr/share/locale/uk/LC_MESSAGES/hello.mo
+/usr/share/locale/vi
+/usr/share/locale/vi/LC_MESSAGES
+/usr/share/locale/vi/LC_MESSAGES/hello.mo
+/usr/share/locale/zh_CN
+/usr/share/locale/zh_CN/LC_MESSAGES
+/usr/share/locale/zh_CN/LC_MESSAGES/hello.mo
+/usr/share/locale/zh_TW
+/usr/share/locale/zh_TW/LC_MESSAGES
+/usr/share/locale/zh_TW/LC_MESSAGES/hello.mo
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/hello.1.gz
+hello: /usr/bin/hello
+hello (GNU Hello) 
+
+=== Vinculacao dinamica ELF de /usr/bin/hello ===
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+	linux-vdso.so.1 (0x00007f735385c000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f7353655000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f735385e000)
+[stderr]
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 10 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 11 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 12 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 13 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 14 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 15 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 16 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 17 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 18 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 19 attached
+/nix/store/78jn0lxqjgz4ahjzvvh4rvan7p607xph-strace-7.2/bin/strace: Process 20 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 40.29    0.010907         991        11         2 wait4
+  9.94    0.002690          10       252         9 openat
+  5.86    0.001585           4       396           read
+  4.95    0.001341         121        11           clone
+  4.84    0.001310           4       268           close
+  4.66    0.001262           4       277       241 newfstatat
+  3.76    0.001017           6       146       134 rename
+  2.84    0.000768          36        21        15 execve
+  2.68    0.000726           4       153       153 rmdir
+  1.98    0.000536           3       157           fstat
+  1.83    0.000495          13        37         3 futex
+  1.75    0.000474           3       129           mmap
+  1.74    0.000471           7        60           write
+  1.67    0.000452          21        21           fsync
+  1.58    0.000427           4        86         8 ioctl
+  1.27    0.000345           3       113        97 lseek
+  1.10    0.000299          24        12           getdents64
+  0.95    0.000256          28         9         1 unlink
+  0.88    0.000239           6        39           mprotect
+  0.61    0.000165           5        32           brk
+  0.55    0.000150         150         1           link
+  0.48    0.000131          21         6           ftruncate
+  0.47    0.000127           3        41           rt_sigprocmask
+  0.45    0.000121          60         2           mkdir
+  0.36    0.000098           2        44           fcntl
+  0.35    0.000094          47         2           unlinkat
+  0.28    0.000075           5        13           munmap
+  0.15    0.000041          10         4         4 connect
+  0.15    0.000040          10         4           pipe2
+  0.14    0.000037           3        12           pread64
+  0.13    0.000035           5         6           fchmod
+  0.13    0.000034           8         4           socket
+  0.13    0.000034           5         6           utimensat
+  0.10    0.000027           6         4           fchown
+  0.09    0.000025           5         5         4 statfs
+  0.08    0.000022           2         8           rseq
+  0.07    0.000020           1        17           set_robust_list
+  0.07    0.000020           3         6           getrandom
+  0.07    0.000019           3         6           prlimit64
+  0.07    0.000018           2         9         8 access
+  0.06    0.000017           5         3         3 readlink
+  0.06    0.000017           2         6           arch_prctl
+  0.06    0.000017           2         6           set_tid_address
+  0.05    0.000013           2         5           umask
+  0.03    0.000008           2         3           rt_sigaction
+  0.03    0.000008           8         1           chown
+  0.03    0.000008           4         2           sync_file_range
+  0.03    0.000007           7         1           chmod
+  0.03    0.000007           1         4           geteuid
+  0.02    0.000006           3         2           madvise
+  0.02    0.000006           6         1           fstatfs
+  0.02    0.000005           5         1         1 mkdirat
+  0.01    0.000004           1         4           getuid
+  0.01    0.000004           2         2           sched_getaffinity
+  0.01    0.000004           4         1           fchownat
+  0.01    0.000004           2         2         2 clone3
+  0.00    0.000000           0         2           dup2
+  0.00    0.000000           0         1           chdir
+  0.00    0.000000           0         1           getgid
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.027068          10      2478       685 total
+[Código de saída: 0 | Tempo: 356.33 ms]
+
+$ docker run --rm debian:trixie-slim bash -c apt-get update -qq && apt-cache show gnome-text-editor | grep -E '^(Package|Version|Installed-Size|Depends):' && apt-get install -s gnome-text-editor | tail -n 5
+Package: gnome-text-editor
+Version: 48.3-3
+Installed-Size: 2722
+Depends: libadwaita-1-0 (>= 1.6.0), libc6 (>= 2.34), libcairo2 (>= 1.15.12), libeditorconfig0 (>= 0.11.0), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.17.3), libgtksourceview-5-0 (>= 5.15.0), libpango-1.0-0 (>= 1.14.0), libspelling-1-2 (>= 0.3.0), dconf-gsettings-backend | gsettings-backend
+Conf mesa-vulkan-drivers (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])
+Conf psmisc (23.7-2 Debian:13.7/stable [amd64])
+Conf publicsuffix (20250328.1952-0.1 Debian:13.7/stable [all])
+Conf systemd-cryptsetup (257.13-1~deb13u1 Debian:13.7/stable [amd64])
+Conf xdg-user-dirs (0.18-2 Debian:13.7/stable [amd64])
+[Código de saída: 0 | Tempo: 7083.13 ms]

@@ -1,0 +1,505 @@
+{
+  "ambiente": "Nix 2.34.9 nativo no NixOS 26.11.20261111.d4f25a3 (kernel 7.3.4 x86_64)",
+  "armazenamento_store": {
+    "tmux-3.8": {
+      "store_path": "/nix/store/7v8w4qyz2wsr251nkxzbcmhbrwlylg7f-tmux-3.8",
+      "nar_bytes": 1669680,
+      "nar_kib": 1630.55,
+      "closure_bytes": 60942984,
+      "closure_mib": 58.12
+    },
+    "gnome-text-editor-50.1": {
+      "store_path": "/nix/store/94r4v2l4r5lzmik62h7mnfi7bwvqnmfz-gnome-text-editor-50.1",
+      "nar_bytes": 2861952,
+      "nar_kib": 2794.88,
+      "closure_bytes": 1003687616,
+      "closure_mib": 957.19
+    },
+    "hello-2.12.3": {
+      "store_path": "/nix/store/sd779x86bjaqxj2lzh2jsir4h0zjz6d1-hello-2.12.3",
+      "nar_bytes": 279592,
+      "nar_kib": 273.04,
+      "closure_bytes": 38515520,
+      "closure_mib": 36.73
+    }
+  },
+  "tempos_perfil_ms": {
+    "profile_add_gnome_text_editor": {
+      "repeticoes": [
+        35.93,
+        39.32,
+        37.74
+      ],
+      "media": 37.66,
+      "mediana": 37.74,
+      "desvio_padrao": 1.7
+    },
+    "profile_add_tmux": {
+      "repeticoes": [
+        37.66,
+        37.65,
+        37.29
+      ],
+      "media": 37.53,
+      "mediana": 37.65,
+      "desvio_padrao": 0.21
+    },
+    "profile_add_hello": {
+      "repeticoes": [
+        38.36,
+        37.63,
+        36.83
+      ],
+      "media": 37.61,
+      "mediana": 37.63,
+      "desvio_padrao": 0.77
+    },
+    "profile_rollback": {
+      "repeticoes": [
+        31.73,
+        32.16,
+        31.51
+      ],
+      "media": 31.8,
+      "mediana": 31.73,
+      "desvio_padrao": 0.33
+    },
+    "execucao_hello": {
+      "repeticoes": [
+        4.04,
+        2.86,
+        2.93
+      ],
+      "media": 3.28,
+      "mediana": 2.93,
+      "desvio_padrao": 0.66
+    },
+    "execucao_tmux_version": {
+      "repeticoes": [
+        2.94,
+        2.84,
+        2.96
+      ],
+      "media": 2.91,
+      "mediana": 2.94,
+      "desvio_padrao": 0.06
+    },
+    "execucao_gnome_text_editor_version": {
+      "repeticoes": [
+        47.46,
+        53.15,
+        46.2
+      ],
+      "media": 48.94,
+      "mediana": 47.46,
+      "desvio_padrao": 3.7
+    }
+  },
+  "strace_profile_add_hello": {
+    "total_calls": 3617,
+    "total_errors": 2342,
+    "syscalls": {
+      "openat": {
+        "calls": 2263,
+        "errors": 2166
+      },
+      "mmap": {
+        "calls": 392,
+        "errors": 0
+      },
+      "read": {
+        "calls": 176,
+        "errors": 0
+      },
+      "newfstatat": {
+        "calls": 240,
+        "errors": 164
+      },
+      "clone3": {
+        "calls": 13,
+        "errors": 0
+      },
+      "lseek": {
+        "calls": 4,
+        "errors": 0
+      },
+      "close": {
+        "calls": 102,
+        "errors": 0
+      },
+      "fstat": {
+        "calls": 95,
+        "errors": 0
+      },
+      "rt_sigprocmask": {
+        "calls": 49,
+        "errors": 0
+      },
+      "prctl": {
+        "calls": 14,
+        "errors": 3
+      },
+      "madvise": {
+        "calls": 17,
+        "errors": 0
+      },
+      "futex": {
+        "calls": 32,
+        "errors": 0
+      },
+      "mprotect": {
+        "calls": 81,
+        "errors": 0
+      },
+      "rseq": {
+        "calls": 14,
+        "errors": 0
+      },
+      "set_robust_list": {
+        "calls": 14,
+        "errors": 0
+      },
+      "symlink": {
+        "calls": 4,
+        "errors": 0
+      },
+      "write": {
+        "calls": 11,
+        "errors": 0
+      },
+      "sendto": {
+        "calls": 2,
+        "errors": 0
+      },
+      "recvmsg": {
+        "calls": 5,
+        "errors": 0
+      },
+      "getdents64": {
+        "calls": 6,
+        "errors": 0
+      },
+      "mkdir": {
+        "calls": 1,
+        "errors": 0
+      },
+      "munmap": {
+        "calls": 3,
+        "errors": 0
+      },
+      "fcntl": {
+        "calls": 8,
+        "errors": 0
+      },
+      "rename": {
+        "calls": 2,
+        "errors": 0
+      },
+      "socket": {
+        "calls": 2,
+        "errors": 0
+      },
+      "prlimit64": {
+        "calls": 8,
+        "errors": 0
+      },
+      "getuid": {
+        "calls": 5,
+        "errors": 0
+      },
+      "access": {
+        "calls": 8,
+        "errors": 7
+      },
+      "readlink": {
+        "calls": 2,
+        "errors": 0
+      },
+      "connect": {
+        "calls": 1,
+        "errors": 0
+      },
+      "readlinkat": {
+        "calls": 2,
+        "errors": 0
+      },
+      "getrandom": {
+        "calls": 6,
+        "errors": 0
+      },
+      "uname": {
+        "calls": 2,
+        "errors": 0
+      },
+      "getpid": {
+        "calls": 8,
+        "errors": 0
+      },
+      "openat2": {
+        "calls": 1,
+        "errors": 0
+      },
+      "rt_sigaction": {
+        "calls": 6,
+        "errors": 0
+      },
+      "pread64": {
+        "calls": 1,
+        "errors": 0
+      },
+      "sysinfo": {
+        "calls": 2,
+        "errors": 0
+      },
+      "brk": {
+        "calls": 1,
+        "errors": 0
+      },
+      "bind": {
+        "calls": 1,
+        "errors": 0
+      },
+      "poll": {
+        "calls": 1,
+        "errors": 0
+      },
+      "ioctl": {
+        "calls": 2,
+        "errors": 2
+      },
+      "getsockname": {
+        "calls": 1,
+        "errors": 0
+      },
+      "sched_getaffinity": {
+        "calls": 1,
+        "errors": 0
+      },
+      "geteuid": {
+        "calls": 1,
+        "errors": 0
+      },
+      "arch_prctl": {
+        "calls": 1,
+        "errors": 0
+      },
+      "set_tid_address": {
+        "calls": 1,
+        "errors": 0
+      },
+      "open": {
+        "calls": 2,
+        "errors": 0
+      },
+      "execve": {
+        "calls": 1,
+        "errors": 0
+      },
+      "umask": {
+        "calls": 1,
+        "errors": 0
+      },
+      "sigaltstack": {
+        "calls": 1,
+        "errors": 0
+      }
+    }
+  },
+  "strace_profile_rollback": {
+    "total_calls": 3525,
+    "total_errors": 2335,
+    "syscalls": {
+      "openat": {
+        "calls": 2256,
+        "errors": 2165
+      },
+      "mmap": {
+        "calls": 390,
+        "errors": 0
+      },
+      "newfstatat": {
+        "calls": 225,
+        "errors": 158
+      },
+      "read": {
+        "calls": 162,
+        "errors": 0
+      },
+      "clone3": {
+        "calls": 13,
+        "errors": 0
+      },
+      "lseek": {
+        "calls": 4,
+        "errors": 0
+      },
+      "close": {
+        "calls": 94,
+        "errors": 0
+      },
+      "mprotect": {
+        "calls": 81,
+        "errors": 0
+      },
+      "fstat": {
+        "calls": 89,
+        "errors": 0
+      },
+      "rt_sigprocmask": {
+        "calls": 49,
+        "errors": 0
+      },
+      "execve": {
+        "calls": 1,
+        "errors": 0
+      },
+      "prctl": {
+        "calls": 14,
+        "errors": 3
+      },
+      "futex": {
+        "calls": 31,
+        "errors": 0
+      },
+      "madvise": {
+        "calls": 15,
+        "errors": 0
+      },
+      "rseq": {
+        "calls": 14,
+        "errors": 0
+      },
+      "set_robust_list": {
+        "calls": 14,
+        "errors": 0
+      },
+      "sendto": {
+        "calls": 2,
+        "errors": 0
+      },
+      "recvmsg": {
+        "calls": 5,
+        "errors": 0
+      },
+      "getuid": {
+        "calls": 5,
+        "errors": 0
+      },
+      "write": {
+        "calls": 2,
+        "errors": 0
+      },
+      "rename": {
+        "calls": 1,
+        "errors": 0
+      },
+      "getdents64": {
+        "calls": 2,
+        "errors": 0
+      },
+      "symlink": {
+        "calls": 1,
+        "errors": 0
+      },
+      "readlink": {
+        "calls": 3,
+        "errors": 0
+      },
+      "access": {
+        "calls": 8,
+        "errors": 7
+      },
+      "socket": {
+        "calls": 1,
+        "errors": 0
+      },
+      "munmap": {
+        "calls": 1,
+        "errors": 0
+      },
+      "fcntl": {
+        "calls": 2,
+        "errors": 0
+      },
+      "unlink": {
+        "calls": 1,
+        "errors": 0
+      },
+      "sysinfo": {
+        "calls": 2,
+        "errors": 0
+      },
+      "bind": {
+        "calls": 1,
+        "errors": 0
+      },
+      "flock": {
+        "calls": 1,
+        "errors": 0
+      },
+      "getsockname": {
+        "calls": 1,
+        "errors": 0
+      },
+      "brk": {
+        "calls": 1,
+        "errors": 0
+      },
+      "rt_sigaction": {
+        "calls": 6,
+        "errors": 0
+      },
+      "geteuid": {
+        "calls": 1,
+        "errors": 0
+      },
+      "sched_getaffinity": {
+        "calls": 1,
+        "errors": 0
+      },
+      "getrandom": {
+        "calls": 6,
+        "errors": 0
+      },
+      "arch_prctl": {
+        "calls": 1,
+        "errors": 0
+      },
+      "set_tid_address": {
+        "calls": 1,
+        "errors": 0
+      },
+      "open": {
+        "calls": 2,
+        "errors": 0
+      },
+      "ioctl": {
+        "calls": 2,
+        "errors": 2
+      },
+      "getpid": {
+        "calls": 6,
+        "errors": 0
+      },
+      "uname": {
+        "calls": 2,
+        "errors": 0
+      },
+      "umask": {
+        "calls": 1,
+        "errors": 0
+      },
+      "sigaltstack": {
+        "calls": 1,
+        "errors": 0
+      },
+      "prlimit64": {
+        "calls": 3,
+        "errors": 0
+      }
+    }
+  },
+  "vinculacao_elf": {
+    "mecanismo": "Cada binário ELF possui RUNPATH gravado no cabeçalho apontando diretamente para os diretórios /nix/store/<hash>-.../lib de suas dependências exatas. Para aplicações GTK/GNOME como o gnome-text-editor, bin/gnome-text-editor é um binário wrapper compilado que exporta variáveis de esquema/ícones/GIO e invoca bin/.gnome-text-editor-wrapped."
+  }
+}

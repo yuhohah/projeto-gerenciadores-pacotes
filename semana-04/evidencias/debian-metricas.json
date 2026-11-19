@@ -1,0 +1,604 @@
+{
+  "ambiente": "Container Docker debian:trixie-slim (Debian GNU/Linux 13 Trixie) sobre kernel Linux 7.3.4 x86_64",
+  "tmux": {
+    "versao": "3.5a-3",
+    "pacotes_deb_baixados": [
+      "libevent-core-2.1-7t64_2.1.13-stable-1~deb13u1_amd64.deb",
+      "libjemalloc2_5.3.0-3_amd64.deb",
+      "tmux_3.5a-3_amd64.deb"
+    ],
+    "quantidade_debs": 3,
+    "download_total_bytes": 897488,
+    "download_total_kib": 876.45,
+    "tempo_instalacao_local_ms": {
+      "repeticoes": [
+        161.0,
+        162.0,
+        162.0
+      ],
+      "media": 161.67,
+      "mediana": 162.0,
+      "desvio_padrao": 0.58
+    },
+    "tempo_execucao_versao_ms": {
+      "repeticoes": [
+        4.0,
+        4.0,
+        3.0
+      ],
+      "media": 3.67,
+      "mediana": 4.0,
+      "desvio_padrao": 0.58
+    },
+    "strace_instalacao": {
+      "total_calls": 7904,
+      "total_errors": 585,
+      "syscalls": {
+        "wait4": {
+          "calls": 110,
+          "errors": 43
+        },
+        "clone": {
+          "calls": 60,
+          "errors": 0
+        },
+        "openat": {
+          "calls": 642,
+          "errors": 21
+        },
+        "execve": {
+          "calls": 100,
+          "errors": 45
+        },
+        "futex": {
+          "calls": 240,
+          "errors": 10
+        },
+        "newfstatat": {
+          "calls": 570,
+          "errors": 145
+        },
+        "read": {
+          "calls": 984,
+          "errors": 0
+        },
+        "mmap": {
+          "calls": 780,
+          "errors": 0
+        },
+        "close": {
+          "calls": 935,
+          "errors": 0
+        },
+        "write": {
+          "calls": 371,
+          "errors": 0
+        },
+        "munmap": {
+          "calls": 144,
+          "errors": 0
+        },
+        "fstat": {
+          "calls": 493,
+          "errors": 0
+        },
+        "fsync": {
+          "calls": 81,
+          "errors": 0
+        },
+        "rename": {
+          "calls": 77,
+          "errors": 25
+        },
+        "getdents64": {
+          "calls": 38,
+          "errors": 0
+        },
+        "mprotect": {
+          "calls": 235,
+          "errors": 0
+        },
+        "unlink": {
+          "calls": 29,
+          "errors": 3
+        },
+        "rt_sigprocmask": {
+          "calls": 243,
+          "errors": 0
+        },
+        "vfork": {
+          "calls": 13,
+          "errors": 0
+        },
+        "fcntl": {
+          "calls": 192,
+          "errors": 0
+        },
+        "brk": {
+          "calls": 185,
+          "errors": 0
+        },
+        "rmdir": {
+          "calls": 95,
+          "errors": 95
+        },
+        "ftruncate": {
+          "calls": 24,
+          "errors": 0
+        },
+        "ioctl": {
+          "calls": 107,
+          "errors": 27
+        },
+        "unlinkat": {
+          "calls": 6,
+          "errors": 0
+        },
+        "pipe2": {
+          "calls": 36,
+          "errors": 0
+        },
+        "dup2": {
+          "calls": 80,
+          "errors": 0
+        },
+        "lseek": {
+          "calls": 90,
+          "errors": 37
+        },
+        "pread64": {
+          "calls": 108,
+          "errors": 0
+        },
+        "mkdir": {
+          "calls": 6,
+          "errors": 0
+        },
+        "link": {
+          "calls": 1,
+          "errors": 0
+        },
+        "utimensat": {
+          "calls": 28,
+          "errors": 0
+        },
+        "set_robust_list": {
+          "calls": 115,
+          "errors": 0
+        },
+        "rseq": {
+          "calls": 61,
+          "errors": 0
+        },
+        "rt_sigreturn": {
+          "calls": 37,
+          "errors": 0
+        },
+        "access": {
+          "calls": 61,
+          "errors": 60
+        },
+        "fchown": {
+          "calls": 21,
+          "errors": 0
+        },
+        "getrandom": {
+          "calls": 55,
+          "errors": 0
+        },
+        "fchmod": {
+          "calls": 25,
+          "errors": 0
+        },
+        "readlink": {
+          "calls": 33,
+          "errors": 30
+        },
+        "arch_prctl": {
+          "calls": 55,
+          "errors": 0
+        },
+        "set_tid_address": {
+          "calls": 55,
+          "errors": 0
+        },
+        "prlimit64": {
+          "calls": 55,
+          "errors": 0
+        },
+        "rt_sigaction": {
+          "calls": 49,
+          "errors": 0
+        },
+        "connect": {
+          "calls": 20,
+          "errors": 20
+        },
+        "socket": {
+          "calls": 20,
+          "errors": 0
+        },
+        "umask": {
+          "calls": 20,
+          "errors": 0
+        },
+        "madvise": {
+          "calls": 6,
+          "errors": 0
+        },
+        "fdatasync": {
+          "calls": 3,
+          "errors": 0
+        },
+        "fchownat": {
+          "calls": 5,
+          "errors": 0
+        },
+        "sync_file_range": {
+          "calls": 8,
+          "errors": 0
+        },
+        "chdir": {
+          "calls": 6,
+          "errors": 0
+        },
+        "chmod": {
+          "calls": 4,
+          "errors": 0
+        },
+        "statfs": {
+          "calls": 15,
+          "errors": 12
+        },
+        "clone3": {
+          "calls": 6,
+          "errors": 6
+        },
+        "chown": {
+          "calls": 3,
+          "errors": 0
+        },
+        "geteuid": {
+          "calls": 16,
+          "errors": 0
+        },
+        "fstatfs": {
+          "calls": 3,
+          "errors": 0
+        },
+        "getuid": {
+          "calls": 8,
+          "errors": 0
+        },
+        "fchmodat": {
+          "calls": 2,
+          "errors": 0
+        },
+        "sched_getaffinity": {
+          "calls": 6,
+          "errors": 0
+        },
+        "faccessat2": {
+          "calls": 1,
+          "errors": 1
+        },
+        "getgid": {
+          "calls": 5,
+          "errors": 0
+        },
+        "getegid": {
+          "calls": 4,
+          "errors": 0
+        },
+        "mkdirat": {
+          "calls": 3,
+          "errors": 3
+        },
+        "getpid": {
+          "calls": 4,
+          "errors": 0
+        },
+        "symlink": {
+          "calls": 1,
+          "errors": 0
+        },
+        "lchown": {
+          "calls": 1,
+          "errors": 0
+        },
+        "getppid": {
+          "calls": 4,
+          "errors": 0
+        },
+        "renameat": {
+          "calls": 2,
+          "errors": 0
+        },
+        "readlinkat": {
+          "calls": 1,
+          "errors": 0
+        },
+        "renameat2": {
+          "calls": 2,
+          "errors": 2
+        }
+      }
+    },
+    "vinculacao_elf": "FHS padrão (/lib/x86_64-linux-gnu/libc.so.6, libevent_core-2.1.so.7, libtinfo.so.6); sem RPATH/RUNPATH"
+  },
+  "hello": {
+    "versao": "2.10-5",
+    "pacotes_deb_baixados": [
+      "hello_2.10-5_amd64.deb"
+    ],
+    "quantidade_debs": 1,
+    "download_total_bytes": 53228,
+    "download_total_kib": 51.98,
+    "tempo_instalacao_local_ms": {
+      "repeticoes": [
+        37.0,
+        38.0,
+        37.0
+      ],
+      "media": 37.33,
+      "mediana": 37.0,
+      "desvio_padrao": 0.58
+    },
+    "tempo_execucao_ms": {
+      "repeticoes": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "media": 1.0,
+      "mediana": 1.0,
+      "desvio_padrao": 0.0
+    },
+    "strace_instalacao": {
+      "total_calls": 2478,
+      "total_errors": 685,
+      "syscalls": {
+        "wait4": {
+          "calls": 11,
+          "errors": 2
+        },
+        "openat": {
+          "calls": 252,
+          "errors": 9
+        },
+        "read": {
+          "calls": 396,
+          "errors": 0
+        },
+        "clone": {
+          "calls": 11,
+          "errors": 0
+        },
+        "close": {
+          "calls": 268,
+          "errors": 0
+        },
+        "newfstatat": {
+          "calls": 277,
+          "errors": 241
+        },
+        "rename": {
+          "calls": 146,
+          "errors": 134
+        },
+        "execve": {
+          "calls": 21,
+          "errors": 15
+        },
+        "rmdir": {
+          "calls": 153,
+          "errors": 153
+        },
+        "fstat": {
+          "calls": 157,
+          "errors": 0
+        },
+        "futex": {
+          "calls": 37,
+          "errors": 3
+        },
+        "mmap": {
+          "calls": 129,
+          "errors": 0
+        },
+        "write": {
+          "calls": 60,
+          "errors": 0
+        },
+        "fsync": {
+          "calls": 21,
+          "errors": 0
+        },
+        "ioctl": {
+          "calls": 86,
+          "errors": 8
+        },
+        "lseek": {
+          "calls": 113,
+          "errors": 97
+        },
+        "getdents64": {
+          "calls": 12,
+          "errors": 0
+        },
+        "unlink": {
+          "calls": 9,
+          "errors": 1
+        },
+        "mprotect": {
+          "calls": 39,
+          "errors": 0
+        },
+        "brk": {
+          "calls": 32,
+          "errors": 0
+        },
+        "link": {
+          "calls": 1,
+          "errors": 0
+        },
+        "ftruncate": {
+          "calls": 6,
+          "errors": 0
+        },
+        "rt_sigprocmask": {
+          "calls": 41,
+          "errors": 0
+        },
+        "mkdir": {
+          "calls": 2,
+          "errors": 0
+        },
+        "fcntl": {
+          "calls": 44,
+          "errors": 0
+        },
+        "unlinkat": {
+          "calls": 2,
+          "errors": 0
+        },
+        "munmap": {
+          "calls": 13,
+          "errors": 0
+        },
+        "connect": {
+          "calls": 4,
+          "errors": 4
+        },
+        "pipe2": {
+          "calls": 4,
+          "errors": 0
+        },
+        "pread64": {
+          "calls": 12,
+          "errors": 0
+        },
+        "fchmod": {
+          "calls": 6,
+          "errors": 0
+        },
+        "socket": {
+          "calls": 4,
+          "errors": 0
+        },
+        "utimensat": {
+          "calls": 6,
+          "errors": 0
+        },
+        "fchown": {
+          "calls": 4,
+          "errors": 0
+        },
+        "statfs": {
+          "calls": 5,
+          "errors": 4
+        },
+        "rseq": {
+          "calls": 8,
+          "errors": 0
+        },
+        "set_robust_list": {
+          "calls": 17,
+          "errors": 0
+        },
+        "getrandom": {
+          "calls": 6,
+          "errors": 0
+        },
+        "prlimit64": {
+          "calls": 6,
+          "errors": 0
+        },
+        "access": {
+          "calls": 9,
+          "errors": 8
+        },
+        "readlink": {
+          "calls": 3,
+          "errors": 3
+        },
+        "arch_prctl": {
+          "calls": 6,
+          "errors": 0
+        },
+        "set_tid_address": {
+          "calls": 6,
+          "errors": 0
+        },
+        "umask": {
+          "calls": 5,
+          "errors": 0
+        },
+        "rt_sigaction": {
+          "calls": 3,
+          "errors": 0
+        },
+        "chown": {
+          "calls": 1,
+          "errors": 0
+        },
+        "sync_file_range": {
+          "calls": 2,
+          "errors": 0
+        },
+        "chmod": {
+          "calls": 1,
+          "errors": 0
+        },
+        "geteuid": {
+          "calls": 4,
+          "errors": 0
+        },
+        "madvise": {
+          "calls": 2,
+          "errors": 0
+        },
+        "fstatfs": {
+          "calls": 1,
+          "errors": 0
+        },
+        "mkdirat": {
+          "calls": 1,
+          "errors": 1
+        },
+        "getuid": {
+          "calls": 4,
+          "errors": 0
+        },
+        "sched_getaffinity": {
+          "calls": 2,
+          "errors": 0
+        },
+        "fchownat": {
+          "calls": 1,
+          "errors": 0
+        },
+        "clone3": {
+          "calls": 2,
+          "errors": 2
+        },
+        "dup2": {
+          "calls": 2,
+          "errors": 0
+        },
+        "chdir": {
+          "calls": 1,
+          "errors": 0
+        },
+        "getgid": {
+          "calls": 1,
+          "errors": 0
+        }
+      }
+    },
+    "vinculacao_elf": "FHS padrão (/lib/x86_64-linux-gnu/libc.so.6); sem RPATH/RUNPATH"
+  },
+  "gnome_text_editor_simulacao": {
+    "saida_resumo": "Package: gnome-text-editor\nVersion: 48.3-3\nInstalled-Size: 2722\nDepends: libadwaita-1-0 (>= 1.6.0), libc6 (>= 2.34), libcairo2 (>= 1.15.12), libeditorconfig0 (>= 0.11.0), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.17.3), libgtksourceview-5-0 (>= 5.15.0), libpango-1.0-0 (>= 1.14.0), libspelling-1-2 (>= 0.3.0), dconf-gsettings-backend | gsettings-backend\nConf mesa-vulkan-drivers (25.0.7-2+deb13u1 Debian:13.7/stable [amd64])\nConf psmisc (23.7-2 Debian:13.7/stable [amd64])\nConf publicsuffix (20250328.1952-0.1 Debian:13.7/stable [all])\nConf systemd-cryptsetup (257.13-1~deb13u1 Debian:13.7/stable [amd64])\nConf xdg-user-dirs (0.18-2 Debian:13.7/stable [amd64])"
+  }
+}

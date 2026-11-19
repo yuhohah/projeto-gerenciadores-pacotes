@@ -1,0 +1,3 @@
+Projeto: Gerenciadores de pacotes
+Teste: abrir, editar e salvar
+Resultado: aguardando

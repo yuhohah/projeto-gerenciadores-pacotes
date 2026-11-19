@@ -1,0 +1,19 @@
+{
+  "data_utc": "2026-11-05T03:37:36.509198+00:00",
+  "sem_interface_grafica": true,
+  "resultados": {
+    "perfis_selecionaram_mesmo_executavel": true,
+    "editor_ausente_perfil_a": true,
+    "editor_presente_perfil_b": true,
+    "editor_recuperado_perfil_a": true,
+    "dados_continuaram_alterados": true,
+    "mesmo_store_na_copia_mesma_maquina": true
+  },
+  "nix": "nix (Nix) 2.34.9",
+  "so": "{\"kernelVersion\":\"7.3.0\",\"nixosVersion\":\"26.11.20261023.3ec6363\",\"nixpkgsRevision\":\"3ec636362e1816bc2f0888fa0fa2c69f1bc9e504\",\"specialisations\":[]}",
+  "sistema": "x86_64-linux",
+  "versao_editor": "50.1",
+  "store_editor": "/nix/store/94r4v2l4r5lzmik62h7mnfi7bwvqnmfz-gnome-text-editor-50.1",
+  "fechamento": "/nix/store/94r4v2l4r5lzmik62h7mnfi7bwvqnmfz-gnome-text-editor-50.1\t 957.2 MiB",
+  "estado": "validação por terminal concluída"
+}

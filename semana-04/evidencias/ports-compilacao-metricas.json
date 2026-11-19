@@ -1,0 +1,811 @@
+{
+  "alcance_metodologico": "A receita misc/hello (Makefile, distinfo, pkg-descr) foi consultada diretamente na árvore oficial do FreeBSD Ports. Como não há máquina virtual FreeBSD no hospedeiro Linux, as medições de compilação abaixo foram executadas sobre o mesmo código-fonte oficial (GNU hello 2.12.3, SHA256 verificado) no ambiente Linux local, isolando o custo real das fases extract, configure, build e stage com --enable-nls vs --disable-nls.",
+  "receita_freebsd_ports": {
+    "port": "misc/hello",
+    "versao": "2.12.3",
+    "uses": [
+      "charsetfix",
+      "gmake",
+      "perl5"
+    ],
+    "options_define": [
+      "NLS"
+    ],
+    "nls_configure_enable": "nls",
+    "nls_uses": [
+      "gettext",
+      "localbase"
+    ],
+    "distfile_nome": "hello-2.12.3.tar.gz",
+    "distfile_size_bytes": 1189208,
+    "distfile_sha256_esperado": "0d5f60154382fee10b114a1c34e785d8b1f492073ae2d3a6f7b147687b366aa0",
+    "distfile_sha256_verificado": "0d5f60154382fee10b114a1c34e785d8b1f492073ae2d3a6f7b147687b366aa0",
+    "checksum_coincide": true
+  },
+  "comparacao_compilacao_nls": {
+    "nls_ativado": {
+      "flag_configure": "--enable-nls",
+      "tempo_configure_ms": {
+        "repeticoes": [
+          17220.98,
+          16941.02,
+          16915.3
+        ],
+        "media": 17025.77,
+        "mediana": 16941.02,
+        "desvio_padrao": 169.55
+      },
+      "tempo_build_ms": {
+        "repeticoes": [
+          2018.28,
+          2018.49,
+          2040.71
+        ],
+        "media": 2025.83,
+        "mediana": 2018.49,
+        "desvio_padrao": 12.89
+      },
+      "tempo_stage_install_ms": {
+        "repeticoes": [
+          744.56,
+          771.57,
+          749.84
+        ],
+        "media": 755.33,
+        "mediana": 749.84,
+        "desvio_padrao": 14.31
+      },
+      "tempo_total_fases_ms": {
+        "repeticoes": [
+          20018.5,
+          19763.33,
+          19739.36
+        ],
+        "media": 19840.4,
+        "mediana": 19763.33,
+        "desvio_padrao": 154.71
+      },
+      "wrkdir_bytes": 10661745,
+      "wrkdir_mib": 10.17,
+      "wrkdir_arquivos_temporarios": 810,
+      "stage_instalado_bytes": 410423,
+      "stage_instalado_kib": 400.8,
+      "stage_arquivos_finais": 50,
+      "arquivos_catalogo_locale_mo": 46,
+      "strace_construcao_completa": {
+        "total_calls": 2467256,
+        "total_errors": 1409372,
+        "syscalls": {
+          "wait4": {
+            "calls": 8607,
+            "errors": 3182
+          },
+          "openat": {
+            "calls": 790471,
+            "errors": 735078
+          },
+          "newfstatat": {
+            "calls": 389682,
+            "errors": 251738
+          },
+          "readlink": {
+            "calls": 397493,
+            "errors": 396503
+          },
+          "mmap": {
+            "calls": 113723,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 4261,
+            "errors": 51
+          },
+          "read": {
+            "calls": 105249,
+            "errors": 0
+          },
+          "clone": {
+            "calls": 3527,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 102147,
+            "errors": 52
+          },
+          "close": {
+            "calls": 70703,
+            "errors": 684
+          },
+          "mprotect": {
+            "calls": 28753,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 87455,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 54478,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 33094,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 85233,
+            "errors": 0
+          },
+          "write": {
+            "calls": 33628,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 22368,
+            "errors": 457
+          },
+          "access": {
+            "calls": 16026,
+            "errors": 8169
+          },
+          "munmap": {
+            "calls": 6543,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 1391,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 8825,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 8905,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 8573,
+            "errors": 8537
+          },
+          "dup2": {
+            "calls": 8217,
+            "errors": 4
+          },
+          "unlinkat": {
+            "calls": 2004,
+            "errors": 1324
+          },
+          "unlink": {
+            "calls": 664,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 4210,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 7748,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 4221,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 4210,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 3038,
+            "errors": 1519
+          },
+          "rt_sigreturn": {
+            "calls": 3447,
+            "errors": 265
+          },
+          "geteuid": {
+            "calls": 4900,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 6644,
+            "errors": 0
+          },
+          "getgid": {
+            "calls": 4686,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 4685,
+            "errors": 0
+          },
+          "getegid": {
+            "calls": 4686,
+            "errors": 0
+          },
+          "getppid": {
+            "calls": 3117,
+            "errors": 0
+          },
+          "getrusage": {
+            "calls": 3560,
+            "errors": 0
+          },
+          "pipe2": {
+            "calls": 1843,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 1242,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 1104,
+            "errors": 984
+          },
+          "copy_file_range": {
+            "calls": 621,
+            "errors": 49
+          },
+          "renameat": {
+            "calls": 124,
+            "errors": 0
+          },
+          "getcwd": {
+            "calls": 1281,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 989,
+            "errors": 0
+          },
+          "getpgrp": {
+            "calls": 1043,
+            "errors": 0
+          },
+          "getresuid": {
+            "calls": 1037,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 1048,
+            "errors": 0
+          },
+          "getresgid": {
+            "calls": 1037,
+            "errors": 0
+          },
+          "splice": {
+            "calls": 820,
+            "errors": 24
+          },
+          "chdir": {
+            "calls": 867,
+            "errors": 0
+          },
+          "utimensat": {
+            "calls": 558,
+            "errors": 0
+          },
+          "futex": {
+            "calls": 37,
+            "errors": 2
+          },
+          "pselect6": {
+            "calls": 387,
+            "errors": 265
+          },
+          "fadvise64": {
+            "calls": 629,
+            "errors": 341
+          },
+          "umask": {
+            "calls": 656,
+            "errors": 0
+          },
+          "renameat2": {
+            "calls": 155,
+            "errors": 124
+          },
+          "faccessat2": {
+            "calls": 117,
+            "errors": 18
+          },
+          "chmod": {
+            "calls": 86,
+            "errors": 0
+          },
+          "fsetxattr": {
+            "calls": 51,
+            "errors": 0
+          },
+          "fchmodat": {
+            "calls": 55,
+            "errors": 0
+          },
+          "mkdirat": {
+            "calls": 14,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 82,
+            "errors": 0
+          },
+          "symlinkat": {
+            "calls": 8,
+            "errors": 2
+          },
+          "fchdir": {
+            "calls": 52,
+            "errors": 0
+          },
+          "rmdir": {
+            "calls": 3,
+            "errors": 0
+          },
+          "dup": {
+            "calls": 30,
+            "errors": 0
+          },
+          "statx": {
+            "calls": 16,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 3,
+            "errors": 0
+          },
+          "getgroups": {
+            "calls": 14,
+            "errors": 0
+          },
+          "clock_nanosleep": {
+            "calls": 7,
+            "errors": 0
+          },
+          "connect": {
+            "calls": 8,
+            "errors": 0
+          },
+          "poll": {
+            "calls": 9,
+            "errors": 0
+          },
+          "fstatfs": {
+            "calls": 7,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 11,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 8,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 8,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 5,
+            "errors": 0
+          },
+          "sched_getscheduler": {
+            "calls": 4,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 4,
+            "errors": 0
+          },
+          "dup3": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 1,
+            "errors": 0
+          },
+          "mknodat": {
+            "calls": 1,
+            "errors": 0
+          }
+        }
+      }
+    },
+    "nls_desativado": {
+      "flag_configure": "--disable-nls",
+      "tempo_configure_ms": {
+        "repeticoes": [
+          17071.67,
+          16998.01,
+          16925.59
+        ],
+        "media": 16998.43,
+        "mediana": 16998.01,
+        "desvio_padrao": 73.04
+      },
+      "tempo_build_ms": {
+        "repeticoes": [
+          1975.74,
+          2019.0,
+          1999.99
+        ],
+        "media": 1998.24,
+        "mediana": 1999.99,
+        "desvio_padrao": 21.69
+      },
+      "tempo_stage_install_ms": {
+        "repeticoes": [
+          254.43,
+          261.12,
+          259.36
+        ],
+        "media": 258.3,
+        "mediana": 259.36,
+        "desvio_padrao": 3.47
+      },
+      "tempo_total_fases_ms": {
+        "repeticoes": [
+          19334.64,
+          19310.73,
+          19218.8
+        ],
+        "media": 19288.05,
+        "mediana": 19310.73,
+        "desvio_padrao": 61.16
+      },
+      "wrkdir_bytes": 10560782,
+      "wrkdir_mib": 10.07,
+      "wrkdir_arquivos_temporarios": 810,
+      "stage_instalado_bytes": 198460,
+      "stage_instalado_kib": 193.81,
+      "stage_arquivos_finais": 4,
+      "arquivos_catalogo_locale_mo": 0,
+      "strace_construcao_completa": {
+        "total_calls": 2382742,
+        "total_errors": 1359865,
+        "syscalls": {
+          "wait4": {
+            "calls": 8058,
+            "errors": 2940
+          },
+          "openat": {
+            "calls": 753795,
+            "errors": 699752
+          },
+          "newfstatat": {
+            "calls": 372644,
+            "errors": 239854
+          },
+          "readlink": {
+            "calls": 396845,
+            "errors": 395856
+          },
+          "mmap": {
+            "calls": 108186,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 4065,
+            "errors": 51
+          },
+          "read": {
+            "calls": 103222,
+            "errors": 0
+          },
+          "clone": {
+            "calls": 3239,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 100736,
+            "errors": 52
+          },
+          "close": {
+            "calls": 68239,
+            "errors": 592
+          },
+          "mprotect": {
+            "calls": 27290,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 83498,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 53013,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 32316,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 82339,
+            "errors": 0
+          },
+          "write": {
+            "calls": 33255,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 22188,
+            "errors": 455
+          },
+          "access": {
+            "calls": 15592,
+            "errors": 7950
+          },
+          "munmap": {
+            "calls": 6331,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 1386,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 8431,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 8695,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 8297,
+            "errors": 8260
+          },
+          "dup2": {
+            "calls": 7996,
+            "errors": 4
+          },
+          "unlinkat": {
+            "calls": 1993,
+            "errors": 1316
+          },
+          "unlink": {
+            "calls": 659,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 4014,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 7264,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 4025,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 4014,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 2754,
+            "errors": 1377
+          },
+          "geteuid": {
+            "calls": 4659,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 6347,
+            "errors": 0
+          },
+          "rt_sigreturn": {
+            "calls": 3191,
+            "errors": 251
+          },
+          "getgid": {
+            "calls": 4491,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 4490,
+            "errors": 0
+          },
+          "getegid": {
+            "calls": 4491,
+            "errors": 0
+          },
+          "getppid": {
+            "calls": 3108,
+            "errors": 0
+          },
+          "getrusage": {
+            "calls": 3506,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 1230,
+            "errors": 0
+          },
+          "pipe2": {
+            "calls": 1698,
+            "errors": 0
+          },
+          "renameat": {
+            "calls": 124,
+            "errors": 0
+          },
+          "futex": {
+            "calls": 38,
+            "errors": 6
+          },
+          "copy_file_range": {
+            "calls": 527,
+            "errors": 49
+          },
+          "getcwd": {
+            "calls": 1271,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 986,
+            "errors": 0
+          },
+          "getpgrp": {
+            "calls": 1040,
+            "errors": 0
+          },
+          "getresuid": {
+            "calls": 1034,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 1045,
+            "errors": 0
+          },
+          "splice": {
+            "calls": 817,
+            "errors": 24
+          },
+          "getresgid": {
+            "calls": 1034,
+            "errors": 0
+          },
+          "utimensat": {
+            "calls": 558,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 368,
+            "errors": 341
+          },
+          "pselect6": {
+            "calls": 373,
+            "errors": 251
+          },
+          "fadvise64": {
+            "calls": 627,
+            "errors": 340
+          },
+          "umask": {
+            "calls": 516,
+            "errors": 0
+          },
+          "renameat2": {
+            "calls": 155,
+            "errors": 124
+          },
+          "chdir": {
+            "calls": 224,
+            "errors": 0
+          },
+          "chmod": {
+            "calls": 85,
+            "errors": 0
+          },
+          "mkdirat": {
+            "calls": 14,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 82,
+            "errors": 0
+          },
+          "faccessat2": {
+            "calls": 70,
+            "errors": 18
+          },
+          "symlinkat": {
+            "calls": 8,
+            "errors": 2
+          },
+          "statx": {
+            "calls": 16,
+            "errors": 0
+          },
+          "dup": {
+            "calls": 26,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 3,
+            "errors": 0
+          },
+          "fchmodat": {
+            "calls": 9,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getgroups": {
+            "calls": 14,
+            "errors": 0
+          },
+          "clock_nanosleep": {
+            "calls": 7,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 11,
+            "errors": 0
+          },
+          "connect": {
+            "calls": 8,
+            "errors": 0
+          },
+          "poll": {
+            "calls": 9,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 8,
+            "errors": 0
+          },
+          "rmdir": {
+            "calls": 3,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 8,
+            "errors": 0
+          },
+          "fstatfs": {
+            "calls": 7,
+            "errors": 0
+          },
+          "fsetxattr": {
+            "calls": 5,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 5,
+            "errors": 0
+          },
+          "fchdir": {
+            "calls": 5,
+            "errors": 0
+          },
+          "sched_getscheduler": {
+            "calls": 4,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 4,
+            "errors": 0
+          },
+          "dup3": {
+            "calls": 2,
+            "errors": 0
+          },
+          "mknodat": {
+            "calls": 1,
+            "errors": 0
+          }
+        }
+      }
+    }
+  }
+}
