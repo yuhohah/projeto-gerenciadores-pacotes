@@ -1,0 +1,40 @@
+{
+  "data_utc": "2026-11-20T03:16:15.990554+00:00",
+  "data_local": "2026-11-20T00:16:15.990566-03:00",
+  "uname": "Linux nixos-btw 7.3.4 #1-NixOS SMP PREEMPT_DYNAMIC @1794334210 x86_64 GNU/Linux",
+  "nixos": {
+    "kernelVersion": "7.3.4",
+    "nixosVersion": "26.11.20261111.d4f25a3",
+    "nixpkgsRevision": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
+    "specialisations": []
+  },
+  "lscpu": "Architecture:                            x86_64\nCPU(s):                                  12\nModel name:                              AMD Ryzen 5 2600 Six-Core Processor\nThread(s) per core:                      2\nCore(s) per socket:                      6\nNUMA node0 CPU(s):                       0-11",
+  "lsm_ativos": "lockdown,capability,landlock,yama,apparmor,bpf,ima",
+  "apparmor_ativo_no_kernel": true,
+  "cgroup_v2_controllers": "cpuset cpu io memory hugetlb pids rdma misc dmem",
+  "caminhos_ferramentas": {
+    "nix": "/nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix",
+    "docker": "/nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker",
+    "curl": "/nix/store/qmjllrv5znaiy0bfj63160rxc8qs8nxl-curl-8.23.0-bin/bin/curl",
+    "ldd": "/nix/store/53wag47axb3bjnwn0imzksh4c9w3mgx7-glibc-2.44-57-bin/bin/ldd",
+    "flatpak": "/nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak",
+    "bwrap": "/nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap",
+    "ostree": "/nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree",
+    "mksquashfs": "/nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/mksquashfs",
+    "unsquashfs": "/nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs",
+    "strace": "/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace",
+    "readelf": "/nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf",
+    "time": "/nix/store/bndiwbkvmpf6wzbms9nay1bmz2b56jmb-time-1.10/bin/time"
+  },
+  "versoes_ferramentas": {
+    "nix": "nix (Nix) 2.35.6",
+    "docker": "Docker version 29.9.2, build v29.9.2",
+    "flatpak": "Flatpak 1.18.4",
+    "bubblewrap": "bubblewrap 0.13.1",
+    "ostree": "libostree: | Version: '2026.2'",
+    "squashfs_tools": "mksquashfs version 4.7.5 (2026/03/01)",
+    "strace": "strace -- version 7.3",
+    "readelf": "GNU readelf (GNU Binutils) 2.46",
+    "gnu_time": "time (GNU Time) 1.10"
+  }
+}

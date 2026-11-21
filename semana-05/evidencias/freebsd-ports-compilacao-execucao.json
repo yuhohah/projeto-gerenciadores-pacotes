@@ -1,0 +1,418 @@
+{
+  "gerado_em_utc": "2026-11-20T16:39:44.812493+00:00",
+  "ambiente": {
+    "os": "FreeBSD 14.4-RELEASE-p13 (amd64)",
+    "uname": "FreeBSD freebsd-ports 14.4-RELEASE-p13 FreeBSD 14.4-RELEASE-p13 releng/14.4-n273833-6b3681ad66f8 GENERIC amd64",
+    "virtualizacao": "QEMU/KVM (-enable-kvm -cpu host -smp 8 -m 8192) no mesmo hospedeiro físico AMD Ryzen 5 2600",
+    "arvore_ports_git_rev": "bd53704f439a4e83c3d4a2d9540a5c0c4006cdb2",
+    "arvore_ports_git_short": "bd53704f4",
+    "estrategia_dependencias": "Dependências de build e runtime pré-instaladas via pkg binário (com build em Ports apenas para pacotes restritos/ausentes como libdvdcss e py-myst-parser); compilação integral a partir do código-fonte via make build + make install para cada um dos 3 ports alvo.",
+    "ferramentas_medicao": {
+      "tempo_ram_cpu": "/usr/bin/time -l (FreeBSD rusage, 1 warm-up + 3 repetições medidas)",
+      "syscalls": "truss -c -f (equivalente FreeBSD ao strace -c -f)"
+    }
+  },
+  "aplicacoes": {
+    "gnome-text-editor": {
+      "app": "gnome-text-editor",
+      "port": "editors/gnome-text-editor",
+      "pkgname": "gnome-text-editor-47.4",
+      "version": "47.4",
+      "binary": "/usr/local/bin/gnome-text-editor",
+      "freebsd_uname": "FreeBSD freebsd-ports 14.4-RELEASE-p13 FreeBSD 14.4-RELEASE-p13 releng/14.4-n273833-6b3681ad66f8 GENERIC amd64",
+      "options_define_count": 0,
+      "options_default_count": 0,
+      "distfile_bytes": 639932,
+      "distfile_mib": 0.61,
+      "compile_install": {
+        "make_jobs": 8,
+        "deps_install_s": 1.6,
+        "fetch_s": 0.47,
+        "build_wall_s": 13.79,
+        "build_cpu_user_s": 80.08,
+        "build_cpu_sys_s": 4.33,
+        "build_max_rss_mib": 138.59,
+        "stage_install_wall_s": 1.45,
+        "total_compile_install_s": 15.24
+      },
+      "disk": {
+        "pkg_own_bytes": 2306618,
+        "pkg_own_mib": 2.2,
+        "pkg_files_count": 267,
+        "runtime_closure_pkgs": 126,
+        "runtime_closure_bytes": 955355665,
+        "runtime_closure_mib": 911.1
+      },
+      "execution": {
+        "artifact_validation": {
+          "version_stdout": "Text Editor 47.4 (47.4)\n\n            GTK: 4.20.4 (Compiled against 4.20.4)\n  GtkSourceView: 5.18.0 (Compiled against 5.18.0)\n\nCopyright 2020-2022 Christian Hergert, et al.\nThis is free software; see the source for copying conditions. There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        "reps": [
+          {
+            "rep": 1,
+            "wall_ms": 36.49,
+            "time_real_s": 0.03,
+            "cpu_user_s": 0.03,
+            "cpu_sys_s": 0.0,
+            "cpu_total_s": 0.03,
+            "cpu_pct": 82.2,
+            "max_rss_kib": 58188,
+            "max_rss_mib": 56.82
+          },
+          {
+            "rep": 2,
+            "wall_ms": 35.1,
+            "time_real_s": 0.03,
+            "cpu_user_s": 0.03,
+            "cpu_sys_s": 0.0,
+            "cpu_total_s": 0.03,
+            "cpu_pct": 85.5,
+            "max_rss_kib": 58604,
+            "max_rss_mib": 57.23
+          },
+          {
+            "rep": 3,
+            "wall_ms": 37.3,
+            "time_real_s": 0.03,
+            "cpu_user_s": 0.03,
+            "cpu_sys_s": 0.0,
+            "cpu_total_s": 0.03,
+            "cpu_pct": 80.4,
+            "max_rss_kib": 58172,
+            "max_rss_mib": 56.81
+          }
+        ],
+        "median_wall_ms": 36.49,
+        "median_max_rss_mib": 56.82,
+        "median_cpu_user_s": 0.03,
+        "median_cpu_sys_s": 0.0,
+        "median_cpu_total_s": 0.03,
+        "median_cpu_pct": 82.2,
+        "truss": {
+          "total_syscalls": 1713,
+          "total_errors": 297,
+          "top_syscalls": [
+            {
+              "syscall": "mmap",
+              "calls": 745,
+              "errors": 0
+            },
+            {
+              "syscall": "open",
+              "calls": 412,
+              "errors": 290
+            },
+            {
+              "syscall": "mprotect",
+              "calls": 148,
+              "errors": 0
+            },
+            {
+              "syscall": "munmap",
+              "calls": 122,
+              "errors": 0
+            },
+            {
+              "syscall": "close",
+              "calls": 122,
+              "errors": 0
+            },
+            {
+              "syscall": "fstat",
+              "calls": 122,
+              "errors": 0
+            },
+            {
+              "syscall": "write",
+              "calls": 5,
+              "errors": 0
+            },
+            {
+              "syscall": "ioctl",
+              "calls": 5,
+              "errors": 5
+            },
+            {
+              "syscall": "__sysctl",
+              "calls": 5,
+              "errors": 0
+            },
+            {
+              "syscall": "getpid",
+              "calls": 4,
+              "errors": 0
+            }
+          ]
+        }
+      }
+    },
+    "vlc": {
+      "app": "vlc",
+      "port": "multimedia/vlc",
+      "pkgname": "vlc-3.0.24,4",
+      "version": "3.0.24",
+      "binary": "/usr/local/bin/vlc",
+      "freebsd_uname": "FreeBSD freebsd-ports 14.4-RELEASE-p13 FreeBSD 14.4-RELEASE-p13 releng/14.4-n273833-6b3681ad66f8 GENERIC amd64",
+      "options_define_count": 72,
+      "options_default_count": 33,
+      "distfile_bytes": 27620304,
+      "distfile_mib": 26.34,
+      "compile_install": {
+        "make_jobs": 8,
+        "deps_install_s": 115.0,
+        "fetch_s": 7.17,
+        "build_wall_s": 184.07,
+        "build_cpu_user_s": 1211.09,
+        "build_cpu_sys_s": 73.66,
+        "build_max_rss_mib": 361.98,
+        "stage_install_wall_s": 38.85,
+        "total_compile_install_s": 222.92
+      },
+      "disk": {
+        "pkg_own_bytes": 59969813,
+        "pkg_own_mib": 57.19,
+        "pkg_files_count": 715,
+        "runtime_closure_pkgs": 183,
+        "runtime_closure_bytes": 1933355241,
+        "runtime_closure_mib": 1843.79
+      },
+      "execution": {
+        "artifact_validation": {
+          "out_ogg_bytes": 11541,
+          "magic": "OggS"
+        },
+        "reps": [
+          {
+            "rep": 1,
+            "wall_ms": 204.12,
+            "time_real_s": 0.19,
+            "cpu_user_s": 0.09,
+            "cpu_sys_s": 0.01,
+            "cpu_total_s": 0.1,
+            "cpu_pct": 49.0,
+            "max_rss_kib": 128988,
+            "max_rss_mib": 125.96
+          },
+          {
+            "rep": 2,
+            "wall_ms": 210.1,
+            "time_real_s": 0.2,
+            "cpu_user_s": 0.11,
+            "cpu_sys_s": 0.0,
+            "cpu_total_s": 0.11,
+            "cpu_pct": 52.4,
+            "max_rss_kib": 128964,
+            "max_rss_mib": 125.94
+          },
+          {
+            "rep": 3,
+            "wall_ms": 204.85,
+            "time_real_s": 0.2,
+            "cpu_user_s": 0.1,
+            "cpu_sys_s": 0.01,
+            "cpu_total_s": 0.11,
+            "cpu_pct": 53.7,
+            "max_rss_kib": 129060,
+            "max_rss_mib": 126.04
+          }
+        ],
+        "median_wall_ms": 204.85,
+        "median_max_rss_mib": 125.96,
+        "median_cpu_user_s": 0.1,
+        "median_cpu_sys_s": 0.01,
+        "median_cpu_total_s": 0.11,
+        "median_cpu_pct": 52.4,
+        "truss": {
+          "total_syscalls": 4865,
+          "total_errors": 372,
+          "top_syscalls": [
+            {
+              "syscall": "mmap",
+              "calls": 1384,
+              "errors": 0
+            },
+            {
+              "syscall": "open",
+              "calls": 643,
+              "errors": 266
+            },
+            {
+              "syscall": "munmap",
+              "calls": 572,
+              "errors": 0
+            },
+            {
+              "syscall": "close",
+              "calls": 441,
+              "errors": 0
+            },
+            {
+              "syscall": "fstatat",
+              "calls": 395,
+              "errors": 36
+            },
+            {
+              "syscall": "fstat",
+              "calls": 347,
+              "errors": 0
+            },
+            {
+              "syscall": "_umtx_op",
+              "calls": 212,
+              "errors": 59
+            },
+            {
+              "syscall": "mprotect",
+              "calls": 199,
+              "errors": 0
+            },
+            {
+              "syscall": "read",
+              "calls": 141,
+              "errors": 0
+            },
+            {
+              "syscall": "getdirentries",
+              "calls": 74,
+              "errors": 0
+            }
+          ]
+        }
+      }
+    },
+    "blender": {
+      "app": "blender",
+      "port": "graphics/blender4",
+      "pkgname": "blender4-4.5.14_3",
+      "version": "4.5.14",
+      "binary": "/usr/local/bin/blender-45",
+      "freebsd_uname": "FreeBSD freebsd-ports 14.4-RELEASE-p13 FreeBSD 14.4-RELEASE-p13 releng/14.4-n273833-6b3681ad66f8 GENERIC amd64",
+      "options_define_count": 57,
+      "options_default_count": 46,
+      "distfile_bytes": 85105652,
+      "distfile_mib": 81.16,
+      "compile_install": {
+        "make_jobs": 6,
+        "deps_install_s": 472.92,
+        "fetch_s": 21.76,
+        "build_wall_s": 2028.64,
+        "build_cpu_user_s": 11423.89,
+        "build_cpu_sys_s": 413.6,
+        "build_max_rss_mib": 1158.97,
+        "stage_install_wall_s": 23.68,
+        "total_compile_install_s": 2052.32
+      },
+      "disk": {
+        "pkg_own_bytes": 230353751,
+        "pkg_own_mib": 219.68,
+        "pkg_files_count": 1326,
+        "runtime_closure_pkgs": 204,
+        "runtime_closure_bytes": 4845013895,
+        "runtime_closure_mib": 4620.57
+      },
+      "execution": {
+        "artifact_validation": {
+          "render_png_bytes": 48610,
+          "magic": "PNG"
+        },
+        "reps": [
+          {
+            "rep": 1,
+            "wall_ms": 1639.26,
+            "time_real_s": 1.63,
+            "cpu_user_s": 1.75,
+            "cpu_sys_s": 0.04,
+            "cpu_total_s": 1.79,
+            "cpu_pct": 109.2,
+            "max_rss_kib": 437088,
+            "max_rss_mib": 426.84
+          },
+          {
+            "rep": 2,
+            "wall_ms": 1617.46,
+            "time_real_s": 1.61,
+            "cpu_user_s": 1.75,
+            "cpu_sys_s": 0.03,
+            "cpu_total_s": 1.78,
+            "cpu_pct": 110.0,
+            "max_rss_kib": 436908,
+            "max_rss_mib": 426.67
+          },
+          {
+            "rep": 3,
+            "wall_ms": 1624.06,
+            "time_real_s": 1.62,
+            "cpu_user_s": 1.71,
+            "cpu_sys_s": 0.09,
+            "cpu_total_s": 1.8,
+            "cpu_pct": 110.8,
+            "max_rss_kib": 437028,
+            "max_rss_mib": 426.79
+          }
+        ],
+        "median_wall_ms": 1624.06,
+        "median_max_rss_mib": 426.79,
+        "median_cpu_user_s": 1.75,
+        "median_cpu_sys_s": 0.04,
+        "median_cpu_total_s": 1.79,
+        "median_cpu_pct": 110.0,
+        "truss": {
+          "total_syscalls": 14331,
+          "total_errors": 1219,
+          "top_syscalls": [
+            {
+              "syscall": "sched_yield",
+              "calls": 4761,
+              "errors": 0
+            },
+            {
+              "syscall": "mmap",
+              "calls": 1682,
+              "errors": 0
+            },
+            {
+              "syscall": "fstatat",
+              "calls": 1369,
+              "errors": 266
+            },
+            {
+              "syscall": "getrusage",
+              "calls": 1024,
+              "errors": 0
+            },
+            {
+              "syscall": "open",
+              "calls": 902,
+              "errors": 582
+            },
+            {
+              "syscall": "fstat",
+              "calls": 730,
+              "errors": 0
+            },
+            {
+              "syscall": "close",
+              "calls": 544,
+              "errors": 0
+            },
+            {
+              "syscall": "read",
+              "calls": 540,
+              "errors": 0
+            },
+            {
+              "syscall": "lseek",
+              "calls": 458,
+              "errors": 2
+            },
+            {
+              "syscall": "_umtx_op",
+              "calls": 416,
+              "errors": 127
+            }
+          ]
+        }
+      }
+    }
+  }
+}

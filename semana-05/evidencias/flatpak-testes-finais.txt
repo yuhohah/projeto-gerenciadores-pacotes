@@ -1,0 +1,686 @@
+=== Flatpak: configuração do remote Flathub ===
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+[Código de saída: 0 | Tempo: 1023.79 ms]
+
+=== Flathub: org.gnome.TextEditor ===
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.gnome.TextEditor
+            ID: org.gnome.TextEditor
+           Ref: app/org.gnome.TextEditor/x86_64/stable
+          Arch: x86_64
+        Branch: stable
+    Collection: org.flathub.Stable
+ Download Size: 1.4 MB
+Installed Size: 2.5 MB
+       Runtime: org.gnome.Platform/x86_64/51
+           Sdk: org.gnome.Sdk/x86_64/51
+
+        Commit: 8effd3457368016ed2bcb2a7b7c5058938c7ad949050d282c4337951a91941a4
+        Parent: 76ecd1d6e9ecfa26f6939c54eec4e9db3491fce949c8808bdee9fb55758a1a91
+       Subject: Merge pull request #56 from flathub/update-master-502031e (688c4b571983)
+          Date: 2026-11-08 08:12:45 +0000
+[Código de saída: 0 | Tempo: 202.23 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user --show-metadata flathub org.gnome.TextEditor
+[Application]
+name=org.gnome.TextEditor
+runtime=org.gnome.Platform/x86_64/51
+sdk=org.gnome.Sdk/x86_64/51
+command=gnome-text-editor
+
+[Context]
+shared=ipc;
+sockets=fallback-x11;wayland;
+devices=dri;
+filesystems=xdg-run/gvfsd;host;xdg-run/gvfs;
+
+[Session Bus Policy]
+org.gtk.vfs.*=talk
+org.freedesktop.FileManager1=talk
+
+[Extension org.gnome.TextEditor.Locale]
+directory=share/runtime/locale
+autodelete=true
+locale-subset=true
+
+[Extension org.gnome.TextEditor.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=org.gnome.TextEditor.Locale;org.gnome.TextEditor.Debug;org.gnome.TextEditor.Sources;
+[Código de saída: 0 | Tempo: 197.39 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.gnome.Platform/x86_64/51
+            ID: org.gnome.Platform
+           Ref: runtime/org.gnome.Platform/x86_64/51
+          Arch: x86_64
+        Branch: 51
+    Collection: org.flathub.Stable
+ Download Size: 432.8 MB
+Installed Size: 1.1 GB
+
+        Commit: f48b9eb43a30cfe42ddc485a32b4417f278f6ced5d4326fb9327ac450a0971bb
+        Parent: 17fff143b0851dbc888a3874a88c308c4c9eb82a859b3474298aaed020627b65
+       Subject: Build of the GNOME Runtime from: 51.1-62-gbd59b2dad
+          Date: 2026-11-18 03:07:33 +0000
+[Código de saída: 0 | Tempo: 193.60 ms]
+
+=== Flathub: org.videolan.VLC ===
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.videolan.VLC
+            ID: org.videolan.VLC
+           Ref: app/org.videolan.VLC/x86_64/stable
+          Arch: x86_64
+        Branch: stable
+    Collection: org.flathub.Stable
+ Download Size: 58.1 MB
+Installed Size: 149.8 MB
+       Runtime: org.kde.Platform/x86_64/5.15-25.08
+           Sdk: org.kde.Sdk/x86_64/5.15-25.08
+
+        Commit: c1f90edc95d2bfa5a096e1c4adf8cec5be6443bbbbe3aa713e1edfb484863771
+        Parent: aba66c4cdf814f6ea3e50f3a8bd2d58047d0d7b1cf27d109ebdf677d72729b85
+       Subject: Fix ffmpeg version (a0f425f6a9a8)
+          Date: 2026-11-17 21:01:07 +0000
+[Código de saída: 0 | Tempo: 191.33 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user --show-metadata flathub org.videolan.VLC
+[Application]
+name=org.videolan.VLC
+runtime=org.kde.Platform/x86_64/5.15-25.08
+sdk=org.kde.Sdk/x86_64/5.15-25.08
+command=vlc
+required-flatpak=0.11.4
+
+[Context]
+shared=ipc;network;
+sockets=pulseaudio;x11;
+devices=all;
+filesystems=xdg-config/kdeglobals:ro;host;xdg-run/gvfs;
+
+[Session Bus Policy]
+org.kde.kwalletd5=talk
+org.kde.kwalletd=talk
+org.mpris.MediaPlayer2.vlc=own
+org.freedesktop.secrets=talk
+org.freedesktop.PowerManagement=talk
+org.kde.StatusNotifierWatcher=talk
+org.kde.KGlobalSettings=talk
+org.freedesktop.ScreenSaver=talk
+com.canonical.AppMenu.Registrar=talk
+org.kde.kconfig.notify=talk
+org.mpris.MediaPlayer2.Player=talk
+
+[Extension org.videolan.VLC.Plugin]
+directory=share/vlc/extra
+autodelete=true
+no-autodownload=true
+subdirectories=true
+add-ld-path=lib
+merge-dirs=plugins
+versions=3-5.15-25.08;3-25.08
+
+[Extension org.videolan.VLC.Locale]
+directory=share/runtime/locale
+autodelete=true
+locale-subset=true
+
+[Extension org.videolan.VLC.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=org.videolan.VLC.Locale;org.videolan.VLC.Debug;org.videolan.VLC.Sources;
+[Código de saída: 0 | Tempo: 193.25 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.kde.Platform/x86_64/5.15-25.08
+            ID: org.kde.Platform
+           Ref: runtime/org.kde.Platform/x86_64/5.15-25.08
+          Arch: x86_64
+        Branch: 5.15-25.08
+    Collection: org.flathub.Stable
+ Download Size: 367.4 MB
+Installed Size: 974.3 MB
+
+        Commit: 1e9b0aa4623015cebd20350b36dc515124567b0f43c2235bd4ea8259fc2b18de
+        Parent: 1408bace3562d35e63db2b019cb38b8fa897784d654488660039289388f22c5d
+       Subject: build of org.kde.Sdk, Mon Jan 19 04:37:06 AM UTC 2026, ad282d4cc1ed31d2708dd4e89d3d9dd4d9f1109e
+          Date: 2026-01-20 01:16:49 +0000
+[Código de saída: 0 | Tempo: 193.70 ms]
+
+=== Flathub: org.blender.Blender ===
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.blender.Blender
+            ID: org.blender.Blender
+           Ref: app/org.blender.Blender/x86_64/stable
+          Arch: x86_64
+        Branch: stable
+    Collection: org.flathub.Stable
+ Download Size: 508.8 MB
+Installed Size: 1.2 GB
+       Runtime: org.freedesktop.Platform/x86_64/26.08
+           Sdk: org.freedesktop.Sdk/x86_64/26.08
+
+        Commit: 3e510e35073011eaf3266b8eb7f88363df9e7630807c6d442b4cdfa2bd7e779c
+        Parent: f97247d9e87dca0bc28c6a01e51cd6425cf8b21c636d28514898b7315b21d521
+       Subject: Add mirror-url-templates to x-checker-data (a0cc252f8890)
+          Date: 2026-11-13 22:11:16 +0000
+[Código de saída: 0 | Tempo: 190.26 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user --show-metadata flathub org.blender.Blender
+[Application]
+name=org.blender.Blender
+runtime=org.freedesktop.Platform/x86_64/26.08
+sdk=org.freedesktop.Sdk/x86_64/26.08
+command=blender
+
+[Context]
+shared=ipc;network;
+sockets=fallback-x11;pulseaudio;wayland;
+devices=dri;
+filesystems=/run/spnav.sock:ro;host;
+
+[Environment]
+SPNAV_SOCKET=/run/spnav.sock
+LD_LIBRARY_PATH=/app/lib:/app/lib/GL/default/lib
+AMD_DEBUG=useaco
+VK_ICD_FILENAMES=/app/lib/GL/vulkan/icd.d
+TMP_DIR=/tmp
+TMP=/tmp
+
+[Extension org.blender.Blender.Codecs]
+directory=lib/codecs
+autodelete=true
+add-ld-path=lib
+
+[Extension org.freedesktop.Platform.GL]
+directory=lib/GL
+subdirectories=true
+add-ld-path=lib:default/lib
+download-if=active-gl-driver
+enable-if=active-gl-driver
+autoprune-unless=active-gl-driver
+merge-dirs=vulkan/icd.d;glvnd/egl_vendor.d;lib/dri
+versions=1.4;26.08
+
+[Extension org.blender.Blender.Locale]
+directory=share/runtime/locale
+autodelete=true
+locale-subset=true
+
+[Extension org.blender.Blender.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=org.blender.Blender.Locale;org.blender.Blender.Debug;org.blender.Blender.Codecs;org.blender.Blender.Sources;
+[Código de saída: 0 | Tempo: 194.02 ms]
+
+$ /nix/store/ln6lcrf6kk65his4r5q1zgfn29jcz3s6-flatpak-1.18.4/bin/flatpak remote-info --user flathub org.freedesktop.Platform/x86_64/26.08
+            ID: org.freedesktop.Platform
+           Ref: runtime/org.freedesktop.Platform/x86_64/26.08
+          Arch: x86_64
+        Branch: 26.08
+    Collection: org.flathub.Stable
+ Download Size: 282.7 MB
+Installed Size: 724.2 MB
+
+        Commit: df26daaf9d07610b4a72cc4585566194051275ac68396597b06474396f66427c
+        Parent: e7f7b0fb20662fe92e4eac65d58a57019cefae45a39559c4b50440a88acc0491
+       Subject: 114ae909ec9881958bd507c8b4414aa33f758d2b
+          Date: 2026-10-26 18:13:16 +0000
+[Código de saída: 0 | Tempo: 191.39 ms]
+
+=== OSTree: deduplicação física (inodes/hardlinks) ===
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree init --repo=/tmp/so-s5-flatpak-qwhj3zrh/ostree-repo --mode=bare-user
+[Código de saída: 0 | Tempo: 22.25 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree commit --repo=/tmp/so-s5-flatpak-qwhj3zrh/ostree-repo --branch=so/final/stable --subject=v1 /tmp/so-s5-flatpak-qwhj3zrh/ostree-v1
+5c5018a74393a513fc0c0c77e3475dc2adca35bdfec8c9d00c27edfd420a8918
+[Código de saída: 0 | Tempo: 746.43 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree commit --repo=/tmp/so-s5-flatpak-qwhj3zrh/ostree-repo --branch=so/final/stable --subject=v2 /tmp/so-s5-flatpak-qwhj3zrh/ostree-v2
+b1c7e0cba95862fb2c2f409f60dc8583161a0a37e0c215c0b7810bacc13eaaca
+[Código de saída: 0 | Tempo: 683.00 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree checkout --repo=/tmp/so-s5-flatpak-qwhj3zrh/ostree-repo -U 5c5018a74393a513fc0c0c77e3475dc2adca35bdfec8c9d00c27edfd420a8918 /tmp/so-s5-flatpak-qwhj3zrh/co-v1
+[Código de saída: 0 | Tempo: 11.12 ms]
+
+$ /nix/store/57a720jdismlqv2a708hi7kmb7rins36-ostree-2026.2/bin/ostree checkout --repo=/tmp/so-s5-flatpak-qwhj3zrh/ostree-repo -U b1c7e0cba95862fb2c2f409f60dc8583161a0a37e0c215c0b7810bacc13eaaca /tmp/so-s5-flatpak-qwhj3zrh/co-v2
+[Código de saída: 0 | Tempo: 10.97 ms]
+
+=== Bubblewrap: política de acesso a arquivos (sem bind / RO / RW) ===
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all /run/current-system/sw/bin/cat /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/comparacao-final.txt
+[stderr]
+cat: /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/comparacao-final.txt: No such file or directory
+[Código de saída: 1 | Tempo: 8.05 ms]
+
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --ro-bind /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox /run/current-system/sw/bin/cat /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/comparacao-final.txt
+Teste de isolamento Bubblewrap: aguardando
+[Código de saída: 0 | Tempo: 7.27 ms]
+
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --ro-bind /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox /run/current-system/sw/bin/sh -c echo bloqueado > "/tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/ro-out.txt"
+[stderr]
+/run/current-system/sw/bin/sh: line 1: /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/ro-out.txt: Read-only file system
+[Código de saída: 1 | Tempo: 9.45 ms]
+
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox /tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox /run/current-system/sw/bin/sh -c sed "s/aguardando/concluido/" "/tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/comparacao-final.txt" > "/tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/rw-out.txt" && cat "/tmp/so-s5-flatpak-qwhj3zrh/doc-sandbox/rw-out.txt"
+Teste de isolamento Bubblewrap: concluido
+[Código de saída: 0 | Tempo: 14.35 ms]
+
+=== Bubblewrap: carga real de gnome-text-editor (repetição 1) ===
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /tmp/so-s5-flatpak-qwhj3zrh/bwrap-gnome-text-editor-1 /tmp/so-s5-flatpak-qwhj3zrh/bwrap-gnome-text-editor-1 /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/gnome-text-editor --version
+Text Editor 48.3 (48.3)
+
+            GTK: 4.18.6 (Compiled against 4.18.6)
+  GtkSourceView: 5.16.0 (Compiled against 5.16.0)
+
+Copyright 2020-2025 Christian Hergert, et al.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[Código de saída: 0 | Tempo: 39.63 ms | Max RSS: 23.57 MiB | CPU user/sys: 0.01s/0.01s (90%) | Faults min/maj: 1482/11]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-gnome-text-editor /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-gnome-text-editor /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/gnome-text-editor --version
+Text Editor 48.3 (48.3)
+
+            GTK: 4.18.6 (Compiled against 4.18.6)
+  GtkSourceView: 5.16.0 (Compiled against 5.16.0)
+
+Copyright 2020-2025 Christian Hergert, et al.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236169 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236170 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 59.45    0.023018        7672         3         2 wait4
+ 12.71    0.004920           5       864       691 openat
+  9.87    0.003822           7       478           mmap
+  2.76    0.001068         534         2           clone
+  2.46    0.000954           4       211       160 newfstatat
+  2.24    0.000868           4       198           close
+  2.16    0.000836         418         2           pivot_root
+  1.40    0.000543           4       135           read
+  1.22    0.000471           3       123           fstat
+  1.09    0.000421          23        18           mount
+  0.99    0.000385           3        97         8 prctl
+  0.73    0.000282           2       113           mprotect
+  0.30    0.000117           8        14         5 readlink
+  0.29    0.000114           6        19           openat2
+  0.27    0.000106          53         2           sendto
+  0.22    0.000087           8        10         1 mkdirat
+  0.20    0.000076          38         2           umount2
+  0.15    0.000058           9         6           getdents64
+  0.14    0.000054           9         6           symlinkat
+  0.14    0.000054           6         9           mount_setattr
+  0.10    0.000037           3        12           write
+  0.09    0.000036           9         4         4 faccessat2
+  0.09    0.000035           5         6         2 chdir
+  0.08    0.000030          10         3           mkdir
+  0.07    0.000029          29         1           unshare
+  0.06    0.000023          11         2           socket
+  0.05    0.000020           4         5           getpid
+  0.05    0.000019           6         3           capset
+  0.04    0.000017           2         6           pread64
+  0.04    0.000016           3         5           rt_sigprocmask
+  0.04    0.000016           4         4           fcntl
+  0.04    0.000016           4         4         4 statfs
+  0.04    0.000015          15         1           poll
+  0.04    0.000014           1        11           brk
+  0.03    0.000013           6         2           eventfd2
+  0.03    0.000011           5         2         1 ioctl
+  0.03    0.000011           2         5         5 access
+  0.03    0.000010           5         2           recvfrom
+  0.02    0.000009           2         4           getrandom
+  0.02    0.000008           4         2           umask
+  0.02    0.000008           2         3           arch_prctl
+  0.02    0.000008           2         3           rseq
+  0.02    0.000007           3         2           getuid
+  0.02    0.000007           2         3           set_tid_address
+  0.02    0.000007           1         4           set_robust_list
+  0.02    0.000006           6         1           bind
+  0.02    0.000006           6         1           signalfd4
+  0.01    0.000005           5         1           rt_sigaction
+  0.01    0.000005           5         1           fchdir
+  0.01    0.000004           4         1           getgid
+  0.01    0.000004           4         1           geteuid
+  0.01    0.000004           4         1           capget
+  0.01    0.000004           1         3           prlimit64
+  0.01    0.000002           0        11           futex
+  0.00    0.000000           0         3           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.038716          15      2435       883 total
+[Código de saída: 0 | Tempo: 86.31 ms]
+
+=== Bubblewrap: carga real de vlc (repetição 1) ===
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /tmp/so-s5-flatpak-qwhj3zrh/bwrap-vlc-1 /tmp/so-s5-flatpak-qwhj3zrh/bwrap-vlc-1 /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/vlc -I dummy --no-video --aout=dummy --play-and-exit /tmp/so-s5-flatpak-qwhj3zrh/bwrap-vlc-1/in.wav --sout #transcode{acodec=vorb,ab=128,channels=1,samplerate=44100}:std{access=file,mux=ogg,dst=/tmp/so-s5-flatpak-qwhj3zrh/bwrap-vlc-1/out.ogg} vlc://quit
+[stderr]
+[00005561d21c4bb0] main interface error: no suitable interface module
+[00005561d212a590] main libvlc error: interface "globalhotkeys,none" initialization failed
+[00005561d21c4bb0] dummy interface: using the dummy interface module...
+[000070d2980035c0] mux_ogg mux: Open
+[000070d2980035c0] mux_ogg mux: Close
+[000070d298c182e0] idummy demux: command `quit'
+[00005561d21b8810] main playlist: end of playlist, exiting
+[Código de saída: 0 | Tempo: 187.13 ms | Max RSS: 34.42 MiB | CPU user/sys: 0.06s/0.03s (51%) | Faults min/maj: 3077/0]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-vlc /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-vlc /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/vlc -I dummy --no-video --aout=dummy --play-and-exit /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-vlc/in.wav --sout #transcode{acodec=vorb,ab=128,channels=1,samplerate=44100}:std{access=file,mux=ogg,dst=/tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-vlc/out.ogg} vlc://quit
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236223 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236224 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236225 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236226 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236227 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236228 attached
+[00005a7e228fa360] main interface error: no suitable interface module
+[00005a7e2285f590] main libvlc error: interface "globalhotkeys,none" initialization failed
+[00005a7e228fa360] dummy interface: using the dummy interface module...
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236232 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236233 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236234 attached
+[000077c2280035f0] mux_ogg mux: Open
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236235 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236236 attached
+[000077c2280035f0] mux_ogg mux: Close
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236237 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236238 attached
+[000077c228c18990] idummy demux: command `quit'
+[00005a7e228ed9b0] main playlist: end of playlist, exiting
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 32.77    0.084780         322       263        46 futex
+ 23.98    0.062031       20677         3         2 wait4
+ 15.35    0.039713         696        57         1 poll
+ 13.55    0.035043       35043         1           rt_sigtimedwait
+  2.92    0.007563           7       962           mmap
+  2.36    0.006114           5      1053       617 openat
+  2.17    0.005605           5      1008       218 newfstatat
+  1.35    0.003485          17       201           munmap
+  0.70    0.001798           4       437           read
+  0.69    0.001796           3       496           close
+  0.69    0.001781           4       432           mprotect
+  0.50    0.001304           3       387           fstat
+  0.46    0.001192         596         2           clone
+  0.31    0.000797          10        78           getdents64
+  0.30    0.000776         388         2           pivot_root
+  0.21    0.000535          48        11           clone3
+  0.18    0.000470           5        85           rt_sigprocmask
+  0.13    0.000333           7        47           write
+  0.13    0.000329          18        18           mount
+  0.10    0.000260           2        91         4 prctl
+  0.10    0.000247          82         3           execve
+  0.08    0.000205          29         7         4 connect
+  0.07    0.000192           9        21        10 recvmsg
+  0.06    0.000167           2        60           lseek
+  0.06    0.000166          18         9           socket
+  0.06    0.000156           8        18           sendmsg
+  0.05    0.000129           9        14           rseq
+  0.04    0.000116           7        15           set_robust_list
+  0.04    0.000115           6        19           openat2
+  0.04    0.000107           2        46           dup3
+  0.04    0.000098           3        26           readv
+  0.03    0.000090           8        11           gettid
+  0.03    0.000089           6        14         5 readlink
+  0.03    0.000086           8        10         1 mkdirat
+  0.03    0.000073           2        28           eventfd2
+  0.03    0.000072          36         2           sendmmsg
+  0.03    0.000068           8         8           sendto
+  0.03    0.000067           5        13           fcntl
+  0.03    0.000067          33         2           umount2
+  0.02    0.000064           8         8         3 ioctl
+  0.02    0.000057           9         6           symlinkat
+  0.02    0.000052           3        14           brk
+  0.02    0.000049           3        16           madvise
+  0.02    0.000049           5         9           mount_setattr
+  0.01    0.000038          19         2           setsockopt
+  0.01    0.000037           4         8           rt_sigaction
+  0.01    0.000032           8         4         4 faccessat2
+  0.01    0.000031           5         6         2 chdir
+  0.01    0.000028           4         6           fadvise64
+  0.01    0.000027           3         7           getrandom
+  0.01    0.000025          25         1           unshare
+  0.01    0.000020           6         3           capset
+  0.01    0.000014          14         1           getsockopt
+  0.01    0.000014           7         2         2 statfs
+  0.01    0.000013          13         1           pipe2
+  0.00    0.000012           4         3           geteuid
+  0.00    0.000011           2         4         4 access
+  0.00    0.000010           3         3           arch_prctl
+  0.00    0.000009           3         3           prlimit64
+  0.00    0.000008           0        12         4 mkdir
+  0.00    0.000008           4         2           getuid
+  0.00    0.000008           2         3           set_tid_address
+  0.00    0.000008           8         1           signalfd4
+  0.00    0.000005           5         1           fchdir
+  0.00    0.000005           5         1           capget
+  0.00    0.000005           5         1           fstatfs
+  0.00    0.000004           4         1           getsockname
+  0.00    0.000004           4         1           uname
+  0.00    0.000004           2         2           umask
+  0.00    0.000004           4         1           getgid
+  0.00    0.000004           4         1           getresuid
+  0.00    0.000004           4         1           getresgid
+  0.00    0.000000           0         1         1 rt_sigreturn
+  0.00    0.000000           0         1           alarm
+  0.00    0.000000           0        13           getpid
+  0.00    0.000000           0         2           recvfrom
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         1           rename
+  0.00    0.000000           0         2           sched_getaffinity
+  0.00    0.000000           0         5           tgkill
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.258678          42      6121       928 total
+[Código de saída: 0 | Tempo: 320.92 ms]
+
+=== Bubblewrap: carga real de blender (repetição 1) ===
+$ /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /tmp/so-s5-flatpak-qwhj3zrh/bwrap-blender-1 /tmp/so-s5-flatpak-qwhj3zrh/bwrap-blender-1 /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/blender --background --factory-startup --python-expr import bpy, sys; out = sys.argv[-1]; s = bpy.context.scene; s.render.engine = 'CYCLES'; s.cycles.device = 'CPU'; s.cycles.samples = 4; s.cycles.use_denoising = False; s.render.resolution_x = 320; s.render.resolution_y = 240; s.render.resolution_percentage = 100; s.render.threads_mode = 'FIXED'; s.render.threads = 4; s.render.image_settings.file_format = 'PNG'; s.render.filepath = out; bpy.ops.render.render(write_still=True) -- /tmp/so-s5-flatpak-qwhj3zrh/bwrap-blender-1/render.png
+Blender 4.3.2
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cube
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.08M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Sample 0/4
+Fra:1 Mem:12.79M (Peak 12.79M) | Time:00:00.01 | Remaining:00:00.04 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 1/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.05 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 4/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.05 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Finished
+Saved: '/tmp/so-s5-flatpak-qwhj3zrh/bwrap-blender-1/render.png'
+Time: 00:00.16 (Saving: 00:00.10)
+
+
+Blender quit
+[stderr]
+could not get a list of mounted file-systems
+[Código de saída: 0 | Tempo: 1391.72 ms | Max RSS: 270.00 MiB | CPU user/sys: 1.35s/0.16s (109%) | Faults min/maj: 40870/46]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/m50dfhnbbqpvj79i444kcdd2zsfwr4hk-bubblewrap-0.13.1/bin/bwrap --ro-bind /nix /nix --ro-bind /run /run --proc /proc --dev /dev --tmpfs /tmp --unshare-all --bind /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-blender /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-blender /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/blender --background --factory-startup --python-expr import bpy, sys; out = sys.argv[-1]; s = bpy.context.scene; s.render.engine = 'CYCLES'; s.cycles.device = 'CPU'; s.cycles.samples = 4; s.cycles.use_denoising = False; s.render.resolution_x = 320; s.render.resolution_y = 240; s.render.resolution_percentage = 100; s.render.threads_mode = 'FIXED'; s.render.threads = 4; s.render.image_settings.file_format = 'PNG'; s.render.filepath = out; bpy.ops.render.render(write_still=True) -- /tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-blender/render.png
+Blender 4.3.2
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cube
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.08M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Sample 0/4
+Fra:1 Mem:12.79M (Peak 12.79M) | Time:00:00.01 | Remaining:00:00.03 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 1/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.05 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 4/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.05 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Finished
+Saved: '/tmp/so-s5-flatpak-qwhj3zrh/bwrap-trace-blender/render.png'
+Time: 00:00.18 (Saving: 00:00.12)
+
+
+Blender quit
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236366 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236367 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236368 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236371 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236372 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236373 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236374 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236375 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236376 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236377 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236378 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236379 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236380 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236381 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236382 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236383 attached
+could not get a list of mounted file-systems
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236402 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236403 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236404 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236405 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236406 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236407 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236408 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236409 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236410 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236411 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236412 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236413 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236414 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236415 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 236416 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 84.47    2.103262       11882       177         6 futex
+ 10.34    0.257397       85799         3         2 wait4
+  2.58    0.064302          25      2478           sched_yield
+  0.78    0.019338           5      3383      2774 openat
+  0.40    0.009960           9      1039         1 mmap
+  0.25    0.006252           2      3089       631 newfstatat
+  0.19    0.004734           3      1321           read
+  0.15    0.003807           3      1024           clock_gettime
+  0.11    0.002628          51        51           madvise
+  0.08    0.001913           3       637           close
+  0.07    0.001809          14       129           rt_sigprocmask
+  0.07    0.001791          61        29           clone3
+  0.07    0.001723           2       813           fstat
+  0.05    0.001179         589         2           clone
+  0.05    0.001142         285         4         1 execve
+  0.04    0.000962          41        23           munmap
+  0.04    0.000953          17        55        55 statx
+  0.04    0.000894          31        28           sched_getaffinity
+  0.03    0.000802          12        62           write
+  0.03    0.000790           3       239           mprotect
+  0.02    0.000582           1       533         3 lseek
+  0.02    0.000555           5       101         8 prctl
+  0.02    0.000461           4       106           getdents64
+  0.02    0.000385         192         2           pivot_root
+  0.01    0.000318           9        32           set_robust_list
+  0.01    0.000301           1       271       268 ioctl
+  0.01    0.000269           8        31           rseq
+  0.01    0.000225          12        18           mount
+  0.01    0.000178           1       172       161 mkdir
+  0.00    0.000116           6        18         7 readlink
+  0.00    0.000112           1        86           rt_sigaction
+  0.00    0.000075           3        19           openat2
+  0.00    0.000068          34         2           umount2
+  0.00    0.000058           5        10         1 mkdirat
+  0.00    0.000053           5        10           brk
+  0.00    0.000048           8         6           symlinkat
+  0.00    0.000036           2        13           getpid
+  0.00    0.000036           4         9           mount_setattr
+  0.00    0.000029           2        14         1 fcntl
+  0.00    0.000028           7         4         4 access
+  0.00    0.000026          26         1           unshare
+  0.00    0.000024           4         6         2 chdir
+  0.00    0.000022          11         2           eventfd2
+  0.00    0.000021           3         6           getrandom
+  0.00    0.000019           4         4           pread64
+  0.00    0.000019           6         3           capset
+  0.00    0.000017           8         2         2 statfs
+  0.00    0.000016          16         1           poll
+  0.00    0.000012           1         8           prlimit64
+  0.00    0.000010           5         2         1 open
+  0.00    0.000008           2         3           getuid
+  0.00    0.000008           2         3           arch_prctl
+  0.00    0.000007           2         3           set_tid_address
+  0.00    0.000007           7         1           signalfd4
+  0.00    0.000005           5         1           fchdir
+  0.00    0.000005           5         1           capget
+  0.00    0.000004           2         2           umask
+  0.00    0.000004           2         2           getgid
+  0.00    0.000004           2         2           geteuid
+  0.00    0.000004           4         1           waitid
+  0.00    0.000004           4         1           pipe2
+  0.00    0.000002           0         3           uname
+  0.00    0.000002           2         1           rmdir
+  0.00    0.000001           0         2           gettid
+  0.00    0.000000           0         2           dup2
+  0.00    0.000000           0         2           socket
+  0.00    0.000000           0         2           sendto
+  0.00    0.000000           0         2           recvfrom
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         1           getegid
+  0.00    0.000000           0         3           getppid
+  0.00    0.000000           0         1           getpgrp
+  0.00    0.000000           0         4         4 faccessat2
+------ ----------- ----------- --------- --------- ------------------
+100.00    2.489822         154     16122      3932 total
+[Código de saída: 0 | Tempo: 1716.16 ms]

@@ -35,6 +35,13 @@ O recorte atual contempla cinco representantes em quatro famílias: **Debian (`A
 - [Documentação da Semana 4](./semana-04/README.md), [script da bateria experimental](./semana-04/evidencias/executar_experimentos.py) e [resumo comparativo (`JSON`)](./semana-04/evidencias/resumo-comparativo.json).
 - [Reserva para apresentação futura](./semana-04/reserva-apresentacao-futura/README.md): preserva o material e os slides anteriores da bateria ampliada com três pacotes (`hello`, `tmux` e `gnome-text-editor`).
 
+### Semana 5 — Resultados finais multi-aplicações (`GNOME Text Editor`, `VLC` e `Blender`)
+
+- **[PDF para projeção](./semana-05/slides/apresentacao-semana-05.pdf)** · **[PowerPoint editável](./semana-05/slides/apresentacao-semana-05.pptx)** · **[HTML offline](./semana-05/slides/apresentacao-semana-05.html)**: **12 slides principais + 1 de apoio** no padrão UFG/INF com as 3 tabelas por aplicativo (todos os 5 gerenciadores compilados/executados), gráficos vetoriais de tempo/RAM/compilação/instalação, explicação do `confinement` (`strict` vs. `classic`) no Snap, escala real de compilação no FreeBSD Ports e síntese final.
+- [Roteiro de fala e divisão dos slides](./semana-05/slides/roteiro-de-fala.md), [script gerador](./semana-05/slides/gerar_apresentacao.py) e [detalhes da apresentação](./semana-05/slides/README.md).
+- **[Resultados e análise comparativa](./semana-05/resultados-e-comparacao.md)**: **3 tabelas comparativas (uma por aplicativo)** colocando `GNOME Text Editor`, `VLC 3.0.24` e `Blender` lado a lado nos 5 gerenciadores (`--reps 3 --align-versions debian`), incluindo medições de execução da mesma tarefa (tempo, RAM `Max RSS`, CPU e syscalls — com `Snap` real via `snapd` e compilação/execução real dos 3 ports no **FreeBSD 14.4 KVM**), disco/VFS, opções de build, compilação/instalação/rollback, segurança e explicação de por que não é possível atualizar pacotes entre gerenciadores distintos.
+- [Documentação da Semana 5](./semana-05/README.md), [script automatizado](./semana-05/evidencias/executar_testes_finais.py) e [evidências brutas e JSON consolidado](./semana-05/evidencias/resumo-testes-finais.json).
+
 ## Execução dos scripts
 
 ### Demonstração visual em terminal (`GNU hello`)

@@ -1,0 +1,44 @@
+$ uname -a
+Linux nixos-btw 7.3.4 #1-NixOS SMP PREEMPT_DYNAMIC @1794334210 x86_64 GNU/Linux
+[Código de saída: 0 | Tempo: 6.11 ms]
+
+$ nixos-version --json
+{"kernelVersion":"7.3.4","nixosVersion":"26.11.20261111.d4f25a3","nixpkgsRevision":"d4f25a3e562008648d45bcf2d70bcc7422cad84e","specialisations":[]}
+[Código de saída: 0 | Tempo: 8.26 ms]
+
+$ lscpu | grep -E 'Architecture|Model name|CPU\(s\):|Thread|Core'
+Architecture:                            x86_64
+CPU(s):                                  12
+Model name:                              AMD Ryzen 5 2600 Six-Core Processor
+Thread(s) per core:                      2
+Core(s) per socket:                      6
+NUMA node0 CPU(s):                       0-11
+[Código de saída: 0 | Tempo: 25.18 ms]
+
+$ free -b
+               total        used        free      shared  buff/cache   available
+Mem:     16668938240  8194850816  2200367104   123924480  7426301952  8474087424
+Swap:    16924008448   881258496 16042749952
+[Código de saída: 0 | Tempo: 8.92 ms]
+
+$ df -B1 /
+Filesystem        1B-blocks         Used   Available Use% Mounted on
+/dev/nvme0n1p6 365913493504 250380460032 96870637568  73% /
+[Código de saída: 0 | Tempo: 4.05 ms]
+
+LSM ativos (/sys/kernel/security/lsm): lockdown,capability,landlock,yama,apparmor,bpf,ima
+
+Controladores cgroup v2 (/sys/fs/cgroup/cgroup.controllers): cpuset cpu io memory hugetlb pids rdma misc dmem
+
+Versões das ferramentas:
+{
+  "nix": "nix (Nix) 2.35.6",
+  "docker": "Docker version 29.9.2, build v29.9.2",
+  "flatpak": "Flatpak 1.18.4",
+  "bubblewrap": "bubblewrap 0.13.1",
+  "ostree": "libostree: | Version: '2026.2'",
+  "squashfs_tools": "mksquashfs version 4.7.5 (2026/03/01)",
+  "strace": "strace -- version 7.3",
+  "readelf": "GNU readelf (GNU Binutils) 2.46",
+  "gnu_time": "time (GNU Time) 1.10"
+}

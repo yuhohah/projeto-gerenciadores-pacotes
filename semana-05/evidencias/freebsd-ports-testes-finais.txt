@@ -1,0 +1,442 @@
+=== Receita oficial FreeBSD Ports: editors/gnome-text-editor (ref=main) ===
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/main/editors/gnome-text-editor/Makefile -> HTTP 200 | 807 bytes]
+PORTNAME=	gnome-text-editor
+PORTVERSION=	47.4
+CATEGORIES=	editors gnome
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Small but powerful text editor for the GNOME Desktop Environment
+WWW=		https://apps.gnome.org/TextEditor/
+
+LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+PORTSCOUT=	limit:^47\.
+
+BUILD_DEPENDS=	itstool>0:textproc/itstool
+LIB_DEPENDS=	libenchant-2.so:textproc/enchant2 \
+		libicudata.so:devel/icu \
+		libpcre2-8.so:devel/pcre2 \
+		libspelling-1.so:x11-toolkits/libspelling \
+		libeditorconfig.so:editors/editorconfig-core-c
+
+USES=		compiler:c11 desktop-file-utils gettext gnome localbase meson \
+		pkgconfig tar:xz
+USE_CSTD=	c11
+USE_GNOME=	cairo glib20 gtk40 gtksourceview5 libadwaita
+GLIB_SCHEMAS=	org.gnome.TextEditor.gschema.xml
+
+.include <bsd.port.mk>
+
+
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/main/editors/gnome-text-editor/distinfo -> HTTP 200 | 187 bytes]
+TIMESTAMP = 1744473535
+SHA256 (gnome/gnome-text-editor-47.4.tar.xz) = 3ac505a904aafce353813bb13a7b8f82a39d474c4a945ce89aef7e650ec9f8da
+SIZE (gnome/gnome-text-editor-47.4.tar.xz) = 639932
+
+
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/main/editors/gnome-text-editor/pkg-descr -> HTTP 200]
+GNOME Text Editor is a simple text editor that focuses on session
+management. It works hard to keep track of changes and state even
+if you quit the application. You can come back to your work even
+if you've never saved it to a file.
+
+
+=== Receita oficial FreeBSD Ports: multimedia/vlc (ref=main) ===
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/main/multimedia/vlc/Makefile -> HTTP 200 | 13292 bytes]
+PORTNAME=	vlc
+DISTVERSION=	3.0.24
+PORTEPOCH=	4
+CATEGORIES=	multimedia audio net www
+MASTER_SITES=	https://get.videolan.org/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		https://mirror.init7.net/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		http://mirror.clarkson.edu/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		http://ftp.kaist.ac.kr/vlc/${PORTNAME}/${DISTVERSION:S/a$//}/ \
+		http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/
+
+MAINTAINER=	multimedia@FreeBSD.org
+COMMENT=	Qt based multimedia player and streaming server
+WWW=		https://www.videolan.org
+
+LICENSE=	GPLv2
+
+BUILD_DEPENDS=	gsed:textproc/gsed \
+		ffmpeg>=3.4.1,1:multimedia/ffmpeg \
+		yasm:devel/yasm
+LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
+		libdvbpsi.so:multimedia/libdvbpsi \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
+		libidn.so:dns/libidn \
+		libmatroska.so:multimedia/libmatroska \
+		libgpg-error.so:security/libgpg-error \
+		libebml.so:textproc/libebml
+RUN_DEPENDS=	ffmpeg>=3.4.1,1:multimedia/ffmpeg
+
+USES=		compiler:c++17-lang cpe desktop-file-utils dos2unix \
+		elfctl gettext-tools gl gmake gnome iconv:wchar_t \
+		libtool localbase pathfix pkgconfig tar:xz
+USE_GL=		opengl
+DOS2UNIX_FILES=	modules/gui/qt/qt6.pro
+
+CPE_VENDOR=	videolan
+
+USE_GNOME=	libxml2
+USE_LDCONFIG=	yes
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-avcodec --enable-avformat --enable-dvbpsi \
+		--enable-fontconfig --enable-freetype --enable-libgcrypt \
+		--enable-libxml2 --enable-oss --enable-postproc \
+		--enable-swscale --enable-vlc \
+		--disable-alsa --disable-aribb25 \
+		--disable-chromaprint --disable-crystalhd --disable-dc1394 \
+		--disable-decklink --disable-dsm --disable-dv1394 \
+		--disable-fdkaac --disable-gst-decode --disable-gles2 \
+		--disable-kai --disable-kate --disable-kva --disable-libcddb \
+		--disable-mpc --disable-mpg123 --disable-vnc --disable-opencv \
+		--disable-projectm --disable-schroedinger --disable-secret \
+		--disable-sid --disable-soxr --disable-telx --disable-tiger \
+		--disable-tremor --disable-udev --disable-update-check \
+		--disable-vsxu --disable-wasapi --disable-x26410b \
+		--with-kde-solid=${PREFIX}/share/solid/actions \
+		ac_cv_search_pthread_rwlock_init=-pthread \
+		BUILDCC="${CC}"
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=--enable-debug --disable-optimizations
+CFLAGS+=	-g -O0
+CXXFLAGS+=	-g -O0
+.endif
+
+MAKE_ENV=	MAKE=${GMAKE}
+INSTALL_TARGET=	install-strip
+CFLAGS+=	-Wno-unreachable-code-generic-assoc
+CFLAGS_i386=	-fomit-frame-pointer
+ELF_FEATURES=	+noaslr:bin/.libs/vlc # See PR 270038
+BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
+
+PORTDATA=	*
+PORTDOCS=	*
+
+OPTIONS_DEFINE=	A52 AALIB AOM ARIBSUB ASS AVAHI CACA CHROMECAST DAV1D DBUS DCA \
+		DOCS DVDNAV DVDREAD FAAD FLAC FLUID FREERDP FRIBIDI \
+		GME GNUTLS GOOM HARFBUZZ JACK JPEG LIBBLURAY LIBPLACEBO LIBRSVG2 \
+		LIBSSH2 LIRC LIVEMEDIA LUA MAD MODPLUG MPEG2 MTP \
+		NCURSES NFS NLS NOTIFY OGGSPOTS OGG OPTIMIZED_CFLAGS OPUS PNG \
+		PULSEAUDIO QT REALRTSP RUNROOT SAMPLERATE SDL SHOUTCAST \
+		SKINS SMB SNDIO SPEEX SRT STREAM TAGLIB THEORA TWOLAME UPNP V4L \
+		VAAPI VCD VDPAU VORBIS VPX WAYLAND X11 X264 X265 ZVBI
+# intel-media-sdk only for i386/amd64
+OPTIONS_DEFINE_amd64=	MFX
+OPTIONS_DEFINE_i386=	MFX
+OPTIONS_DEFINE_powerpc=		ALTIVEC
+OPTIONS_DEFINE_powerpc64=	ALTIVEC
+OPTIONS_RADIO=		QTVER
+OPTIONS_RADIO_QTVER=	QT5 QT6
+
+OPTIONS_DEFAULT=ASS AVAHI CHROMECAST DAV1D DBUS DVDNAV DVDREAD FRIBIDI GNUTLS HARFBUZZ \
+		JPEG LIVEMEDIA LUA OGG OPTIMIZED_CFLAGS OPUS PNG QT QT5 SAMPLERATE \
+		SKINS SPEEX STREAM TAGLIB THEORA TWOLAME UPNP V4L VAAPI VCD \
+		VDPAU VORBIS WAYLAND X11
+OPTIONS_DEFAULT_powerpc=	ALTIVEC
+OPTIONS_DEFAULT_powerpc64=	ALTIVEC
+OPTIONS_EXCLUDE=	LIBPLACEBO # https://code.videolan.org/videolan/vlc/-/commit/8e22c39ea3c3
+OPTIONS_EXCLUDE+=	VAAPI # Not compatible until VLC 4
+OPTIONS_SUB=		yes
+
+AOM_DESC=		AV1 video encoding/decoding via libaom
+ARIBSUB_DESC=		ARIB text decoding via libaribb24
+ASS_DESC=		ASS/SSA subtitle rendering
+CHROMECAST_DESC=	Streaming to Chromecast device
+
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/main/multimedia/vlc/distinfo -> HTTP 200 | 153 bytes]
+TIMESTAMP = 1794274581
+SHA256 (vlc-3.0.24.tar.xz) = e7cab503d1d7d5849b89d2cf0e1ee60d0ef6d012407791b644b9cfc0cc225fdf
+SIZE (vlc-3.0.24.tar.xz) = 27620304
+
+
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/main/multimedia/vlc/pkg-descr -> HTTP 200]
+VLC media player is a highly portable multimedia player for various
+audio and video formats (MPEG-1, MPEG-2, MPEG-4, DivX, mp3, ogg, and
+more) as well as DVD's, VCD's, and various streaming protocols. It
+can also be used as a server to stream in unicast or multicast in
+IPv4 or IPv6 on a high-bandwidth network. VLC also has the ability
+to transcode media on-the-fly for streaming or saving to disk.
+
+
+=== Receita oficial FreeBSD Ports: graphics/blender (ref=12fd1e2633db4c76fa18fa17d983ebe79bb03ff7) ===
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/12fd1e2633db4c76fa18fa17d983ebe79bb03ff7/graphics/blender/Makefile -> HTTP 200 | 9208 bytes]
+PORTNAME=	blender
+DISTVERSION=	4.2.0
+CATEGORIES=	graphics multimedia
+MASTER_SITES=	http://download.blender.org/source/ \
+		http://mirror.cs.umn.edu/blender.org/source/ \
+		http://public.planetmirror.com/pub/blender/source/
+
+MAINTAINER=	FreeBSD@Shaneware.biz
+COMMENT=	3D modeling/rendering/animation package
+WWW=		https://www.blender.org/
+
+LICENSE=	GPLv3+
+LICENSE_FILE=	${WRKSRC}/doc/license/GPL3-license.txt
+
+ONLY_FOR_ARCHS=		aarch64 amd64 powerpc64 powerpc64le riscv64
+ONLY_FOR_ARCHS_REASON=	static_assert(sizeof(unsigned long long) == sizeof(struct hipArray*))
+
+BUILD_DEPENDS=	${PYNUMPY}
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
+		libfreetype.so:print/freetype2 \
+		libepoxy.so:graphics/libepoxy \
+		libOpenImageIO.so:graphics/openimageio \
+		libpng.so:graphics/png \
+		libtiff.so:graphics/tiff \
+		libzstd.so:archivers/zstd
+RUN_DEPENDS=	${PYNUMPY}
+# libboost_regex.so just acts as a placeholder; several boost
+# libraries are used, if either of the most common options in blender
+# are set. We will pull boost in just to be on the safe side.
+USES=		cmake:noninja compiler:c++17-lang cpe eigen:3 jpeg llvm:build,run pkgconfig \
+		python:3.11 shebangfix tar:xz xorg
+USE_XORG=	x11 xext xfixes xmu xrender
+
+SHEBANG_FILES=	scripts/modules/bl_i18n_utils/merge_po.py \
+		scripts/modules/bl_i18n_utils/utils_rtl.py \
+		scripts/modules/blend_render_info.py
+
+CMAKE_ARGS=	-DCMAKE_CXX_STANDARD:INTEGER=17 \
+		-DLLVM_CONFIG:STRING="${LOCALBASE}/bin/llvm-config${LLVM_VERSION}"
+.if defined(WITH_DEBUG)
+CMAKE_ARGS+=	-DWITH_GHOST_DEBUG:BOOL=ON
+.endif
+CMAKE_ON=	WITH_AUDASPACE WITH_BOOST WITH_CLANG WITH_GHOST_X11 WITH_GHOST_XDND \
+		WITH_HYDRA WITH_IO_GPENCIL WITH_IO_PLY WITH_IO_STL WITH_IO_WAVEFRONT_OBJ \
+		WITH_LLVM WITH_OPENGL_BACKEND WITH_PYTHON WITH_SYSTEM_EIGEN3 \
+		WITH_SYSTEM_FREETYPE WITH_X11_XINPUT WITH_X11_XF86VMODE WITH_X11_XFIXES
+CMAKE_OFF=	WITH_GHOST_SDL WITH_INSTALL_PORTABLE LLVM_STATIC WITH_MATERIALX \
+		WITH_MEM_JEMALLOC WITH_MEM_VALGRIND WITH_NANOVDB WITH_PYTHON_INSTALL \
+		WITH_PYTHON_INSTALL_NUMPY
+
+CFLAGS+=	${CFLAGS_${CHOSEN_COMPILER_TYPE}}
+CFLAGS_gcc=	-Wno-float-conversion
+CXXFLAGS+=	-DGLOG_USE_GLOG_EXPORT
+LDFLAGS+=	-lexecinfo -Wl,--undefined-version
+
+SUB_FILES=	blender
+PLIST_SUB+=	VER=${DISTVERSION:R}
+OPTIONS_SUB=	yes
+
+.include "${.CURDIR}/Makefile.options"
+
+ALEMBIC_IMPLIES=		OPENEXR
+ALEMBIC_LIB_DEPENDS=		libAlembic.so:graphics/alembic
+ALEMBIC_CMAKE_BOOL=		WITH_ALEMBIC
+AVI_CMAKE_BOOL=			WITH_CODEC_AVI
+BULLET_CMAKE_BOOL=		WITH_BULLET
+CAMERATRACK_LIB_DEPENDS=	libglog.so:devel/glog
+CAMERATRACK_CMAKE_BOOL=		WITH_LIBMV WITH_SYSTEM_GLOG
+CINEON_CMAKE_BOOL=		WITH_IMAGE_CINEON
+COLLADA_LIB_DEPENDS=		libOpenCOLLADABaseUtils.so:graphics/opencollada \
+				libpcre.so:devel/pcre
+COLLADA_USES=			gnome
+COLLADA_USE=			GNOME=libxml2
+COLLADA_CMAKE_BOOL=		WITH_OPENCOLLADA
+COMPOSITOR_CMAKE_BOOL=		WITH_COMPOSITOR_CPU
+CYCLES_IMPLIES=			TBB
+CYCLES_LIB_DEPENDS=		libgflags.so:devel/gflags
+CYCLES_CMAKE_BOOL=		WITH_CYCLES WITH_CYCLES_LOGGING
+CYCLES_LDFLAGS=			-L${LOCALBASE}/lib -lgflags
+CYCLES_EMBR_IMPLIES=		CYCLES
+CYCLES_EMBR_LIB_DEPENDS=	libembree3.so:graphics/embree
+CYCLES_EMBR_CMAKE_BOOL=		WITH_CYCLES_EMBREE
+CYCLES_ONEAPI_LIB_DEPENDS=	libtbb.so:devel/onetbb
+CYCLES_ONEAPI_CMAKE_BOOL=	WITH_CYCLES_DEVICE_ONEAPI
+CYCLES_OSL_IMPLIES=		CYCLES OPENEXR PUGIXML
+CYCLES_OSL_LIB_DEPENDS=		liboslcomp.so:graphics/openshadinglanguage
+CYCLES_OSL_CMAKE_BOOL=		WITH_CYCLES_OSL
+CYCLES_OSL_CMAKE_ON=		-DOSL_SHADER_DIR:STRING="${LOCALBASE}/share/openshadinglanguage/shaders"
+DRACO_USE=			LDCONFIG=${PYTHON_SITELIBDIR}
+DRACO_CMAKE_BOOL=		WITH_DRACO
+EBOOL_LIB_DEPENDS=		libgmp.so:math/gmp
+EBOOL_CMAKE_BOOL=		WITH_GMP
+FFMPEG_LIB_DEPENDS=		libavutil.so:multimedia/ffmpeg \
+				libflite.so:audio/flite
+FFMPEG_CMAKE_BOOL=		WITH_CODEC_FFMPEG
+FFMPEG_LDFLAGS=			-L${LOCALBASE}/lib -lflite -lflite_cmu_us_kal \
+				-lflite_cmulex -lflite_usenglish
+FFTW3_LIB_DEPENDS=		libfftw3.so:math/fftw3 \
+				libfftw3f.so:math/fftw3-float
+FFTW3_CMAKE_BOOL=		WITH_FFTW3
+FREESTYLE_CMAKE_BOOL=		WITH_FREESTYLE
+FRIBIDI_L
+
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/12fd1e2633db4c76fa18fa17d983ebe79bb03ff7/graphics/blender/Makefile.options -> HTTP 200 | 4078 bytes]
+OPTIONS_DEFINE=		\
+	ALEMBIC		\
+	AVI		\
+	BULLET		\
+	CAMERATRACK	\
+	CINEON		\
+	COLLADA		\
+	COMPOSITOR	\
+	CYCLES		\
+	CYCLES_EMBR	\
+	CYCLES_ONEAPI	\
+	CYCLES_OSL	\
+	DRACO		\
+	EBOOL		\
+	FFMPEG		\
+	FFTW3		\
+	FREESTYLE	\
+	FRIBIDI		\
+	HARFBUZZ	\
+	HARU		\
+	HEADLESS	\
+	INPUT_NDOF	\
+	JACK		\
+	LZMA		\
+	LZO		\
+	MENU		\
+	MOD_FLUID	\
+	MOD_OCEANSIM	\
+	MOD_REMESH	\
+	NLS		\
+	OPENAL		\
+	OPENCOLORIO	\
+	OPENEXR		\
+	OPENIMAGEDN	\
+	OPENJPEG	\
+	OPENMP		\
+	OPENPGL		\
+	OPENSUBDIV	\
+	OPENVDB		\
+	OPENXR		\
+	POTRACE		\
+	PUGIXML		\
+	PULSEAUDIO	\
+	QUADRIFLOW	\
+	SDL		\
+	SIMD		\
+	SNDFILE		\
+	TBB		\
+	THUMBNAILER	\
+	TRACE		\
+	USD		\
+	VULKAN		\
+	WAYLAND		\
+	WEBP		\
+	XINPUT		\
+	XF86VMODE
+
+OPTIONS_DEFAULT=	\
+	ALEMBIC		\
+	AVI		\
+	BULLET		\
+	CINEON		\
+	COLLADA		\
+	COMPOSITOR	\
+	CYCLES		\
+	CYCLES_ONEAPI	\
+	DRACO		\
+	EBOOL		\
+	FFMPEG		\
+	FFTW3		\
+	FREESTYLE	\
+	FRIBIDI		\
+	HARFBUZZ	\
+	HARU		\
+	INPUT_NDOF	\
+	LZMA		\
+	LZO		\
+	MENU		\
+	MOD_FLUID	\
+	MOD_OCEANSIM	\
+	MOD_REMESH	\
+	OPENAL		\
+	OPENCOLORIO	\
+	OPENEXR		\
+	OPENJPEG	\
+	OPENSUBDIV	\
+	OPENVDB		\
+	POTRACE		\
+	PUGIXML		\
+	PULSEAUDIO	\
+	QUADRIFLOW	\
+	SDL		\
+	TBB		\
+	THUMBNAILER	\
+	TRACE		\
+	WAYLAND		\
+	WEBP		\
+	XINPUT		\
+	XF86VMODE
+
+# CAMERATRACK: libunwind only supports i386/amd64/aarch64/powerpc64/powerpc64le
+# CYCLES_EMBR: embree only supports amd64 and i386
+# OPENIMAGEDN: oidn only supports amd64
+# OPENPGL:     requires supported SIMD ISA - i386/amd64/aarch64/armv6/armv7
+OPTIONS_DEFAULT_aarch64=	CAMERATRACK OPENPGL SIMD
+OPTIONS_DEFAULT_amd64=		CAMERATRACK CYCLES_EMBR OPENIMAGEDN OPENPGL
+OPTIONS_DEFAULT_powerpc64=	CAMERATRACK
+OPTIONS_DEFAULT_powerpc64le=	CAMERATRACK
+
+ALEMBIC_DESC=		Enable Alembic file support
+AVI_DESC=		Enable Blender's own AVI file support
+BULLET_DESC=		Bullet physics engine
+CAMERATRACK_DESC=	Camera tracking support (amd64/aarch64/powerpc64/powerpc64le only)
+CINEON_DESC=		CINEON and DPX graphics format support
+COLLADA_DESC=		Enable read/write support for COLLADA files
+COMPOSITOR_DESC=	Use the tile-based nodal compositor
+CYCLES_DESC=		Cycles render engine support
+CYCLES_EMBR_DESC=	Embree support (amd64 only)
+CYCLES_ONEAPI_DESC=	Enable Cycles oneAPI compute support
+CYCLES_OSL_DESC=	Shading support for the cycles render engine
+# this is required to support gltf import/export
+DRACO_DESC=		Install draco python module
+EBOOL_DESC=		Enable exact boolean support
+FFTW3_DESC=		Use fftw for smoke and audio effects
+FREESTYLE_DESC=		Enable advanced edges rendering
+FRIBIDI_DESC=		Enable features using fribidi Unicode Bidirectional Algorithm
+HARFBUZZ_DESC=		Enable features using harfbuzz OpenType text shaping engine
+HARU_DESC=		Enable libharu support
+HEADLESS_DESC=		Disable user interface (for render-farms)
+INPUT_NDOF_DESC=	Enable NDOF input device support
+LZMA_DESC=		Best compression support
+LZO_DESC=		Fast compression support
+MENU_DESC=		Install desktop menu
+MOD_FLUID_DESC=		Fluid simulation support
+MOD_OCEANSIM_DESC=	Ocean simulation support
+MOD_REMESH_DESC=	Remesh modifier support
+OPENCOLORIO_DESC=	OpenColorIO-based color management support
+OPENIMAGEDN_DESC=	OpenImageDenoise support (amd64 only)
+OPENJPEG_DESC=		Enhanced JPEG (JPEG 2000) graphics support
+OPENPGL_DESC=		Open Path Guiding in Cycles (aarch64 and amd64 only)
+OPENSUBDIV_DESC=	Use the OpenSubDiv library for surface subdivision
+OPENVDB_DESC=		Use openVDB library for volumetric data
+OPENXR_DESC=		Enable VR features through the OpenXR specification
+POTRACE_DESC=		Enable features using libpotrace
+PUGIXML_DESC=		Enable pugixml support
+QUADRIFLOW_DESC=	Enable quadriflow remesher
+SDL_DESC=		Audio and Joystick support using SDL
+SIMD_DESC=		Use SIMD optimized routines (on amd64 require x86-64-v2 support)
+TBB_DESC=		Enable use of Intel's tbb
+THUMBNAILER_DESC=	Build blender thumbnailer
+TRACE_DESC=		Enable tracing image to GP stroke
+USD_DESC=		Universal Scene Description Support (aarch64 and amd64 only, broken)
+VULKAN_DESC=		Enable Vulkan as graphics backend (only for development)
+WAYLAND_DESC=		Wayland support
+WEBP_DESC=		Enable webp image support
+XF86VMODE_DESC
+
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/12fd1e2633db4c76fa18fa17d983ebe79bb03ff7/graphics/blender/distinfo -> HTTP 200 | 159 bytes]
+TIMESTAMP = 1722074942
+SHA256 (blender-4.2.0.tar.xz) = 30515eafbac3301bf33af859945315d209cac4f8ee1dc0e312b4fbce50a85be2
+SIZE (blender-4.2.0.tar.xz) = 72767404
+
+
+[GET https://raw.githubusercontent.com/freebsd/freebsd-ports/12fd1e2633db4c76fa18fa17d983ebe79bb03ff7/graphics/blender/pkg-descr -> HTTP 200]
+Blender is a free and fully functional 3D
+modeling/rendering/animation/gaming package.
+

@@ -1,0 +1,2087 @@
+=== Nix: realização de github:NixOS/nixpkgs/ac62194c3917d5f474c1a844b6fd6da2db95077d#gnome-text-editor ===
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix build github:NixOS/nixpkgs/ac62194c3917d5f474c1a844b6fd6da2db95077d#gnome-text-editor.out --no-link --print-out-paths
+/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+[stderr]
+these 315 paths will be fetched (263.2 MiB download, 991.4 MiB unpacked):
+  /nix/store/bylmxi0aa2v3jz2q7zkdpa49nmpyrkgq-acl-2.3.2
+  /nix/store/35b7pci9f1308g1n297y1kca9k8rl461-alsa-lib-1.2.13
+  /nix/store/qnwch8002srl30i60an7s0giz00ldlmn-alsa-topology-conf-1.2.5.1
+  /nix/store/8v3zxwk9dny1bc95ibzr0x8hf26hqkrq-alsa-ucm-conf-1.2.12
+  /nix/store/dmrwlq8ram9bi4dy09h0wrmjzklhnww5-appstream-1.0.4
+  /nix/store/i2zz6ig7017jfpgx0nmlap1ci4zwqkbk-aspell-0.60.8.1
+  /nix/store/h13jrdg1scvfpwmpwdqvd8jmb90gv2z3-at-spi2-core-2.56.2
+  /nix/store/s1rbzc4mmfhwlhafha52c8frsrfkrx37-attr-2.5.2
+  /nix/store/wxq21pla3bpk2n22ckand6dhnaq82gy8-audit-4.1.0-lib
+  /nix/store/1sv8j6k9rccxb10sxkh38xfsx1ppl3rh-avahi-0.8
+  /nix/store/l9k32vj2aczxw62134j1x0dsh569jz2l-bash-5.2p37
+  /nix/store/nn27l879np49xvx6l1a8nqnqlp9apd8n-bash-interactive-5.2p37
+  /nix/store/f6h1mckx26vw89f0hlgh2n0y3nx4y22x-bluez-5.80
+  /nix/store/9c65bhkvvcsahkzp38ir5gqprp4y44lx-brotli-1.1.0-lib
+  /nix/store/s3mkvm3f20pd1vfx109w89jcc0mdcx2a-bzip2-1.0.8
+  /nix/store/59pgpbm743q1nhav513283zinqrf4rqk-bzip2-1.0.8-bin
+  /nix/store/gd22hvyhpvwpwv3wd3f5r1c02d2cy5m6-cairo-1.18.2
+  /nix/store/jvzi8ak4rrwnmkmbwn81zlcqwpfp856q-cdparanoia-III-10.2
+  /nix/store/f3f0l8by19nz1yln0kavpizh1snjp039-celt-0.11.3
+  /nix/store/yrw2z93rq23dw93wvy098gdz09qgp3zj-chromaprint-1.5.1
+  /nix/store/cmmvz51gaak59wpmi6qil1dg70mk9rwy-cjson-1.7.18
+  /nix/store/zwplch93wbpj82bp7riwaixmdx2xi0ah-coreutils-9.7
+  /nix/store/ifqpynrl7jh4m6yi5nx17hh4kdszzv39-cracklib-2.10.0
+  /nix/store/1jk1yh8rx95llb9vbk61scax9x82sfp6-cryptsetup-2.7.5
+  /nix/store/qia8jjij6qwqb9lkfg4x72px65lqmpms-cups-2.4.14-lib
+  /nix/store/nshhjm3s9pwc86s5hyzqf22pn8kikw8j-curl-8.14.1
+  /nix/store/x96w22l8iqhd0k92x7gys2qsy0wcsc89-dav1d-1.5.1
+  /nix/store/a1x1nnzdk606ry2b7jxzsyzx268b34k4-db-4.8.30
+  /nix/store/mkqpd42f5ngv9ns71gpaxdhnjpcf4dv4-dbus-1.14.10-lib
+  /nix/store/p2w6dyv1xyihxj5hqimgs7irj2z7q5hl-dconf-0.40.0-lib
+  /nix/store/xvy8dq43r9hi9qrnwgg7kjjny8y0lr0g-dejavu-fonts-minimal-2.37
+  /nix/store/25rjicrjsc82nyg4cj2ykkmcb69kxlij-dns-root-data-2025-04-14
+  /nix/store/6fcnmcwnp7kf3b37psxl11w9knczhcn9-editorconfig-core-c-0.12.9
+  /nix/store/mlnlvdaij0c6qgzz3mmcb5f796871778-elfutils-0.192
+  /nix/store/lxwwp585ikghhknl5sa9n8gwmbclqrvv-ell-0.76
+  /nix/store/6xpirynhwn5zbqdjzq9az730pxa03f9h-enchant-2.6.9
+  /nix/store/jr8kyv517lyd5xcv3pnhr6z4wirbi06r-expat-2.7.3
+  /nix/store/h3n5692s0pkh2qfbl3l10d28vzry769c-faad2-2.11.2
+  /nix/store/bn2ppwm28sfzkwaxrqwv4l2mlf2jzc6w-fdk-aac-2.0.3
+  /nix/store/dlvcgf0y7m1ijrlkqlzdgs6jw43px4qj-ffado-2.4.9
+  /nix/store/qjbdnjj9qn3kvmcznzzppfjxwpcr0bp5-ffmpeg-headless-7.1.1-data
+  /nix/store/jwnq8vfnvjqshmrnrj2acvsixh42ijv2-ffmpeg-headless-7.1.1-lib
+  /nix/store/c6f6vx8d4d97wcw6bra3kgwls317q0km-fftw-single-3.3.10
+  /nix/store/yrgnr4naqdjwdhn1q142f8c5yb8jsz37-file-5.45
+  /nix/store/37zx287az46bylnmgmx7iygq1wq23l2s-flac-1.5.0
+  /nix/store/7zcgw7325dkys87jv1h05vplmq5n6gwx-flite-2.2-lib
+  /nix/store/1hm5xf6f87ndhcgq7rw4aq4sscwic92f-fluidsynth-2.4.4
+  /nix/store/fzmns3hnwpxmva6xk9jryr79ci49y4pr-fontconfig-2.16.0
+  /nix/store/74z7naywq3fzikbsbb0248y7j6mgcmi6-fontconfig-2.16.0-lib
+  /nix/store/d1adwfwl43i34ffj24alc844rkl1pk19-freepats-20060219
+  /nix/store/v2nsb0q208p4xiw74vp4srn2sammhhks-freetype-2.13.3
+  /nix/store/62h5sfxr4s1qc3fghcan06viq4gms6yg-fribidi-1.0.16
+  /nix/store/xg8pvkw0nshh3dfig36n88xvpvh2dail-game-music-emu-0.6.3
+  /nix/store/cf1a53iqg6ncnygl698c4v0l8qam5a2q-gcc-14.3.0-lib
+  /nix/store/d84l3qjb077dxkajn24k58z2q261d4lv-gcc-14.3.0-libgcc
+  /nix/store/vmw4ghy1v0lz64f1xx4cyv6g6qc1lb1k-gdbm-1.25-lib
+  /nix/store/zw02m3kb15sb2rs65vjsc81k87xp2pms-gdk-pixbuf-2.42.12
+  /nix/store/bnma8xd8wwvsjgnncd0d7q5f7m7vl97n-getent-glibc-2.40-66
+  /nix/store/imw7yr5pkn22zaq7z7hczpb9dim29scw-giflib-5.2.2
+  /nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3
+  /nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66
+  /nix/store/60dqvw79p46541c9wlmlycmycn2plqfx-glibc-2.40-66-getent
+  /nix/store/lg9b5vp33kbdp5dmb8zdk6br9vy6w0sa-glibmm-2.66.8
+  /nix/store/lm0g29ps43q8bm2gsd26g5pi2zwb6i8d-gmp-with-cxx-6.3.0
+  /nix/store/m9fycbkaairz8kampnsl7sx1aanvl0db-gmp-with-cxx-6.3.0
+  /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+  /nix/store/90r466lzg0jw11v60cki60s0qfhs93vp-gnugrep-3.11
+  /nix/store/4r05g1i1rfflips84l0h2y49b9y3sjq2-gnum4-1.4.19
+  /nix/store/hgzr9d5da7n07wlq9wv7cxy42z4y86hn-gnupg-2.4.8
+  /nix/store/76df6j9sq1ar58id3y3v4rkijany1wxp-gnutar-1.35
+  /nix/store/5n5nnddzq111zqdncc19iyc24a5n2828-gnutls-3.8.9
+  /nix/store/pk0hycs9ry01qgcaa88bj92bxpcbfvyc-gobject-introspection-1.84.0
+  /nix/store/7096hm4ngrc657mn25gxy4pidffblrc5-graphene-1.10.8
+  /nix/store/45cbd7hk1jpppp9arkpabjvr9x2wfpzn-graphite2-1.3.14
+  /nix/store/d5m4r5zrjqdrgdzj09wjvhfbbdyk99j1-gsettings-desktop-schemas-48.0
+  /nix/store/6qanwb6lar8lkpvf8illhidw8ps23748-gsm-1.0.22
+  /nix/store/69z8gc1q1kvphvzygi0zvfy07386p76q-gssdp-1.6.3
+  /nix/store/pn5rnphljfwj5nj7fm9jna2f8cpaxf36-gst-plugins-bad-1.26.3
+  /nix/store/xkgs1irfbfm7j5ccpxy69ar5gxk25vmn-gst-plugins-base-1.26.3
+  /nix/store/frfa9gkb39j5a7gk7585vnhrb7gwx485-gstreamer-1.26.3
+  /nix/store/gfignin0226v6d6xxs10bfbxqw17p8bg-gtk+3-3.24.49
+  /nix/store/w8kpi29gnj914xnbns7rds35155lyxfk-gtk4-4.18.6
+  /nix/store/1kx3rjz0y3r2a5qr5i0k780qg2a3084l-gtksourceview-5.16.0
+  /nix/store/6an935fh9nn57y2ym940v8y2qrsscp35-gupnp-1.6.9
+  /nix/store/yksy1kpppwmn1aqx81nx9mwfc15z4kbr-gupnp-igd-1.6.0
+  /nix/store/44c243x0jpv587hmxrzl31pripa0f0j8-gzip-1.14
+  /nix/store/rlxh4fghh2v71s5vvin2slqz2p1kqzwi-harfbuzz-10.2.0
+  /nix/store/pagypvpcw6wxlc60ni4fb8p33zg8rnm9-hfst-ospell-0.5.4
+  /nix/store/vfv09np60w4r91na0vfa7n2rm1n5a7jv-hspell-1.4
+  /nix/store/8p5iyc3ld6aj0fxzwhp6n9v0157c6idr-hunspell-1.7.2
+  /nix/store/nh74bblpc90y60shawgd1g3sqahj8g6i-hwdata-0.393
+  /nix/store/krj0md2jkaaz4ksrg8wqab80wk34d1d0-icu4c-76.1
+  /nix/store/r4872p8rypmvfafmw28jhqqdjm53zqjg-imath-3.1.12
+  /nix/store/c0rsnkvnq4vgm23cva64h3jspqs1q7i9-iptables-1.8.11
+  /nix/store/ifqkxv5mmvvmy38dpphnb6vcslicii2k-iso-codes-4.17.0
+  /nix/store/
+... [truncado: 54048 chars totais] ...
+ path '/nix/store/4r05g1i1rfflips84l0h2y49b9y3sjq2-gnum4-1.4.19' from 'https://cache.nixos.org'...
+copying path '/nix/store/i2zz6ig7017jfpgx0nmlap1ci4zwqkbk-aspell-0.60.8.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/vfv09np60w4r91na0vfa7n2rm1n5a7jv-hspell-1.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/2hqck6r9pxgvqlfxdzlijnd7qlihl0c9-libmad-0.15.1b' from 'https://cache.nixos.org'...
+copying path '/nix/store/x5k2vwhmnfshp234lj3lgnhc3j0zlka2-wavpack-5.8.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/yrgnr4naqdjwdhn1q142f8c5yb8jsz37-file-5.45' from 'https://cache.nixos.org'...
+copying path '/nix/store/z27bwbd4ynxw2cmszkylzm0v2m67l43d-opusfile-0.12' from 'https://cache.nixos.org'...
+copying path '/nix/store/mlnlvdaij0c6qgzz3mmcb5f796871778-elfutils-0.192' from 'https://cache.nixos.org'...
+copying path '/nix/store/55mm225hwlqf6bg0dprpppc4zl411z3n-raptor2-2.0.16' from 'https://cache.nixos.org'...
+copying path '/nix/store/494s5jn4yvbmfynk3k6qmkvmlv3b5v2v-tpm2-tss-4.1.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/lg9b5vp33kbdp5dmb8zdk6br9vy6w0sa-glibmm-2.66.8' from 'https://cache.nixos.org'...
+copying path '/nix/store/hqxm7r1q3ky4j3nigbnydf658ld92xh3-libbpf-1.5.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/wpj48wj94jb3hlmclxcmx47qf8f857p8-lrdf-0.6.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/d78fm9z3isk3kb26plx0yc1a3708n5h3-libpcap-1.10.5' from 'https://cache.nixos.org'...
+copying path '/nix/store/rigwlrg08iw071x8brffd9cq8x039k6z-zstd-1.5.7-bin' from 'https://cache.nixos.org'...
+copying path '/nix/store/6xpirynhwn5zbqdjzq9az730pxa03f9h-enchant-2.6.9' from 'https://cache.nixos.org'...
+copying path '/nix/store/f20j3x3r4xjc3r4kskaxj4c10miii4zp-libpwquality-1.4.5-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/nk7wnp1209mv9mdf0vr1ivzsdzm38yzs-kbd-2.7.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/884b8cl0x9hz7bmdq93icppfwzm3bv9m-libxml++-3.0.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/c0rsnkvnq4vgm23cva64h3jspqs1q7i9-iptables-1.8.11' from 'https://cache.nixos.org'...
+copying path '/nix/store/dlvcgf0y7m1ijrlkqlzdgs6jw43px4qj-ffado-2.4.9' from 'https://cache.nixos.org'...
+copying path '/nix/store/kiplbb6yv7rmjf21hf9ky01b9kmgmnqn-systemd-257.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/d2402qsphw86lqf2fg6kdrzq3r467x5w-systemd-minimal-257.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/mkqpd42f5ngv9ns71gpaxdhnjpcf4dv4-dbus-1.14.10-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/1sv8j6k9rccxb10sxkh38xfsx1ppl3rh-avahi-0.8' from 'https://cache.nixos.org'...
+copying path '/nix/store/y9pdffmcljhsklcwcgrzzhmd43ndhacg-libjack2-1.9.22' from 'https://cache.nixos.org'...
+copying path '/nix/store/f6h1mckx26vw89f0hlgh2n0y3nx4y22x-bluez-5.80' from 'https://cache.nixos.org'...
+copying path '/nix/store/cipbx35w268sdp8851zb50m1lfnd9xn0-libpulseaudio-17.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/qia8jjij6qwqb9lkfg4x72px65lqmpms-cups-2.4.14-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/xnx5jnb26fia13bh62dxrv9p24pi8dmg-tinysparql-3.9.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/dmrwlq8ram9bi4dy09h0wrmjzklhnww5-appstream-1.0.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/h13jrdg1scvfpwmpwdqvd8jmb90gv2z3-at-spi2-core-2.56.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/7zcgw7325dkys87jv1h05vplmq5n6gwx-flite-2.2-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/1hm5xf6f87ndhcgq7rw4aq4sscwic92f-fluidsynth-2.4.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/sr5n77vlqy08yd1ilx3awpqw1d4vgkvv-libao-1.2.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/d52qnl9mald53hyg69md697m6gk1mqhc-mpg123-1.32.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/0dc9kkbr9z1wh0sarjc1k65sdlxw72qj-sox-unstable-2021-05-09-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/y1jz7wdb8m9vr1a926pf9lgnxvmkf2v7-libopenmpt-0.7.16' from 'https://cache.nixos.org'...
+copying path '/nix/store/gfignin0226v6d6xxs10bfbxqw17p8bg-gtk+3-3.24.49' from 'https://cache.nixos.org'...
+copying path '/nix/store/lw419kksszipf5h674s0j28rcqi0wi60-roc-toolkit-0.4.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/jwnq8vfnvjqshmrnrj2acvsixh42ijv2-ffmpeg-headless-7.1.1-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/frfa9gkb39j5a7gk7585vnhrb7gwx485-gstreamer-1.26.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/xkgs1irfbfm7j5ccpxy69ar5gxk25vmn-gst-plugins-base-1.26.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/xpb1ibiij73b8yql5lyyms7lb9b0cbpk-libcanberra-0.30' from 'https://cache.nixos.org'...
+copying path '/nix/store/3yk6qq4s2zjcmvr3xaill3z2y1qd1rim-libnice-0.1.22' from 'https://cache.nixos.org'...
+copying path '/nix/store/yrw2z93rq23dw93wvy098gdz09qgp3zj-chromaprint-1.5.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/xswym3887gf8l681i2m3j587kllcwlh7-libcamera-0.5.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/0490wlxa4p3k4h95kkv0wlmv7iyjgm8i-pipewire-1.4.7' from 'https://cache.nixos.org'...
+copying path '/nix/store/vc0p41f03fk34ifi0jyrfz0gm4bd7d5k-openal-soft-1.24.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/pn5rnphljfwj5nj7fm9jna2f8cpaxf36-gst-plugins-bad-1.26.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/w8kpi29gnj914xnbns7rds35155lyxfk-gtk4-4.18.6' from 'https://cache.nixos.org'...
+copying path '/nix/store/1kx3rjz0y3r2a5qr5i0k780qg2a3084l-gtksourceview-5.16.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/8kxg2016yvvf9abmv9lfwjr14qrz7j76-libadwaita-1.7.5' from 'https://cache.nixos.org'...
+copying path '/nix/store/zblx0463sd39b0qp7jkqb4y6lzcc46fr-libspelling-0.4.8' from 'https://cache.nixos.org'...
+copying path '/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3' from 'https://cache.nixos.org'...
+[Código de saída: 0 | Tempo: 31744.84 ms]
+
+=== Nix: realização de nixpkgs#vlc ===
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix build nixpkgs#vlc.out --no-link --print-out-paths
+/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24
+[Código de saída: 0 | Tempo: 206.77 ms]
+
+=== Nix: realização de github:NixOS/nixpkgs/12be955b9e3e029f0c6274122b5fc040324f898a#blender ===
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix build github:NixOS/nixpkgs/12be955b9e3e029f0c6274122b5fc040324f898a#blender.out --no-link --print-out-paths
+/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2
+[stderr]
+these 330 paths will be fetched (534.4 MiB download, 2.2 GiB unpacked):
+  /nix/store/dazcj1317dmil20vvmb3rs8vsl75b2ah-SDL2-2.32.2
+  /nix/store/4izi23kn57b3cw47jddzq14wcv01b5y5-acl-2.3.2
+  /nix/store/b8n9qhafrn3v6jl3x46blrhw7a5val2y-alembic-1.8.8-lib
+  /nix/store/3vp6c1l75z0kw6wp9lpbc8lkdpvsmxyx-alsa-lib-1.2.13
+  /nix/store/phvdngdrvkwa0lyg1zgrkr46h1p44443-alsa-topology-conf-1.2.5.1
+  /nix/store/ihfa49hzibjn4w6chlay0p2kg30198x0-alsa-ucm-conf-1.2.12
+  /nix/store/3h9a7n84x8nwb0lzfvgqakdcfhhm0ll1-at-spi2-core-2.54.1
+  /nix/store/pn0rk0wsmkjazbz380y8xzb99n8sr07g-attr-2.5.2
+  /nix/store/6wf4iwp85hpwfs21vj46n9v9ham6bik6-audiofile-0.3.6
+  /nix/store/hxv1nhajv5f4qx45fsx0jdw1bba2yqay-audit-4.0.3-lib
+  /nix/store/l4ng5cmvf3wp03q96qxl1ablwsbplxzc-avahi-0.8
+  /nix/store/58br4vk3q5akf4g8lx0pqzfhn47k3j8d-bash-5.2p37
+  /nix/store/cvlbhhrvzfkjl2hrrzhq3vr5gzan1r60-bash-interactive-5.2p37
+  /nix/store/75jf6s5i8j83rb0dh5dwl9sqbszx6a8a-blas-3
+  /nix/store/h8n3hfhfrdpkwsp9dfjmbdqdlpzcyx60-blas-3-dev
+  /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2
+  /nix/store/kri8wxxn0ccifq9va0cs6wlnf2jck6ip-bluez-5.79
+  /nix/store/54wr0cn0c6vsybjdlhm82d6cd2cz5s7g-boost-1.87.0
+  /nix/store/h0pvnm3d36in5cvhh6f3qmxxb9agbnk7-boost-1.87.0
+  /nix/store/8jsnksvw9f0yr4a2cqx0zpsis8bkis8k-boost-1.87.0-dev
+  /nix/store/ka86qsp50hdljs1qmn888yw1s75grxac-brotli-1.1.0-lib
+  /nix/store/r2cw2amwdjwdfcdrvfbq1cj4ryi6yfs5-bzip2-1.0.8
+  /nix/store/pcf18502sz0b25qya2lzm5f7wy0pd7a6-bzip2-1.0.8-bin
+  /nix/store/m2nf77p9bkw371mp2lazahndjaxbjx8l-c-blosc-1.21.6
+  /nix/store/gqaawaddz6q8z56w31vq7qr2ywmb40dq-cairo-1.18.2
+  /nix/store/z6rwz8jrk7262yrwa6ylnmrayr00cb0g-cdparanoia-III-10.2
+  /nix/store/ngr8ydjw0rwzd3hclj97khk4iyriicp7-celt-0.11.3
+  /nix/store/434wbk9nhqsq8ggx7zcni424xwmnb22p-cjson-1.7.18
+  /nix/store/yh6qg1nsi5h2xblcr67030pz58fsaxx3-coreutils-9.6
+  /nix/store/lrw2l1ygcnrd74wjp4r9sw5r5ycfwwj6-cracklib-2.10.0
+  /nix/store/wr01ivcrqxrq4ziqc9v7df1lldhad9qa-cryptsetup-2.7.5
+  /nix/store/70f2n4nda8jkqw7mxw6cij74i7v433nb-cups-2.4.11-lib
+  /nix/store/l6hzv5ms9fi7mx2j3xh0i42anyjcgpp8-curl-8.12.1
+  /nix/store/jfa17qdadghc941jjgz4qxbxsw3c5ymg-dav1d-1.5.1
+  /nix/store/75wkk19pbk141znbf3w4c686mr9488k4-db-4.8.30
+  /nix/store/25530szazsn249fjh6mhd0pr43paa3hq-dbus-1.14.10-lib
+  /nix/store/8fvx528a7fgi55gacsyd9v0rgsw3bfnq-dconf-0.40.0-lib
+  /nix/store/9caya68qm2fam74aplm4qmrvzk21ji95-dejavu-fonts-minimal-2.37
+  /nix/store/jzysf1ngm0897z6yb9484slkgp0ai4qy-dns-root-data-2024-06-20
+  /nix/store/ihc62ballwfcadb8hqki4s3ap382ymgz-draco-1.5.7
+  /nix/store/cy649s4771zabjmxxljx0p2vn9mxs0yc-elfutils-0.192
+  /nix/store/k95k3d451vdah7pww42fm24d8q560h6j-ell-0.71
+  /nix/store/564pdy2ai838fb9gi4v2qq4zmzjx1gz6-embree-4.3.3
+  /nix/store/spb4xrswkigavjyhri271xqfzhazxgar-expat-2.6.4
+  /nix/store/71q3780syrxmq1m66zy3imfc8890wahc-fdk-aac-2.0.3
+  /nix/store/izf3s1jnzxnbik547r59qrch85xlm6lb-ffado-2.4.9
+  /nix/store/fcw9rgcrlx81vv71ygj4gmi0x6fncwpp-ffmpeg-7.1.1-data
+  /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib
+  /nix/store/hk0p55w8py73nhcbwf4gsppa51p16sp1-ffmpeg-headless-7.1.1-data
+  /nix/store/6j9wh9vq3wmjka44ihfff77zzsmlnjb6-ffmpeg-headless-7.1.1-lib
+  /nix/store/r73qjirp95ri10z1fgb4rpsxm2jnrnql-fftw-double-3.3.10
+  /nix/store/06qhbfn1g8gdmj7c1sbgzfxqdazid73i-fftw-single-3.3.10
+  /nix/store/8mldw611f5mbgsl6fpz1khk4wjflvxb7-file-5.46
+  /nix/store/76iqnsw4lsz93wnz1977swfv7pxvil9g-flac-1.4.3
+  /nix/store/n4iqx5jwcsgzcb1wpia5kfclgamrwj6l-fontconfig-2.16.0
+  /nix/store/pqb8qbd3bq9r7vndbphavjgmvcd8zs66-fontconfig-2.16.0-lib
+  /nix/store/4shi5fy3m7bdj9p060mvxyhvfdka4r21-freeglut-3.6.0
+  /nix/store/2mmsgkggc79x1ayvd4hkbs6k2bqvw091-freetype-2.13.3
+  /nix/store/6hxiipj4w7p6dxmrx840h2d2r6zjvisy-fribidi-1.0.16
+  /nix/store/ik84lbv5jvjm1xxvdl8mhg52ry3xycvm-gcc-14-20241116-lib
+  /nix/store/id29wx2vp10d5xi6wzsykd4rb9ssaikx-gcc-14-20241116-libgcc
+  /nix/store/3l0ghb5nqlvrf83wsf2cxwn1my9xnwxv-gdbm-1.24-lib
+  /nix/store/51l1cplskpyg7zwqmh7f4ha8jcpsqisj-gdk-pixbuf-2.42.12
+  /nix/store/zy2n4id5gcxcbx2x8jbblkmcpdlpsypk-getent-glibc-2.40-66
+  /nix/store/2y8c3b7ydkl68liz336035llfhmm6r95-gfortran-14-20241116-lib
+  /nix/store/wiv7xa38v7mx8jhxp12d4qpclwrqdv3x-gfortran-14-20241116-libgcc
+  /nix/store/5z112gk0k73wgdiljb1l3n5jq6hkkzfw-giflib-5.2.2
+  /nix/store/26h27lwrs8f3c3d4fxr9qwz5jrp1hvyn-gle-3.1.2
+  /nix/store/0biq5934f1sgp3391al4kcanprqaxv3l-glew-2.2.0
+  /nix/store/vi9n40g3814x3f7sqnc3jvmrhr4n3ij9-glib-2.82.5
+  /nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66
+  /nix/store/3gbjdkkqzinpjg7za37qkjjirq9zswz7-glibc-2.40-66-getent
+  /nix/store/gfg3rf1bvsrw3p5gasld9gklniwniiz2-glibmm-2.66.7
+  /nix/store/q6063jl4mgbz9fk8hnfy1l5m8y9vldl5-glu-9.0.3
+  /nix/store/h89gh873zcsfjjp7w0f2mw357np32br7-gmp-with-cxx-6.3.0
+  /nix/store/rlpanzl29s3gv3wgs5720q04rbgysl8a-gmp-with-cxx-6.3.0
+  /nix/store/40yifhx34v4g4llrdn3v2ag8w02j10fv-gnugrep-3.11
+  /nix/store/r9g33qd54b8z66jz25z6v71lpmmhng1c-gnum4-1.4.19
+  /nix/store/rc3wprzgic84797wvyw218r5fgp6hc5c-gnupg-2.4.7
+  /nix/store/hfkclq54gppdb9fshnkwfdph1safyvli-gnutar-1.35
+  /nix/store/rxph0va3ibmp57dvk1ym5lzlp9ck2hh8-gnutls-3.8.9
+  /nix/store/zs1zlg5awyxl74lqzkkc6g46wm4faxzy-gobject-introspection-1.82.0
+  /nix/store/652kimm2xp2widc2ym996792h9yvn3fb-graphene-1.10.8
+  /nix/store/mfhahm2jw2x3nliqphcc4cc0f0w538yf-graphite2-1.3.14
+  /nix/store/lp1n3fdfisbzvdgvmk7jk7xivl8hg2n5-gsettings-desktop-schemas-47.1
+  /nix/store/l0kxf1arsc9nk0afhnl1hngjsn7ikcqr-gst-plugins-base-1.24.10
+  /nix/store/0zp153xbsipx4slnjavzp9r2d0h6a3hk-gstreamer-1.24.10
+  /nix/store/s6sg70v6kkwmgkd6nv0rjr5kr28m9777-gtk+3-3.24.48
+  /nix/store/4q2sv4sqb7y8y4pp3n9bf2aabmgqmwmy-gzip-1.13
+  /nix/store/a8105kj1z98ycyq6ki16ccav5fkvjf6f-harfbuzz-10.2.0
+  /nix/store/3hjk510258shkn6qihl0ilyd029qyz6c-hdf5-cpp-threadsafe-1.14.6
+  /nix/store/xa1mr1y5ps5pw6m559lyl3lh6gc6cajq-hwdata-0.393
+  /nix/store/qgij2wczc4vx1rhwf911mv491dx1n65i-icu4c-76.1
+  /nix/store/0ip3zavhi7999mqpjlqa32mr9aychhck-imath-3.1.12
+  /nix/store/4gb562nhb03scxhpndfynfl1bd1w9vjf-iptables-1.8.11
+  /nix/store/ak0d97ck0mjq9b
+... [truncado: 56927 chars totais] ...
+.3-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/kacmz3l42i1xckn537ifkwsfc7fg2w6f-zstd-1.5.6-bin' from 'https://cache.nixos.org'...
+copying path '/nix/store/wfihml2g7bm6crj4bfbsqg4iw6w60m3q-libpcap-1.10.5' from 'https://cache.nixos.org'...
+copying path '/nix/store/f8yfpqngp53yp51lxr8hhflzkkccprha-libpwquality-1.4.5-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/mjdgh8k4q3j2zj1f4ninp2r218j47qvd-kbd-2.7.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/skpajy8ck6gin4khjn34k7pvbmwzifb8-python3.11-certifi-2025.01.31' from 'https://cache.nixos.org'...
+copying path '/nix/store/j34jjs03pclfs9dfl7q6iw9863bpigdw-python3.11-charset-normalizer-3.4.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/m2lcy425r1vasrrmmn1v88rbasy6dmjy-python3.11-idna-3.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/kpjz5xi4crnih25v7q1k7pk01d9fxxb7-python3.11-markupsafe-3.0.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/sbplmix1irviidpag542vav5iikz1vd2-python3.11-materialx-1.38.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/sqri8xiywycjnhc4ar74x8gxac8b4pbj-python3.11-pillow-11.1.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/mv19vi7hzvnmgpd4vdnf8sx1hm25fmd3-python3.11-pycparser-2.22' from 'https://cache.nixos.org'...
+copying path '/nix/store/cv63p96qc38mjy6s5wiixqpjcn2i3qkn-python3.11-numpy-2.2.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/dk1mg76s0r0a9yip2jn05i8rsi8zy53y-python3.11-urllib3-2.3.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/09lavmy5phk8akw3anyfkigvf6xj2945-python3.11-numpy-1.26.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/l6hzv5ms9fi7mx2j3xh0i42anyjcgpp8-curl-8.12.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/cy649s4771zabjmxxljx0p2vn9mxs0yc-elfutils-0.192' from 'https://cache.nixos.org'...
+copying path '/nix/store/lc5fyzn4kxw5aaprmf888icjnn3d40hr-tpm2-tss-4.1.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/4gb562nhb03scxhpndfynfl1bd1w9vjf-iptables-1.8.11' from 'https://cache.nixos.org'...
+copying path '/nix/store/i5gwrg77ynz8j7ppx0z58jy3p8ccc4bc-python3.11-requests-2.32.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/851vwjwb2mp9giqcizzrp43a9ix3valx-python3.11-cffi-1.17.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/s8jxp0s2ycambmj6pb5fq6wjgvqripb6-python3.11-jinja2-3.1.6' from 'https://cache.nixos.org'...
+copying path '/nix/store/9jpnvdzzf5qlibawrqnlgm03l41k332a-systemd-minimal-257.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/7kk2lx48ga4hcax9wjln78v76qcacw63-python3.11-pyopengl-3.1.7' from 'https://cache.nixos.org'...
+copying path '/nix/store/iy7j3a1x1ym5sqrixx8kfq5942gd8i1b-libbpf-1.5.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/42gsqil2jwa85yig4ds32yix783lwlr6-python3.11-zstandard-0.23.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/b2cfj7yk3wfg1jdwjzim7306hvsc5gnl-systemd-257.3' from 'https://cache.nixos.org'...
+copying path '/nix/store/25530szazsn249fjh6mhd0pr43paa3hq-dbus-1.14.10-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/l4ng5cmvf3wp03q96qxl1ablwsbplxzc-avahi-0.8' from 'https://cache.nixos.org'...
+copying path '/nix/store/kri8wxxn0ccifq9va0cs6wlnf2jck6ip-bluez-5.79' from 'https://cache.nixos.org'...
+copying path '/nix/store/yp7w08l2a9j5ij7ccyr4jzxx8ldy1q2h-libjack2-1.9.22' from 'https://cache.nixos.org'...
+copying path '/nix/store/x3wfgf914z4cvgrr6mnkyq4p81zzs50q-libpulseaudio-17.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/70f2n4nda8jkqw7mxw6cij74i7v433nb-cups-2.4.11-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/svp9c5nrbdd4m02w9x2dga0c0zbb0dcb-tinysparql-3.8.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/1wjrvnxdaq9m08sy4lfj7302sv56vba8-libao-1.2.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/s4g3c8lkshgkk5cy8395f1bjc7cd9cf3-mpg123-1.32.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/7afi4r3j9pnmjg82dvwd23g81fnim40i-sox-unstable-2021-05-09-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/3hm2653l92dxskixxck9vz13fkzv2b5p-libopenmpt-0.7.13' from 'https://cache.nixos.org'...
+copying path '/nix/store/3h9a7n84x8nwb0lzfvgqakdcfhhm0ll1-at-spi2-core-2.54.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/7i2rp6md2liy0bfavp8jxnrrxgmynpww-roc-toolkit-0.4.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/6j9wh9vq3wmjka44ihfff77zzsmlnjb6-ffmpeg-headless-7.1.1-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/s6sg70v6kkwmgkd6nv0rjr5kr28m9777-gtk+3-3.24.48' from 'https://cache.nixos.org'...
+copying path '/nix/store/0zp153xbsipx4slnjavzp9r2d0h6a3hk-gstreamer-1.24.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/3xlb4yb09jicyq645aak9v331w6rv1rd-libdecor-0.2.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/5p3i6xl9vkqqsanq1g3f513m9881c4c5-libdecor-0.2.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/l0kxf1arsc9nk0afhnl1hngjsn7ikcqr-gst-plugins-base-1.24.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/cswlm3ari26d0as8zq8b8xwj0072x89b-libcanberra-0.30' from 'https://cache.nixos.org'...
+copying path '/nix/store/p13n2zvvadplgnjlhzlkz23wnkfvx9p8-libcamera-0.4.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/xir78j1r5bk42jjxsszjwfx93sjc0d93-pipewire-1.4.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/dazcj1317dmil20vvmb3rs8vsl75b2ah-SDL2-2.32.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/y8g7zgz6y7v2x74jc607rdxdz6sj056s-openal-soft-1.23.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/vlip39fgsli4jv5p08ycycnnbryzj5jd-python3.11-openusd-24.11' from 'https://cache.nixos.org'...
+copying path '/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2' from 'https://cache.nixos.org'...
+[Código de saída: 0 | Tempo: 68833.56 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix path-info -s -S /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3	    2599696	 1039513464
+[Código de saída: 0 | Tempo: 112.04 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix path-info -r /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+/nix/store/16hvpw4b3r05girazh4rnwbw0jgjkb4l-xgcc-14.3.0-libgcc
+/nix/store/d5s1ab9ynjsh45js7d75ijxklzqm49r0-libunistring-1.3
+/nix/store/vi5fmmv0q0z9rjf3jfis7q2i9g05l8s2-libidn2-2.3.8
+/nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66
+/nix/store/4gybpyd4avw8hz8gk0fhhkh2pk06rm6d-libXau-1.0.12
+/nix/store/rl14lfb8yhxxajpvlkp7ymvy2gy9f1lk-libXdmcp-1.1.5
+/nix/store/xwd1s74zk3bwilv4p02284ckyy319vhz-libxcb-1.17.0
+/nix/store/2yvh4kwhfd65dcd3r6y6bgdwclfndvzr-libX11-1.8.12
+/nix/store/2v2nlnxm34grn5iq1s1n4di9vsn3k4si-libXext-1.3.6
+/nix/store/frfb398wg8imfw5r0ac18gy389by0vap-libXi-1.8.2
+/nix/store/01mzw06way3k3fqb7bdl0nwnknww8h5s-libXtst-1.2.5
+/nix/store/f2q5ld1nipl8w1r2w8m6azhlm2varqgb-zlib-1.3.1
+/nix/store/d84l3qjb077dxkajn24k58z2q261d4lv-gcc-14.3.0-libgcc
+/nix/store/cf1a53iqg6ncnygl698c4v0l8qam5a2q-gcc-14.3.0-lib
+/nix/store/2m97xlq3lpfawmvnp9ii2kk1j0yfzy6q-zstd-1.5.7
+/nix/store/4iwxcmla6n5yzwbwj57jkhas92jrjb1q-libjpeg-turbo-3.0.4
+/nix/store/6ab07lf8v6zjcjr8ysxcsf13kn8593vb-xz-5.8.1
+/nix/store/cacml0j41d0zkj043va8ryg29cfs3s0j-lerc-4.0.0
+/nix/store/ck7khcf4za0whllxl5v2p0g5qcfkzzmh-libdeflate-1.23
+/nix/store/imw7yr5pkn22zaq7z7hczpb9dim29scw-giflib-5.2.2
+/nix/store/yf40kfs9xqyhzp9h8zrb22arf8vnpksa-libpng-apng-1.6.46
+/nix/store/fkdyizhx4mvgr1wsbl36w1x59ybb66fb-libwebp-1.5.0
+/nix/store/rmvm61j683qh9p61kjkpnpmdxmma7cfd-libtiff-4.7.0
+/nix/store/xax5k2adyfgsgsvf7b2zqjdrv4va0dfj-lcms2-2.17
+/nix/store/02j09l20c06fsvnsm5ng31jyl735ydk2-openjpeg-2.5.2
+/nix/store/an9292vacc9q4lh98h4g7spr07x6dzqk-libdaemon-0.14
+/nix/store/jr8kyv517lyd5xcv3pnhr6z4wirbi06r-expat-2.7.3
+/nix/store/ka48qwfbrhac03afnw6pcmnfq11agwpr-libevent-2.1.12
+/nix/store/l9k32vj2aczxw62134j1x0dsh569jz2l-bash-5.2p37
+/nix/store/0rpngd5nyjy2i5iq3k2am6hqjyfzpd49-kmod-31-lib
+/nix/store/ks3slx52c0jmfgg717n0jq9lp354mlnw-sqlite-3.48.0
+/nix/store/18ks84vwka6v1ldjp0cnil98pyykr3a9-util-linux-minimal-2.41.1-lib
+/nix/store/5njwabxkp1adj6q55a0yhncj51mnzib9-libseccomp-2.6.0-lib
+/nix/store/b00sis10das1hx3sjc5wbda4jy905hzl-kmod-31
+/nix/store/60dqvw79p46541c9wlmlycmycn2plqfx-glibc-2.40-66-getent
+/nix/store/bnma8xd8wwvsjgnncd0d7q5f7m7vl97n-getent-glibc-2.40-66
+/nix/store/c9vl68dx0parv94mm2l24000hhrahpyx-kexec-tools-2.0.29
+/nix/store/cvd68krxqrwgrsigszs0al2i8dnvlwk4-libxcrypt-4.4.38
+/nix/store/izqi1kbfayrajfvmsbsq5gb5qlrr65pa-util-linux-minimal-2.41.1-mount
+/nix/store/kyb5i9i8v922nc6psb11ksg12hljgjxd-libcap-2.75-lib
+/nix/store/44c243x0jpv587hmxrzl31pripa0f0j8-gzip-1.14
+/nix/store/s3mkvm3f20pd1vfx109w89jcc0mdcx2a-bzip2-1.0.8
+/nix/store/59pgpbm743q1nhav513283zinqrf4rqk-bzip2-1.0.8-bin
+/nix/store/b7g83isqdl778kmcpv6v68z76x4x5riv-xz-5.8.1-bin
+/nix/store/n6vl6ni6zxxgh4163cqnjf8p0n7yah0d-pcre2-10.44
+/nix/store/90r466lzg0jw11v60cki60s0qfhs93vp-gnugrep-3.11
+/nix/store/rigwlrg08iw071x8brffd9cq8x039k6z-zstd-1.5.7-bin
+/nix/store/s1rbzc4mmfhwlhafha52c8frsrfkrx37-attr-2.5.2
+/nix/store/bylmxi0aa2v3jz2q7zkdpa49nmpyrkgq-acl-2.3.2
+/nix/store/lm0g29ps43q8bm2gsd26g5pi2zwb6i8d-gmp-with-cxx-6.3.0
+/nix/store/zwplch93wbpj82bp7riwaixmdx2xi0ah-coreutils-9.7
+/nix/store/nk7wnp1209mv9mdf0vr1ivzsdzm38yzs-kbd-2.7.1
+/nix/store/vj3rmg6937p9icir6bazbdcb4xdnrg9j-ncurses-6.5
+/nix/store/k8c60f1c543yng7878rfkc12han58hiv-readline-8.2p13
+/nix/store/nn27l879np49xvx6l1a8nqnqlp9apd8n-bash-interactive-5.2p37
+/nix/store/s1xwhyh16gnl7zcxmmdhjirkzwaxda3p-util-linux-minimal-2.41.1-swap
+/nix/store/xhll94m7ylb2v42xadrrrrlhrn798x0k-util-linux-minimal-2.41.1-login
+/nix/store/d2402qsphw86lqf2fg6kdrzq3r467x5w-systemd-minimal-257.10
+/nix/store/mkqpd42f5ngv9ns71gpaxdhnjpcf4dv4-dbus-1.14.10-lib
+/nix/store/0aaj6jbxclpwvrphggqz4vf5hg8360fr-libffi-3.4.8
+/nix/store/7alkpy53ndwgg2j1548vlgc3j6pzmjkj-libselinux-3.8.1
+/nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3
+/nix/store/1sv8j6k9rccxb10sxkh38xfsx1ppl3rh-avahi-0.8
+/nix/store/2fxp204b9jh1s3lpggdlnws44vvzw1w9-openssl-3.4.3
+/nix/store/8v3zxwk9dny1bc95ibzr0x8hf26hqkrq-alsa-ucm-conf-1.2.12
+/nix/store/qnwch8002srl30i60an7s0giz00ldlmn-alsa-topology-conf-1.2.5.1
+/nix/store/35b7pci9f1308g1n297y1kca9k8rl461-alsa-lib-1.2.13
+/nix/store/3yjjrqis0wnapgfvi433ji8pc9r0q5ah-libfreeaptx-0.2.2
+/nix/store/5g9sy7frpxkjhx39r4ixz4lnlri31fc0-systemd-minimal-libs-257.10
+/nix/store/7lcdvwr7ycnbg20z5skkm8j2iw3jq91n-ldacBT-2.0.2.3
+/nix/store/bn2ppwm28sfzkwaxrqwv4l2mlf2jzc6w-fdk-aac-2.0.3
+/nix/store/qbybagna19vd6q6zyhr7spcpk9jifgzk-libogg-1.3.5
+/nix/store/37zx287az46bylnmgmx7iygq1wq23l2s-flac-1.5.0
+/nix/store/f3bfkmfflxx3dpgsxnyqrcn1dqrg2c2r-lame-3.100-lib
+/nix/store/l4iizdiadr7igxsyxzp19ylxqd47xxax-libopus-1.5.2
+/nix/store/l50ambip8xxnmf7ra84h0xfcdsscna2k-libmpg123-1.32.10
+/nix/store/z3ypq4qryx1hm43nmgs7srhdgmyc4ma7-libvorbis-1.3.7
+/nix/store/bsaz9by1nrxdwdh1r4478jjijrdfjj8h-libsndfile-1.2.2
+/nix/store/c6f6vx8d4d97wcw6bra3kgwls317q0km-fftw-single-3.3.10
+/nix/store/cbsw8z8pafv529wd9wiiraz2wy25624r-libmysofa-1.3.3
+/nix/store/aj10j7rli4yhdfpl1f7yw31rkq4ha7yk-libtool-2.5.4-lib
+/nix/store/jnl9vhdxhzbwdj4nwgizwsaz06jpp4f0-speexdsp-1.2.1
+/nix/store/p2w6dyv1xyihxj5hqimgs7irj2z7q5hl-dconf-0.40.0-lib
+/nix/store/x5ps5ds44x6aqyhbsppjy20wh6w3wgpx-soxr-0.1.3
+/nix/store/cipbx35w268sdp8851zb50m1lfnd9xn0-libpulseaudio-17.0
+/nix/store/21zrws7iacnbrrkbkc7p5lxmkhfvp2fh-libconfig-1.8
+/nix/store/f35fr3iklsi4kb4jznr025bzrksg1hms-libxml2-2.13.8
+/nix/store/4r05g1i1rfflips84l0h2y49b9y3sjq2-gnum4-1.4.19
+/nix/store/wdlgsa81mv62qd87vyhq6qb4ih2827sj-libsigc++-2.12.1
+/nix/store/lg9b5vp33kbdp5dmb8zdk6br9vy6w0sa-glibmm-2.66.8
+/nix/store/884b8cl0x9hz7bmdq93icppfwzm3bv9m-libxml++-3.0.1
+/nix/store/q6rwk26a2nccjg74cy6y2i0g70jaczhq-libraw1394-2.1.2
+/nix/store/b0707dvb5i6q5s4i0dfrn4byay5giy8i-libiec61883-1.2.0
+/nix/store/b6pgzzcfkmhhnlp2cc7lv4blk3x4p5m6-libavc1394-0.5.4
+/nix/store/dlvcgf0y7m1ijrlkqlzdgs6jw43px4qj-ffado-2.4.9
+/nix/store/drdfqqsgpi5nss9kkydw8bac44zxrjqx-webrtc-audio-processing-1.3
+/nix/store/krj0md2jkaaz4ksrg8wqab80wk34d1d0-icu4c-76.1
+/nix/store/k9lrqx2r2wd17yy875wj65ilh7h6pmym-libical-3.0.20
+/nix/store/lxwwp585ikghhknl5sa9n8gwmbclqrvv-ell-0.76
+/nix/store/qwsij6q9za18jyfxb3rj1np3gwvmifg3-json-c-0.18
+/nix/store/f6h1
+... [truncado: 18954 chars totais] ...
+jbfs6fa9c5zzffbal4fa19-libnl-3.11.0
+/nix/store/d78fm9z3isk3kb26plx0yc1a3708n5h3-libpcap-1.10.5
+/nix/store/c0rsnkvnq4vgm23cva64h3jspqs1q7i9-iptables-1.8.11
+/nix/store/myh35j3njs47spnxn1vyadcq2aif26m7-pcsclite-2.3.0-lib
+/nix/store/y77p470daimn1b0cdf1374pgmnp7dvfz-libcbor-0.12.0
+/nix/store/dcjj6zqkhzfq6q7hkw4c9q131g3nc47w-libfido2-1.15.0
+/nix/store/ifqpynrl7jh4m6yi5nx17hh4kdszzv39-cracklib-2.10.0
+/nix/store/a1x1nnzdk606ry2b7jxzsyzx268b34k4-db-4.8.30
+/nix/store/hkj8hw50n2jafdd9ls7ibq09lddgkgnv-libcap-ng-0.8.5
+/nix/store/wxq21pla3bpk2n22ckand6dhnaq82gy8-audit-4.1.0-lib
+/nix/store/ra5rk5n1sifsb3752p8cigca7alsya5b-linux-pam-1.6.1
+/nix/store/f20j3x3r4xjc3r4kskaxj4c10miii4zp-libpwquality-1.4.5-lib
+/nix/store/5g8011h2gb37z0vyv1sx3d0par1q6h75-npth-1.8
+/nix/store/syp9k0jpzwnwabln2dvi103z7ijwspa3-libgpg-error-1.51
+/nix/store/cmfp2xa710abf2ky47kfg97kxc2pmvx5-libassuan-3.0.2
+/nix/store/j3bl7wf60xbp20zh0svy0br02mh731dc-libgcrypt-1.10.3-lib
+/nix/store/hgzr9d5da7n07wlq9wv7cxy42z4y86hn-gnupg-2.4.8
+/nix/store/hqxm7r1q3ky4j3nigbnydf658ld92xh3-libbpf-1.5.0
+/nix/store/nbxnpfk6mycs1rcd8i0zxx9381rbwqdb-qrencode-4.1.1
+/nix/store/kiplbb6yv7rmjf21hf9ky01b9kmgmnqn-systemd-257.10
+/nix/store/xpb1ibiij73b8yql5lyyms7lb9b0cbpk-libcanberra-0.30
+/nix/store/f4p5dri7kl1ylqjq10adn039043badr7-lttng-ust-2.13.8
+/nix/store/rf83vadrrhxmf5r5nh7pv8r6p8xbwr5j-libyaml-0.2.5
+/nix/store/xswym3887gf8l681i2m3j587kllcwlh7-libcamera-0.5.0
+/nix/store/0490wlxa4p3k4h95kkv0wlmv7iyjgm8i-pipewire-1.4.7
+/nix/store/1hm5xf6f87ndhcgq7rw4aq4sscwic92f-fluidsynth-2.4.4
+/nix/store/c0z5kfib8j6xcmbkdknwkkqy38nwph4c-libXcursor-1.2.3
+/nix/store/fxw37cf0j4zp5xagyq0j144536qwc9q4-libXrandr-1.5.4
+/nix/store/g7wgcvrsyk0n2fxgmi1ni5lwmq3x23jl-libXinerama-1.1.5
+/nix/store/hs8f4kfqywx5biss84d92i1lwiw49wpk-libXdamage-1.1.6
+/nix/store/y05zpr8z6qrpfcppppinfzkjp9r16030-xkeyboard-config-2.44
+/nix/store/ilh3k434j6a9kx8vw4q75k3d2s71q4vw-libxkbcommon-1.8.1
+/nix/store/lyifb392qssvw1qmar5jbx3rjwid0hw2-libsoup-3.6.5
+/nix/store/69z8gc1q1kvphvzygi0zvfy07386p76q-gssdp-1.6.3
+/nix/store/6an935fh9nn57y2ym940v8y2qrsscp35-gupnp-1.6.9
+/nix/store/yksy1kpppwmn1aqx81nx9mwfc15z4kbr-gupnp-igd-1.6.0
+/nix/store/3yk6qq4s2zjcmvr3xaill3z2y1qd1rim-libnice-0.1.22
+/nix/store/491d975icn8z6b3wn8j5n4vwcaj4jzfw-neon-0.32.5
+/nix/store/5ax47cdlw0dypw845399swkfypcsz5c3-libva-2.22.0
+/nix/store/6qanwb6lar8lkpvf8illhidw8ps23748-gsm-1.0.22
+/nix/store/7zcgw7325dkys87jv1h05vplmq5n6gwx-flite-2.2-lib
+/nix/store/r4872p8rypmvfafmw28jhqqdjm53zqjg-imath-3.1.12
+/nix/store/87yx1qc164sv63aimm5k0adl3bbb0fwg-openexr-3.2.4
+/nix/store/9csb5kgazlrygfa8fpxsi9avpnw492fh-libbs2b-3.1.0
+/nix/store/ai2vg6a82w8x499bps9b26sdrsgzfg37-rtmpdump-2.6
+/nix/store/bxy68dipkhbj7g84nd8hh7jyl3zrxbzk-vo-aacenc-0.1.3
+/nix/store/f0bf3wwlhp2nraf5mj78gnwwqp5r6mqn-json-glib-1.10.6
+/nix/store/f2dnyasvm6jnbdidiy4mrkbga064fqg6-libajantv2-17.1.3
+/nix/store/frfz308226nbhvrpim3dplyhm3h8fj87-openh264-2.6.0
+/nix/store/frzihmjb0wqp3y5008rybdqjw26w0h6w-libde265-1.0.15
+/nix/store/arx565rli278751asv966i4hwb1v71hf-libXcomposite-0.4.6
+/nix/store/d5m4r5zrjqdrgdzj09wjvhfbbdyk99j1-gsettings-desktop-schemas-48.0
+/nix/store/h13jrdg1scvfpwmpwdqvd8jmb90gv2z3-at-spi2-core-2.56.2
+/nix/store/qia8jjij6qwqb9lkfg4x72px65lqmpms-cups-2.4.14-lib
+/nix/store/sknpzccsnkv0kjszbbyhls9cfx4z80r9-libepoxy-1.5.10
+/nix/store/pk0hycs9ry01qgcaa88bj92bxpcbfvyc-gobject-introspection-1.84.0
+/nix/store/xnx5jnb26fia13bh62dxrv9p24pi8dmg-tinysparql-3.9.2
+/nix/store/zw02m3kb15sb2rs65vjsc81k87xp2pms-gdk-pixbuf-2.42.12
+/nix/store/gfignin0226v6d6xxs10bfbxqw17p8bg-gtk+3-3.24.49
+/nix/store/h3n5692s0pkh2qfbl3l10d28vzry769c-faad2-2.11.2
+/nix/store/8s0ds4lapfnxfk9zv5ll4qph12fr4ab1-libdvdcss-1.4.3
+/nix/store/hnax0hyrmhr0qph3c641p7w5nync1png-libdvdread-6.1.3
+/nix/store/izlkqmhm0jbvaxx4hnq2x6ffj79gxprg-libsrtp-2.7.0
+/nix/store/ly3p1qzvlz5d9pncqlr1fxbikdqymk25-libgudev-238
+/nix/store/q4wjxnxmjar6vff4jrp098g4jf6s3h5g-zxing-cpp-2.3.0
+/nix/store/d1adwfwl43i34ffj24alc844rkl1pk19-freepats-20060219
+/nix/store/wg35h1a14wqxxqgg6x1pkbdazk8galpq-wildmidi.cfg
+/nix/store/qf859ddpbbb0jlk9jm05mkn9768ilgfr-wildmidi-0.4.6
+/nix/store/r8khf4gjpmldm8zxvy23vq5i21kyh50a-popt-1.19
+/nix/store/2m1wim20ff63h6j69p1yfz5mmbfamlhn-libdv-1.0.0
+/nix/store/qwqdbc3pwv6v6gqf7az4226avqnqzpm8-mjpegtools-2.2.1-lib
+/nix/store/r0k9k74in64wz1p78hlvybg8zy76dgn6-spandsp-0.0.6
+/nix/store/v4jibpi0r9bgah9bxlvl7mkjbdsaqvrl-libdvdnav-6.1.1
+/nix/store/vc0p41f03fk34ifi0jyrfz0gm4bd7d5k-openal-soft-1.24.2
+/nix/store/vppgp3q1il73a858drikdfqfamc3dx5m-libdc1394-2.2.7
+/nix/store/d867n5p9b23cviibn7z6vd51il3x48c9-libxslt-1.1.43
+/nix/store/55mm225hwlqf6bg0dprpppc4zl411z3n-raptor2-2.0.16
+/nix/store/wpj48wj94jb3hlmclxcmx47qf8f857p8-lrdf-0.6.1
+/nix/store/xg8pvkw0nshh3dfig36n88xvpvh2dail-game-music-emu-0.6.3
+/nix/store/y23gzbmfn4qwvpn0c2jbc78k8cah9kz8-libmodplug-0.8.9.0
+/nix/store/y2gq1i1r8cxb5sarg3ybian6mcql3q1d-librsvg-2.60.0
+/nix/store/yrw2z93rq23dw93wvy098gdz09qgp3zj-chromaprint-1.5.1
+/nix/store/zzkw33lcrdfz1ihawzskkzd7iz1zlj4v-soundtouch-2.3.3
+/nix/store/pn5rnphljfwj5nj7fm9jna2f8cpaxf36-gst-plugins-bad-1.26.3
+/nix/store/w8kpi29gnj914xnbns7rds35155lyxfk-gtk4-4.18.6
+/nix/store/1kx3rjz0y3r2a5qr5i0k780qg2a3084l-gtksourceview-5.16.0
+/nix/store/pagypvpcw6wxlc60ni4fb8p33zg8rnm9-hfst-ospell-0.5.4
+/nix/store/63f1gg67qp3w3z8zrgrrfj3gkpaj8a3b-libvoikko-4.3.2
+/nix/store/6fcnmcwnp7kf3b37psxl11w9knczhcn9-editorconfig-core-c-0.12.9
+/nix/store/8p5iyc3ld6aj0fxzwhp6n9v0157c6idr-hunspell-1.7.2
+/nix/store/k9lfh0l007sp61rag7d9bf3nn5bg3qy7-perl-5.40.0
+/nix/store/i2zz6ig7017jfpgx0nmlap1ci4zwqkbk-aspell-0.60.8.1
+/nix/store/q47j3xcw99m7y8i8afqnn08br0hzn62d-nuspell-5.1.6-lib
+/nix/store/vfv09np60w4r91na0vfa7n2rm1n5a7jv-hspell-1.4
+/nix/store/6xpirynhwn5zbqdjzq9az730pxa03f9h-enchant-2.6.9
+/nix/store/v2pr7067rj13rv6alijqv7xbqjd3zk3v-libxmlb-0.3.22-lib
+/nix/store/dmrwlq8ram9bi4dy09h0wrmjzklhnww5-appstream-1.0.4
+/nix/store/8kxg2016yvvf9abmv9lfwjr14qrz7j76-libadwaita-1.7.5
+/nix/store/zblx0463sd39b0qp7jkqb4y6lzcc46fr-libspelling-0.4.8
+/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+[Código de saída: 0 | Tempo: 70.92 ms]
+
+=== Nix ELF: gnome-text-editor (bin=/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/gnome-text-editor, real=/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/.gnome-text-editor-wrapped) ===
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/gnome-text-editor" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000001d (RUNPATH)            Library runpath: [/nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib]
+[Código de saída: 0 | Tempo: 15.05 ms]
+
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/.gnome-text-editor-wrapped" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgio-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgobject-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libglib-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtk-4.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpango-1.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcairo.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtksourceview-5.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libadwaita-1.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libspelling-1.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libeditorconfig.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000001d (RUNPATH)            Library runpath: [/nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3/lib:/nix/store/gd22hvyhpvwpwv3wd3f5r1c02d2cy5m6-cairo-1.18.2/lib:/nix/store/570m5d83a79bcqddf1bq9ac758sgi1j0-pango-1.56.3/lib:/nix/store/w8kpi29gnj914xnbns7rds35155lyxfk-gtk4-4.18.6/lib:/nix/store/1kx3rjz0y3r2a5qr5i0k780qg2a3084l-gtksourceview-5.16.0/lib:/nix/store/8kxg2016yvvf9abmv9lfwjr14qrz7j76-libadwaita-1.7.5/lib:/nix/store/zblx0463sd39b0qp7jkqb4y6lzcc46fr-libspelling-0.4.8/lib:/nix/store/6fcnmcwnp7kf3b37psxl11w9knczhcn9-editorconfig-core-c-0.12.9/lib:/nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib]
+[Código de saída: 0 | Tempo: 6.39 ms]
+
+$ /nix/store/53wag47axb3bjnwn0imzksh4c9w3mgx7-glibc-2.44-57-bin/bin/ldd /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/.gnome-text-editor-wrapped
+	linux-vdso.so.1 (0x000073403760d000)
+	libm.so.6 => /nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib/libm.so.6 (0x000073403751c000)
+	libgio-2.0.so.0 => /nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3/lib/libgio-2.0.so.0 (0x0000734037200000)
+	libgobject-2.0.so.0 => /nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3/lib/libgobject-2.0.so.0 (0x00007340374b6000)
+	libglib-2.0.so.0 => /nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3/lib/libglib-2.0.so.0 (0x00007340370a0000)
+	libgtk-4.so.1 => /nix/store/w8kpi29gnj914xnbns7rds35155lyxfk-gtk4-4.18.6/lib/libgtk-4.so.1 (0x0000734036400000)
+	libpango-1.0.so.0 => /nix/store/570m5d83a79bcqddf1bq9ac758sgi1j0-pango-1.56.3/lib/libpango-1.0.so.0 (0x0000734037443000)
+	libcairo.so.2 => /nix/store/gd22hvyhpvwpwv3wd3f5r1c02d2cy5m6-cairo-1.18.2/lib/libcairo.so.2 (0x0000734036f51000)
+	libgtksourceview-5.so.0 => /nix/store/1kx3rjz0y3r2a5qr5i0k780qg2a3084l-gtksourceview-5.16.0/lib/libgtksourceview-5.so.0 (0x0000734036000000)
+	libadwaita-1.so.0 => /nix/store/8kxg2016yvvf9abmv9lfwjr14qrz7j76-libadwaita-1.7.5/lib/libadwaita-1.so.0 (0x0000734035c00000)
+	libspelling-1.so.2 => /nix/store/zblx0463sd39b0qp7jkqb4y6lzcc46fr-libspelling-0.4.8/lib/libspelling-1.so.2 (0x0000734037416000)
+	libeditorconfig.so.0 => /nix/store/6fcnmcwnp7kf3b37psxl11w9knczhcn9-editorconfig-core-c-0.12.9/lib/libeditorconfig.so.0 (0x000073403740e000)
+	libc.so.6 => /nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib/libc.so.6 (0x0000734035800000)
+	/nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib/ld-linux-x86-64.so.2 => /nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib64/ld-linux-x86-64.so.2 (0x000073403760f000)
+	libgmodule-2.0.so.0 => /nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3/lib/libgmodule-2.0.so.0 (0x0000734036f4a000)
+	libz.so.1 => /nix/store/f2q5ld1nipl8w1r2w8m6azhlm2varqgb-zlib-1.3.1/lib/libz.so.1 (0x0000734036f2b000)
+	libmount.so.1 => /nix/store/18ks84vwka6v1ldjp0cnil98pyykr3a9-util-linux-minimal-2.41.1-lib/lib/libmount.so.1 (0x0000734036385000)
+	libselinux.so.1 => /nix/store/7alkpy53ndwgg2j1548vlgc3j6pzmjkj-libselinux-3.8.1/lib/libselinux.so.1 (0x0000734036ef5000)
+	libffi.so.8 => /nix/store/0aaj6jbxclpwvrphggqz4vf5hg8360fr-libffi-3.4.8/lib/libffi.so.8 (0x0000734036ee4000)
+	libpcre2-8.so.0 => /nix/store/n6vl6ni6zxxgh4163cqnjf8p0n7yah0d-pcre2-10.44/lib/libpcre2-8.so.0 (0x0000734035f5d000)
+	libpangocairo-1.0.so.0 => /nix/store/570m5d83a79bcqddf1bq9ac758sgi1j0-pango-1.56.3/lib/libpangocairo-1.0.so.0 (0x0000734036ed2000)
+	libharfbuzz.so.0 => /nix/store/rlxh4fghh2v71s5vvin2slqz2p1kqzwi-harfbuzz-10.2.0/lib/libharfbuzz.so.0 (0x0000734035ab8000)
+	libharfbuzz-subset.so.0 => /nix/store/rlxh4fghh2v71s5vvin2slqz2p1kqzwi-harfbuzz-10.2.0/lib/libharfbuzz-subset.so.0 (0x000073403568a000)
+	libfribidi.so.0 => /nix/store/62h5sfxr4s1qc3fghcan06viq4gms6yg-fribidi-1.0.16/lib/libfribidi.so.0 (0x0000734036365000)
+	libcairo-gobject.so.2 => /nix/store/gd22hvyhpvwpwv3wd3f5r1c02d2cy5m6-cairo-1.18.2/lib/libcairo-gobject.so.2 (0x0000734036ec7000)
+	libfontconfig.so.1 => /nix/store/74z7naywq3fzikbsbb0248y7j6mgcmi6-fontconfig-2.16.0-lib/lib/libfontconfig.so.1 (0x0000734036314000)
+	libgdk_pixbuf-2.0.so.0 => /nix/store/zw02m3kb15sb2rs65vjsc81k87xp2pms-gdk-pixbuf-2.42.12/lib/libgdk_pixbuf-2.0.so.0 (0x0000734035f2e000)
+	libepoxy.so.0 => /nix/store/sknpzccsnkv0kjszbbyhls9cfx4z80r9-libepoxy-1.5.10/lib/libepoxy.so.0 (0x0000734035554000)
+	libgraphene-1.0.so.0 => /nix/store/7096hm4ngrc657mn25gxy4pidffblrc5-graphene-1.10.8/lib/libgraphene-1.0.so.0 (0x00007340362f7000)
+	libXi.so.6 => /nix/store/frfb398wg8imfw5r0ac18gy389by0vap-libXi-1.8.2/lib/libXi.so.6 (0x0000734035f1a000)
+	libX11.so.6 => /nix/store/2yvh4kwhfd65dcd3r6y6bgdwclfndvzr-libX11-1.8.12/lib/libX11.so.6 (0x0000734035404000)
+	libpangoft2-1.0.so.0 => /nix/store/570m5d83a79bcqddf1bq9ac758sgi1j0-pango-1.56.3/lib/libpangoft2-1.0.so.0 (0x0000734035eff000)
+	libtinysparql-3.0.so.0 => /nix/store/xnx5jnb26fia13bh62dxrv9p24pi8dmg-tinysparql-3.9.2/lib/libtinysparql-3.0.so.0 (0x000073403532c000)
+	libvulkan.so.1 => /nix/store/fcb2hgy9x7fqbplgc5211gr56h00vaz0-vulkan-loader-1.4.313.0/lib/libvulkan.so.1 (0x0000734035e77000)
+	libpng16.so.16 => /nix/store/yf40kfs9xqyhzp9h8zrb22arf8vnpksa-libpng-apng-1.6.46/lib/libpng16.so.16 (0x0000734035e39000)
+	libtiff.so.6 => /nix/store/rmvm61j683qh9p61kjkpnpmdxmma7cfd-libtiff-4.7.0/lib/libtiff.so.6 (0x0000734035a10000)
+	libjpeg.so.62 => /nix/store/4iwxcmla6n5yzwbwj57jkhas92jrjb1q-libjpeg-turbo-3.0.4/lib/libjpeg.so.62 (0x0000734035258000)
+	libxkbcommon.so.0 => /nix/store/ilh3k434j6a9kx8vw4q75k3d2s71q4vw-libxkbcommon-1.8.1/lib/libxkbcommon.so.0 (0x0000734035208000)
+	libwayland-client.so.0 => /nix/store/znpca9nxcjxlwhxmfpnrvmd3z3rm704q-wayland-1.23.1/lib/libwayland-client.so.0 (0x00007340351f5000)
+	libwayland-egl.so.1 => /nix/store/znpca9nxcjxlwhxmfpnrvmd3z3rm704q-wayland-1.23.1/lib/libwayland-egl.so.1 (0x0000734036ebc000)
+	libXext.so.6 => /nix/store/2v2nlnxm34grn5iq1s1n4di9vsn3k4si-libXext-1.3.6/lib/libXext.so.6 (0x00007340351e0000)
+	libXcursor.so.1 => /nix/store/c0z5kfib8j6xcmbkdknwkkqy38nwph4c-libXcursor-1.2.3/lib/libXcursor.so.1 (0x00007340351d3000)
+	libXdamage.so.1 => /nix/store/hs8f4kfqywx5biss84d92i1lwiw49wpk-libXdamage-1.1.6/lib/libXdamage.so.1 (0x00007340362f2000)
+	libXfixes.so.3 => /nix/store/phrzfhkp7814lxdw46kqsxxxfx6h5f4y-libXfixes-6.0.1/lib/libXfixes.so.3 (0x0000734035e31000)
+	libXrandr.so.2 => /nix/store/fxw37cf0j4zp5xagyq0j144536qwc9q4-libXrandr-1.5.4/lib/libXrandr.so.2 (0x00007340351c6000)
+	libXinerama.so.1 => /nix/store/g7wgcvrsyk0n2fxgmi1ni5lwmq3x23jl-libXinerama-1.1.5/lib/libXinerama.so.1 (0x0000734035a09000)
+	libcairo-script-interpreter.so.2 => /nix/store/gd22hvyhpvwpwv3wd3f5r1c02d2cy5m6-cairo-1.18.2/lib/libcairo-script-interpreter.so.2 (0x000073403519e000)
+	libthai.so.0 => /nix/store/qyz709rdi8pdai3krdmyppaw6w21bjsj-libthai-0.1.29/lib/libthai.so.0 (0x0000734035191000)
+	libfreetype.so.6 => /nix/store/v2nsb0q208p4xiw74vp4srn2sammhhks-freetype-2.13.3/lib/libfreetyp
+... [truncado: 12088 chars totais] ...
+qiz-libXrender-0.9.12/lib/libXrender.so.1 (0x00007340350af000)
+	libxcb.so.1 => /nix/store/xwd1s74zk3bwilv4p02284ckyy319vhz-libxcb-1.17.0/lib/libxcb.so.1 (0x0000734035082000)
+	libxcb-render.so.0 => /nix/store/xwd1s74zk3bwilv4p02284ckyy319vhz-libxcb-1.17.0/lib/libxcb-render.so.0 (0x0000734035072000)
+	libxcb-shm.so.0 => /nix/store/xwd1s74zk3bwilv4p02284ckyy319vhz-libxcb-1.17.0/lib/libxcb-shm.so.0 (0x000073403506d000)
+	libpixman-1.so.0 => /nix/store/sfk8d2l0yx7xr7w38msspzp7hk6jhz0r-pixman-0.44.2/lib/libpixman-1.so.0 (0x0000734034fb8000)
+	libxml2.so.2 => /nix/store/f35fr3iklsi4kb4jznr025bzrksg1hms-libxml2-2.13.8/lib/libxml2.so.2 (0x0000734034e56000)
+	libappstream.so.5 => /nix/store/dmrwlq8ram9bi4dy09h0wrmjzklhnww5-appstream-1.0.4/lib/libappstream.so.5 (0x0000734034cd7000)
+	libenchant-2.so.2 => /nix/store/6xpirynhwn5zbqdjzq9az730pxa03f9h-enchant-2.6.9/lib/libenchant-2.so.2 (0x0000734034cc9000)
+	libicuuc.so.76 => /nix/store/krj0md2jkaaz4ksrg8wqab80wk34d1d0-icu4c-76.1/lib/libicuuc.so.76 (0x0000734034a00000)
+	libblkid.so.1 => /nix/store/18ks84vwka6v1ldjp0cnil98pyykr3a9-util-linux-minimal-2.41.1-lib/lib/libblkid.so.1 (0x0000734034c66000)
+	libdl.so.2 => /nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib/libdl.so.2 (0x0000734034c61000)
+	libgraphite2.so.3 => /nix/store/45cbd7hk1jpppp9arkpabjvr9x2wfpzn-graphite2-1.3.14/lib/libgraphite2.so.3 (0x0000734034c34000)
+	libbz2.so.1 => /nix/store/s3mkvm3f20pd1vfx109w89jcc0mdcx2a-bzip2-1.0.8/lib/libbz2.so.1 (0x00007340349ec000)
+	libbrotlidec.so.1 => /nix/store/9c65bhkvvcsahkzp38ir5gqprp4y44lx-brotli-1.1.0-lib/lib/libbrotlidec.so.1 (0x00007340349dd000)
+	libpthread.so.0 => /nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib/libpthread.so.0 (0x00007340349d8000)
+	libexpat.so.1 => /nix/store/jr8kyv517lyd5xcv3pnhr6z4wirbi06r-expat-2.7.3/lib/libexpat.so.1 (0x00007340349a9000)
+	libjson-glib-1.0.so.0 => /nix/store/f0bf3wwlhp2nraf5mj78gnwwqp5r6mqn-json-glib-1.10.6/lib/libjson-glib-1.0.so.0 (0x000073403497d000)
+	libsqlite3.so.0 => /nix/store/ks3slx52c0jmfgg717n0jq9lp354mlnw-sqlite-3.48.0/lib/libsqlite3.so.0 (0x00007340347ec000)
+	libdeflate.so.0 => /nix/store/ck7khcf4za0whllxl5v2p0g5qcfkzzmh-libdeflate-1.23/lib/libdeflate.so.0 (0x00007340347d2000)
+	libLerc.so.4 => /nix/store/cacml0j41d0zkj043va8ryg29cfs3s0j-lerc-4.0.0/lib/libLerc.so.4 (0x0000734034704000)
+	liblzma.so.5 => /nix/store/6ab07lf8v6zjcjr8ysxcsf13kn8593vb-xz-5.8.1/lib/liblzma.so.5 (0x00007340346d2000)
+	libzstd.so.1 => /nix/store/2m97xlq3lpfawmvnp9ii2kk1j0yfzy6q-zstd-1.5.7/lib/libzstd.so.1 (0x00007340345fc000)
+	libwebp.so.7 => /nix/store/fkdyizhx4mvgr1wsbl36w1x59ybb66fb-libwebp-1.5.0/lib/libwebp.so.7 (0x000073403454d000)
+	libsharpyuv.so.0 => /nix/store/fkdyizhx4mvgr1wsbl36w1x59ybb66fb-libwebp-1.5.0/lib/libsharpyuv.so.0 (0x0000734034541000)
+	libdatrie.so.1 => /nix/store/crxsllsl4kg5p0001gfal6a58yxmhjnw-libdatrie-2019-12-20-lib/lib/libdatrie.so.1 (0x0000734034537000)
+	libXau.so.6 => /nix/store/4gybpyd4avw8hz8gk0fhhkh2pk06rm6d-libXau-1.0.12/lib/libXau.so.6 (0x0000734034532000)
+	libXdmcp.so.6 => /nix/store/rl14lfb8yhxxajpvlkp7ymvy2gy9f1lk-libXdmcp-1.1.5/lib/libXdmcp.so.6 (0x000073403452a000)
+	libcurl.so.4 => /nix/store/nshhjm3s9pwc86s5hyzqf22pn8kikw8j-curl-8.14.1/lib/libcurl.so.4 (0x0000734034445000)
+	libxmlb.so.2 => /nix/store/v2pr7067rj13rv6alijqv7xbqjd3zk3v-libxmlb-0.3.22-lib/lib/libxmlb.so.2 (0x0000734034419000)
+	libyaml-0.so.2 => /nix/store/rf83vadrrhxmf5r5nh7pv8r6p8xbwr5j-libyaml-0.2.5/lib/libyaml-0.so.2 (0x00007340343f7000)
+	libsystemd.so.0 => /nix/store/kiplbb6yv7rmjf21hf9ky01b9kmgmnqn-systemd-257.10/lib/libsystemd.so.0 (0x000073403429c000)
+	libaspell.so.15 => /nix/store/i2zz6ig7017jfpgx0nmlap1ci4zwqkbk-aspell-0.60.8.1/lib/libaspell.so.15 (0x00007340341e3000)
+	libicudata.so.76 => /nix/store/krj0md2jkaaz4ksrg8wqab80wk34d1d0-icu4c-76.1/lib/libicudata.so.76 (0x0000734032200000)
+	libstdc++.so.6 => /nix/store/cf1a53iqg6ncnygl698c4v0l8qam5a2q-gcc-14.3.0-lib/lib/libstdc++.so.6 (0x0000734031e00000)
+	libgcc_s.so.1 => /nix/store/cf1a53iqg6ncnygl698c4v0l8qam5a2q-gcc-14.3.0-lib/lib/libgcc_s.so.1 (0x00007340341b5000)
+	libbrotlicommon.so.1 => /nix/store/9c65bhkvvcsahkzp38ir5gqprp4y44lx-brotli-1.1.0-lib/lib/libbrotlicommon.so.1 (0x0000734034190000)
+	libnghttp2.so.14 => /nix/store/qsaszbis1va1b5rvl1fprydx0zad37h2-nghttp2-1.65.0-lib/lib/libnghttp2.so.14 (0x0000734034160000)
+	libidn2.so.0 => /nix/store/vi5fmmv0q0z9rjf3jfis7q2i9g05l8s2-libidn2-2.3.8/lib/libidn2.so.0 (0x000073403412f000)
+	libssh2.so.1 => /nix/store/wi9cp03qqfw49v3j7fzz44k9kqfm7i9i-libssh2-1.11.1/lib/libssh2.so.1 (0x00007340340e3000)
+	libpsl.so.5 => /nix/store/6dh413ivs6gyzy0s93209jy7cgc40ysx-libpsl-0.21.5/lib/libpsl.so.5 (0x00007340340cf000)
+	libssl.so.3 => /nix/store/2fxp204b9jh1s3lpggdlnws44vvzw1w9-openssl-3.4.3/lib/libssl.so.3 (0x00007340320f7000)
+	libcrypto.so.3 => /nix/store/2fxp204b9jh1s3lpggdlnws44vvzw1w9-openssl-3.4.3/lib/libcrypto.so.3 (0x0000734031800000)
+	libgssapi_krb5.so.2 => /nix/store/5cdzaagddbzip0rd0f9bfkfnq143bxd8-krb5-1.21.3-lib/lib/libgssapi_krb5.so.2 (0x0000734034078000)
+	libcap.so.2 => /nix/store/kyb5i9i8v922nc6psb11ksg12hljgjxd-libcap-2.75-lib/lib/libcap.so.2 (0x0000734034069000)
+	libunistring.so.5 => /nix/store/d5s1ab9ynjsh45js7d75ijxklzqm49r0-libunistring-1.3/lib/libunistring.so.5 (0x0000734031615000)
+	libkrb5.so.3 => /nix/store/5cdzaagddbzip0rd0f9bfkfnq143bxd8-krb5-1.21.3-lib/lib/libkrb5.so.3 (0x000073403153a000)
+	libk5crypto.so.3 => /nix/store/5cdzaagddbzip0rd0f9bfkfnq143bxd8-krb5-1.21.3-lib/lib/libk5crypto.so.3 (0x00007340320c7000)
+	libcom_err.so.3 => /nix/store/5cdzaagddbzip0rd0f9bfkfnq143bxd8-krb5-1.21.3-lib/lib/libcom_err.so.3 (0x00007340320c0000)
+	libkrb5support.so.0 => /nix/store/5cdzaagddbzip0rd0f9bfkfnq143bxd8-krb5-1.21.3-lib/lib/libkrb5support.so.0 (0x00007340320b2000)
+	libkeyutils.so.1 => /nix/store/1v6ry0zx6igrskzd8arw76glqgsi61is-keyutils-1.6.3-lib/lib/libkeyutils.so.1 (0x00007340320ab000)
+	libresolv.so.2 => /nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib/libresolv.so.2 (0x0000734032099000)
+[Código de saída: 0 | Tempo: 62.06 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile add --profile /tmp/so-s5-nix-qw5ot5mt/prof-gnome-text-editor-1 /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+[Código de saída: 0 | Tempo: 40.04 ms | Max RSS: 50.96 MiB | CPU user/sys: 0.01s/0.01s (81%) | Faults min/maj: 2095/1]
+
+$ /tmp/so-s5-nix-qw5ot5mt/prof-gnome-text-editor-1/bin/gnome-text-editor --version
+Text Editor 48.3 (48.3)
+
+            GTK: 4.18.6 (Compiled against 4.18.6)
+  GtkSourceView: 5.16.0 (Compiled against 5.16.0)
+
+Copyright 2020-2025 Christian Hergert, et al.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[Código de saída: 0 | Tempo: 52.93 ms | Max RSS: 23.03 MiB | CPU user/sys: 0.01s/0.01s (64%) | Faults min/maj: 1500/98]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile rollback --profile /tmp/so-s5-nix-qw5ot5mt/prof-gnome-text-editor-1
+[stderr]
+switching profile from version 2 to 1
+[Código de saída: 0 | Tempo: 29.99 ms | Max RSS: 41.33 MiB | CPU user/sys: 0.01s/0.01s (100%) | Faults min/maj: 2041/0]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile add --profile /tmp/so-s5-nix-qw5ot5mt/prof-trace-gnome-text-editor /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235033 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235034 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235035 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235036 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235037 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235038 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235039 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235040 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235041 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235042 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235043 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235044 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235045 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 29.42    0.003656           9       390           mmap
+ 25.35    0.003150           6       512       415 openat
+  7.91    0.000983           5       176           read
+  6.79    0.000844           4       171       122 newfstatat
+  5.97    0.000742          57        13           clone3
+  3.86    0.000480         120         4           lseek
+  3.62    0.000450           4       102           close
+  3.17    0.000394           4        95           fstat
+  3.16    0.000393           4        81           mprotect
+  2.05    0.000255           5        49           rt_sigprocmask
+  1.31    0.000163          11        14           rseq
+  1.16    0.000144           4        32           futex
+  1.09    0.000136          34         4           symlink
+  1.01    0.000125           8        14         3 prctl
+  0.82    0.000102           6        17           madvise
+  0.75    0.000093           6        14           set_robust_list
+  0.52    0.000065          32         2           munmap
+  0.35    0.000044          22         2           rename
+  0.35    0.000043           3        11           write
+  0.31    0.000039           6         6           getdents64
+  0.20    0.000025          12         2           open
+  0.20    0.000025           3         8         7 access
+  0.12    0.000015           1         8           fcntl
+  0.11    0.000014           7         2           sysinfo
+  0.08    0.000010           1         6           getrandom
+  0.06    0.000008           4         2           readlinkat
+  0.05    0.000006           6         1           poll
+  0.04    0.000005           0         8           getpid
+  0.04    0.000005           1         5           getuid
+  0.04    0.000005           5         1           openat2
+  0.02    0.000003           3         1           pread64
+  0.02    0.000003           3         1           sched_getaffinity
+  0.02    0.000003           0         9           prlimit64
+  0.00    0.000000           0         1           brk
+  0.00    0.000000           0         6           rt_sigaction
+  0.00    0.000000           0         2         2 ioctl
+  0.00    0.000000           0         2           socket
+  0.00    0.000000           0         1           connect
+  0.00    0.000000           0         2           sendto
+  0.00    0.000000           0         5           recvmsg
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         1           getsockname
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         2           uname
+  0.00    0.000000           0         1           mkdir
+  0.00    0.000000           0         2           readlink
+  0.00    0.000000           0         1           umask
+  0.00    0.000000           0         1           geteuid
+  0.00    0.000000           0         1           sigaltstack
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           set_tid_address
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.012428           6      1795       549 total
+[Código de saída: 0 | Tempo: 81.01 ms]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile rollback --profile /tmp/so-s5-nix-qw5ot5mt/prof-trace-gnome-text-editor
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235078 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235079 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235080 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235081 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235082 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235083 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235084 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235085 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235086 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235087 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235088 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235089 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235090 attached
+switching profile from version 2 to 1
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 27.93    0.003850           9       388           mmap
+ 24.09    0.003320           6       505       414 openat
+ 10.37    0.001429           8       162           read
+  6.36    0.000876          67        13           clone3
+  6.09    0.000839           5       162       116 newfstatat
+  5.00    0.000689         172         4           lseek
+  3.00    0.000413           4        94           close
+  2.74    0.000378           4        89           fstat
+  2.52    0.000348         348         1           execve
+  2.48    0.000342           6        49           rt_sigprocmask
+  1.65    0.000228           2        81           mprotect
+  1.57    0.000217          15        14         3 prctl
+  1.04    0.000144           4        31           futex
+  1.03    0.000142           9        15           madvise
+  0.99    0.000136           9        14           rseq
+  0.86    0.000118           8        14           set_robust_list
+  0.33    0.000046           5         8         7 access
+  0.33    0.000045          22         2           open
+  0.21    0.000029           4         6           getrandom
+  0.15    0.000020           3         6           rt_sigaction
+  0.13    0.000018           9         2           write
+  0.13    0.000018           9         2           sysinfo
+  0.12    0.000017          17         1           rename
+  0.12    0.000016           2         6           getpid
+  0.11    0.000015          15         1           symlink
+  0.09    0.000013           6         2           getdents64
+  0.09    0.000013           3         4           prlimit64
+  0.08    0.000011           3         3           readlink
+  0.05    0.000007           7         1           unlink
+  0.05    0.000007           1         5           getuid
+  0.04    0.000006           3         2         2 ioctl
+  0.04    0.000006           6         1           sched_getaffinity
+  0.04    0.000005           5         1           brk
+  0.04    0.000005           5         1           sigaltstack
+  0.03    0.000004           2         2           fcntl
+  0.03    0.000004           4         1           flock
+  0.03    0.000004           4         1           arch_prctl
+  0.02    0.000003           3         1           set_tid_address
+  0.01    0.000002           2         1           umask
+  0.00    0.000000           0         1           socket
+  0.00    0.000000           0         2           sendto
+  0.00    0.000000           0         5           recvmsg
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         1           getsockname
+  0.00    0.000000           0         2           uname
+  0.00    0.000000           0         1           geteuid
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.013783           8      1709       542 total
+[Código de saída: 0 | Tempo: 72.68 ms]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /tmp/so-s5-nix-qw5ot5mt/prof-trace-gnome-text-editor/bin/gnome-text-editor --version
+Text Editor 48.3 (48.3)
+
+            GTK: 4.18.6 (Compiled against 4.18.6)
+  GtkSourceView: 5.16.0 (Compiled against 5.16.0)
+
+Copyright 2020-2025 Christian Hergert, et al.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[stderr]
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 41.55    0.004935           6       778       675 openat
+ 34.02    0.004040           9       445           mmap
+  7.28    0.000865           4       187       148 newfstatat
+  4.69    0.000557           4       118           read
+  3.92    0.000466           4       104           fstat
+  3.79    0.000450           4       103           close
+  2.22    0.000264         132         2           execve
+  1.68    0.000200           1       104           mprotect
+  0.29    0.000034           3        11           futex
+  0.17    0.000020           3         6           pread64
+  0.13    0.000015           7         2           getdents64
+  0.10    0.000012           1         8           brk
+  0.08    0.000010           5         2         2 statfs
+  0.07    0.000008           2         3         3 access
+  0.00    0.000000           0         5           write
+  0.00    0.000000           0         6         4 prctl
+  0.00    0.000000           0         2           arch_prctl
+  0.00    0.000000           0         2           set_tid_address
+  0.00    0.000000           0         2           set_robust_list
+  0.00    0.000000           0         2           prlimit64
+  0.00    0.000000           0         2           getrandom
+  0.00    0.000000           0         2           rseq
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.011876           6      1896       832 total
+[Código de saída: 0 | Tempo: 79.27 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix path-info -s -S /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24
+/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24	   69085704	 1123775824
+[Código de saída: 0 | Tempo: 62.29 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix path-info -r /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24
+/nix/store/80v5n8kdscr9r2ls8h72s8ppwmccwrgm-xgcc-16.2.0-libgcc
+/nix/store/4r0d1hm8458zz59xrh22ga2p0nkwvbpy-libunistring-1.4.2
+/nix/store/rwq5g35321vg407qwg7ynsqfz77iyrrp-libidn2-2.3.8
+/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57
+/nix/store/930sd5x7lp8xnwvzk2fpzg5ffwbjgbcz-bzip2-1.0.8
+/nix/store/kp68n1q6r8lzpf5mxjmfasn3zq2pql4x-zlib-1.3.2
+/nix/store/d7pn11xv3qyfdfx33fgwvcqlnxhlnhpj-libpng-apng-1.6.59
+/nix/store/sx0fyd6228r3m84d5bccs6d5kz81lh9n-brotli-1.2.1-lib
+/nix/store/92ymwd3gpjn4gf4gs9rhddmy3wi4zsb4-freetype-2.14.3
+/nix/store/1vf3gs73myaha9a90w4s29z0v0vprs5w-libxau-1.0.12
+/nix/store/zcc3ps8kx9vbfzr4c5qcm2hhyfifddkk-libxdmcp-1.1.5
+/nix/store/hnprfn6a77gb9lk42h0ib1dhqd944rvp-libxcb-1.17.0
+/nix/store/nz6yl26svfj0qap9qnpvd26yp2gxn3xl-libx11-1.8.14
+/nix/store/ig03w1najff9c7rfi3fm7fsnr1azkfs7-libxext-1.3.7
+/nix/store/lc5vzk58j2xh96ckiklh7z820n3ym9y7-pixman-0.46.4
+/nix/store/0zhvihb7r16n9ghyyf2y69c9c6hh36cq-dejavu-fonts-minimal-2.37
+/nix/store/40ixrl4ppcv6xa7r17pqxrllb9wj3b6s-expat-2.9.0
+/nix/store/pz6inqfwnzk3rj0kvg52fxrwanp2n9nm-fontconfig-2.18.3
+/nix/store/rbppbs3qnv7as8wnz7mn5h4wx0wjq4yn-fontconfig-2.18.3-lib
+/nix/store/459kh2fvd4n7ayy4jbmsafq64pm4yyhj-util-linux-minimal-2.42.4-lib
+/nix/store/m9y00qgmfbzvlffgbx0hi5hc38dps46q-pcre2-10.49
+/nix/store/qk6cz4ba571znqrsyhma192y8h50yi05-gcc-16.2.0-libgcc
+/nix/store/myhwfdgqm39yms5clinafii9i1nmq43h-gcc-16.2.0-lib
+/nix/store/v8ik1izlcgga2r33gh1ws9wgxsvf84bl-libselinux-3.11
+/nix/store/zy879gpqy4w1yyzf1q0cbfkpa9fvs7xf-libffi-3.8.0
+/nix/store/rj0sh9bqfc62j2jvh6zahd0a9rpnwgw9-glib-2.90.0
+/nix/store/rqq907s6kn0d7b2n737c5v6qqgbp5p8x-libxrender-0.9.13
+/nix/store/s1zgzkkphrz14x4sz7np8w619im8xf9x-lzo-2.10
+/nix/store/r020s04y8608q03ayybg2kssia1jc9z2-cairo-1.18.6
+/nix/store/2lm82b2dsna4vjfvg5vg1hfx4fiy69x9-gobject-introspection-1.86.0
+/nix/store/fx3qv8qzc64y9sm1z3gd7qh4vmjww17h-libdaemon-0.14
+/nix/store/hasnvc0j36gg6qrdsfcx7yivx3c2bpqr-bash-5.3p20
+/nix/store/4vdll3ayvj82s2x722w9jzh1vqh6qj6p-libxcrypt-4.5.2
+/nix/store/5smwg3fcf30jd7f1ga6imjaipbj0i0k9-gmp-with-cxx-6.3.0
+/nix/store/hzr6xd6i4hxax19mj165p8nsy5n8l6ci-attr-2.6.0
+/nix/store/j7nqmiia4h15b5gsqjdv091nsg9i1axp-acl-2.4.0
+/nix/store/a50ml7za6h61m4mv4cdbvkl33c6sx5yn-coreutils-9.12
+/nix/store/bsrf6vrcvp6vnfg99ksq07bd355mx8v5-util-linux-minimal-2.42.4-login
+/nix/store/2a69456iqj6rzzc2ys7l2yypsv1w6l5m-zstd-1.5.7
+/nix/store/5n1qsd423q10dlscj3k4np04imfv4nm2-xz-5.8.4
+/nix/store/l61b7akyg90i6fnw96spap7s44cv4k12-kmod-31
+/nix/store/mkxif1sr97103nfqlcpb89dvq9vh25k6-util-linux-minimal-2.42.4-mount
+/nix/store/zgh6gn8hzq8n42id5f6sdhb4h567dahi-kmod-31-lib
+/nix/store/zm2cpgy1cz7y80ryhxym05wwzgqxz4zx-util-linux-minimal-2.42.4-swap
+/nix/store/xj7bg66n0xqgk79jy1z5vnjscinf680j-systemd-minimal-262
+/nix/store/qbv74lpzb7i6zkv1kd3wzm7i758vmn1v-dbus-1.16.2-lib
+/nix/store/rlddw02a2zkm0qjrzxqn3542l5p0div5-libevent-2.1.13
+/nix/store/ck36cr8xnhgy4mxv38x1xjyqp95w59vq-avahi-0.8
+/nix/store/da0jhl7dj82flrp9wld11jp3pvs9raxa-sqlite-3.54.0
+/nix/store/f6sc8iqwxy7ig3lqi07as1pz5mag109i-icu4c-78.3
+/nix/store/gf6q6pclqdmig7iw8zifl4jzqnf8cmhx-json-glib-1.10.8
+/nix/store/2slk4gxc605zqc9k3spzlli96vql7m14-nghttp2-1.70.0-lib
+/nix/store/18jady12x8j4qrfw0kbkasd4mkqdq658-publicsuffix-list-0-unstable-2026-09-02
+/nix/store/i3fb4p14jn3xmj5kyvzxsaksd6i5dw8v-libpsl-0.23.3
+/nix/store/srd6l83hc8dr35kbnll2cpwhpr44sbcn-libsoup-3.8.0
+/nix/store/v1jy8ggciqlyv5j297jhr9ybsv5fj5k9-dconf-51.0-lib
+/nix/store/wa7a9r7b6asfir8r8wdp7wbzx3dj8qhm-libxml2-2.15.4
+/nix/store/04b8i6dk9kfqca5ps4jcvp8vx9dx9kri-tinysparql-3.12.0
+/nix/store/3h4ifcg10i9j0kj5c0cmas23v15pc7cl-openssl-3.5.9
+/nix/store/0g32v6hvd6ylhnzzqnznjsd914qikj14-live555-2026.01.12
+/nix/store/adz753psjvfr4j597fprrh4p0cvjylx9-ncurses-6.6
+/nix/store/ga33b6wdnwl7lzkizgxfs9fraramsajy-readline-8.3p3
+/nix/store/0h2wawrxv908iwki42fk1fr5mb6zwqhn-lua-5.2.4
+/nix/store/1l0a4cq8ahhpgwx0byq2zcsi316mlzm1-vulkan-loader-1.4.363.0
+/nix/store/28z11yz990sjcd8hh73r66mfk3mc4gab-lcms2-2.19.1
+/nix/store/f9rx5ciyxbk16b2ri7in9bwnnr8mcakf-libdovi-3.3.1
+/nix/store/h39qml87bd24gdsvnmgspcf1awi5c57p-libunwind-1.8.3
+/nix/store/yw00mmzbxyd5cmfkdmycnl3gihnrxdrj-glslang-16.6.0
+/nix/store/q9nicibnx3b3n2vh1q2psz7nf7s6df85-shaderc-2026.1-lib
+/nix/store/0s2g17x61j0q9ilr8skwnf0mfz6qv6vv-libplacebo-5.264.1
+/nix/store/1p18fp66q4rrf1hscxzrff191ikfjvlh-libcddb-1.3.2
+/nix/store/25svpf3rdkvkc43f0zp59j5g1wjlmfp5-keyutils-1.6.3-lib
+/nix/store/1s8bxpyfc3faqvdvr5hlv5bbf6zp49nj-krb5-1.22.2-lib
+/nix/store/lncjyfgmlkp9ziddalwb56nq4s5m11mp-libgpg-error-1.61
+/nix/store/aaxqsmdi1n0250rask9qrs8qn6m1fmx5-libgcrypt-1.12.4-lib
+/nix/store/dvgmzy2h66ysvq9k3b7bz27jn9qlgmw9-libbdplus-0.2.0
+/nix/store/vhfg79fwwqfrj40wlikpvxnrn055syj9-libaacs-0.11.1
+/nix/store/254b1mxrkhfykqrrw4fhzf4ks9scgm1q-libjpeg-turbo-3.2.0
+/nix/store/cyhr3klhvaggc0bcqqb67b25ly33bgfg-libxi-1.8.4
+/nix/store/2nxx4nyf7i5a9gbcq7wm6qy9bhx5c6by-libxtst-1.2.6
+/nix/store/d5nbmb080lckh9811q3grnlfv1ikmisi-alsa-topology-conf-1.2.5.1
+/nix/store/kh9d602gyx4wmjrki2dsshxz1gb8lmf7-alsa-ucm-conf-1.2.16.1
+/nix/store/4anfh4wyg0bckkj4h29lda6n5v7kq6hh-alsa-lib-1.2.16.1
+/nix/store/5v5157x6b5s80yin21mzbrr7iqc566sp-libxinerama-1.1.6
+/nix/store/kfsjrlmpvyxha1xfpkl9w38zykkz194a-file-5.48
+/nix/store/kb3ymiph15pf74ddls92q7046vkfp5kz-xkeyboard-config-2.49
+/nix/store/md555jfqdvwxhzm93mv3yl1ki6a2yd3g-wayland-1.26.0
+/nix/store/4irfnnwv8iq34pf2irccxz1ypxy3plg9-libxkbcommon-1.13.2
+/nix/store/6v9lkf7a07n9v3yva5mw6nhjzbv0d9k0-fribidi-1.0.18
+/nix/store/7pqd3hafa9cbcy426lnx4qnb05psr4mf-libdeflate-1.26
+/nix/store/w4cjyk294i1h68z75z46dgws7hmma7m6-giflib-6.1.3
+/nix/store/b0gpq7815bq5bssdv0fkk8kpxrnjhcbm-libwebp-1.6.0
+/nix/store/ja8mqzwv5qclf4kc009y7pchx8cnkn3w-lerc-4.2.0
+/nix/store/v154wvscivq3j7cizhnfccyi8b1ws0kl-libtiff-4.7.2
+/nix/store/bgrrk1crwbmc7phgzkipmrzc9x257i88-gdk-pixbuf-2.44.8
+/nix/store/hhp85inw9g37xmgqny2ii4bdrfy06fwj-libxfixes-6.0.2
+/nix/store/cmgd662xssc0pza0hv05kwznn5h88ag4-libxdamage-1.1.7
+/nix/store/gdqmbpbjwb6ff8bcllblc4pv69v0qafs-iso-codes-4.20.1
+/nix/store/jc5j9axzwla63bnnzbnkkfi6p6bw61s1-libxcomposite-0.4.7
+/nix
+... [truncado: 15043 chars totais] ...
+8az5133kryqp2cvrxbnz8qy-python3-3.14.10
+/nix/store/5n10l0fbi0w4slmdynbjfdjgfdsqg7xg-talloc-2.5.0
+/nix/store/8qkq67b32m4jiippp3xbjxx0x4szs4h9-ncompress-5.0
+/nix/store/pd6kmgkpz1bmpck9sc2yr520hmvrzm1l-gzip-1.15
+/nix/store/6qab01kp6cqrk1a5inplkbwxwfb5pmhd-libxpm-3.5.20
+/nix/store/8hmmrkv0bgrg7l19ray9yj8dfi4dqqfp-libmd-1.3.0
+/nix/store/71x9j34qp7zj8awfcnmhvnna4m1qsx78-libbsd-0.12.2
+/nix/store/7na2hh2gszyr7i9n3fa5jhqm66mcyk51-dav1d-1.5.3
+/nix/store/83drlwlr2i43wpw1xk058i41n494v8sd-libva-2.24.1
+/nix/store/8c5lw9fmbdl774v6242qmkcis10jdkl6-libogg-1.3.6
+/nix/store/8wc68p1fbag8w4w836v1p4r46qxcnm08-libmysofa-1.3.5
+/nix/store/9ag1rb4vwwazb98v3yfj77dkczpfi2z2-qtx11extras-5.15.19
+/nix/store/smk7b972v1v8h8inihxxpm4xsr7zbs1k-libdvdcss-1.5.0
+/nix/store/a969xj4rzqgl6hw3myjxsyfnfy2sb04r-libdvdread-7.0.1
+/nix/store/9l0npjvfb15i142fy3ia18hbxvwhjq7m-libdvdnav-6.1.1
+/nix/store/j2bgw36d5qjjq48bk48v692bd01dz2ff-libssh2-1.11.1
+/nix/store/jyl4vqdxhjak7mw52vq4sscra2mk5yli-ngtcp2-1.23.0
+/nix/store/sx5f2g42i3p6k5s0wfng4j98q6zgmzdp-nghttp3-1.18.0
+/nix/store/ykyk7ajsw31ybw4yq72pa4a6xp7jl3zs-curl-8.23.0
+/nix/store/9m1q61npkc3i9fnw9cc2gygz9sghz0rf-mariadb-connector-c-3.3.5
+/nix/store/a6ydzdxz1678c5vdsfkddkfx7kqhymx4-protobuf-36.2-lib
+/nix/store/adx0bv0ifaa3sqv6ldn0bgf712sxc7pf-flac-1.5.0
+/nix/store/w5cmsqrnjv6mjbji3nbwdcx860bqxzgy-libusb-1.0.30
+/nix/store/aivvdav578dlc9al52p9i1rls8vhkn6d-libmtp-1.1.23
+/nix/store/b483qgs3aac06js3i7ldfi7mabwqyh63-qtsvg-5.15.19
+/nix/store/crap6x69ivm3nayw89r0sgcvyrl624sj-qtdeclarative-5.15.19-bin
+/nix/store/d70ciig1wfzvq0y3gy828l6ylrf0cyjp-libopus-1.6.1
+/nix/store/f0d8sj7kkg00q8qf2wjs62brds0ddlay-speex-1.2.1
+/nix/store/f1q8g8jyzaxml2ddrs5frqbfzwlgh8x7-libarchive-3.8.10-lib
+/nix/store/v94152y88gm4p7g884wjbzmqahw789nb-libkate-0.4.3
+/nix/store/ff62s82mffsj4rvqm7xywm1jpg2rh4v8-libtiger-0.3.4
+/nix/store/fwl3lwrldy9m3cdsych8jsm86njpvd31-libvorbis-1.3.7
+/nix/store/g8sx9mz91qszdab0asfvmcb431pkxns3-srt-1.5.6
+/nix/store/hbr878lpbvawd9f1gy5jbz6la1rnlhr1-librsvg-2.63.0
+/nix/store/hvkw7hrdyz2jcbi99mq7gpzpwk5p5ks9-libebml-1.4.7
+/nix/store/db8gz9m30n8lwszr1zahm6jx56vja3g2-cjson-1.7.19
+/nix/store/fbf2drh0ghga6dd2fwq6y26p7dqc0sj9-mbedtls-3.6.7
+/nix/store/ahk9mmm7pwvg8v28j8k80inrv9qgk6c6-librist-0.2.11
+/nix/store/bf3k5pjdn27i5p3ah9nm2m283jp64kh3-x264-0-unstable-2025-09-10-lib
+/nix/store/bnlb0cz152lvh3pcbcqcw75gls1nwvm7-xvidcore-1.3.7
+/nix/store/jk8jiy9xc1xgiiggpdgj32v7cwyz54aq-libsamplerate-0.2.2
+/nix/store/kvm3ixhh24wzgws7fk50vb4zqh5hzcqp-libjack2-1.9.22
+/nix/store/k2r0paqyw97frkqkcrafzw3w2hjxpriz-speexdsp-1.2.1
+/nix/store/p460c4cb861xsvvbwymhpbkj3iivqzi3-libtool-2.6.2-lib
+/nix/store/k0byqkpzxbfnf4wj57d22wkry9wckrn4-libmpg123-1.33.7
+/nix/store/v17dqik3jffynyz5f2cyy5jpxkgi6nk7-lame-4.0-lib
+/nix/store/sqrv5n1sfwp1amsy9mg0swd82kv16ryq-libsndfile-1.2.2
+/nix/store/vq78r7aba4gvyyxmpiy9dv0ijwcv1h0r-soxr-0.1.3
+/nix/store/r645g67lgfmnzxkx46dllaw526r4a72v-libpulseaudio-17.0
+/nix/store/rflg90289ingvyh9ia9j3izlxifpdzis-mpg123-1.33.7
+/nix/store/cy50qnx0sxxcxljw7ya24ssizjxf203d-libopenmpt-0.8.9
+/nix/store/ddnjzpbgydbgqy550badv1hpdc3d3ip3-libssh-0.12.2
+/nix/store/f2dlchc4li9867776f0x8d6zmjdd22qg-ffmpeg-8.1.3-data
+/nix/store/g4ig3b9018zgk98j0cw6sdb15fbayban-zimg-3.0.6
+/nix/store/ifcwaj8yy1dc20xgzb07v3273ak0hn4s-v4l-utils-1.32.0
+/nix/store/k2rzdzihsh97y8crji8r9v3lgh572nbk-libvdpau-1.5
+/nix/store/k5j1mac7m0q29b2d2ny2rd141v6nd62w-svt-av1-4.1.0
+/nix/store/kq3q1xrnnnh8j6ipwl1hryg2hax8yhc4-libwebp-1.6.0
+/nix/store/i835y8b4g9rkw94jiswhbc4hwi9dknna-numactl-2.0.18
+/nix/store/m5559wb4wia7rdaws9jp8r14w7jbp59v-x265-4.2
+/nix/store/qbymljrswqsgysplkjn95rx8ba7cjv5n-vid.stab-1.1.2
+/nix/store/rv93yisy1qr0v0lwzmf6nl0wknnhyqi3-libtheora-1.2.0
+/nix/store/s2px6whypbb9s66jhr8arx7z94rxvkgq-zvbi-0.2.46
+/nix/store/s8gs08id2i6qihi2fs59xi5v64slx62i-ocl-icd-2.3.5
+/nix/store/hz5k84g1n07h1bjwpgl7z7v01rgizn2k-libvmaf-3.0.0
+/nix/store/vcnh80mmsp10ybh4azw4vrxlczb0jyds-libaom-3.15.2
+/nix/store/w1yw5az5ah4j4csh053pdhq8iyzfs53y-libass-0.17.5
+/nix/store/xlibasfm55mnngx3rxjr663kank2952w-libvpx-1.17.0
+/nix/store/yk78n107w0yzp5n0bfbf9axwwpvqgyww-openjpeg-2.5.4
+/nix/store/ib87nggs4vsq06jwmjkzyzv63020bp65-ffmpeg-8.1.3-lib
+/nix/store/nbmpc2jpzknx08mp0djn2i2zqjhy8c0m-libpq-18.6
+/nix/store/kjdvypkknzd15b7g5vjxyw6045qalhm6-qtbase-5.15.19-bin
+/nix/store/p1idd0bmcakmdzpgk0pvmg24wd7kb4zi-libcaca-0.99.beta20
+/nix/store/p8cc53zxjyjapb4p5mxa3mv38g0s80pw-fluidsynth-2.5.6
+/nix/store/wlwfib24sapw01gny10balapq1pakz10-libcap-ng-0.9.6
+/nix/store/r7gc1i2zv83m9pryidpdk1wdav72sg5s-audit-4.2.1-lib
+/nix/store/rapxnw8qqv47psglrgfd2yg48rhzfpmz-db-4.8.30
+/nix/store/ajn83h1fdvxjv69fg1fpi6wcmhbkmzh3-linux-pam-1.7.2
+/nix/store/bmjz9qdcncaxqr7vvl4x6dxqk4ckdxi0-jansson-2.15.1
+/nix/store/bmqf500vwkk82d4a2jis9xkpw6vkjaxv-tdb-1.4.15
+/nix/store/bqj517lgn84gas9vrx445niwpr0vkdk0-python3.14-dnspython-2.9.0
+/nix/store/civ6di833jrxm1xa5bpxg6bg849fz3rg-lmdb-0.9.36
+/nix/store/gr73qzw1bdv8gwxmkc7swrcbkf2jwar1-popt-1.19
+/nix/store/iqim8k857g83h2dq6qkpm2ds9ijr22v7-tevent-0.17.2
+/nix/store/lfm00fnq66xfgbn099vqckabyl5jllz6-bash-interactive-5.3p20
+/nix/store/rjk4frr9bpnyh6xn8392dxx1zqddpwgz-python3.14-markdown-3.11.0
+/nix/store/v3za74snmvklqb98bfah0b2m0cxa2051-liburing-2.14
+/nix/store/qiqlv0fibiaisn202lswr4byamrjgcdq-samba-4.25.1
+/nix/store/r30zjb6crivjxbw3ir8csn34rjsldxnz-faad2-2.11.4
+/nix/store/r72v4xi8pn8zmdfh5nbdilwaykcrsj3d-qtquickcontrols-5.15.19
+/nix/store/d6gr9sml4m15kiva712flzxva6pjlr8f-libraw1394-2.1.2
+/nix/store/rblchy230qs47zpf15fnsw8wii51pr0s-libdc1394-2.2.7
+/nix/store/wncjz6s97fz7rbs68bvhir0pd5394mbx-taglib-1.13.1
+/nix/store/x29gv1zkw2r61nka3wwf01ns4z6zkz85-libmatroska-1.7.2
+/nix/store/xj47a8k9q3impjq3nhfql47kmq5c15fz-libmicrodns-0.2.0
+/nix/store/ybzzi1k8sj8y81qfwsbw96k0apg2xrrf-libupnp-1.14.25
+/nix/store/yc3ykk5ka2p7r3biany5x96gis57kdd1-qtwayland-5.15.19-bin
+/nix/store/ygprxqimdp07x5fgrs2ki9244cdzwsj6-libmad-0.16.5
+/nix/store/yhzjr67z7pga7jz6mxv3w3qsacfqf2k0-freefont-ttf-20120503
+/nix/store/z9pdhlmcjb328n42p6xw716ip6brgvgf-qtsvg-5.15.19-bin
+/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24
+[Código de saída: 0 | Tempo: 62.50 ms]
+
+=== Nix ELF: vlc (bin=/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/vlc, real=/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/.vlc-wrapped) ===
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/vlc" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000001d (RUNPATH)            Library runpath: [/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib]
+[Código de saída: 0 | Tempo: 6.66 ms]
+
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/.vlc-wrapped" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libvlc.so.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libvlccore.so.9]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdbus-1.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000001d (RUNPATH)            Library runpath: [/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/lib:/nix/store/qbv74lpzb7i6zkv1kd3wzm7i758vmn1v-dbus-1.16.2-lib/lib:/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib]
+[Código de saída: 0 | Tempo: 6.80 ms]
+
+$ /nix/store/53wag47axb3bjnwn0imzksh4c9w3mgx7-glibc-2.44-57-bin/bin/ldd /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/.vlc-wrapped
+	linux-vdso.so.1 (0x00007a4a737f2000)
+	libvlc.so.5 => /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/lib/libvlc.so.5 (0x00007a4a737bc000)
+	libvlccore.so.9 => /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/lib/libvlccore.so.9 (0x00007a4a73697000)
+	libdbus-1.so.3 => /nix/store/qbv74lpzb7i6zkv1kd3wzm7i758vmn1v-dbus-1.16.2-lib/lib/libdbus-1.so.3 (0x00007a4a7363b000)
+	libm.so.6 => /nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib/libm.so.6 (0x00007a4a7351a000)
+	libc.so.6 => /nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib/libc.so.6 (0x00007a4a73200000)
+	libsystemd.so.0 => /nix/store/xj7bg66n0xqgk79jy1z5vnjscinf680j-systemd-minimal-262/lib/libsystemd.so.0 (0x00007a4a73071000)
+	/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib/ld-linux-x86-64.so.2 => /nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib64/ld-linux-x86-64.so.2 (0x00007a4a737f4000)
+[Código de saída: 0 | Tempo: 10.90 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile add --profile /tmp/so-s5-nix-qw5ot5mt/prof-vlc-1 /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24
+[Código de saída: 0 | Tempo: 41.07 ms | Max RSS: 50.59 MiB | CPU user/sys: 0.01s/0.01s (79%) | Faults min/maj: 2090/0]
+
+$ /tmp/so-s5-nix-qw5ot5mt/prof-vlc-1/bin/vlc -I dummy --no-video --aout=dummy --play-and-exit /tmp/so-s5-nix-qw5ot5mt/work-vlc-1/in.wav --sout #transcode{acodec=vorb,ab=128,channels=1,samplerate=44100}:std{access=file,mux=ogg,dst=/tmp/so-s5-nix-qw5ot5mt/work-vlc-1/out.ogg} vlc://quit
+[stderr]
+[00005f89e66a03d0] dummy interface: using the dummy interface module...
+[00007c0474003560] mux_ogg mux: Open
+[00007c0474003560] mux_ogg mux: Close
+[00007c0474c17490] idummy demux: command `quit'
+[00005f89e6660a50] main playlist: end of playlist, exiting
+[Código de saída: 0 | Tempo: 377.33 ms | Max RSS: 34.37 MiB | CPU user/sys: 0.07s/0.05s (34%) | Faults min/maj: 3012/274]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile rollback --profile /tmp/so-s5-nix-qw5ot5mt/prof-vlc-1
+[stderr]
+switching profile from version 2 to 1
+[Código de saída: 0 | Tempo: 30.37 ms | Max RSS: 41.30 MiB | CPU user/sys: 0.01s/0.01s (100%) | Faults min/maj: 2038/0]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile add --profile /tmp/so-s5-nix-qw5ot5mt/prof-trace-vlc /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235326 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235327 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235328 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235329 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235330 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235331 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235332 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235333 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235334 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235335 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235336 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235337 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235338 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 27.50    0.003935          10       390           mmap
+ 23.62    0.003380           6       512       415 openat
+ 11.17    0.001598           9       177           read
+  6.49    0.000928          71        13           clone3
+  6.17    0.000883           5       174       123 newfstatat
+  4.75    0.000679         169         4           lseek
+  3.29    0.000471           4       102           close
+  2.90    0.000415           4        95           fstat
+  2.53    0.000362           7        49           rt_sigprocmask
+  1.61    0.000230           2        81           mprotect
+  1.16    0.000166          11        14         3 prctl
+  1.13    0.000162           9        17           madvise
+  1.12    0.000160           5        32           futex
+  0.98    0.000140          10        14           set_robust_list
+  0.92    0.000131           9        14           rseq
+  0.81    0.000116          23         5           symlink
+  0.51    0.000073           6        11           write
+  0.43    0.000062          31         2           sendto
+  0.43    0.000062          62         1           mkdir
+  0.36    0.000052           8         6           getdents64
+  0.32    0.000046           9         5           recvmsg
+  0.22    0.000032          16         2           munmap
+  0.22    0.000032           4         8           fcntl
+  0.17    0.000025          12         2           socket
+  0.17    0.000025          12         2           rename
+  0.17    0.000024           2         9           prlimit64
+  0.10    0.000015          15         1           connect
+  0.09    0.000013           4         3           readlinkat
+  0.08    0.000011           5         2           readlink
+  0.06    0.000009           1         6           rt_sigaction
+  0.06    0.000009           1         6           getrandom
+  0.06    0.000008           4         2           sysinfo
+  0.06    0.000008           1         5           getuid
+  0.05    0.000007           0         8           getpid
+  0.03    0.000005           0         8         7 access
+  0.03    0.000005           5         1           sched_getaffinity
+  0.03    0.000005           5         1           openat2
+  0.03    0.000004           4         1           pread64
+  0.03    0.000004           4         1           bind
+  0.03    0.000004           4         1           arch_prctl
+  0.03    0.000004           4         1           set_tid_address
+  0.02    0.000003           3         1           poll
+  0.02    0.000003           3         1           getsockname
+  0.01    0.000002           2         1           geteuid
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         1           brk
+  0.00    0.000000           0         2         2 ioctl
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         2           uname
+  0.00    0.000000           0         1           umask
+  0.00    0.000000           0         1           sigaltstack
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.014308           7      1801       550 total
+[Código de saída: 0 | Tempo: 77.93 ms]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile rollback --profile /tmp/so-s5-nix-qw5ot5mt/prof-trace-vlc
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235360 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235361 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235362 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235363 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235364 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235365 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235366 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235367 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235368 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235369 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235370 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235371 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235372 attached
+switching profile from version 2 to 1
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 28.33    0.002874           7       388           mmap
+ 23.35    0.002369           4       505       414 openat
+ 10.52    0.001067           6       162           read
+  6.05    0.000614         153         4           lseek
+  5.32    0.000540           6        81           mprotect
+  5.31    0.000539           3       162       116 newfstatat
+  5.21    0.000529          40        13           clone3
+  3.61    0.000366           3        94           close
+  3.07    0.000311           3        89           fstat
+  2.52    0.000256           5        49           rt_sigprocmask
+  1.20    0.000122           8        14         3 prctl
+  1.05    0.000107           3        31           futex
+  0.98    0.000099           7        14           rseq
+  0.91    0.000092           6        15           madvise
+  0.76    0.000077           5        14           set_robust_list
+  0.24    0.000024          12         2           getdents64
+  0.22    0.000022          22         1           rename
+  0.21    0.000021          10         2           write
+  0.17    0.000017          17         1           symlink
+  0.15    0.000015           1         8         7 access
+  0.10    0.000010          10         1           unlink
+  0.10    0.000010           3         3           readlink
+  0.10    0.000010           2         5           getuid
+  0.10    0.000010           1         6           getrandom
+  0.09    0.000009           1         6           rt_sigaction
+  0.07    0.000007           3         2           uname
+  0.06    0.000006           3         2           fcntl
+  0.05    0.000005           5         1           flock
+  0.05    0.000005           5         1           arch_prctl
+  0.05    0.000005           5         1           sched_getaffinity
+  0.05    0.000005           5         1           set_tid_address
+  0.03    0.000003           1         2         2 ioctl
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         1           brk
+  0.00    0.000000           0         6           getpid
+  0.00    0.000000           0         1           socket
+  0.00    0.000000           0         2           sendto
+  0.00    0.000000           0         5           recvmsg
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         1           getsockname
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           umask
+  0.00    0.000000           0         2           sysinfo
+  0.00    0.000000           0         1           geteuid
+  0.00    0.000000           0         1           sigaltstack
+  0.00    0.000000           0         4           prlimit64
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.010146           5      1709       542 total
+[Código de saída: 0 | Tempo: 68.42 ms]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /tmp/so-s5-nix-qw5ot5mt/prof-trace-vlc/bin/vlc -I dummy --no-video --aout=dummy --play-and-exit /tmp/so-s5-nix-qw5ot5mt/work-trace-vlc/in.wav --sout #transcode{acodec=vorb,ab=128,channels=1,samplerate=44100}:std{access=file,mux=ogg,dst=/tmp/so-s5-nix-qw5ot5mt/work-trace-vlc/out.ogg} vlc://quit
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235378 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235379 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235380 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235381 attached
+[0000563fc441d540] dummy interface: using the dummy interface module...
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235382 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235383 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235384 attached
+[00007bc8dc0035c0] mux_ogg mux: Open
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235385 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235386 attached
+[00007bc8dc0035c0] mux_ogg mux: Close
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235387 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235388 attached
+[00007bc8dcc143c0] idummy demux: command `quit'
+[0000563fc4415a50] main playlist: end of playlist, exiting
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 43.82    0.095890         357       268        52 futex
+ 19.80    0.043336         802        54         1 poll
+ 17.93    0.039234       39234         1           rt_sigtimedwait
+  3.38    0.007400           7       932           mmap
+  2.99    0.006537           6       967       592 openat
+  2.93    0.006420           6       981       203 newfstatat
+  2.09    0.004582          23       199           munmap
+  1.35    0.002958           6       425           mprotect
+  1.23    0.002697           6       435           read
+  0.99    0.002168           5       408           close
+  0.83    0.001811           4       377           fstat
+  0.47    0.001031          13        78           getdents64
+  0.29    0.000636          57        11           clone3
+  0.28    0.000613           7        80           rt_sigprocmask
+  0.23    0.000499          10        47           dup3
+  0.20    0.000443           7        63           lseek
+  0.13    0.000280           9        31           write
+  0.12    0.000257           8        30           readv
+  0.12    0.000256          12        21           sendmsg
+  0.11    0.000237          15        15           fcntl
+  0.10    0.000217          13        16           madvise
+  0.08    0.000180           6        28           eventfd2
+  0.06    0.000140         140         1           rename
+  0.06    0.000130          11        11           gettid
+  0.06    0.000123          20         6         2 ioctl
+  0.04    0.000092           7        13           rseq
+  0.04    0.000086           4        20        10 recvmsg
+  0.04    0.000084           6        13           set_robust_list
+  0.03    0.000064          21         3         1 connect
+  0.03    0.000058           4        12           brk
+  0.02    0.000052          17         3           socket
+  0.02    0.000050           6         8           fadvise64
+  0.02    0.000037          12         3         1 recvfrom
+  0.01    0.000028           4         7           rt_sigaction
+  0.01    0.000027          27         1           writev
+  0.01    0.000023          23         1           getpeername
+  0.01    0.000021           5         4           sendto
+  0.01    0.000015           1         8           getpid
+  0.01    0.000014          14         1           getsockopt
+  0.01    0.000013           4         3         3 access
+  0.01    0.000011          11         1           shutdown
+  0.01    0.000011          11         1           uname
+  0.00    0.000010           2         5           tgkill
+  0.00    0.000009           4         2           geteuid
+  0.00    0.000009           9         1           pipe2
+  0.00    0.000007           7         1         1 mkdir
+  0.00    0.000007           1         6           getrandom
+  0.00    0.000006           3         2           prlimit64
+  0.00    0.000005           5         1           getresuid
+  0.00    0.000004           4         1           getresgid
+  0.00    0.000003           3         1           getsockname
+  0.00    0.000000           0         1         1 rt_sigreturn
+  0.00    0.000000           0         1           alarm
+  0.00    0.000000           0         2           execve
+  0.00    0.000000           0         1           fstatfs
+  0.00    0.000000           0         2           arch_prctl
+  0.00    0.000000           0         2           sched_getaffinity
+  0.00    0.000000           0         2           set_tid_address
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.218821          38      5618       867 total
+[Código de saída: 0 | Tempo: 322.23 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix path-info -s -S /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2
+/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2	  264399664	 2352893328
+[Código de saída: 0 | Tempo: 65.93 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix path-info -r /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2
+/nix/store/m2047a1xwgblgkrnbxz0yilkaqfrbf2b-xgcc-14-20241116-libgcc
+/nix/store/nj19yxkqf0iqjqn4x6dbglsvqk5bgsbs-libunistring-1.3
+/nix/store/y2xxdhhjy2l5mgpm3d0rw2wxmpd61my4-libidn2-2.3.7
+/nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66
+/nix/store/ia5k8g4zzjsa2vkax834m0p8sp72q5fb-libXau-1.0.12
+/nix/store/qw9qk0sk4q9790w6qh27z5zgn93hcwmn-libXdmcp-1.1.5
+/nix/store/nfkkx2iz3injlh130y3b0zgip5981y33-libxcb-1.17.0
+/nix/store/wfrgia7qj3ijrxl9irsqvjfz20qqx5fm-libX11-1.8.12
+/nix/store/inh6jc1w3fl95j7crcp5vyih7macq4py-libXext-1.3.6
+/nix/store/00iygsbzwg42xg0nb2pynbnch7xxd3pf-libXxf86vm-1.1.6
+/nix/store/id29wx2vp10d5xi6wzsykd4rb9ssaikx-gcc-14-20241116-libgcc
+/nix/store/ik84lbv5jvjm1xxvdl8mhg52ry3xycvm-gcc-14-20241116-lib
+/nix/store/06qhbfn1g8gdmj7c1sbgzfxqdazid73i-fftw-single-3.3.10
+/nix/store/09fqpfbccrbhjcmz9q9xycnfl89lw5q1-libsamplerate-0.2.2
+/nix/store/09k57h5hxlavh7320z0f43jkbzch3v14-pcre-8.45
+/nix/store/58br4vk3q5akf4g8lx0pqzfhn47k3j8d-bash-5.2p37
+/nix/store/wiv7xa38v7mx8jhxp12d4qpclwrqdv3x-gfortran-14-20241116-libgcc
+/nix/store/2y8c3b7ydkl68liz336035llfhmm6r95-gfortran-14-20241116-lib
+/nix/store/1i29y15r4f2w3yjpwpw7whdbn1l961kb-openblas-0.3.29
+/nix/store/75jf6s5i8j83rb0dh5dwl9sqbszx6a8a-blas-3
+/nix/store/h8n3hfhfrdpkwsp9dfjmbdqdlpzcyx60-blas-3-dev
+/nix/store/2af51irxs1ilijingdad4hjhaigyh83c-mpdecimal-4.0.0
+/nix/store/3l0ghb5nqlvrf83wsf2cxwn1my9xnwxv-gdbm-1.24-lib
+/nix/store/80l1sb3vcmrkcdd7ihlizkcnv19rq9fj-ncurses-6.5
+/nix/store/954l60hahqvr0hbs7ww6lmgkxvk8akdf-openssl-3.4.1
+/nix/store/xijpnhg8mg0g4lahwrxdwylpcq7249gc-zlib-1.3.1
+/nix/store/kz7q992dqpfcbzi1ic9qdss1k7bcihnj-sqlite-3.48.0
+/nix/store/bd12z7swxj5kzqw9m1gf99d6v570h0b3-util-linux-minimal-2.40.4-lib
+/nix/store/ci6lysmni722fq1gjhhddyy4pynfqwc1-mailcap-2.1.54
+/nix/store/j8rf4yi0w2w2n4mp01cz7b6xmykcqm30-readline-8.2p13
+/nix/store/k9hqqrqws9jsvl1ip8890nrsgavn3kyb-libffi-3.4.6
+/nix/store/ll9dm3r87v4r46a0km0zck4968m60vys-libxcrypt-4.4.38
+/nix/store/qkmlj9xwg316pxsprhq1jldjc3xqvim1-xz-5.6.4
+/nix/store/r2cw2amwdjwdfcdrvfbq1cj4ryi6yfs5-bzip2-1.0.8
+/nix/store/spb4xrswkigavjyhri271xqfzhazxgar-expat-2.6.4
+/nix/store/ss40xh9b67bnk6p7q4cqvmdbvb993d8h-tzdata-2025a
+/nix/store/ii0svv5raqqbwmdhkarca2d28p07n067-python3-3.11.11
+/nix/store/09lavmy5phk8akw3anyfkigvf6xj2945-python3.11-numpy-1.26.4
+/nix/store/ylzpk54f82kc888pr4325ynshk48la6i-libglvnd-1.7.0
+/nix/store/q6063jl4mgbz9fk8hnfy1l5m8y9vldl5-glu-9.0.3
+/nix/store/0biq5934f1sgp3391al4kcanprqaxv3l-glew-2.2.0
+/nix/store/rp5ik9ai3srbzfkn9r99x4aib5dhcmf5-publicsuffix-list-0-unstable-2025-02-12
+/nix/store/0d4hjqfgsdchamwyfjbs3fjmycv9a5m0-libpsl-0.21.5
+/nix/store/0ip3zavhi7999mqpjlqa32mr9aychhck-imath-3.1.12
+/nix/store/5z112gk0k73wgdiljb1l3n5jq6hkkzfw-giflib-5.2.2
+/nix/store/miq99gylww7177pdm7n7ygcryvlnyp70-libpng-apng-1.6.46
+/nix/store/vpnxv9pd10i69df260bmilkgf8fylxng-libjpeg-turbo-3.0.4
+/nix/store/dr4yq68w26y50qs64vbzzkxgggrhddj2-libwebp-1.5.0
+/nix/store/k2wh2kgwc0hjm5j30bpdi7p3z9vs8b99-libdeflate-1.23
+/nix/store/r6j66y631l90bzrbdf8zp5wpa4m9f2la-lerc-4.0.0
+/nix/store/wy0slah6yvchgra8nhp6vgrqa6ay72cq-zstd-1.5.6
+/nix/store/0ncvzgf8r52dnc1dbdpz6ns55nbyrwng-libtiff-4.7.0
+/nix/store/65rz54nrzkbfc3iqfwb8qa3bl10rhbh3-libunwind-1.8.1
+/nix/store/iwlabmwfw8shz7kh4kara81gmmicq9pk-json-c-0.18
+/nix/store/y7w4wvxw4l297laddc396fmf5j12x55p-keyutils-1.6.3-lib
+/nix/store/3pj3d23p8k1wqgs26fjnwhh7cj5bg2c2-krb5-1.21.3-lib
+/nix/store/ka86qsp50hdljs1qmn888yw1s75grxac-brotli-1.1.0-lib
+/nix/store/qfkd5kkkr4n7rd3gl5njhfbmlgf3cz3q-nghttp2-1.64.0-lib
+/nix/store/xdl4pp0fvpliyzvl6gqvk2xyb3xg4n4h-libssh2-1.11.1
+/nix/store/l6hzv5ms9fi7mx2j3xh0i42anyjcgpp8-curl-8.12.1
+/nix/store/cy649s4771zabjmxxljx0p2vn9mxs0yc-elfutils-0.192
+/nix/store/f2krmq3iv5nibcvn4rw7nrnrciqprdkh-python3-3.12.9
+/nix/store/i20j88gykyv6m9bifcbmhjslxi3bl098-libcap-2.74-lib
+/nix/store/gd0nqxbn5nz4as2pbkkr0xb753j4b2b9-pcre2-10.44
+/nix/store/szpy4jwrsmpd8m0ynvsagi7d2w4szxa8-libselinux-3.8
+/nix/store/vi9n40g3814x3f7sqnc3jvmrhr4n3ij9-glib-2.82.5
+/nix/store/0zp153xbsipx4slnjavzp9r2d0h6a3hk-gstreamer-1.24.10
+/nix/store/1qh00n9g62z825022gsqrhajgkgw4m0w-orc-0.4.40
+/nix/store/nx27idxpvi3fk3p7admvhipny73nr25n-kmod-31
+/nix/store/pn0rk0wsmkjazbz380y8xzb99n8sr07g-attr-2.5.2
+/nix/store/4izi23kn57b3cw47jddzq14wcv01b5y5-acl-2.3.2
+/nix/store/rlpanzl29s3gv3wgs5720q04rbgysl8a-gmp-with-cxx-6.3.0
+/nix/store/yh6qg1nsi5h2xblcr67030pz58fsaxx3-coreutils-9.6
+/nix/store/ihfa49hzibjn4w6chlay0p2kg30198x0-alsa-ucm-conf-1.2.12
+/nix/store/phvdngdrvkwa0lyg1zgrkr46h1p44443-alsa-topology-conf-1.2.5.1
+/nix/store/3vp6c1l75z0kw6wp9lpbc8lkdpvsmxyx-alsa-lib-1.2.13
+/nix/store/390mgf6zr42l1f0bv986xn9p3rp2rsp0-util-linux-minimal-2.40.4-mount
+/nix/store/4y86406sk1ddgic4bqyc41w86dv2q41l-libseccomp-2.6.0-lib
+/nix/store/9q21szf7syv6z1fqyksnq2gwjf7jblak-util-linux-minimal-2.40.4-swap
+/nix/store/cvlbhhrvzfkjl2hrrzhq3vr5gzan1r60-bash-interactive-5.2p37
+/nix/store/dgbkwc55pj8f4wksq0dw315jxvcgvdah-kmod-31-lib
+/nix/store/4q2sv4sqb7y8y4pp3n9bf2aabmgqmwmy-gzip-1.13
+/nix/store/f246qzchy7zy00z1f42dqz9jiwcf5n7f-xz-5.6.4-bin
+/nix/store/40yifhx34v4g4llrdn3v2ag8w02j10fv-gnugrep-3.11
+/nix/store/kacmz3l42i1xckn537ifkwsfc7fg2w6f-zstd-1.5.6-bin
+/nix/store/pcf18502sz0b25qya2lzm5f7wy0pd7a6-bzip2-1.0.8-bin
+/nix/store/mjdgh8k4q3j2zj1f4ninp2r218j47qvd-kbd-2.7.1
+/nix/store/nffa4k51svp4x8sygznd1vqacmg6k4qj-util-linux-minimal-2.40.4-login
+/nix/store/ng0w98hfl5zan700dbsl2hfzv3d24407-kexec-tools-2.0.29
+/nix/store/3gbjdkkqzinpjg7za37qkjjirq9zswz7-glibc-2.40-66-getent
+/nix/store/zy2n4id5gcxcbx2x8jbblkmcpdlpsypk-getent-glibc-2.40-66
+/nix/store/9jpnvdzzf5qlibawrqnlgm03l41k332a-systemd-minimal-257.3
+/nix/store/25530szazsn249fjh6mhd0pr43paa3hq-dbus-1.14.10-lib
+/nix/store/aigqzlkfls5akdnx36p2221rxwi197d3-libogg-1.3.5
+/nix/store/76iqnsw4lsz93wnz1977swfv7pxvil9g-flac-1.4.3
+/nix/store/8ghyd21r9dpcbnwkrk1c5pdvpfbj7qrh-lame-3.100-lib
+/nix/store/a8wgdilqdfd04di4lpy2792hlkbdzgv8-libvorbis-1.3.7
+/nix/store/fbixmvavkismz23a3kr0pmqji1iv3rb4-libopus-1.5.2
+/nix/store/p5fs6hlgdgcij1aqrh3m9vwj4bzrrxmp-libmpg123-1.32.10
+/nix/store/6rd25pqlls1sqhzvdh3i1nyr
+... [truncado: 20012 chars totais] ...
+fpvhvkqwmrzqqpqiv5gnzgw-zvbi-0.2.43
+/nix/store/acim4wpz7bxj0gsmhf0h4y25s3c0158q-x264-0-unstable-2025-01-03-lib
+/nix/store/b1kc0bjk14sj3qjdkfw7zk8jxbxn1w2j-libass-0.17.3
+/nix/store/ccvqiqc94rw1y55v8zpkkwsh7b3f6c3x-zimg-3.0.5
+/nix/store/9vvhwy679650icg1rizbfzqk8z8vcwyh-libvmaf-3.0.0
+/nix/store/cm96jf9j3xw73fybmlrls3d3jkz7qzh9-libaom-3.11.0
+/nix/store/72clf8wm74i490x8wf1jbc8bwcqapnn3-numactl-2.0.18
+/nix/store/f9qv6p11clj0wzb3njw07769bxklgimb-x265-4.1
+/nix/store/hk0p55w8py73nhcbwf4gsppa51p16sp1-ffmpeg-headless-7.1.1-data
+/nix/store/jfa17qdadghc941jjgz4qxbxsw3c5ymg-dav1d-1.5.1
+/nix/store/lhmnmmimkl2369nl0lwr201ndbr9hhpc-libwebp-1.5.0
+/nix/store/n1jka9qgydxivkp03zv9k1lr2x80nyd6-vid.stab-unstable-2022-05-30
+/nix/store/q053ysxmdb8qvpsrwzba92c727icfrck-svt-av1-2.3.0
+/nix/store/xa1mr1y5ps5pw6m559lyl3lh6gc6cajq-hwdata-0.393
+/nix/store/g3mwygr9v9kb09q5r6a97mx5fvfncqdb-libpciaccess-0.18.1
+/nix/store/rqv3prq2iryrvqh1dq9az1nrhid3yp1b-libdrm-2.4.124
+/nix/store/q6a12jg1ys38hj7n62919ci070nzz9vn-libva-minimal-2.22.0
+/nix/store/rwcw9gyq1icrj92mmqxdm9d87xacbb0a-libvpx-1.15.0
+/nix/store/wx8c4152alccg5adp8f7b3v8dq1l0ylx-libbluray-1.3.4
+/nix/store/yi2n3a1d14iazpaxh90hjvvj77a5m3rv-xvidcore-1.3.7
+/nix/store/6j9wh9vq3wmjka44ihfff77zzsmlnjb6-ffmpeg-headless-7.1.1-lib
+/nix/store/6rvwar712c350j7qp0fbi57kcyc8dqr3-openfec-1.4.2.11
+/nix/store/6wf4iwp85hpwfs21vj46n9v9ham6bik6-audiofile-0.3.6
+/nix/store/77pphl59nk5v8jgnx0pr5g4m1lqq45k8-openexr-3.2.4
+/nix/store/q6bs3xy6whmil2ksdmhxyjgcsj700qcs-minizip-ng-4.0.8
+/nix/store/zs4x5y2rqrdbh0girs4x2yqshlylgljd-yaml-cpp-0.8.0
+/nix/store/a20z42xzl1cslf3p0ql11zjxxg6qrjsk-opencolorio-2.4.2
+/nix/store/6ywp02ix59vmqa3a17a75py1b2ihfz1y-openimageio-2.5.16.0
+/nix/store/71q3780syrxmq1m66zy3imfc8890wahc-fdk-aac-2.0.3
+/nix/store/8mldw611f5mbgsl6fpz1khk4wjflvxb7-file-5.46
+/nix/store/nm2f7vrw8mqhlqsh8azn66hhrv39900q-opusfile-0.12
+/nix/store/qnazb1jzkp8i6d3k2k4k1q4j31vcbyys-libmad-0.15.1b
+/nix/store/xh5l30bimnp4qq239a4si2vy3d2fpqqv-wavpack-5.8.1
+/nix/store/7afi4r3j9pnmjg82dvwd23g81fnim40i-sox-unstable-2021-05-09-lib
+/nix/store/k7ahgbgfjhw3lr8g8vdpxns2y538h3zg-libuv-1.50.0
+/nix/store/7i2rp6md2liy0bfavp8jxnrrxgmynpww-roc-toolkit-0.4.0
+/nix/store/7jj8ig9f4gnjy60czaapxpz0hy0g3gzl-openpgl-0.7.0
+/nix/store/7pnad9w5wy66vxsj285n9ki2r58qzb10-libraqm-0.10.2
+/nix/store/mvncq1gfljrgx2v9pjysdmha8gw26cf8-libimagequant-4.3.4
+/nix/store/sqri8xiywycjnhc4ar74x8gxac8b4pbj-python3.11-pillow-11.1.0
+/nix/store/7kk2lx48ga4hcax9wjln78v76qcacw63-python3.11-pyopengl-3.1.7
+/nix/store/h0pvnm3d36in5cvhh6f3qmxxb9agbnk7-boost-1.87.0
+/nix/store/8jsnksvw9f0yr4a2cqx0zpsis8bkis8k-boost-1.87.0-dev
+/nix/store/ajlwi4cnqs6744scgvfpplp178r68sl2-libharu-2.4.5
+/nix/store/b8n9qhafrn3v6jl3x46blrhw7a5val2y-alembic-1.8.8-lib
+/nix/store/baw7g1jfwrzccgcp9bnkk1x9vynd4lkg-shaderc-2024.0-lib
+/nix/store/cga8qkwg8w1z4w6a6c4p8l489p1y5bs4-openimagedenoise-2.3.2
+/nix/store/vmjrzp7xa7q6krp1jmx7j4v9g27nyhbn-lapack-3
+/nix/store/h9qxzliagrgqhgn39z1w413zlqp9j4y4-lapack-3-dev
+/nix/store/cv63p96qc38mjy6s5wiixqpjcn2i3qkn-python3.11-numpy-2.2.3
+/nix/store/dk1mg76s0r0a9yip2jn05i8rsi8zy53y-python3.11-urllib3-2.3.0
+/nix/store/g8ih8zlmzysaivh7iaygv9xyrs8hpjjk-jemalloc-5.3.0
+/nix/store/m2nf77p9bkw371mp2lazahndjaxbjx8l-c-blosc-1.21.6
+/nix/store/gmg5vdraczibq95yniry1m9r0xk85hh0-openvdb-11.0.0
+/nix/store/j34jjs03pclfs9dfl7q6iw9863bpigdw-python3.11-charset-normalizer-3.4.1
+/nix/store/m2lcy425r1vasrrmmn1v88rbasy6dmjy-python3.11-idna-3.10
+/nix/store/9zxb5ln0awpc13s0gv1vz7f28wyvn2x1-nss-cacert-3.108
+/nix/store/skpajy8ck6gin4khjn34k7pvbmwzifb8-python3.11-certifi-2025.01.31
+/nix/store/i5gwrg77ynz8j7ppx0z58jy3p8ccc4bc-python3.11-requests-2.32.3
+/nix/store/kpjz5xi4crnih25v7q1k7pk01d9fxxb7-python3.11-markupsafe-3.0.2
+/nix/store/cswlm3ari26d0as8zq8b8xwj0072x89b-libcanberra-0.30
+/nix/store/y96lx5yd2d3iiyb0crp7c9pc1p6x3jvh-libiec61883-1.2.0
+/nix/store/ykrq6drsyp6zwzw3c6vhd6k43y3wajvh-libconfig-1.7.3
+/nix/store/izf3s1jnzxnbik547r59qrch85xlm6lb-ffado-2.4.9
+/nix/store/kdq1virhajmsc9c1d7622napfzmn46h1-libusb-1.0.27
+/nix/store/k95k3d451vdah7pww42fm24d8q560h6j-ell-0.71
+/nix/store/n7fb2578f4ca1vv0jpvmmqj5cvf5s53x-libical-3.0.19
+/nix/store/kri8wxxn0ccifq9va0cs6wlnf2jck6ip-bluez-5.79
+/nix/store/krmk9k9y1pfyhk1rnla5fjxb9xgs4g15-lilv-0.24.24
+/nix/store/bkr4mz7s8yalnnbaa0ha239ix265020j-libXv-1.0.13
+/nix/store/z6rwz8jrk7262yrwa6ylnmrayr00cb0g-cdparanoia-III-10.2
+/nix/store/l0kxf1arsc9nk0afhnl1hngjsn7ikcqr-gst-plugins-base-1.24.10
+/nix/store/nmg1j4v1j6vvrhgm7c8zq1i3gkbx0pyd-libmysofa-1.3.3
+/nix/store/a28v2wclwmaymykakvbzfgzsxrqp4jij-libyaml-0.2.5
+/nix/store/l6rc5cy3mng2ph2dcf97z85l490sid0p-lttng-ust-2.13.8
+/nix/store/p13n2zvvadplgnjlhzlkz23wnkfvx9p8-libcamera-0.4.0
+/nix/store/pbifw7ynlacbds4x1594rvzah93zxlms-liblc3-1.1.3
+/nix/store/qqybpf85l88qczgrjb13jr3zjsy254vh-sbc-2.0
+/nix/store/w10l092y43jqs46rihzy3f31rs7sx5jm-libebur128-1.2.6
+/nix/store/yq609xdia656cc00v3d38ql7pvndnmgy-libfreeaptx-0.1.1
+/nix/store/zp6889v2yv7622wsijj48fi1ji2qj7sj-webrtc-audio-processing-1.3
+/nix/store/xir78j1r5bk42jjxsszjwfx93sjc0d93-pipewire-1.4.1
+/nix/store/y7a06sim2zvil7h5r5r5w3n4p8knc3km-libXScrnSaver-1.2.4
+/nix/store/dazcj1317dmil20vvmb3rs8vsl75b2ah-SDL2-2.32.2
+/nix/store/fcw9rgcrlx81vv71ygj4gmi0x6fncwpp-ffmpeg-7.1.1-data
+/nix/store/q6pcfdvqilwgy41jb259h0azb6n1nhp7-libva-2.22.0
+/nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib
+/nix/store/r73qjirp95ri10z1fgb4rpsxm2jnrnql-fftw-double-3.3.10
+/nix/store/s8jxp0s2ycambmj6pb5fq6wjgvqripb6-python3.11-jinja2-3.1.6
+/nix/store/sbplmix1irviidpag542vav5iikz1vd2-python3.11-materialx-1.38.10
+/nix/store/vb8nn4v59vsyryamlv8wv78im77qyn8p-libspnav-1.1
+/nix/store/ihc62ballwfcadb8hqki4s3ap382ymgz-draco-1.5.7
+/nix/store/y5clxlj2gcnqa4qcx1kb3xyr56r9r2ax-opensubdiv-3.6.0
+/nix/store/vlip39fgsli4jv5p08ycycnnbryzj5jd-python3.11-openusd-24.11
+/nix/store/x11as0mjqrdnq6mdc6sqqr9gzqm6yfkc-openxr-loader-1.1.46
+/nix/store/xhhqd7nc4vf6x3nx0i8x7dxd00wlzl8b-potrace-1.16
+/nix/store/y8g7zgz6y7v2x74jc607rdxdz6sj056s-openal-soft-1.23.1
+/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2
+[Código de saída: 0 | Tempo: 68.52 ms]
+
+=== Nix ELF: blender (bin=/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/blender, real=/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/.blender-wrapped) ===
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/blender" | grep -E "NEEDED|RUNPATH|RPATH" || true
+[stderr]
+readelf: Error: Not an ELF file - it has the wrong magic bytes at the start
+[Código de saída: 0 | Tempo: 6.71 ms]
+
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/.blender-wrapped" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libatomic.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libtbb.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libjemalloc.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libutil.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpng16.so.16]
+ 0x0000000000000001 (NEEDED)             Shared library: [libosdGPU.so.3.6.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libosdCPU.so.3.6.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libspnav.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libX11.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXrender.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXxf86vm.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXfixes.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXi.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libxkbcommon.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libwayland-client.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libwayland-egl.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libwayland-cursor.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdecor-0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenxr_loader.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageIO.so.2.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageIO_Util.so.2.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libjpeg.so.62]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenjp2.so.7]
+ 0x0000000000000001 (NEEDED)             Shared library: [libwebp.so.7]
+ 0x0000000000000001 (NEEDED)             Shared library: [libwebpmux.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libwebpdemux.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libsharpyuv.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libembree4.so.4]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenpgl.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenColorIO.so.2.4]
+ 0x0000000000000001 (NEEDED)             Shared library: [libexpat.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libAlembic.so.1.8]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_python311.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_container.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_graph.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageDenoise.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpotrace.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libusd_ms.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavcodec.so.61]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavdevice.so.61]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavfilter.so.10]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavformat.so.61]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavutil.so.59]
+ 0x0000000000000001 (NEEDED)             Shared library: [libswscale.so.8]
+ 0x0000000000000001 (NEEDED)             Shared library: [libswresample.so.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libsndfile.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenal.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenvdb.so.11.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libIex-3_2.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenEXR-3_2.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenEXRCore-3_2.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libIlmThread-3_2.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libImath-3_1.so.29]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpcre.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libxml2.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_filesystem.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_atomic.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_date_time.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_locale.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_thread.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_chrono.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_iostreams.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_regex.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_random.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_system.so.1.87.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libhpdf.so.2.4]
+ 0x0000000000000001 (NEEDED)             Shared library: [libepoxy.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libvulkan.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libshaderc_shared.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [librt.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfreetype.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpython3.11.so.1.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfftw3f.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfftw3.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfftw3f_threads.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libz.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libzstd.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgmpxx.so.4]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgmp.so.10]
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x000000000000001d (RUNPATH)            Library runpath: [/nix/store/xijpnhg8mg0g4lahwrxdwylpcq7249gc-zlib-1.3.1/lib:/nix/store/b8n9qhafrn3v6jl3x46blrhw7a5val2y-alembic-1.8.8-lib/lib:/nix/store/54wr0cn0c6vsybjdlhm82d6cd2cz5s7g-boost-1.87.0/lib:/nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib:/nix/store/r73qjirp95ri10z1fgb4rpsxm2jnrnql-fftw-double-3.3.10/lib:/nix/store/06qhbfn1g8gdmj7c1sbgzfxqdazid73i-fftw-single-3.3.10/lib:/nix/store/miq99gylww7177pdm7n7ygcryvlnyp70-libpng-apng-1.6.46/lib:/nix/store/2mmsgkggc79x1ayvd4hkbs6k2bqvw091-freetype-2.13.3/lib:/nix/store/h89gh873zcsfjjp7w0f2mw357np32br7-gmp-with-cxx-6.3.0/lib:/nix/store/g8ih8zlmzysaivh7iaygv9xyrs8hpjjk-jemalloc-5.3.0/lib:/nix/store/xdc7337pixdwfjgwi0gqrmzkf48xfxrv-libepoxy-1.5.10/lib:/nix/store/ajlwi4cnqs6744scgvfpplp178r68sl2-libharu-2.4.5/lib:/nix/store/vpnxv9pd10i69df260bmilkgf8fylxng-libjpeg-turbo-3.0.4/lib:/nix/store/6rd25pqlls1sqhzvdh3i1nyrdxj41bww-libsndfile-1.2.2/lib:/nix/store/dr4yq68w26y50qs64vbzzkxgggrhddj2-libwebp-1.5.0/lib:/nix/store/wy0slah6yvchgra8nhp6vgrqa6ay72cq-zstd-1.5.6/lib:/nix/store/a20z42xzl1cslf3p0ql11zjxxg6qrjsk-opencolorio-2.4.2/lib:/nix/store/0ip3zavhi7999mqpjlqa32mr9aychhck-imath-3.1.12/lib:/nix/store/77pphl59nk5v8jgnx0pr5g4m1lqq45k8-openexr-3.2.4/lib:/nix/store/6ywp02ix59vmqa3a17a75py1b2ihfz1y-openimageio-2.5.16.0/lib:/nix/store/1y02vlsy49gii1zgglyhgrkzas55qlz9-openjpeg-2.5.2/lib:/nix/store/7jj8ig9f4gnjy60czaapxpz0hy0g3gzl-openpgl-0.7.0/lib:/nix/store/y5clxlj2gcnqa4qcx1kb3xyr56r9r2ax-opensubdiv-3.6.0/lib:/nix/store/gmg5vdraczibq95yniry1m9r0xk85hh0-openvdb-11.0.0/lib:/nix/store/xhhqd7nc4vf6x3nx0i8x7dxd00wlzl8b-potrace-1.16/lib:/nix/store/ii0svv5raqqbwmdhkarca2d28p07n067-python3-3.11.11/lib:/nix/store/pvv8jj4ic2fpj4kkwgrw968z099v27g3-tbb-2020.3/lib:/nix/store/564pdy2ai838fb9gi4v2qq4zmzjx1gz6-embree-4.3.3/lib:/nix/store/cga8qkwg8w1z4w6a6c4p8l489p1y5bs4-openimagedenoise-2.3.2/lib:/nix/store/wfrgia7qj3ijrxl9irsqvjfz20qqx5fm-libX11-1.8.12/lib:/nix/store/k5lslg4k7jd105wmiahvfymwad14r3zr-libXfixes-6.0.1/lib:/nix/store/yn7wjwgjlk7y53l73fljfvvzyw6hn624-libXi-1.8.2/lib:/nix/store/l3138hd3gy3i0gcpw9xs41h6a8hf0m00-libXrender-0.9.12/lib:/nix/store/00iygsbzwg42xg0nb2pynbnch7xxd3pf-libXxf86vm-1.1.6/lib:/nix/store/y8g7zgz6y7v2x74jc607rdxdz6sj056s-openal-soft-1.23.1/lib:/nix/store/x11as0mjqrdnq6mdc6sqqr9gzqm6yfkc-openxr-loader-1.1.46/lib:/nix/store/vlip39fgsli4jv5p08ycycnnbryzj5jd-python3.11-openusd-24.11/lib:/nix/store/h0pvnm3d36in5cvhh6f3qmxxb9agbnk7-boost-1.87.0/lib:/nix/store/spb4xrswkigavjyhri271xqfzhazxgar-expat-2.6.4/lib:/nix/store/3xlb4yb09jicyq645aak9v331w6rv1rd-libdecor-0.2.2/lib:/nix/store/qmlmyfxra64fvd42w7xkxxxnbvhzvh3w-libxkbcommon-1.7.0/lib:/nix/store/yd4670avwzw2fpfgfdwdkbj97n3jcgms-wayland-1.23.1/lib:/nix/store/rhl3v4rkhv8ma7vm313qa4zh8mirgwz7-libxml2-2.13.6/lib:/nix/store/09k57h5hxlavh7320z0f43jkbzch3v14-pcre-8.45/lib:/nix/store/vb8nn4v59vsyryamlv8wv78im77qyn8p-libspnav-1.1/lib:/nix/store/baw7g1jfwrzccgcp9bnkk1x9vynd4lkg-shaderc-2024.0-lib/lib:/nix/store/9g16ws1mgqa89p8y8iq8w0p652bc8zsf-vulkan-loader-1.4.304.0/lib:/nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66/lib:/nix/store/ik84lbv5jvjm1xxvdl8mhg52ry3xycvm-gcc-14-20241116-lib/lib]
+[Código de saída: 0 | Tempo: 6.57 ms]
+
+$ /nix/store/53wag47axb3bjnwn0imzksh4c9w3mgx7-glibc-2.44-57-bin/bin/ldd /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/.blender-wrapped
+	linux-vdso.so.1 (0x00007a1790bc2000)
+	libatomic.so.1 => /nix/store/ik84lbv5jvjm1xxvdl8mhg52ry3xycvm-gcc-14-20241116-lib/lib/libatomic.so.1 (0x00007a1790baa000)
+	libtbb.so.2 => /nix/store/pvv8jj4ic2fpj4kkwgrw968z099v27g3-tbb-2020.3/lib/libtbb.so.2 (0x00007a1790b62000)
+	libjemalloc.so.2 => /nix/store/g8ih8zlmzysaivh7iaygv9xyrs8hpjjk-jemalloc-5.3.0/lib/libjemalloc.so.2 (0x00007a1790a5d000)
+	libutil.so.1 => /nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66/lib/libutil.so.1 (0x00007a1790a58000)
+	libdl.so.2 => /nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66/lib/libdl.so.2 (0x00007a1790a53000)
+	libpng16.so.16 => /nix/store/miq99gylww7177pdm7n7ygcryvlnyp70-libpng-apng-1.6.46/lib/libpng16.so.16 (0x00007a1790a13000)
+	libosdGPU.so.3.6.0 => /nix/store/y5clxlj2gcnqa4qcx1kb3xyr56r9r2ax-opensubdiv-3.6.0/lib/libosdGPU.so.3.6.0 (0x00007a1790938000)
+	libosdCPU.so.3.6.0 => /nix/store/y5clxlj2gcnqa4qcx1kb3xyr56r9r2ax-opensubdiv-3.6.0/lib/libosdCPU.so.3.6.0 (0x00007a1790836000)
+	libspnav.so.0 => /nix/store/vb8nn4v59vsyryamlv8wv78im77qyn8p-libspnav-1.1/lib/libspnav.so.0 (0x00007a179082a000)
+	libX11.so.6 => /nix/store/wfrgia7qj3ijrxl9irsqvjfz20qqx5fm-libX11-1.8.12/lib/libX11.so.6 (0x00007a17906da000)
+	libXrender.so.1 => /nix/store/l3138hd3gy3i0gcpw9xs41h6a8hf0m00-libXrender-0.9.12/lib/libXrender.so.1 (0x00007a17906cb000)
+	libXxf86vm.so.1 => /nix/store/00iygsbzwg42xg0nb2pynbnch7xxd3pf-libXxf86vm-1.1.6/lib/libXxf86vm.so.1 (0x00007a17906c3000)
+	libXfixes.so.3 => /nix/store/k5lslg4k7jd105wmiahvfymwad14r3zr-libXfixes-6.0.1/lib/libXfixes.so.3 (0x00007a17906bb000)
+	libXi.so.6 => /nix/store/yn7wjwgjlk7y53l73fljfvvzyw6hn624-libXi-1.8.2/lib/libXi.so.6 (0x00007a17906a7000)
+	libxkbcommon.so.0 => /nix/store/qmlmyfxra64fvd42w7xkxxxnbvhzvh3w-libxkbcommon-1.7.0/lib/libxkbcommon.so.0 (0x00007a179065b000)
+	libwayland-client.so.0 => /nix/store/yd4670avwzw2fpfgfdwdkbj97n3jcgms-wayland-1.23.1/lib/libwayland-client.so.0 (0x00007a1790646000)
+	libwayland-egl.so.1 => /nix/store/yd4670avwzw2fpfgfdwdkbj97n3jcgms-wayland-1.23.1/lib/libwayland-egl.so.1 (0x00007a1790641000)
+	libwayland-cursor.so.0 => /nix/store/yd4670avwzw2fpfgfdwdkbj97n3jcgms-wayland-1.23.1/lib/libwayland-cursor.so.0 (0x00007a1790637000)
+	libdecor-0.so.0 => /nix/store/3xlb4yb09jicyq645aak9v331w6rv1rd-libdecor-0.2.2/lib/libdecor-0.so.0 (0x00007a179062c000)
+	libopenxr_loader.so.1 => /nix/store/x11as0mjqrdnq6mdc6sqqr9gzqm6yfkc-openxr-loader-1.1.46/lib/libopenxr_loader.so.1 (0x00007a179059b000)
+	libOpenImageIO.so.2.5 => /nix/store/6ywp02ix59vmqa3a17a75py1b2ihfz1y-openimageio-2.5.16.0/lib/libOpenImageIO.so.2.5 (0x00007a178f800000)
+	libOpenImageIO_Util.so.2.5 => /nix/store/6ywp02ix59vmqa3a17a75py1b2ihfz1y-openimageio-2.5.16.0/lib/libOpenImageIO_Util.so.2.5 (0x00007a1790459000)
+	libjpeg.so.62 => /nix/store/vpnxv9pd10i69df260bmilkgf8fylxng-libjpeg-turbo-3.0.4/lib/libjpeg.so.62 (0x00007a178f72c000)
+	libopenjp2.so.7 => /nix/store/1y02vlsy49gii1zgglyhgrkzas55qlz9-openjpeg-2.5.2/lib/libopenjp2.so.7 (0x00007a17903e0000)
+	libwebp.so.7 => /nix/store/dr4yq68w26y50qs64vbzzkxgggrhddj2-libwebp-1.5.0/lib/libwebp.so.7 (0x00007a178f67d000)
+	libwebpmux.so.3 => /nix/store/dr4yq68w26y50qs64vbzzkxgggrhddj2-libwebp-1.5.0/lib/libwebpmux.so.3 (0x00007a17903d0000)
+	libwebpdemux.so.2 => /nix/store/dr4yq68w26y50qs64vbzzkxgggrhddj2-libwebp-1.5.0/lib/libwebpdemux.so.2 (0x00007a17903c9000)
+	libsharpyuv.so.0 => /nix/store/dr4yq68w26y50qs64vbzzkxgggrhddj2-libwebp-1.5.0/lib/libsharpyuv.so.0 (0x00007a17903bf000)
+	libembree4.so.4 => /nix/store/564pdy2ai838fb9gi4v2qq4zmzjx1gz6-embree-4.3.3/lib/libembree4.so.4 (0x00007a178ce00000)
+	libopenpgl.so.0 => /nix/store/7jj8ig9f4gnjy60czaapxpz0hy0g3gzl-openpgl-0.7.0/lib/libopenpgl.so.0 (0x00007a178ccd4000)
+	libOpenColorIO.so.2.4 => /nix/store/a20z42xzl1cslf3p0ql11zjxxg6qrjsk-opencolorio-2.4.2/lib/libOpenColorIO.so.2.4 (0x00007a178c600000)
+	libexpat.so.1 => /nix/store/spb4xrswkigavjyhri271xqfzhazxgar-expat-2.6.4/lib/libexpat.so.1 (0x00007a178f650000)
+	libAlembic.so.1.8 => /nix/store/b8n9qhafrn3v6jl3x46blrhw7a5val2y-alembic-1.8.8-lib/lib/libAlembic.so.1.8 (0x00007a178c200000)
+	libboost_python311.so.1.87.0 => /nix/store/h0pvnm3d36in5cvhh6f3qmxxb9agbnk7-boost-1.87.0/lib/libboost_python311.so.1.87.0 (0x00007a178f60d000)
+	libboost_container.so.1.87.0 => /nix/store/54wr0cn0c6vsybjdlhm82d6cd2cz5s7g-boost-1.87.0/lib/libboost_container.so.1.87.0 (0x00007a178f5f6000)
+	libboost_graph.so.1.87.0 => /nix/store/54wr0cn0c6vsybjdlhm82d6cd2cz5s7g-boost-1.87.0/lib/libboost_graph.so.1.87.0 (0x00007a178f596000)
+	libOpenImageDenoise.so.2 => /nix/store/cga8qkwg8w1z4w6a6c4p8l489p1y5bs4-openimagedenoise-2.3.2/lib/libOpenImageDenoise.so.2 (0x00007a178ccb4000)
+	libpotrace.so.0 => /nix/store/xhhqd7nc4vf6x3nx0i8x7dxd00wlzl8b-potrace-1.16/lib/libpotrace.so.0 (0x00007a178f58c000)
+	libusd_ms.so => /nix/store/vlip39fgsli4jv5p08ycycnnbryzj5jd-python3.11-openusd-24.11/lib/libusd_ms.so (0x00007a1788400000)
+	libpthread.so.0 => /nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66/lib/libpthread.so.0 (0x00007a178f587000)
+	libavcodec.so.61 => /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib/libavcodec.so.61 (0x00007a1786e00000)
+	libavdevice.so.61 => /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib/libavdevice.so.61 (0x00007a178cc96000)
+	libavfilter.so.10 => /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib/libavfilter.so.10 (0x00007a1786800000)
+	libavformat.so.61 => /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib/libavformat.so.61 (0x00007a1786400000)
+	libavutil.so.59 => /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib/libavutil.so.59 (0x00007a1785200000)
+	libswscale.so.8 => /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib/libswscale.so.8 (0x00007a178c558000)
+	libswresample.so.5 => /nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib/libswresample.so.5 (0x00007a178c538000)
+	libsndfile.so.1 => /nix/store/6rd25pqlls1sqhzvdh3i1nyrdxj41bww-libsndfile-1.2.2/lib/libsndfile.so.1 (0x00007a1
+... [truncado: 22595 chars totais] ...
+8dq1l0ylx-libbluray-1.3.4/lib/libbluray.so.2 (0x00007a17799a9000)
+	libgnutls.so.30 => /nix/store/rxph0va3ibmp57dvk1ym5lzlp9ck2hh8-gnutls-3.8.9/lib/libgnutls.so.30 (0x00007a1777600000)
+	librist.so.4 => /nix/store/85kmwg0dww0d0an1i3nwbk238zvg6ylk-librist-0.2.11/lib/librist.so.4 (0x00007a177abeb000)
+	libsrt.so.1.5 => /nix/store/43rnxc48qw5mn47icdzmjxzk45hi37vj-srt-1.5.4/lib64/libsrt.so.1.5 (0x00007a1777906000)
+	libssh.so.4 => /nix/store/8la2sdkayawiqp1sh6cpbxibzczdwy1y-libssh-0.11.1/lib/libssh.so.4 (0x00007a1777ca0000)
+	libva-drm.so.2 => /nix/store/q6pcfdvqilwgy41jb259h0azb6n1nhp7-libva-2.22.0/lib/libva-drm.so.2 (0x00007a1786317000)
+	libvdpau.so.1 => /nix/store/1ykxbf1n23lq578rachkikk2ahw0qwp6-libvdpau-1.5/lib/libvdpau.so.1 (0x00007a178174d000)
+	libsoxr.so.0 => /nix/store/vdc04rf68w2ajyd6vzvs7l9ky0l56mb0-soxr-0.1.3/lib/libsoxr.so.0 (0x00007a1777889000)
+	libFLAC.so.12 => /nix/store/76iqnsw4lsz93wnz1977swfv7pxvil9g-flac-1.4.3/lib/libFLAC.so.12 (0x00007a177757c000)
+	libogg.so.0 => /nix/store/aigqzlkfls5akdnx36p2221rxwi197d3-libogg-1.3.5/lib/libogg.so.0 (0x00007a1781241000)
+	libmpg123.so.0 => /nix/store/p5fs6hlgdgcij1aqrh3m9vwj4bzrrxmp-libmpg123-1.32.10/lib/libmpg123.so.0 (0x00007a177994a000)
+	libpipewire-0.3.so.0 => /nix/store/xir78j1r5bk42jjxsszjwfx93sjc0d93-pipewire-1.4.1/lib/libpipewire-0.3.so.0 (0x00007a1777484000)
+	libdbus-1.so.3 => /nix/store/25530szazsn249fjh6mhd0pr43paa3hq-dbus-1.14.10-lib/lib/libdbus-1.so.3 (0x00007a1777830000)
+	libblosc.so.1 => /nix/store/m2nf77p9bkw371mp2lazahndjaxbjx8l-c-blosc-1.21.6/lib/libblosc.so.1 (0x00007a177b57c000)
+	libdeflate.so.0 => /nix/store/k2wh2kgwc0hjm5j30bpdi7p3z9vs8b99-libdeflate-1.23/lib/libdeflate.so.0 (0x00007a177a2cc000)
+	libicudata.so.76 => /nix/store/qgij2wczc4vx1rhwf911mv491dx1n65i-icu4c-76.1/lib/libicudata.so.76 (0x00007a1775600000)
+	libicui18n.so.76 => /nix/store/qgij2wczc4vx1rhwf911mv491dx1n65i-icu4c-76.1/lib/libicui18n.so.76 (0x00007a1775200000)
+	libicuuc.so.76 => /nix/store/qgij2wczc4vx1rhwf911mv491dx1n65i-icu4c-76.1/lib/libicuuc.so.76 (0x00007a1774e00000)
+	libbrotlidec.so.1 => /nix/store/ka86qsp50hdljs1qmn888yw1s75grxac-brotli-1.1.0-lib/lib/libbrotlidec.so.1 (0x00007a1780ebb000)
+	libXau.so.6 => /nix/store/ia5k8g4zzjsa2vkax834m0p8sp72q5fb-libXau-1.0.12/lib/libXau.so.6 (0x00007a178123a000)
+	libXdmcp.so.6 => /nix/store/qw9qk0sk4q9790w6qh27z5zgn93hcwmn-libXdmcp-1.1.5/lib/libXdmcp.so.6 (0x00007a1780460000)
+	libLerc.so.4 => /nix/store/r6j66y631l90bzrbdf8zp5wpa4m9f2la-lerc-4.0.0/lib/libLerc.so.4 (0x00007a1775132000)
+	libssl.so.3 => /nix/store/954l60hahqvr0hbs7ww6lmgkxvk8akdf-openssl-3.4.1/lib/libssl.so.3 (0x00007a1774cf2000)
+	libcrypto.so.3 => /nix/store/954l60hahqvr0hbs7ww6lmgkxvk8akdf-openssl-3.4.1/lib/libcrypto.so.3 (0x00007a1774600000)
+	libuuid.so.1 => /nix/store/bd12z7swxj5kzqw9m1gf99d6v570h0b3-util-linux-minimal-2.40.4-lib/lib/libuuid.so.1 (0x00007a177fdd8000)
+	libGLX.so.0 => /nix/store/ylzpk54f82kc888pr4325ynshk48la6i-libglvnd-1.7.0/lib/libGLX.so.0 (0x00007a17795cc000)
+	libGLdispatch.so.0 => /nix/store/ylzpk54f82kc888pr4325ynshk48la6i-libglvnd-1.7.0/lib/libGLdispatch.so.0 (0x00007a1775079000)
+	libvmaf.so.3 => /nix/store/9vvhwy679650icg1rizbfzqk8z8vcwyh-libvmaf-3.0.0/lib/libvmaf.so.3 (0x00007a1774be5000)
+	libmvec.so.1 => /nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66/lib/libmvec.so.1 (0x00007a1774507000)
+	libnuma.so.1 => /nix/store/72clf8wm74i490x8wf1jbc8bwcqapnn3-numactl-2.0.18/lib/libnuma.so.1 (0x00007a177b56c000)
+	libpulsecommon-17.0.so => /nix/store/x3wfgf914z4cvgrr6mnkyq4p81zzs50q-libpulseaudio-17.0/lib/pulseaudio/libpulsecommon-17.0.so (0x00007a177447d000)
+	libXcursor.so.1 => /nix/store/f90pwkhqw3ddp8a006l536ckxnx8rlax-libXcursor-1.2.3/lib/libXcursor.so.1 (0x00007a177f006000)
+	libXrandr.so.2 => /nix/store/m5mvqvx6fyrsayz2rnab0yy64885fz6x-libXrandr-1.5.4/lib/libXrandr.so.2 (0x00007a177993d000)
+	libXss.so.1 => /nix/store/y7a06sim2zvil7h5r5r5w3n4p8knc3km-libXScrnSaver-1.2.4/lib/libXss.so.1 (0x00007a177f9a0000)
+	libv4lconvert.so.0 => /nix/store/68xyywq7rpdhr2k57k80xvbrc285zkdg-v4l-utils-1.24.1/lib/libv4lconvert.so.0 (0x00007a17743ff000)
+	libglib-2.0.so.0 => /nix/store/vi9n40g3814x3f7sqnc3jvmrhr4n3ij9-glib-2.82.5/lib/libglib-2.0.so.0 (0x00007a17742a8000)
+	libgraphite2.so.3 => /nix/store/mfhahm2jw2x3nliqphcc4cc0f0w538yf-graphite2-1.3.14/lib/libgraphite2.so.3 (0x00007a177808d000)
+	libvorbisfile.so.3 => /nix/store/a8wgdilqdfd04di4lpy2792hlkbdzgv8-libvorbis-1.3.7/lib/libvorbisfile.so.3 (0x00007a177ec60000)
+	libp11-kit.so.0 => /nix/store/agqjld656f801gc27siikvvsv9q2r5cj-p11-kit-0.25.5/lib/libp11-kit.so.0 (0x00007a1774107000)
+	libidn2.so.0 => /nix/store/y2xxdhhjy2l5mgpm3d0rw2wxmpd61my4-libidn2-2.3.7/lib/libidn2.so.0 (0x00007a17755cf000)
+	libunistring.so.5 => /nix/store/nj19yxkqf0iqjqn4x6dbglsvqk5bgsbs-libunistring-1.3/lib/libunistring.so.5 (0x00007a1773f1c000)
+	libtasn1.so.6 => /nix/store/5al86359smx17kbsnki2qkiv5i8hw8n8-libtasn1-4.20.0/lib/libtasn1.so.6 (0x00007a1778077000)
+	libhogweed.so.6 => /nix/store/c2wvni2zlkz3qaxixcplwy4cdrvxl991-nettle-3.10.1/lib/libhogweed.so.6 (0x00007a1773ed0000)
+	libnettle.so.8 => /nix/store/c2wvni2zlkz3qaxixcplwy4cdrvxl991-nettle-3.10.1/lib/libnettle.so.8 (0x00007a1773e79000)
+	libmbedcrypto.so.16 => /nix/store/p96sid8vbdylxxa3bzcncx3kzx30xgmw-mbedtls-3.6.2/lib/libmbedcrypto.so.16 (0x00007a1773ddc000)
+	libcjson.so.1 => /nix/store/434wbk9nhqsq8ggx7zcni424xwmnb22p-cjson-1.7.18/lib/libcjson.so.1 (0x00007a177b172000)
+	libsystemd.so.0 => /nix/store/9jpnvdzzf5qlibawrqnlgm03l41k332a-systemd-minimal-257.3/lib/libsystemd.so.0 (0x00007a1773c88000)
+	liblz4.so.1 => /nix/store/xzw9x2c9as23dbxq1k07yjpvc9zxwb8h-lz4-1.10.0-lib/lib/liblz4.so.1 (0x00007a1775039000)
+	libbrotlicommon.so.1 => /nix/store/ka86qsp50hdljs1qmn888yw1s75grxac-brotli-1.1.0-lib/lib/libbrotlicommon.so.1 (0x00007a1774bc2000)
+	libpcre2-8.so.0 => /nix/store/gd0nqxbn5nz4as2pbkkr0xb753j4b2b9-pcre2-10.44/lib/libpcre2-8.so.0 (0x00007a1773be5000)
+	libcap.so.2 => /nix/store/i20j88gykyv6m9bifcbmhjslxi3bl098-libcap-2.74-lib/lib/libcap.so.2 (0x00007a1779930000)
+[Código de saída: 0 | Tempo: 33.71 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile add --profile /tmp/so-s5-nix-qw5ot5mt/prof-blender-1 /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2
+[Código de saída: 0 | Tempo: 37.17 ms | Max RSS: 50.71 MiB | CPU user/sys: 0.01s/0.01s (80%) | Faults min/maj: 2093/0]
+
+$ /tmp/so-s5-nix-qw5ot5mt/prof-blender-1/bin/blender --background --factory-startup --python-expr import bpy, sys; out = sys.argv[-1]; s = bpy.context.scene; s.render.engine = 'CYCLES'; s.cycles.device = 'CPU'; s.cycles.samples = 4; s.cycles.use_denoising = False; s.render.resolution_x = 320; s.render.resolution_y = 240; s.render.resolution_percentage = 100; s.render.threads_mode = 'FIXED'; s.render.threads = 4; s.render.image_settings.file_format = 'PNG'; s.render.filepath = out; bpy.ops.render.render(write_still=True) -- /tmp/so-s5-nix-qw5ot5mt/work-blender-1/render.png
+Blender 4.3.2
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cube
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.08M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Sample 0/4
+Fra:1 Mem:12.79M (Peak 12.79M) | Time:00:00.01 | Remaining:00:00.03 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 1/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.04 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 4/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.04 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Finished
+Saved: '/tmp/so-s5-nix-qw5ot5mt/work-blender-1/render.png'
+Time: 00:00.16 (Saving: 00:00.11)
+
+
+Blender quit
+[Código de saída: 0 | Tempo: 1369.70 ms | Max RSS: 319.52 MiB | CPU user/sys: 1.36s/0.11s (107%) | Faults min/maj: 18306/1]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile rollback --profile /tmp/so-s5-nix-qw5ot5mt/prof-blender-1
+[stderr]
+switching profile from version 2 to 1
+[Código de saída: 0 | Tempo: 29.17 ms | Max RSS: 41.86 MiB | CPU user/sys: 0.01s/0.01s (100%) | Faults min/maj: 2049/0]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile add --profile /tmp/so-s5-nix-qw5ot5mt/prof-trace-blender /nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235705 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235706 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235707 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235708 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235709 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235710 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235711 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235712 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235713 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235714 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235715 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235716 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235717 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 27.22    0.003366           8       390           mmap
+ 23.43    0.002897           5       512       415 openat
+  8.79    0.001087           6       177           read
+  6.51    0.000805           4       171       122 newfstatat
+  6.07    0.000751          57        13           clone3
+  3.39    0.000419           4       102           close
+  3.27    0.000404         404         1           execve
+  2.90    0.000359           3        95           fstat
+  2.13    0.000264           3        81           mprotect
+  2.09    0.000258           5        49           rt_sigprocmask
+  1.86    0.000230          57         4           lseek
+  1.34    0.000166          11        14         3 prctl
+  1.16    0.000143           4        32           futex
+  1.01    0.000125           7        17           madvise
+  0.96    0.000119          29         4           symlink
+  0.90    0.000111          55         2           sendto
+  0.88    0.000109          21         5           recvmsg
+  0.84    0.000104           7        14           rseq
+  0.72    0.000089           8        11           write
+  0.71    0.000088           6        14           set_robust_list
+  0.51    0.000063          10         6           getdents64
+  0.50    0.000062          62         1           mkdir
+  0.41    0.000051          25         2           munmap
+  0.35    0.000043          21         2           rename
+  0.27    0.000034           4         8         7 access
+  0.27    0.000033           4         8           fcntl
+  0.21    0.000026          13         2           socket
+  0.18    0.000022           2         9           prlimit64
+  0.15    0.000018          18         1           connect
+  0.11    0.000014           2         6           getrandom
+  0.09    0.000011           1         8           getpid
+  0.09    0.000011           5         2           readlink
+  0.08    0.000010           2         5           getuid
+  0.08    0.000010           5         2           readlinkat
+  0.06    0.000008           1         6           rt_sigaction
+  0.06    0.000007           3         2           sysinfo
+  0.06    0.000007           7         1           openat2
+  0.05    0.000006           3         2           uname
+  0.04    0.000005           5         1           poll
+  0.03    0.000004           4         1           brk
+  0.03    0.000004           4         1           pread64
+  0.03    0.000004           4         1           bind
+  0.03    0.000004           4         1           arch_prctl
+  0.03    0.000004           4         1           set_tid_address
+  0.02    0.000003           1         2         2 ioctl
+  0.02    0.000003           3         1           getsockname
+  0.02    0.000003           3         1           geteuid
+  0.02    0.000002           2         1           sched_getaffinity
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         1           umask
+  0.00    0.000000           0         1           sigaltstack
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.012366           6      1796       549 total
+[Código de saída: 0 | Tempo: 77.24 ms]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile rollback --profile /tmp/so-s5-nix-qw5ot5mt/prof-trace-blender
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235739 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235740 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235741 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235742 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235743 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235744 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235745 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235746 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235747 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235748 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235749 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235750 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235751 attached
+switching profile from version 2 to 1
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 27.50    0.003286           8       388           mmap
+ 23.01    0.002749           5       505       414 openat
+  6.89    0.000823          63        13           clone3
+  6.32    0.000755           4       162       116 newfstatat
+  5.34    0.000638         159         4           lseek
+  5.12    0.000612           3       162           read
+  3.66    0.000437           5        81           mprotect
+  3.08    0.000368           3        94           close
+  3.04    0.000363         363         1           execve
+  2.81    0.000336           3        89           fstat
+  2.62    0.000313           6        49           rt_sigprocmask
+  2.06    0.000246           7        31           futex
+  1.10    0.000131           9        14           rseq
+  1.05    0.000125           8        15           madvise
+  1.00    0.000119           8        14         3 prctl
+  0.92    0.000110           7        14           set_robust_list
+  0.80    0.000095          47         2           sendto
+  0.57    0.000068          13         5           recvmsg
+  0.35    0.000042           5         8         7 access
+  0.31    0.000037          18         2           getdents64
+  0.24    0.000029          14         2           write
+  0.24    0.000029          29         1           rename
+  0.23    0.000028          28         1           symlink
+  0.18    0.000022          11         2           open
+  0.17    0.000020           4         5           getuid
+  0.15    0.000018           6         3           readlink
+  0.15    0.000018           3         6           getrandom
+  0.13    0.000015          15         1           socket
+  0.12    0.000014           2         6           rt_sigaction
+  0.12    0.000014           7         2           sysinfo
+  0.11    0.000013          13         1           unlink
+  0.09    0.000011           2         4           prlimit64
+  0.07    0.000008           4         2           fcntl
+  0.05    0.000006           6         1           bind
+  0.05    0.000006           3         2           uname
+  0.05    0.000006           6         1           flock
+  0.05    0.000006           6         1           sigaltstack
+  0.04    0.000005           2         2         2 ioctl
+  0.04    0.000005           5         1           getsockname
+  0.03    0.000004           4         1           brk
+  0.03    0.000004           4         1           geteuid
+  0.03    0.000004           4         1           arch_prctl
+  0.03    0.000004           4         1           sched_getaffinity
+  0.03    0.000004           4         1           set_tid_address
+  0.03    0.000003           3         1           umask
+  0.00    0.000000           0         6           getpid
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.011949           6      1709       542 total
+[Código de saída: 0 | Tempo: 67.78 ms]
+
+$ /nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f /tmp/so-s5-nix-qw5ot5mt/prof-trace-blender/bin/blender --background --factory-startup --python-expr import bpy, sys; out = sys.argv[-1]; s = bpy.context.scene; s.render.engine = 'CYCLES'; s.cycles.device = 'CPU'; s.cycles.samples = 4; s.cycles.use_denoising = False; s.render.resolution_x = 320; s.render.resolution_y = 240; s.render.resolution_percentage = 100; s.render.threads_mode = 'FIXED'; s.render.threads = 4; s.render.image_settings.file_format = 'PNG'; s.render.filepath = out; bpy.ops.render.render(write_still=True) -- /tmp/so-s5-nix-qw5ot5mt/work-trace-blender/render.png
+Blender 4.3.2
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Cube
+Fra:1 Mem:10.23M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:10.05M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.08M, Peak:0.08M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.00M, Peak:0.08M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:10.14M (Peak 10.23M) | Time:00:00.00 | Mem:0.09M, Peak:0.09M | Scene, ViewLayer | Sample 0/4
+Fra:1 Mem:12.79M (Peak 12.79M) | Time:00:00.02 | Remaining:00:00.04 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 1/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.05 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Sample 4/4
+Fra:1 Mem:13.97M (Peak 16.31M) | Time:00:00.05 | Mem:2.73M, Peak:2.73M | Scene, ViewLayer | Finished
+Saved: '/tmp/so-s5-nix-qw5ot5mt/work-trace-blender/render.png'
+Time: 00:00.18 (Saving: 00:00.12)
+
+
+Blender quit
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235757 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235758 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235759 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235760 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235761 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235762 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235763 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235764 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235765 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235766 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235767 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235768 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235769 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235770 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235771 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235776 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235777 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235778 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235779 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235780 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235781 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235782 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235783 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235784 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235785 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235786 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235787 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235788 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235789 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 235790 attached
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 91.28    1.665656        9305       179         3 futex
+  4.54    0.082876          30      2749           sched_yield
+  0.99    0.018003           5      3317      2760 openat
+  0.68    0.012425          11      1038         1 mmap
+  0.31    0.005700           1      3109       634 newfstatat
+  0.31    0.005649          64        87           madvise
+  0.24    0.004327          31       139           rt_sigprocmask
+  0.23    0.004218           3      1299           read
+  0.22    0.004066        1355         3         1 wait4
+  0.19    0.003532         126        28           sched_getaffinity
+  0.18    0.003262           3      1024           clock_gettime
+  0.13    0.002425         105        23           munmap
+  0.13    0.002387          82        29           clone3
+  0.09    0.001558           1       813           fstat
+  0.08    0.001518           2       561           close
+  0.07    0.001323          24        55        55 statx
+  0.07    0.001298          39        33           set_robust_list
+  0.06    0.001120           4       240           mprotect
+  0.04    0.000644          20        32           rseq
+  0.03    0.000550           1       534         3 lseek
+  0.02    0.000423           3       106           getdents64
+  0.02    0.000346           6        55           write
+  0.02    0.000306          76         4           execve
+  0.02    0.000288           1       272       270 ioctl
+  0.01    0.000201           1       162       161 mkdir
+  0.01    0.000104         104         1           clone
+  0.00    0.000087           8        10         4 prctl
+  0.00    0.000060           0       107           rt_sigaction
+  0.00    0.000045           3        15           brk
+  0.00    0.000030           2        11         1 fcntl
+  0.00    0.000028           3         8         4 access
+  0.00    0.000028           7         4         2 readlink
+  0.00    0.000028           3         8           getrandom
+  0.00    0.000027           2        12           getpid
+  0.00    0.000026           2        10           prlimit64
+  0.00    0.000020           3         6           getppid
+  0.00    0.000010           2         4           pread64
+  0.00    0.000010           2         5           getuid
+  0.00    0.000009           2         4           uname
+  0.00    0.000009           1         5           geteuid
+  0.00    0.000008           1         5           getgid
+  0.00    0.000008           1         5           getegid
+  0.00    0.000008           4         2           gettid
+  0.00    0.000007           2         3           dup2
+  0.00    0.000007           3         2           getpgrp
+  0.00    0.000005           5         1           pipe2
+  0.00    0.000004           1         4           arch_prctl
+  0.00    0.000003           3         1           rt_sigreturn
+  0.00    0.000003           3         1           getresuid
+  0.00    0.000003           3         1           getresgid
+  0.00    0.000003           0         4           set_tid_address
+  0.00    0.000000           0         2           open
+  0.00    0.000000           0         1           rmdir
+------ ----------- ----------- --------- --------- ------------------
+100.00    1.824681         113     16133      3899 total
+[Código de saída: 0 | Tempo: 1650.98 ms]
+
+=== Nix: coexistência de perfis e preservação de arquivo externo após rollback ===
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile rollback --profile /tmp/so-s5-nix-qw5ot5mt/coex-perfil-a
+[stderr]
+switching profile from version 2 to 1
+[Código de saída: 0 | Tempo: 27.97 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile list --profile /tmp/so-s5-nix-qw5ot5mt/coex-perfil-a
+Name:               [1mgnome-text-editor[0m
+Store paths:        /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+[Código de saída: 0 | Tempo: 28.71 ms]
+
+$ /nix/store/6nq4al4f7kbf8fs238h4vy38gnyl3g31-nix-2.35.6/bin/nix profile list --profile /tmp/so-s5-nix-qw5ot5mt/coex-perfil-b
+Name:               [1mgnome-text-editor[0m
+Store paths:        /nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3
+
+Name:               [1mvlc[0m
+Store paths:        /nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24
+[Código de saída: 0 | Tempo: 30.43 ms]

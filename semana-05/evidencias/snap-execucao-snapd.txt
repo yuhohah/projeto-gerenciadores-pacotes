@@ -1,0 +1,312 @@
+=== snap version ===
+snap          2.78+ubuntu24.04
+snapd         2.78+ubuntu24.04
+series        16
+ubuntu        24.04
+kernel        7.3.4
+architecture  amd64
+
+=== snap list ===
+Name               Version                         Rev    Tracking       Publisher            Notes
+bare               1.0                             5      latest/stable  canonical**          base
+blender            4.3.1                           5647   -              blenderfoundation**  classic
+core               16-2.61.4-20260225              17292  latest/stable  canonical**          core
+core20             20261023                        3015   latest/stable  canonical**          base
+core24             20261022                        2307   latest/stable  canonical**          base
+gnome-46-2404      0+git.b31ceab-sdk0+git.ef6f7e9  177    latest/stable  canonical**          -
+gnome-text-editor  48.3                            53     -              ken-vandine*         -
+gtk-common-themes  0.1-81-g442e511                 1535   latest/stable  canonical**          -
+hello-world        6.4                             29     latest/stable  canonical**          -
+kf6-core24         6.11.2-6.31.0-6.7.5-26.08.2     69     latest/stable  kde**                -
+mesa-2404          25.2.8-snap288                  1839   latest/stable  canonical**          -
+snapd              2.78                            28332  latest/stable  canonical**          snapd
+vlc                3.0.24-rc1                      4472   -              videolan**           -
+
+=== strace -c -f (gnome-text-editor) ===
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 47.49    0.229141        3756        61        29 wait4
+ 12.21    0.058894          11      4952      4870 access
+ 10.66    0.051431         128       399        53 futex
+  7.30    0.035216          11      2972      2340 openat
+  5.67    0.027369          67       404           nanosleep
+  2.45    0.011810          12       918         6 read
+  2.33    0.011259           8      1270           mmap
+  1.92    0.009251         370        25           execve
+  1.73    0.008346           7      1110       686 newfstatat
+  0.91    0.004382        2191         2         1 waitid
+  0.76    0.003653          81        45           clone
+  0.61    0.002927          23       126           getdents64
+  0.60    0.002906        2906         1           unshare
+  0.59    0.002851           3       761           close
+  0.56    0.002707           4       578           rt_sigprocmask
+  0.55    0.002638           4       546           fstat
+  0.52    0.002528           2      1074           rt_sigaction
+  0.44    0.002135           8       257           mprotect
+  0.27    0.001311          69        19           clone3
+  0.26    0.001236         112        11         6 seccomp
+  0.23    0.001094          14        73           getpid
+  0.17    0.000844          19        43           munmap
+  0.16    0.000789          10        75           sigaltstack
+  0.15    0.000738          28        26           epoll_pwait
+  0.11    0.000542           5       105       101 readlink
+  0.11    0.000521           3       153         2 fcntl
+  0.10    0.000460           5        91           brk
+  0.09    0.000446          13        34           sched_yield
+  0.08    0.000406           7        53           gettid
+  0.08    0.000369           3       101        10 prctl
+  0.07    0.000356           6        56         2 rt_sigreturn
+  0.07    0.000346          13        26           tgkill
+  0.06    0.000300          10        28           readlinkat
+  0.06    0.000285           3        74           set_robust_list
+  0.05    0.000261           6        42           rseq
+  0.05    0.000260           7        35           write
+  0.05    0.000256           4        60        12 epoll_ctl
+  0.05    0.000234           3        62           pread64
+  0.05    0.000229         229         1           execveat
+  0.03    0.000129           6        21           pipe2
+  0.02    0.000115           3        30           prlimit64
+  0.02    0.000106           2        46           getuid
+  0.02    0.000102           4        25           getrandom
+  0.02    0.000096           4        23        23 ioctl
+  0.02    0.000093           3        26           arch_prctl
+  0.02    0.000082           2        39           getgid
+  0.02    0.000077           2        38           getegid
+  0.02    0.000077           3        23           set_tid_address
+  0.02    0.000076           1        40           geteuid
+  0.01    0.000064           2        32           dup2
+  0.01    0.000053           5         9           setrlimit
+  0.01    0.000051           3        13         2 lseek
+  0.01    0.000051          51         1           mount
+  0.01    0.000049          16         3         2 symlinkat
+  0.01    0.000048           4        12           madvise
+  0.01    0.000042           7         6           epoll_create1
+  0.01    0.000038           5         7           eventfd2
+  0.01    0.000037           6         6         2 statfs
+  0.01    0.000031           5         6           getrlimit
+  0.01    0.000029           7         4           socket
+  0.01    0.000028           1        15        15 mkdirat
+  0.01    0.000027           4         6           capset
+  0.01    0.000025           2         9           sched_getaffinity
+  0.01    0.000025          25         1           renameat
+  0.00    0.000024           3         7           capget
+  0.00    0.000023           3         6           getppid
+  0.00    0.000020          20         1           fchmodat
+  0.00    0.000019           6         3           uname
+  0.00    0.000016           4         4         2 connect
+  0.00    0.000015           2         6           umask
+  0.00    0.000014           3         4           chdir
+  0.00    0.000012           2         5           flock
+  0.00    0.000010           5         2           getsockname
+  0.00    0.000009           9         1           pidfd_open
+  0.00    0.000009           4         2         1 faccessat2
+  0.00    0.000008           4         2           getpgrp
+  0.00    0.000008           4         2           getgroups
+  0.00    0.000006           6         1           getcwd
+  0.00    0.000006           3         2           fchown
+  0.00    0.000006           6         1           pidfd_send_signal
+  0.00    0.000005           0         8           alarm
+  0.00    0.000005           5         1           getresuid
+  0.00    0.000005           5         1           getresgid
+  0.00    0.000004           2         2           getpeername
+  0.00    0.000001           0         2           fchdir
+  0.00    0.000000           0         2           kill
+  0.00    0.000000           0         1           fstatfs
+  0.00    0.000000           0         3           dup3
+  0.00    0.000000           0         2           setns
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.482503          28     17181      8165 total
+
+=== strace -c -f (vlc) ===
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 31.97    0.145261         213       680        99 futex
+ 26.34    0.119686        1870        64        30 wait4
+  8.93    0.040551          12      3282      2331 openat
+  7.03    0.031925       31925         1           rt_sigtimedwait
+  5.80    0.026360          63       416           nanosleep
+  3.47    0.015780           8      1908           mmap
+  3.03    0.013774           7      1755       850 newfstatat
+  1.50    0.006819           7       965         8 read
+  1.40    0.006345         235        27           execve
+  1.21    0.005484        2742         2         1 waitid
+  0.99    0.004516          14       304           munmap
+  0.96    0.004364           3      1130         2 close
+  0.93    0.004229          89        47           clone
+  0.87    0.003951           4       865           fstat
+  0.73    0.003329           2      1116           rt_sigaction
+  0.66    0.003013           5       542           mprotect
+  0.60    0.002704           4       635           rt_sigprocmask
+  0.41    0.001858          14       126           getdents64
+  0.30    0.001366        1366         1           unshare
+  0.26    0.001163         105        11         6 seccomp
+  0.25    0.001141          39        29           clone3
+  0.23    0.001028          36        28           epoll_pwait
+  0.17    0.000795           4       174         3 fcntl
+  0.17    0.000767          10        73           sigaltstack
+  0.16    0.000720          11        62           gettid
+  0.14    0.000624           7        88           set_robust_list
+  0.10    0.000465           5        91           brk
+  0.09    0.000421           4       104           write
+  0.07    0.000322           8        37           sched_yield
+  0.07    0.000322           3       102        10 prctl
+  0.07    0.000316           5        54           rseq
+  0.07    0.000310           4        63        58 readlink
+  0.06    0.000294           4        60        12 epoll_ctl
+  0.06    0.000257           5        49         3 rt_sigreturn
+  0.05    0.000233           2        79         3 lseek
+  0.05    0.000227           3        65        27 access
+  0.05    0.000207         207         1           execveat
+  0.04    0.000200           2        80           getpid
+  0.04    0.000199           7        25           pipe2
+  0.04    0.000186           2        66           pread64
+  0.04    0.000176           5        35           eventfd2
+  0.03    0.000151           3        50           dup3
+  0.03    0.000142           8        17           readlinkat
+  0.03    0.000140           4        34           prlimit64
+  0.03    0.000128           5        22           tgkill
+  0.03    0.000116           4        27           getrandom
+  0.02    0.000102           4        23           madvise
+  0.02    0.000101          12         8         6 connect
+  0.02    0.000101           3        28           arch_prctl
+  0.02    0.000095           1        50           getuid
+  0.02    0.000093           3        26        26 ioctl
+  0.02    0.000093           3        30           readv
+  0.02    0.000087           3        25           set_tid_address
+  0.02    0.000086           2        31           poll
+  0.02    0.000073           4        15        15 mkdirat
+  0.02    0.000073          24         3         2 symlinkat
+  0.01    0.000067           1        43           geteuid
+  0.01    0.000060           1        34           dup2
+  0.01    0.000060           7         8           socket
+  0.01    0.000060           1        41           getgid
+  0.01    0.000060           6         9           setrlimit
+  0.01    0.000053           8         6         2 statfs
+  0.01    0.000050           8         6           getrlimit
+  0.01    0.000050           1        39           getegid
+  0.01    0.000049           8         6           capset
+  0.01    0.000047           4        11           sched_getaffinity
+  0.01    0.000045           7         6           epoll_create1
+  0.01    0.000042          42         1           renameat
+  0.01    0.000038           4         9         1 fadvise64
+  0.01    0.000036           5         7           capget
+  0.01    0.000032          32         1           mount
+  0.01    0.000030           3         8           umask
+  0.01    0.000027           3         9           getppid
+  0.01    0.000026           5         5           flock
+  0.00    0.000022          11         2           getsockname
+  0.00    0.000019           2         9           alarm
+  0.00    0.000018          18         1           fchmodat
+  0.00    0.000017           4         4           chdir
+  0.00    0.000012           3         4           uname
+  0.00    0.000012           6         2           fchown
+  0.00    0.000011           3         3           getpgrp
+  0.00    0.000011          11         1           pidfd_open
+  0.00    0.000010           5         2         1 faccessat2
+  0.00    0.000009           4         2           setsockopt
+  0.00    0.000009           4         2           getgroups
+  0.00    0.000009           9         1           memfd_create
+  0.00    0.000007           7         1         1 sendto
+  0.00    0.000007           3         2           getpeername
+  0.00    0.000007           7         1           ftruncate
+  0.00    0.000006           3         2           fchdir
+  0.00    0.000005           5         1           getcwd
+  0.00    0.000005           2         2         2 mkdir
+  0.00    0.000005           2         2           getresuid
+  0.00    0.000005           2         2           getresgid
+  0.00    0.000004           2         2           setns
+  0.00    0.000004           4         1           pidfd_send_signal
+  0.00    0.000002           1         2           fstatfs
+  0.00    0.000000           0         2           kill
+  0.00    0.000000           0         1           rename
+  0.00    0.000000           0         1           mlock
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.454317          28     15935      3499 total
+
+=== strace -c -f (blender) ===
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 79.58    2.024578        4353       465        44 futex
+  8.86    0.225287          53      4233           sched_yield
+  7.68    0.195489       39097         5         2 wait4
+  0.76    0.019450          95       204         1 nanosleep
+  0.42    0.010617          16       661         1 mmap
+  0.31    0.007814           6      1258       222 stat
+  0.24    0.006229         148        42           clone3
+  0.23    0.005866          25       229           rt_sigprocmask
+  0.23    0.005727        2863         2         1 waitid
+  0.20    0.005062          27       183           madvise
+  0.19    0.004745           8       571       108 openat
+  0.18    0.004602         575         8           execve
+  0.15    0.003742           3       997         3 read
+  0.12    0.003004          93        32           sched_getaffinity
+  0.10    0.002441           2      1024           clock_gettime
+  0.09    0.002346          13       178           mprotect
+  0.08    0.001940          41        47           munmap
+  0.07    0.001876          31        59           write
+  0.07    0.001746          36        48           set_robust_list
+  0.06    0.001621           3       480           close
+  0.06    0.001474           2       631           fstat
+  0.04    0.001024           2       415           rt_sigaction
+  0.04    0.000990           9       102           getdents64
+  0.03    0.000886          18        48           rseq
+  0.03    0.000823           5       144        89 newfstatat
+  0.03    0.000776           3       223       223 ioctl
+  0.02    0.000635           1       443         5 lseek
+  0.02    0.000475          11        40           sigaltstack
+  0.01    0.000373           7        52         5 prctl
+  0.01    0.000280           2       113           fcntl
+  0.01    0.000246           9        25           getpid
+  0.01    0.000237           8        29           gettid
+  0.01    0.000211          16        13           tgkill
+  0.01    0.000191          13        14           epoll_pwait
+  0.01    0.000171           3        43        12 epoll_ctl
+  0.01    0.000146           9        16         3 rt_sigreturn
+  0.01    0.000129          43         3           getrlimit
+  0.00    0.000124           3        32           pread64
+  0.00    0.000101          20         5           clone
+  0.00    0.000075           5        13           readlinkat
+  0.00    0.000053           5         9         6 seccomp
+  0.00    0.000048           9         5         2 readlink
+  0.00    0.000044           2        20           brk
+  0.00    0.000042           3        13         8 access
+  0.00    0.000038          19         2           open
+  0.00    0.000033           5         6           setrlimit
+  0.00    0.000031          15         2           vfork
+  0.00    0.000031           2        12           prlimit64
+  0.00    0.000028           7         4           pipe2
+  0.00    0.000024           8         3           eventfd2
+  0.00    0.000023           7         3           epoll_create1
+  0.00    0.000021           3         6           getuid
+  0.00    0.000018           4         4         3 mkdir
+  0.00    0.000016           5         3           uname
+  0.00    0.000016           2         6         6 mkdirat
+  0.00    0.000015           2         7           getrandom
+  0.00    0.000014           7         2         2 connect
+  0.00    0.000014           1         8           arch_prctl
+  0.00    0.000013           1         7           set_tid_address
+  0.00    0.000009           2         4           capset
+  0.00    0.000009           9         1           pidfd_open
+  0.00    0.000008           1         6           umask
+  0.00    0.000008           2         4         2 statfs
+  0.00    0.000007           3         2           socket
+  0.00    0.000007           1         5           capget
+  0.00    0.000006           6         1           pidfd_send_signal
+  0.00    0.000006           6         1           faccessat2
+  0.00    0.000005           1         5           geteuid
+  0.00    0.000004           1         3           dup2
+  0.00    0.000004           4         1           rmdir
+  0.00    0.000003           1         3           getgid
+  0.00    0.000002           2         1           getcwd
+  0.00    0.000002           0         3           chdir
+  0.00    0.000002           1         2           getgroups
+  0.00    0.000002           2         1           getresuid
+  0.00    0.000002           2         1           getresgid
+  0.00    0.000001           1         1           fchdir
+  0.00    0.000001           0         2           getegid
+  0.00    0.000001           0         2           getppid
+  0.00    0.000000           0         2           lstat
+  0.00    0.000000           0         1           flock
+  0.00    0.000000           0         3           dup3
+------ ----------- ----------- --------- --------- ------------------
+100.00    2.544160         191     13307       748 total

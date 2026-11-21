@@ -1,0 +1,1429 @@
+{
+  "alinhamento_versoes": "debian",
+  "flathub_aplicacoes": {
+    "gnome-text-editor": {
+      "info": {
+        "id": "org.gnome.TextEditor",
+        "ref": "app/org.gnome.TextEditor/x86_64/stable",
+        "arch": "x86_64",
+        "branch": "stable",
+        "download_size": "1.4 MB",
+        "installed_size": "2.5 MB",
+        "runtime": "org.gnome.Platform/x86_64/51",
+        "sdk": "org.gnome.Sdk/x86_64/51",
+        "commit": "8effd3457368016ed2bcb2a7b7c5058938c7ad949050d282c4337951a91941a4",
+        "date": "2026-11-08 08:12:45 +0000"
+      },
+      "metadata": {
+        "context": {
+          "shared": [
+            "ipc"
+          ],
+          "sockets": [
+            "fallback-x11",
+            "wayland"
+          ],
+          "devices": [
+            "dri"
+          ],
+          "filesystems": [
+            "xdg-run/gvfsd",
+            "host",
+            "xdg-run/gvfs"
+          ]
+        },
+        "session_bus_policy": {
+          "org.gtk.vfs.*": "talk",
+          "org.freedesktop.FileManager1": "talk"
+        },
+        "extensions": [
+          "org.gnome.TextEditor.Locale",
+          "org.gnome.TextEditor.Debug"
+        ]
+      }
+    },
+    "vlc": {
+      "info": {
+        "id": "org.videolan.VLC",
+        "ref": "app/org.videolan.VLC/x86_64/stable",
+        "arch": "x86_64",
+        "branch": "stable",
+        "download_size": "58.1 MB",
+        "installed_size": "149.8 MB",
+        "runtime": "org.kde.Platform/x86_64/5.15-25.08",
+        "sdk": "org.kde.Sdk/x86_64/5.15-25.08",
+        "commit": "c1f90edc95d2bfa5a096e1c4adf8cec5be6443bbbbe3aa713e1edfb484863771",
+        "date": "2026-11-17 21:01:07 +0000"
+      },
+      "metadata": {
+        "context": {
+          "shared": [
+            "ipc",
+            "network"
+          ],
+          "sockets": [
+            "pulseaudio",
+            "x11"
+          ],
+          "devices": [
+            "all"
+          ],
+          "filesystems": [
+            "xdg-config/kdeglobals:ro",
+            "host",
+            "xdg-run/gvfs"
+          ]
+        },
+        "session_bus_policy": {
+          "org.kde.kwalletd5": "talk",
+          "org.kde.kwalletd": "talk",
+          "org.mpris.MediaPlayer2.vlc": "own",
+          "org.freedesktop.secrets": "talk",
+          "org.freedesktop.PowerManagement": "talk",
+          "org.kde.StatusNotifierWatcher": "talk",
+          "org.kde.KGlobalSettings": "talk",
+          "org.freedesktop.ScreenSaver": "talk",
+          "com.canonical.AppMenu.Registrar": "talk",
+          "org.kde.kconfig.notify": "talk",
+          "org.mpris.MediaPlayer2.Player": "talk"
+        },
+        "extensions": [
+          "org.videolan.VLC.Plugin",
+          "org.videolan.VLC.Locale",
+          "org.videolan.VLC.Debug"
+        ]
+      }
+    },
+    "blender": {
+      "info": {
+        "id": "org.blender.Blender",
+        "ref": "app/org.blender.Blender/x86_64/stable",
+        "arch": "x86_64",
+        "branch": "stable",
+        "download_size": "508.8 MB",
+        "installed_size": "1.2 GB",
+        "runtime": "org.freedesktop.Platform/x86_64/26.08",
+        "sdk": "org.freedesktop.Sdk/x86_64/26.08",
+        "commit": "3e510e35073011eaf3266b8eb7f88363df9e7630807c6d442b4cdfa2bd7e779c",
+        "date": "2026-11-13 22:11:16 +0000"
+      },
+      "metadata": {
+        "context": {
+          "shared": [
+            "ipc",
+            "network"
+          ],
+          "sockets": [
+            "fallback-x11",
+            "pulseaudio",
+            "wayland"
+          ],
+          "devices": [
+            "dri"
+          ],
+          "filesystems": [
+            "/run/spnav.sock:ro",
+            "host"
+          ]
+        },
+        "session_bus_policy": {},
+        "extensions": [
+          "org.blender.Blender.Codecs",
+          "org.freedesktop.Platform.GL",
+          "org.blender.Blender.Locale",
+          "org.blender.Blender.Debug"
+        ]
+      }
+    }
+  },
+  "flathub_runtimes": {
+    "org.gnome.Platform/x86_64/51": {
+      "id": "org.gnome.Platform",
+      "ref": "runtime/org.gnome.Platform/x86_64/51",
+      "arch": "x86_64",
+      "branch": "51",
+      "download_size": "432.8 MB",
+      "installed_size": "1.1 GB",
+      "commit": "f48b9eb43a30cfe42ddc485a32b4417f278f6ced5d4326fb9327ac450a0971bb",
+      "date": "2026-11-18 03:07:33 +0000"
+    },
+    "org.kde.Platform/x86_64/5.15-25.08": {
+      "id": "org.kde.Platform",
+      "ref": "runtime/org.kde.Platform/x86_64/5.15-25.08",
+      "arch": "x86_64",
+      "branch": "5.15-25.08",
+      "download_size": "367.4 MB",
+      "installed_size": "974.3 MB",
+      "commit": "1e9b0aa4623015cebd20350b36dc515124567b0f43c2235bd4ea8259fc2b18de",
+      "date": "2026-01-20 01:16:49 +0000"
+    },
+    "org.freedesktop.Platform/x86_64/26.08": {
+      "id": "org.freedesktop.Platform",
+      "ref": "runtime/org.freedesktop.Platform/x86_64/26.08",
+      "arch": "x86_64",
+      "branch": "26.08",
+      "download_size": "282.7 MB",
+      "installed_size": "724.2 MB",
+      "commit": "df26daaf9d07610b4a72cc4585566194051275ac68396597b06474396f66427c",
+      "date": "2026-10-26 18:13:16 +0000"
+    }
+  },
+  "ostree_deduplicacao": {
+    "commit_v1": "5c5018a74393a513fc0c0c77e3475dc2adca35bdfec8c9d00c27edfd420a8918",
+    "commit_v2": "b1c7e0cba95862fb2c2f409f60dc8583161a0a37e0c215c0b7810bacc13eaaca",
+    "arquivos_inalterados": {
+      "gnome-text-editor.bin": {
+        "tamanho_bytes": 725984,
+        "inode_v1": 8544735,
+        "inode_v2": 8544735,
+        "nlink": 3,
+        "mesmo_inode": true
+      },
+      "vlc.bin": {
+        "tamanho_bytes": 22880,
+        "inode_v1": 8544746,
+        "inode_v2": 8544746,
+        "nlink": 3,
+        "mesmo_inode": true
+      },
+      "blender.bin": {
+        "tamanho_bytes": 133884352,
+        "inode_v1": 8544739,
+        "inode_v2": 8544739,
+        "nlink": 3,
+        "mesmo_inode": true
+      }
+    },
+    "arquivo_alterado": {
+      "nome": "release-meta.txt",
+      "inode_v1": 8544730,
+      "inode_v2": 8544742,
+      "inodes_distintos": true
+    }
+  },
+  "bubblewrap_politica_arquivos": {
+    "sem_bind_bloqueado": true,
+    "ro_bind_leitura_ok": true,
+    "ro_bind_escrita_bloqueada": true,
+    "rw_bind_escrita_ok": true
+  },
+  "bubblewrap_cargas_reais": {
+    "gnome-text-editor": {
+      "executado": true,
+      "versao_binario_bwrap": "48.3",
+      "tempo_bwrap_ms": {
+        "repeticoes": [
+          39.63,
+          36.06,
+          36.8
+        ],
+        "media": 37.5,
+        "mediana": 36.8,
+        "desvio_padrao": 1.88
+      },
+      "recursos_bwrap_carga_real": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            24136.0,
+            23984.0,
+            23996.0
+          ],
+          "media": 24038.67,
+          "mediana": 23996.0,
+          "desvio_padrao": 84.51
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            23.57,
+            23.42,
+            23.43
+          ],
+          "media": 23.47,
+          "mediana": 23.43,
+          "desvio_padrao": 0.08
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.0,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.01
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.01,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.01
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            90.0,
+            93.0,
+            96.0
+          ],
+          "media": 93.0,
+          "mediana": 93.0,
+          "desvio_padrao": 3.0
+        },
+        "minor_faults": {
+          "repeticoes": [
+            1482.0,
+            1493.0,
+            1492.0
+          ],
+          "media": 1489.0,
+          "mediana": 1492.0,
+          "desvio_padrao": 6.08
+        },
+        "major_faults": {
+          "repeticoes": [
+            11.0,
+            0.0,
+            0.0
+          ],
+          "media": 3.67,
+          "mediana": 0.0,
+          "desvio_padrao": 6.35
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            16.0,
+            1.0,
+            1.0
+          ],
+          "media": 6.0,
+          "mediana": 1.0,
+          "desvio_padrao": 8.66
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            2.0,
+            1.0,
+            2.0
+          ],
+          "media": 1.67,
+          "mediana": 2.0,
+          "desvio_padrao": 0.58
+        }
+      },
+      "carga_real_artefato": {
+        "verificado": true,
+        "saida": "Text Editor 48.3 (48.3)\n\n            GTK: 4.18.6 (Compiled against 4.18.6)\n  GtkSourceView: 5.16.0 (Compiled against 5.16.0)\n\nCopyright 2020-2025 Christian Hergert, et al.\nThis is free software; see the source for copying conditions. There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+      },
+      "strace_bwrap": {
+        "total_calls": 2435,
+        "total_errors": 883,
+        "syscalls": {
+          "wait4": {
+            "calls": 3,
+            "errors": 2
+          },
+          "openat": {
+            "calls": 864,
+            "errors": 691
+          },
+          "mmap": {
+            "calls": 478,
+            "errors": 0
+          },
+          "clone": {
+            "calls": 2,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 211,
+            "errors": 160
+          },
+          "close": {
+            "calls": 198,
+            "errors": 0
+          },
+          "pivot_root": {
+            "calls": 2,
+            "errors": 0
+          },
+          "read": {
+            "calls": 135,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 123,
+            "errors": 0
+          },
+          "mount": {
+            "calls": 18,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 97,
+            "errors": 8
+          },
+          "mprotect": {
+            "calls": 113,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 14,
+            "errors": 5
+          },
+          "openat2": {
+            "calls": 19,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "mkdirat": {
+            "calls": 10,
+            "errors": 1
+          },
+          "umount2": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 6,
+            "errors": 0
+          },
+          "symlinkat": {
+            "calls": 6,
+            "errors": 0
+          },
+          "mount_setattr": {
+            "calls": 9,
+            "errors": 0
+          },
+          "write": {
+            "calls": 12,
+            "errors": 0
+          },
+          "faccessat2": {
+            "calls": 4,
+            "errors": 4
+          },
+          "chdir": {
+            "calls": 6,
+            "errors": 2
+          },
+          "mkdir": {
+            "calls": 3,
+            "errors": 0
+          },
+          "unshare": {
+            "calls": 1,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "capset": {
+            "calls": 3,
+            "errors": 0
+          },
+          "pread64": {
+            "calls": 6,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 5,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 4,
+            "errors": 0
+          },
+          "statfs": {
+            "calls": 4,
+            "errors": 4
+          },
+          "poll": {
+            "calls": 1,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 11,
+            "errors": 0
+          },
+          "eventfd2": {
+            "calls": 2,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 2,
+            "errors": 1
+          },
+          "access": {
+            "calls": 5,
+            "errors": 5
+          },
+          "recvfrom": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 4,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 2,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 3,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 3,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 2,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 3,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 4,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "signalfd4": {
+            "calls": 1,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 1,
+            "errors": 0
+          },
+          "fchdir": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getgid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "capget": {
+            "calls": 1,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 3,
+            "errors": 0
+          },
+          "futex": {
+            "calls": 11,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 3,
+            "errors": 0
+          }
+        }
+      }
+    },
+    "vlc": {
+      "executado": true,
+      "versao_binario_bwrap": "3.0.24",
+      "tempo_bwrap_ms": {
+        "repeticoes": [
+          187.13,
+          192.46,
+          197.45
+        ],
+        "media": 192.35,
+        "mediana": 192.46,
+        "desvio_padrao": 5.16
+      },
+      "recursos_bwrap_carga_real": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            35244.0,
+            35412.0,
+            34980.0
+          ],
+          "media": 35212.0,
+          "mediana": 35244.0,
+          "desvio_padrao": 217.77
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            34.42,
+            34.58,
+            34.16
+          ],
+          "media": 34.39,
+          "mediana": 34.42,
+          "desvio_padrao": 0.21
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.06,
+            0.07,
+            0.07
+          ],
+          "media": 0.07,
+          "mediana": 0.07,
+          "desvio_padrao": 0.01
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.03,
+            0.02,
+            0.03
+          ],
+          "media": 0.03,
+          "mediana": 0.03,
+          "desvio_padrao": 0.01
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.09,
+            0.09,
+            0.1
+          ],
+          "media": 0.09,
+          "mediana": 0.09,
+          "desvio_padrao": 0.01
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            51.0,
+            53.0,
+            55.0
+          ],
+          "media": 53.0,
+          "mediana": 53.0,
+          "desvio_padrao": 2.0
+        },
+        "minor_faults": {
+          "repeticoes": [
+            3077.0,
+            3075.0,
+            3080.0
+          ],
+          "media": 3077.33,
+          "mediana": 3077.0,
+          "desvio_padrao": 2.52
+        },
+        "major_faults": {
+          "repeticoes": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.0,
+          "mediana": 0.0,
+          "desvio_padrao": 0.0
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            80.0,
+            82.0,
+            82.0
+          ],
+          "media": 81.33,
+          "mediana": 82.0,
+          "desvio_padrao": 1.15
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            3.0,
+            5.0,
+            4.0
+          ],
+          "media": 4.0,
+          "mediana": 4.0,
+          "desvio_padrao": 1.0
+        }
+      },
+      "carga_real_artefato": {
+        "verificado": true,
+        "formato": "ogg/vorbis",
+        "tamanho_bytes": 11545,
+        "magic_ok": true
+      },
+      "strace_bwrap": {
+        "total_calls": 6121,
+        "total_errors": 928,
+        "syscalls": {
+          "futex": {
+            "calls": 263,
+            "errors": 46
+          },
+          "wait4": {
+            "calls": 3,
+            "errors": 2
+          },
+          "poll": {
+            "calls": 57,
+            "errors": 1
+          },
+          "rt_sigtimedwait": {
+            "calls": 1,
+            "errors": 0
+          },
+          "mmap": {
+            "calls": 962,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 1053,
+            "errors": 617
+          },
+          "newfstatat": {
+            "calls": 1008,
+            "errors": 218
+          },
+          "munmap": {
+            "calls": 201,
+            "errors": 0
+          },
+          "read": {
+            "calls": 437,
+            "errors": 0
+          },
+          "close": {
+            "calls": 496,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 432,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 387,
+            "errors": 0
+          },
+          "clone": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 78,
+            "errors": 0
+          },
+          "pivot_root": {
+            "calls": 2,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 11,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 85,
+            "errors": 0
+          },
+          "write": {
+            "calls": 47,
+            "errors": 0
+          },
+          "mount": {
+            "calls": 18,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 91,
+            "errors": 4
+          },
+          "execve": {
+            "calls": 3,
+            "errors": 0
+          },
+          "connect": {
+            "calls": 7,
+            "errors": 4
+          },
+          "recvmsg": {
+            "calls": 21,
+            "errors": 10
+          },
+          "lseek": {
+            "calls": 60,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 9,
+            "errors": 0
+          },
+          "sendmsg": {
+            "calls": 18,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 14,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 15,
+            "errors": 0
+          },
+          "openat2": {
+            "calls": 19,
+            "errors": 0
+          },
+          "dup3": {
+            "calls": 46,
+            "errors": 0
+          },
+          "readv": {
+            "calls": 26,
+            "errors": 0
+          },
+          "gettid": {
+            "calls": 11,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 14,
+            "errors": 5
+          },
+          "mkdirat": {
+            "calls": 10,
+            "errors": 1
+          },
+          "eventfd2": {
+            "calls": 28,
+            "errors": 0
+          },
+          "sendmmsg": {
+            "calls": 2,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 8,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 13,
+            "errors": 0
+          },
+          "umount2": {
+            "calls": 2,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 8,
+            "errors": 3
+          },
+          "symlinkat": {
+            "calls": 6,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 14,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 16,
+            "errors": 0
+          },
+          "mount_setattr": {
+            "calls": 9,
+            "errors": 0
+          },
+          "setsockopt": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 8,
+            "errors": 0
+          },
+          "faccessat2": {
+            "calls": 4,
+            "errors": 4
+          },
+          "chdir": {
+            "calls": 6,
+            "errors": 2
+          },
+          "fadvise64": {
+            "calls": 6,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 7,
+            "errors": 0
+          },
+          "unshare": {
+            "calls": 1,
+            "errors": 0
+          },
+          "capset": {
+            "calls": 3,
+            "errors": 0
+          },
+          "getsockopt": {
+            "calls": 1,
+            "errors": 0
+          },
+          "statfs": {
+            "calls": 2,
+            "errors": 2
+          },
+          "pipe2": {
+            "calls": 1,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 3,
+            "errors": 0
+          },
+          "access": {
+            "calls": 4,
+            "errors": 4
+          },
+          "arch_prctl": {
+            "calls": 3,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 3,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 12,
+            "errors": 4
+          },
+          "getuid": {
+            "calls": 2,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 3,
+            "errors": 0
+          },
+          "signalfd4": {
+            "calls": 1,
+            "errors": 0
+          },
+          "fchdir": {
+            "calls": 1,
+            "errors": 0
+          },
+          "capget": {
+            "calls": 1,
+            "errors": 0
+          },
+          "fstatfs": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getgid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getresuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getresgid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "rt_sigreturn": {
+            "calls": 1,
+            "errors": 1
+          },
+          "alarm": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 13,
+            "errors": 0
+          },
+          "recvfrom": {
+            "calls": 2,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 2,
+            "errors": 0
+          },
+          "tgkill": {
+            "calls": 5,
+            "errors": 0
+          }
+        }
+      }
+    },
+    "blender": {
+      "executado": true,
+      "versao_binario_bwrap": "4.3.2",
+      "tempo_bwrap_ms": {
+        "repeticoes": [
+          1391.72,
+          1329.58,
+          1337.37
+        ],
+        "media": 1352.89,
+        "mediana": 1337.37,
+        "desvio_padrao": 33.85
+      },
+      "recursos_bwrap_carga_real": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            276480.0,
+            270332.0,
+            274632.0
+          ],
+          "media": 273814.67,
+          "mediana": 274632.0,
+          "desvio_padrao": 3154.44
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            270.0,
+            264.0,
+            268.2
+          ],
+          "media": 267.4,
+          "mediana": 268.2,
+          "desvio_padrao": 3.08
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            1.35,
+            1.31,
+            1.32
+          ],
+          "media": 1.33,
+          "mediana": 1.32,
+          "desvio_padrao": 0.02
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.16,
+            0.16,
+            0.15
+          ],
+          "media": 0.16,
+          "mediana": 0.16,
+          "desvio_padrao": 0.01
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            1.51,
+            1.47,
+            1.47
+          ],
+          "media": 1.48,
+          "mediana": 1.47,
+          "desvio_padrao": 0.02
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            109.0,
+            111.0,
+            111.0
+          ],
+          "media": 110.33,
+          "mediana": 111.0,
+          "desvio_padrao": 1.15
+        },
+        "minor_faults": {
+          "repeticoes": [
+            40870.0,
+            39547.0,
+            40526.0
+          ],
+          "media": 40314.33,
+          "mediana": 40526.0,
+          "desvio_padrao": 686.43
+        },
+        "major_faults": {
+          "repeticoes": [
+            46.0,
+            0.0,
+            0.0
+          ],
+          "media": 15.33,
+          "mediana": 0.0,
+          "desvio_padrao": 26.56
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            154.0,
+            105.0,
+            104.0
+          ],
+          "media": 121.0,
+          "mediana": 105.0,
+          "desvio_padrao": 28.58
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            94.0,
+            55.0,
+            187.0
+          ],
+          "media": 112.0,
+          "mediana": 94.0,
+          "desvio_padrao": 67.82
+        }
+      },
+      "carga_real_artefato": {
+        "verificado": true,
+        "formato": "png (Cycles CPU 320x240, 4 samples)",
+        "tamanho_bytes": 43986,
+        "magic_ok": true
+      },
+      "strace_bwrap": {
+        "total_calls": 16122,
+        "total_errors": 3932,
+        "syscalls": {
+          "futex": {
+            "calls": 177,
+            "errors": 6
+          },
+          "wait4": {
+            "calls": 3,
+            "errors": 2
+          },
+          "sched_yield": {
+            "calls": 2478,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 3383,
+            "errors": 2774
+          },
+          "mmap": {
+            "calls": 1039,
+            "errors": 1
+          },
+          "newfstatat": {
+            "calls": 3089,
+            "errors": 631
+          },
+          "read": {
+            "calls": 1321,
+            "errors": 0
+          },
+          "clock_gettime": {
+            "calls": 1024,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 51,
+            "errors": 0
+          },
+          "close": {
+            "calls": 637,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 129,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 29,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 813,
+            "errors": 0
+          },
+          "clone": {
+            "calls": 2,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 4,
+            "errors": 1
+          },
+          "munmap": {
+            "calls": 23,
+            "errors": 0
+          },
+          "statx": {
+            "calls": 55,
+            "errors": 55
+          },
+          "sched_getaffinity": {
+            "calls": 28,
+            "errors": 0
+          },
+          "write": {
+            "calls": 62,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 239,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 533,
+            "errors": 3
+          },
+          "prctl": {
+            "calls": 101,
+            "errors": 8
+          },
+          "getdents64": {
+            "calls": 106,
+            "errors": 0
+          },
+          "pivot_root": {
+            "calls": 2,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 32,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 271,
+            "errors": 268
+          },
+          "rseq": {
+            "calls": 31,
+            "errors": 0
+          },
+          "mount": {
+            "calls": 18,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 172,
+            "errors": 161
+          },
+          "readlink": {
+            "calls": 18,
+            "errors": 7
+          },
+          "rt_sigaction": {
+            "calls": 86,
+            "errors": 0
+          },
+          "openat2": {
+            "calls": 19,
+            "errors": 0
+          },
+          "umount2": {
+            "calls": 2,
+            "errors": 0
+          },
+          "mkdirat": {
+            "calls": 10,
+            "errors": 1
+          },
+          "brk": {
+            "calls": 10,
+            "errors": 0
+          },
+          "symlinkat": {
+            "calls": 6,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 13,
+            "errors": 0
+          },
+          "mount_setattr": {
+            "calls": 9,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 14,
+            "errors": 1
+          },
+          "access": {
+            "calls": 4,
+            "errors": 4
+          },
+          "unshare": {
+            "calls": 1,
+            "errors": 0
+          },
+          "chdir": {
+            "calls": 6,
+            "errors": 2
+          },
+          "eventfd2": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "pread64": {
+            "calls": 4,
+            "errors": 0
+          },
+          "capset": {
+            "calls": 3,
+            "errors": 0
+          },
+          "statfs": {
+            "calls": 2,
+            "errors": 2
+          },
+          "poll": {
+            "calls": 1,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 8,
+            "errors": 0
+          },
+          "open": {
+            "calls": 2,
+            "errors": 1
+          },
+          "getuid": {
+            "calls": 3,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 3,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 3,
+            "errors": 0
+          },
+          "signalfd4": {
+            "calls": 1,
+            "errors": 0
+          },
+          "fchdir": {
+            "calls": 1,
+            "errors": 0
+          },
+          "capget": {
+            "calls": 1,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getgid": {
+            "calls": 2,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 2,
+            "errors": 0
+          },
+          "waitid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "pipe2": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 3,
+            "errors": 0
+          },
+          "rmdir": {
+            "calls": 1,
+            "errors": 0
+          },
+          "gettid": {
+            "calls": 2,
+            "errors": 0
+          },
+          "dup2": {
+            "calls": 2,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 2,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "recvfrom": {
+            "calls": 2,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getegid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getppid": {
+            "calls": 3,
+            "errors": 0
+          },
+          "getpgrp": {
+            "calls": 1,
+            "errors": 0
+          },
+          "faccessat2": {
+            "calls": 4,
+            "errors": 4
+          }
+        }
+      }
+    }
+  }
+}

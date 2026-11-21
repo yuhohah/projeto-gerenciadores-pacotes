@@ -1,0 +1,61 @@
+======================================================================
+FREEBSD PORTS — COMPILAÇÃO REAL A PARTIR DO CÓDIGO-FONTE E EXECUÇÃO
+======================================================================
+Sistema: FreeBSD freebsd-ports 14.4-RELEASE-p13 FreeBSD 14.4-RELEASE-p13 releng/14.4-n273833-6b3681ad66f8 GENERIC amd64
+Virtualização: QEMU/KVM (-enable-kvm -cpu host -smp 8 -m 8192) no mesmo hospedeiro físico AMD Ryzen 5 2600
+Árvore /usr/ports: commit bd53704f439a4e83c3d4a2d9540a5c0c4006cdb2
+Estratégia: Dependências de build e runtime pré-instaladas via pkg binário (com build em Ports apenas para pacotes restritos/ausentes como libdvdcss e py-myst-parser); compilação integral a partir do código-fonte via make build + make install para cada um dos 3 ports alvo.
+
+----------------------------------------------------------------------
+APLICATIVO: gnome-text-editor | PORT: editors/gnome-text-editor | PKG: gnome-text-editor-47.4 (v47.4)
+----------------------------------------------------------------------
+Binário instalado: /usr/local/bin/gnome-text-editor
+Opções de compilação (Makefile): 0 definidas / 0 padrão
+Distfile (código-fonte): 0.61 MiB (639932 bytes)
+Compilação (make build, -j8): 13.79 s (CPU user=80.08 s, sys=4.33 s, Max RSS=138.59 MiB)
+Stage + Install (make install): 1.45 s
+TOTAL Compilação + Instalação do port: 15.24 s
+Disco (pacote próprio): 2.20 MiB (267 arquivos)
+Disco (fechamento runtime /usr/local): 911.10 MiB (126 pacotes)
+Execução (mediana 3 reps):
+  Tempo de parede: 36.49 ms (reps: [36.49, 35.1, 37.3])
+  RAM (Max RSS):   56.82 MiB (reps: [56.82, 57.23, 56.81])
+  CPU (user+sys):  0.03 + 0.00 = 0.03 s (82.2%)
+  Syscalls (truss -c -f): 1713 total (297 erros)
+  Validação do artefato: {"version_stdout": "Text Editor 47.4 (47.4)\n\n            GTK: 4.20.4 (Compiled against 4.20.4)\n  GtkSourceView: 5.18.0 (Compiled against 5.18.0)\n\nCopyright 2020-2022 Christian Hergert, et al.\nThis is free software; see the source for copying conditions. There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."}
+
+----------------------------------------------------------------------
+APLICATIVO: vlc | PORT: multimedia/vlc | PKG: vlc-3.0.24,4 (v3.0.24)
+----------------------------------------------------------------------
+Binário instalado: /usr/local/bin/vlc
+Opções de compilação (Makefile): 72 definidas / 33 padrão
+Distfile (código-fonte): 26.34 MiB (27620304 bytes)
+Compilação (make build, -j8): 184.07 s (CPU user=1211.09 s, sys=73.66 s, Max RSS=361.98 MiB)
+Stage + Install (make install): 38.85 s
+TOTAL Compilação + Instalação do port: 222.92 s
+Disco (pacote próprio): 57.19 MiB (715 arquivos)
+Disco (fechamento runtime /usr/local): 1843.79 MiB (183 pacotes)
+Execução (mediana 3 reps):
+  Tempo de parede: 204.85 ms (reps: [204.12, 210.1, 204.85])
+  RAM (Max RSS):   125.96 MiB (reps: [125.96, 125.94, 126.04])
+  CPU (user+sys):  0.10 + 0.01 = 0.11 s (52.4%)
+  Syscalls (truss -c -f): 4865 total (372 erros)
+  Validação do artefato: {"out_ogg_bytes": 11541, "magic": "OggS"}
+
+----------------------------------------------------------------------
+APLICATIVO: blender | PORT: graphics/blender4 | PKG: blender4-4.5.14_3 (v4.5.14)
+----------------------------------------------------------------------
+Binário instalado: /usr/local/bin/blender-45
+Opções de compilação (Makefile): 57 definidas / 46 padrão
+Distfile (código-fonte): 81.16 MiB (85105652 bytes)
+Compilação (make build, -j6): 2028.64 s (CPU user=11423.89 s, sys=413.60 s, Max RSS=1158.97 MiB)
+Stage + Install (make install): 23.68 s
+TOTAL Compilação + Instalação do port: 2052.32 s
+Disco (pacote próprio): 219.68 MiB (1326 arquivos)
+Disco (fechamento runtime /usr/local): 4620.57 MiB (204 pacotes)
+Execução (mediana 3 reps):
+  Tempo de parede: 1624.06 ms (reps: [1639.26, 1617.46, 1624.06])
+  RAM (Max RSS):   426.79 MiB (reps: [426.84, 426.67, 426.79])
+  CPU (user+sys):  1.75 + 0.04 = 1.79 s (110.0%)
+  Syscalls (truss -c -f): 14331 total (1219 erros)
+  Validação do artefato: {"render_png_bytes": 48610, "magic": "PNG"}

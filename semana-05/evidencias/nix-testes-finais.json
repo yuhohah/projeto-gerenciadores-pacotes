@@ -1,0 +1,3075 @@
+{
+  "ambiente": "Nix nativo no hospedeiro NixOS",
+  "alinhamento_versoes": "debian",
+  "aplicacoes": {
+    "gnome-text-editor": {
+      "flake_ref": "github:NixOS/nixpkgs/ac62194c3917d5f474c1a844b6fd6da2db95077d#gnome-text-editor",
+      "versao": "48.3",
+      "store_path": "/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3",
+      "possui_wrapper": true,
+      "binario_principal": "/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/gnome-text-editor",
+      "binario_elf_real": "/nix/store/dr1bxfjbi6yz818ziwxkwksfmssayn8b-gnome-text-editor-48.3/bin/.gnome-text-editor-wrapped",
+      "nar_bytes": 2599696,
+      "nar_mib": 2.48,
+      "closure_bytes": 1039513464,
+      "closure_mib": 991.36,
+      "closure_paths_count": 315,
+      "bibliotecas_ldd_count": 99,
+      "elf_wrapper": {
+        "needed_count": 1,
+        "needed": [
+          "libc.so.6"
+        ],
+        "runpath_count": 1,
+        "runpath": [
+          "/nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib"
+        ],
+        "rpath": []
+      },
+      "elf_real": {
+        "needed_count": 12,
+        "needed": [
+          "libm.so.6",
+          "libgio-2.0.so.0",
+          "libgobject-2.0.so.0",
+          "libglib-2.0.so.0",
+          "libgtk-4.so.1",
+          "libpango-1.0.so.0",
+          "libcairo.so.2",
+          "libgtksourceview-5.so.0",
+          "libadwaita-1.so.0",
+          "libspelling-1.so.2",
+          "libeditorconfig.so.0",
+          "libc.so.6"
+        ],
+        "runpath_count": 9,
+        "runpath": [
+          "/nix/store/sgap1pr1czm1k2pp8sdkp9hs9v3ahx27-glib-2.84.3/lib",
+          "/nix/store/gd22hvyhpvwpwv3wd3f5r1c02d2cy5m6-cairo-1.18.2/lib",
+          "/nix/store/570m5d83a79bcqddf1bq9ac758sgi1j0-pango-1.56.3/lib",
+          "/nix/store/w8kpi29gnj914xnbns7rds35155lyxfk-gtk4-4.18.6/lib",
+          "/nix/store/1kx3rjz0y3r2a5qr5i0k780qg2a3084l-gtksourceview-5.16.0/lib",
+          "/nix/store/8kxg2016yvvf9abmv9lfwjr14qrz7j76-libadwaita-1.7.5/lib",
+          "/nix/store/zblx0463sd39b0qp7jkqb4y6lzcc46fr-libspelling-0.4.8/lib",
+          "/nix/store/6fcnmcwnp7kf3b37psxl11w9knczhcn9-editorconfig-core-c-0.12.9/lib",
+          "/nix/store/i3ibgfskl99qd8rslafbpaa1dmxdzh1z-glibc-2.40-66/lib"
+        ],
+        "rpath": []
+      },
+      "tempo_profile_add_ms": {
+        "repeticoes": [
+          40.04,
+          36.57,
+          36.35
+        ],
+        "media": 37.65,
+        "mediana": 36.57,
+        "desvio_padrao": 2.07
+      },
+      "recursos_profile_add": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            52188.0,
+            51700.0,
+            51800.0
+          ],
+          "media": 51896.0,
+          "mediana": 51800.0,
+          "desvio_padrao": 257.78
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            50.96,
+            50.49,
+            50.59
+          ],
+          "media": 50.68,
+          "mediana": 50.59,
+          "desvio_padrao": 0.25
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.0
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            81.0,
+            85.0,
+            85.0
+          ],
+          "media": 83.67,
+          "mediana": 85.0,
+          "desvio_padrao": 2.31
+        },
+        "minor_faults": {
+          "repeticoes": [
+            2095.0,
+            2092.0,
+            2092.0
+          ],
+          "media": 2093.0,
+          "mediana": 2092.0,
+          "desvio_padrao": 1.73
+        },
+        "major_faults": {
+          "repeticoes": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.33,
+          "mediana": 0.0,
+          "desvio_padrao": 0.58
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            63.0,
+            62.0,
+            61.0
+          ],
+          "media": 62.0,
+          "mediana": 62.0,
+          "desvio_padrao": 1.0
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            8.0,
+            6.0,
+            7.0
+          ],
+          "media": 7.0,
+          "mediana": 7.0,
+          "desvio_padrao": 1.0
+        }
+      },
+      "tempo_profile_rollback_ms": {
+        "repeticoes": [
+          29.99,
+          29.73,
+          29.54
+        ],
+        "media": 29.75,
+        "mediana": 29.73,
+        "desvio_padrao": 0.23
+      },
+      "recursos_profile_rollback": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            42324.0,
+            42300.0,
+            42488.0
+          ],
+          "media": 42370.67,
+          "mediana": 42324.0,
+          "desvio_padrao": 102.32
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            41.33,
+            41.31,
+            41.49
+          ],
+          "media": 41.38,
+          "mediana": 41.33,
+          "desvio_padrao": 0.1
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.0
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            100.0,
+            96.0,
+            100.0
+          ],
+          "media": 98.67,
+          "mediana": 100.0,
+          "desvio_padrao": 2.31
+        },
+        "minor_faults": {
+          "repeticoes": [
+            2041.0,
+            2046.0,
+            2044.0
+          ],
+          "media": 2043.67,
+          "mediana": 2044.0,
+          "desvio_padrao": 2.52
+        },
+        "major_faults": {
+          "repeticoes": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.0,
+          "mediana": 0.0,
+          "desvio_padrao": 0.0
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            47.0,
+            43.0,
+            44.0
+          ],
+          "media": 44.67,
+          "mediana": 44.0,
+          "desvio_padrao": 2.08
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            6.0,
+            4.0,
+            7.0
+          ],
+          "media": 5.67,
+          "mediana": 6.0,
+          "desvio_padrao": 1.53
+        }
+      },
+      "tempo_carga_real_ms": {
+        "repeticoes": [
+          52.93,
+          33.26,
+          31.44
+        ],
+        "media": 39.21,
+        "mediana": 33.26,
+        "desvio_padrao": 11.92
+      },
+      "recursos_carga_real": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            23580.0,
+            24020.0,
+            24020.0
+          ],
+          "media": 23873.33,
+          "mediana": 24020.0,
+          "desvio_padrao": 254.03
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            23.03,
+            23.46,
+            23.46
+          ],
+          "media": 23.32,
+          "mediana": 23.46,
+          "desvio_padrao": 0.25
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.0
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            64.0,
+            93.0,
+            93.0
+          ],
+          "media": 83.33,
+          "mediana": 93.0,
+          "desvio_padrao": 16.74
+        },
+        "minor_faults": {
+          "repeticoes": [
+            1500.0,
+            1496.0,
+            1494.0
+          ],
+          "media": 1496.67,
+          "mediana": 1496.0,
+          "desvio_padrao": 3.06
+        },
+        "major_faults": {
+          "repeticoes": [
+            98.0,
+            0.0,
+            0.0
+          ],
+          "media": 32.67,
+          "mediana": 0.0,
+          "desvio_padrao": 56.58
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            110.0,
+            0.0,
+            0.0
+          ],
+          "media": 36.67,
+          "mediana": 0.0,
+          "desvio_padrao": 63.51
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            1.0,
+            2.0,
+            2.0
+          ],
+          "media": 1.67,
+          "mediana": 2.0,
+          "desvio_padrao": 0.58
+        }
+      },
+      "carga_real_artefato": {
+        "verificado": true,
+        "saida": "Text Editor 48.3 (48.3)\n\n            GTK: 4.18.6 (Compiled against 4.18.6)\n  GtkSourceView: 5.16.0 (Compiled against 5.16.0)\n\nCopyright 2020-2025 Christian Hergert, et al.\nThis is free software; see the source for copying conditions. There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+      },
+      "strace_profile_add": {
+        "total_calls": 1795,
+        "total_errors": 549,
+        "syscalls": {
+          "mmap": {
+            "calls": 390,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 512,
+            "errors": 415
+          },
+          "read": {
+            "calls": 176,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 171,
+            "errors": 122
+          },
+          "clone3": {
+            "calls": 13,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 4,
+            "errors": 0
+          },
+          "close": {
+            "calls": 102,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 95,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 81,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 49,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 14,
+            "errors": 0
+          },
+          "futex": {
+            "calls": 32,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 4,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 14,
+            "errors": 3
+          },
+          "madvise": {
+            "calls": 17,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 14,
+            "errors": 0
+          },
+          "munmap": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 2,
+            "errors": 0
+          },
+          "write": {
+            "calls": 11,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 6,
+            "errors": 0
+          },
+          "open": {
+            "calls": 2,
+            "errors": 0
+          },
+          "access": {
+            "calls": 8,
+            "errors": 7
+          },
+          "fcntl": {
+            "calls": 8,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "readlinkat": {
+            "calls": 2,
+            "errors": 0
+          },
+          "poll": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 8,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "openat2": {
+            "calls": 1,
+            "errors": 0
+          },
+          "pread64": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 1,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 9,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 1,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 6,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 2,
+            "errors": 2
+          },
+          "socket": {
+            "calls": 2,
+            "errors": 0
+          },
+          "connect": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 5,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 2,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 1,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 2,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 1,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 1,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 1,
+            "errors": 0
+          }
+        }
+      },
+      "strace_profile_rollback": {
+        "total_calls": 1709,
+        "total_errors": 542,
+        "syscalls": {
+          "mmap": {
+            "calls": 388,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 505,
+            "errors": 414
+          },
+          "read": {
+            "calls": 162,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 13,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 162,
+            "errors": 116
+          },
+          "lseek": {
+            "calls": 4,
+            "errors": 0
+          },
+          "close": {
+            "calls": 94,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 89,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 1,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 49,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 81,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 14,
+            "errors": 3
+          },
+          "futex": {
+            "calls": 31,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 15,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 14,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 14,
+            "errors": 0
+          },
+          "access": {
+            "calls": 8,
+            "errors": 7
+          },
+          "open": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 6,
+            "errors": 0
+          },
+          "write": {
+            "calls": 2,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 6,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 2,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 4,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 3,
+            "errors": 0
+          },
+          "unlink": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 2,
+            "errors": 2
+          },
+          "sched_getaffinity": {
+            "calls": 1,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 1,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 2,
+            "errors": 0
+          },
+          "flock": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 1,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 1,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 1,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 5,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 2,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 1,
+            "errors": 0
+          }
+        }
+      },
+      "strace_carga_real": {
+        "total_calls": 1896,
+        "total_errors": 832,
+        "syscalls": {
+          "openat": {
+            "calls": 778,
+            "errors": 675
+          },
+          "mmap": {
+            "calls": 445,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 187,
+            "errors": 148
+          },
+          "read": {
+            "calls": 118,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 104,
+            "errors": 0
+          },
+          "close": {
+            "calls": 103,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 2,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 104,
+            "errors": 0
+          },
+          "futex": {
+            "calls": 11,
+            "errors": 0
+          },
+          "pread64": {
+            "calls": 6,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 2,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 8,
+            "errors": 0
+          },
+          "statfs": {
+            "calls": 2,
+            "errors": 2
+          },
+          "access": {
+            "calls": 3,
+            "errors": 3
+          },
+          "write": {
+            "calls": 5,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 6,
+            "errors": 4
+          },
+          "arch_prctl": {
+            "calls": 2,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 2,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 2,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 2,
+            "errors": 0
+          }
+        }
+      }
+    },
+    "vlc": {
+      "flake_ref": "nixpkgs#vlc",
+      "versao": "3.0.24",
+      "store_path": "/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24",
+      "possui_wrapper": true,
+      "binario_principal": "/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/vlc",
+      "binario_elf_real": "/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/bin/.vlc-wrapped",
+      "nar_bytes": 69085704,
+      "nar_mib": 65.89,
+      "closure_bytes": 1123775824,
+      "closure_mib": 1071.72,
+      "closure_paths_count": 249,
+      "bibliotecas_ldd_count": 7,
+      "elf_wrapper": {
+        "needed_count": 1,
+        "needed": [
+          "libc.so.6"
+        ],
+        "runpath_count": 1,
+        "runpath": [
+          "/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib"
+        ],
+        "rpath": []
+      },
+      "elf_real": {
+        "needed_count": 5,
+        "needed": [
+          "libvlc.so.5",
+          "libvlccore.so.9",
+          "libdbus-1.so.3",
+          "libm.so.6",
+          "libc.so.6"
+        ],
+        "runpath_count": 3,
+        "runpath": [
+          "/nix/store/abrrgszr971b27wrwv6lnd813ni8vx5j-vlc-3.0.24/lib",
+          "/nix/store/qbv74lpzb7i6zkv1kd3wzm7i758vmn1v-dbus-1.16.2-lib/lib",
+          "/nix/store/r3hvhzl5fxhrgn0rfy5g7rda17702pj4-glibc-2.44-57/lib"
+        ],
+        "rpath": []
+      },
+      "tempo_profile_add_ms": {
+        "repeticoes": [
+          41.07,
+          36.23,
+          36.33
+        ],
+        "media": 37.88,
+        "mediana": 36.33,
+        "desvio_padrao": 2.77
+      },
+      "recursos_profile_add": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            51808.0,
+            51504.0,
+            51688.0
+          ],
+          "media": 51666.67,
+          "mediana": 51688.0,
+          "desvio_padrao": 153.12
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            50.59,
+            50.3,
+            50.48
+          ],
+          "media": 50.46,
+          "mediana": 50.48,
+          "desvio_padrao": 0.15
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.0
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            79.0,
+            82.0,
+            85.0
+          ],
+          "media": 82.0,
+          "mediana": 82.0,
+          "desvio_padrao": 3.0
+        },
+        "minor_faults": {
+          "repeticoes": [
+            2090.0,
+            2092.0,
+            2096.0
+          ],
+          "media": 2092.67,
+          "mediana": 2092.0,
+          "desvio_padrao": 3.06
+        },
+        "major_faults": {
+          "repeticoes": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.0,
+          "mediana": 0.0,
+          "desvio_padrao": 0.0
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            67.0,
+            69.0,
+            65.0
+          ],
+          "media": 67.0,
+          "mediana": 67.0,
+          "desvio_padrao": 2.0
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            3.0,
+            4.0,
+            4.0
+          ],
+          "media": 3.67,
+          "mediana": 4.0,
+          "desvio_padrao": 0.58
+        }
+      },
+      "tempo_profile_rollback_ms": {
+        "repeticoes": [
+          30.37,
+          28.75,
+          29.85
+        ],
+        "media": 29.66,
+        "mediana": 29.85,
+        "desvio_padrao": 0.83
+      },
+      "recursos_profile_rollback": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            42292.0,
+            42192.0,
+            42756.0
+          ],
+          "media": 42413.33,
+          "mediana": 42292.0,
+          "desvio_padrao": 300.94
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            41.3,
+            41.2,
+            41.75
+          ],
+          "media": 41.42,
+          "mediana": 41.3,
+          "desvio_padrao": 0.29
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.0
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            100.0,
+            96.0,
+            100.0
+          ],
+          "media": 98.67,
+          "mediana": 100.0,
+          "desvio_padrao": 2.31
+        },
+        "minor_faults": {
+          "repeticoes": [
+            2038.0,
+            2046.0,
+            2047.0
+          ],
+          "media": 2043.67,
+          "mediana": 2046.0,
+          "desvio_padrao": 4.93
+        },
+        "major_faults": {
+          "repeticoes": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.0,
+          "mediana": 0.0,
+          "desvio_padrao": 0.0
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            49.0,
+            44.0,
+            39.0
+          ],
+          "media": 44.0,
+          "mediana": 44.0,
+          "desvio_padrao": 5.0
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            6.0,
+            5.0,
+            6.0
+          ],
+          "media": 5.67,
+          "mediana": 6.0,
+          "desvio_padrao": 0.58
+        }
+      },
+      "tempo_carga_real_ms": {
+        "repeticoes": [
+          377.33,
+          188.61,
+          188.53
+        ],
+        "media": 251.49,
+        "mediana": 188.61,
+        "desvio_padrao": 108.98
+      },
+      "recursos_carga_real": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            35192.0,
+            36040.0,
+            36040.0
+          ],
+          "media": 35757.33,
+          "mediana": 36040.0,
+          "desvio_padrao": 489.59
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            34.37,
+            35.2,
+            35.2
+          ],
+          "media": 34.92,
+          "mediana": 35.2,
+          "desvio_padrao": 0.48
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.07,
+            0.07,
+            0.07
+          ],
+          "media": 0.07,
+          "mediana": 0.07,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.05,
+            0.02,
+            0.02
+          ],
+          "media": 0.03,
+          "mediana": 0.02,
+          "desvio_padrao": 0.02
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.12,
+            0.09,
+            0.09
+          ],
+          "media": 0.1,
+          "mediana": 0.09,
+          "desvio_padrao": 0.02
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            34.0,
+            52.0,
+            53.0
+          ],
+          "media": 46.33,
+          "mediana": 52.0,
+          "desvio_padrao": 10.69
+        },
+        "minor_faults": {
+          "repeticoes": [
+            3012.0,
+            3093.0,
+            3095.0
+          ],
+          "media": 3066.67,
+          "mediana": 3093.0,
+          "desvio_padrao": 47.35
+        },
+        "major_faults": {
+          "repeticoes": [
+            274.0,
+            0.0,
+            0.0
+          ],
+          "media": 91.33,
+          "mediana": 0.0,
+          "desvio_padrao": 158.19
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            704.0,
+            81.0,
+            85.0
+          ],
+          "media": 290.0,
+          "mediana": 85.0,
+          "desvio_padrao": 358.54
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            7.0,
+            4.0,
+            5.0
+          ],
+          "media": 5.33,
+          "mediana": 5.0,
+          "desvio_padrao": 1.53
+        }
+      },
+      "carga_real_artefato": {
+        "verificado": true,
+        "formato": "ogg/vorbis",
+        "tamanho_bytes": 11545,
+        "magic_ok": true
+      },
+      "strace_profile_add": {
+        "total_calls": 1801,
+        "total_errors": 550,
+        "syscalls": {
+          "mmap": {
+            "calls": 390,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 512,
+            "errors": 415
+          },
+          "read": {
+            "calls": 177,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 13,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 174,
+            "errors": 123
+          },
+          "lseek": {
+            "calls": 4,
+            "errors": 0
+          },
+          "close": {
+            "calls": 102,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 95,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 49,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 81,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 14,
+            "errors": 3
+          },
+          "madvise": {
+            "calls": 17,
+            "errors": 0
+          },
+          "futex": {
+            "calls": 32,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 14,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 14,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 5,
+            "errors": 0
+          },
+          "write": {
+            "calls": 11,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 6,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 5,
+            "errors": 0
+          },
+          "munmap": {
+            "calls": 2,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 8,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 2,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 9,
+            "errors": 0
+          },
+          "connect": {
+            "calls": 1,
+            "errors": 0
+          },
+          "readlinkat": {
+            "calls": 3,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 6,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 8,
+            "errors": 0
+          },
+          "access": {
+            "calls": 8,
+            "errors": 7
+          },
+          "sched_getaffinity": {
+            "calls": 1,
+            "errors": 0
+          },
+          "openat2": {
+            "calls": 1,
+            "errors": 0
+          },
+          "pread64": {
+            "calls": 1,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 1,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 1,
+            "errors": 0
+          },
+          "poll": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "open": {
+            "calls": 2,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 1,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 2,
+            "errors": 2
+          },
+          "execve": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 2,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 1,
+            "errors": 0
+          }
+        }
+      },
+      "strace_profile_rollback": {
+        "total_calls": 1709,
+        "total_errors": 542,
+        "syscalls": {
+          "mmap": {
+            "calls": 388,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 505,
+            "errors": 414
+          },
+          "read": {
+            "calls": 162,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 4,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 81,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 162,
+            "errors": 116
+          },
+          "clone3": {
+            "calls": 13,
+            "errors": 0
+          },
+          "close": {
+            "calls": 94,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 89,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 49,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 14,
+            "errors": 3
+          },
+          "futex": {
+            "calls": 31,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 14,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 15,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 14,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 1,
+            "errors": 0
+          },
+          "write": {
+            "calls": 2,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 1,
+            "errors": 0
+          },
+          "access": {
+            "calls": 8,
+            "errors": 7
+          },
+          "unlink": {
+            "calls": 1,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 3,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 6,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 2,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 2,
+            "errors": 0
+          },
+          "flock": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 1,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 1,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 2,
+            "errors": 2
+          },
+          "open": {
+            "calls": 2,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 6,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 5,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 1,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 2,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 1,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 4,
+            "errors": 0
+          }
+        }
+      },
+      "strace_carga_real": {
+        "total_calls": 5618,
+        "total_errors": 867,
+        "syscalls": {
+          "futex": {
+            "calls": 268,
+            "errors": 52
+          },
+          "poll": {
+            "calls": 54,
+            "errors": 1
+          },
+          "rt_sigtimedwait": {
+            "calls": 1,
+            "errors": 0
+          },
+          "mmap": {
+            "calls": 932,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 967,
+            "errors": 592
+          },
+          "newfstatat": {
+            "calls": 981,
+            "errors": 203
+          },
+          "munmap": {
+            "calls": 199,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 425,
+            "errors": 0
+          },
+          "read": {
+            "calls": 435,
+            "errors": 0
+          },
+          "close": {
+            "calls": 408,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 377,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 78,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 11,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 80,
+            "errors": 0
+          },
+          "dup3": {
+            "calls": 47,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 63,
+            "errors": 0
+          },
+          "write": {
+            "calls": 31,
+            "errors": 0
+          },
+          "readv": {
+            "calls": 30,
+            "errors": 0
+          },
+          "sendmsg": {
+            "calls": 21,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 15,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 16,
+            "errors": 0
+          },
+          "eventfd2": {
+            "calls": 28,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 1,
+            "errors": 0
+          },
+          "gettid": {
+            "calls": 11,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 6,
+            "errors": 2
+          },
+          "rseq": {
+            "calls": 13,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 20,
+            "errors": 10
+          },
+          "set_robust_list": {
+            "calls": 13,
+            "errors": 0
+          },
+          "connect": {
+            "calls": 3,
+            "errors": 1
+          },
+          "brk": {
+            "calls": 12,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 3,
+            "errors": 0
+          },
+          "fadvise64": {
+            "calls": 8,
+            "errors": 0
+          },
+          "recvfrom": {
+            "calls": 3,
+            "errors": 1
+          },
+          "rt_sigaction": {
+            "calls": 7,
+            "errors": 0
+          },
+          "writev": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getpeername": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 4,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 8,
+            "errors": 0
+          },
+          "getsockopt": {
+            "calls": 1,
+            "errors": 0
+          },
+          "access": {
+            "calls": 3,
+            "errors": 3
+          },
+          "shutdown": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "tgkill": {
+            "calls": 5,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 2,
+            "errors": 0
+          },
+          "pipe2": {
+            "calls": 1,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 1,
+            "errors": 1
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getresuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getresgid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "rt_sigreturn": {
+            "calls": 1,
+            "errors": 1
+          },
+          "alarm": {
+            "calls": 1,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 2,
+            "errors": 0
+          },
+          "fstatfs": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 2,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 2,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 2,
+            "errors": 0
+          }
+        }
+      }
+    },
+    "blender": {
+      "flake_ref": "github:NixOS/nixpkgs/12be955b9e3e029f0c6274122b5fc040324f898a#blender",
+      "versao": "4.3.2",
+      "store_path": "/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2",
+      "possui_wrapper": true,
+      "binario_principal": "/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/blender",
+      "binario_elf_real": "/nix/store/9gjyprxyvjf7s8prpw3nvama3hnd9wgw-blender-4.3.2/bin/.blender-wrapped",
+      "nar_bytes": 264399664,
+      "nar_mib": 252.15,
+      "closure_bytes": 2352893328,
+      "closure_mib": 2243.89,
+      "closure_paths_count": 330,
+      "bibliotecas_ldd_count": 185,
+      "elf_wrapper": {
+        "needed_count": 0,
+        "needed": [],
+        "runpath_count": 0,
+        "runpath": [],
+        "rpath": []
+      },
+      "elf_real": {
+        "needed_count": 87,
+        "needed": [
+          "libatomic.so.1",
+          "libtbb.so.2",
+          "libjemalloc.so.2",
+          "libutil.so.1",
+          "libdl.so.2",
+          "libpng16.so.16",
+          "libosdGPU.so.3.6.0",
+          "libosdCPU.so.3.6.0",
+          "libspnav.so.0",
+          "libX11.so.6",
+          "libXrender.so.1",
+          "libXxf86vm.so.1",
+          "libXfixes.so.3",
+          "libXi.so.6",
+          "libxkbcommon.so.0",
+          "libwayland-client.so.0",
+          "libwayland-egl.so.1",
+          "libwayland-cursor.so.0",
+          "libdecor-0.so.0",
+          "libopenxr_loader.so.1",
+          "libOpenImageIO.so.2.5",
+          "libOpenImageIO_Util.so.2.5",
+          "libjpeg.so.62",
+          "libopenjp2.so.7",
+          "libwebp.so.7",
+          "libwebpmux.so.3",
+          "libwebpdemux.so.2",
+          "libsharpyuv.so.0",
+          "libembree4.so.4",
+          "libopenpgl.so.0",
+          "libOpenColorIO.so.2.4",
+          "libexpat.so.1",
+          "libAlembic.so.1.8",
+          "libboost_python311.so.1.87.0",
+          "libboost_container.so.1.87.0",
+          "libboost_graph.so.1.87.0",
+          "libOpenImageDenoise.so.2",
+          "libpotrace.so.0",
+          "libusd_ms.so",
+          "libpthread.so.0",
+          "libavcodec.so.61",
+          "libavdevice.so.61",
+          "libavfilter.so.10",
+          "libavformat.so.61",
+          "libavutil.so.59",
+          "libswscale.so.8",
+          "libswresample.so.5",
+          "libsndfile.so.1",
+          "libopenal.so.1",
+          "libopenvdb.so.11.0",
+          "libIex-3_2.so.31",
+          "libOpenEXR-3_2.so.31",
+          "libOpenEXRCore-3_2.so.31",
+          "libIlmThread-3_2.so.31",
+          "libImath-3_1.so.29",
+          "libpcre.so.1",
+          "libxml2.so.2",
+          "libboost_filesystem.so.1.87.0",
+          "libboost_atomic.so.1.87.0",
+          "libboost_date_time.so.1.87.0",
+          "libboost_locale.so.1.87.0",
+          "libboost_thread.so.1.87.0",
+          "libboost_chrono.so.1.87.0",
+          "libboost_iostreams.so.1.87.0",
+          "libboost_regex.so.1.87.0",
+          "libboost_random.so.1.87.0",
+          "libboost_system.so.1.87.0",
+          "libhpdf.so.2.4",
+          "libepoxy.so.0",
+          "libvulkan.so.1",
+          "libshaderc_shared.so.1",
+          "librt.so.1",
+          "libfreetype.so.6",
+          "libpython3.11.so.1.0",
+          "libfftw3f.so.3",
+          "libfftw3.so.3",
+          "libfftw3f_threads.so.3",
+          "libz.so.1",
+          "libzstd.so.1",
+          "libgmpxx.so.4",
+          "libgmp.so.10",
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libc.so.6",
+          "ld-linux-x86-64.so.2",
+          "libgomp.so.1",
+          "libgcc_s.so.1"
+        ],
+        "runpath_count": 49,
+        "runpath": [
+          "/nix/store/xijpnhg8mg0g4lahwrxdwylpcq7249gc-zlib-1.3.1/lib",
+          "/nix/store/b8n9qhafrn3v6jl3x46blrhw7a5val2y-alembic-1.8.8-lib/lib",
+          "/nix/store/54wr0cn0c6vsybjdlhm82d6cd2cz5s7g-boost-1.87.0/lib",
+          "/nix/store/pg0bn822q72sy52ws98ks9c6w1k6s2sp-ffmpeg-7.1.1-lib/lib",
+          "/nix/store/r73qjirp95ri10z1fgb4rpsxm2jnrnql-fftw-double-3.3.10/lib",
+          "/nix/store/06qhbfn1g8gdmj7c1sbgzfxqdazid73i-fftw-single-3.3.10/lib",
+          "/nix/store/miq99gylww7177pdm7n7ygcryvlnyp70-libpng-apng-1.6.46/lib",
+          "/nix/store/2mmsgkggc79x1ayvd4hkbs6k2bqvw091-freetype-2.13.3/lib",
+          "/nix/store/h89gh873zcsfjjp7w0f2mw357np32br7-gmp-with-cxx-6.3.0/lib",
+          "/nix/store/g8ih8zlmzysaivh7iaygv9xyrs8hpjjk-jemalloc-5.3.0/lib",
+          "/nix/store/xdc7337pixdwfjgwi0gqrmzkf48xfxrv-libepoxy-1.5.10/lib",
+          "/nix/store/ajlwi4cnqs6744scgvfpplp178r68sl2-libharu-2.4.5/lib",
+          "/nix/store/vpnxv9pd10i69df260bmilkgf8fylxng-libjpeg-turbo-3.0.4/lib",
+          "/nix/store/6rd25pqlls1sqhzvdh3i1nyrdxj41bww-libsndfile-1.2.2/lib",
+          "/nix/store/dr4yq68w26y50qs64vbzzkxgggrhddj2-libwebp-1.5.0/lib",
+          "/nix/store/wy0slah6yvchgra8nhp6vgrqa6ay72cq-zstd-1.5.6/lib",
+          "/nix/store/a20z42xzl1cslf3p0ql11zjxxg6qrjsk-opencolorio-2.4.2/lib",
+          "/nix/store/0ip3zavhi7999mqpjlqa32mr9aychhck-imath-3.1.12/lib",
+          "/nix/store/77pphl59nk5v8jgnx0pr5g4m1lqq45k8-openexr-3.2.4/lib",
+          "/nix/store/6ywp02ix59vmqa3a17a75py1b2ihfz1y-openimageio-2.5.16.0/lib",
+          "/nix/store/1y02vlsy49gii1zgglyhgrkzas55qlz9-openjpeg-2.5.2/lib",
+          "/nix/store/7jj8ig9f4gnjy60czaapxpz0hy0g3gzl-openpgl-0.7.0/lib",
+          "/nix/store/y5clxlj2gcnqa4qcx1kb3xyr56r9r2ax-opensubdiv-3.6.0/lib",
+          "/nix/store/gmg5vdraczibq95yniry1m9r0xk85hh0-openvdb-11.0.0/lib",
+          "/nix/store/xhhqd7nc4vf6x3nx0i8x7dxd00wlzl8b-potrace-1.16/lib",
+          "/nix/store/ii0svv5raqqbwmdhkarca2d28p07n067-python3-3.11.11/lib",
+          "/nix/store/pvv8jj4ic2fpj4kkwgrw968z099v27g3-tbb-2020.3/lib",
+          "/nix/store/564pdy2ai838fb9gi4v2qq4zmzjx1gz6-embree-4.3.3/lib",
+          "/nix/store/cga8qkwg8w1z4w6a6c4p8l489p1y5bs4-openimagedenoise-2.3.2/lib",
+          "/nix/store/wfrgia7qj3ijrxl9irsqvjfz20qqx5fm-libX11-1.8.12/lib",
+          "/nix/store/k5lslg4k7jd105wmiahvfymwad14r3zr-libXfixes-6.0.1/lib",
+          "/nix/store/yn7wjwgjlk7y53l73fljfvvzyw6hn624-libXi-1.8.2/lib",
+          "/nix/store/l3138hd3gy3i0gcpw9xs41h6a8hf0m00-libXrender-0.9.12/lib",
+          "/nix/store/00iygsbzwg42xg0nb2pynbnch7xxd3pf-libXxf86vm-1.1.6/lib",
+          "/nix/store/y8g7zgz6y7v2x74jc607rdxdz6sj056s-openal-soft-1.23.1/lib",
+          "/nix/store/x11as0mjqrdnq6mdc6sqqr9gzqm6yfkc-openxr-loader-1.1.46/lib",
+          "/nix/store/vlip39fgsli4jv5p08ycycnnbryzj5jd-python3.11-openusd-24.11/lib",
+          "/nix/store/h0pvnm3d36in5cvhh6f3qmxxb9agbnk7-boost-1.87.0/lib",
+          "/nix/store/spb4xrswkigavjyhri271xqfzhazxgar-expat-2.6.4/lib",
+          "/nix/store/3xlb4yb09jicyq645aak9v331w6rv1rd-libdecor-0.2.2/lib",
+          "/nix/store/qmlmyfxra64fvd42w7xkxxxnbvhzvh3w-libxkbcommon-1.7.0/lib",
+          "/nix/store/yd4670avwzw2fpfgfdwdkbj97n3jcgms-wayland-1.23.1/lib",
+          "/nix/store/rhl3v4rkhv8ma7vm313qa4zh8mirgwz7-libxml2-2.13.6/lib",
+          "/nix/store/09k57h5hxlavh7320z0f43jkbzch3v14-pcre-8.45/lib",
+          "/nix/store/vb8nn4v59vsyryamlv8wv78im77qyn8p-libspnav-1.1/lib",
+          "/nix/store/baw7g1jfwrzccgcp9bnkk1x9vynd4lkg-shaderc-2024.0-lib/lib",
+          "/nix/store/9g16ws1mgqa89p8y8iq8w0p652bc8zsf-vulkan-loader-1.4.304.0/lib",
+          "/nix/store/rmy663w9p7xb202rcln4jjzmvivznmz8-glibc-2.40-66/lib",
+          "/nix/store/ik84lbv5jvjm1xxvdl8mhg52ry3xycvm-gcc-14-20241116-lib/lib"
+        ],
+        "rpath": []
+      },
+      "tempo_profile_add_ms": {
+        "repeticoes": [
+          37.17,
+          34.66,
+          36.61
+        ],
+        "media": 36.15,
+        "mediana": 36.61,
+        "desvio_padrao": 1.32
+      },
+      "recursos_profile_add": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            51924.0,
+            51984.0,
+            52112.0
+          ],
+          "media": 52006.67,
+          "mediana": 51984.0,
+          "desvio_padrao": 96.03
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            50.71,
+            50.77,
+            50.89
+          ],
+          "media": 50.79,
+          "mediana": 50.77,
+          "desvio_padrao": 0.09
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.0
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            80.0,
+            84.0,
+            85.0
+          ],
+          "media": 83.0,
+          "mediana": 84.0,
+          "desvio_padrao": 2.65
+        },
+        "minor_faults": {
+          "repeticoes": [
+            2093.0,
+            2094.0,
+            2093.0
+          ],
+          "media": 2093.33,
+          "mediana": 2093.0,
+          "desvio_padrao": 0.58
+        },
+        "major_faults": {
+          "repeticoes": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.0,
+          "mediana": 0.0,
+          "desvio_padrao": 0.0
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            63.0,
+            63.0,
+            62.0
+          ],
+          "media": 62.67,
+          "mediana": 63.0,
+          "desvio_padrao": 0.58
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            4.0,
+            0.0,
+            8.0
+          ],
+          "media": 4.0,
+          "mediana": 4.0,
+          "desvio_padrao": 4.0
+        }
+      },
+      "tempo_profile_rollback_ms": {
+        "repeticoes": [
+          29.17,
+          29.17,
+          27.98
+        ],
+        "media": 28.77,
+        "mediana": 29.17,
+        "desvio_padrao": 0.69
+      },
+      "recursos_profile_rollback": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            42868.0,
+            42424.0,
+            42068.0
+          ],
+          "media": 42453.33,
+          "mediana": 42424.0,
+          "desvio_padrao": 400.81
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            41.86,
+            41.43,
+            41.08
+          ],
+          "media": 41.46,
+          "mediana": 41.43,
+          "desvio_padrao": 0.39
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.01,
+            0.01,
+            0.01
+          ],
+          "media": 0.01,
+          "mediana": 0.01,
+          "desvio_padrao": 0.0
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "media": 0.02,
+          "mediana": 0.02,
+          "desvio_padrao": 0.0
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            100.0,
+            103.0,
+            100.0
+          ],
+          "media": 101.0,
+          "mediana": 100.0,
+          "desvio_padrao": 1.73
+        },
+        "minor_faults": {
+          "repeticoes": [
+            2049.0,
+            2043.0,
+            2040.0
+          ],
+          "media": 2044.0,
+          "mediana": 2043.0,
+          "desvio_padrao": 4.58
+        },
+        "major_faults": {
+          "repeticoes": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.0,
+          "mediana": 0.0,
+          "desvio_padrao": 0.0
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            43.0,
+            47.0,
+            44.0
+          ],
+          "media": 44.67,
+          "mediana": 44.0,
+          "desvio_padrao": 2.08
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            3.0,
+            2.0,
+            2.0
+          ],
+          "media": 2.33,
+          "mediana": 2.0,
+          "desvio_padrao": 0.58
+        }
+      },
+      "tempo_carga_real_ms": {
+        "repeticoes": [
+          1369.7,
+          1338.76,
+          1328.49
+        ],
+        "media": 1345.65,
+        "mediana": 1338.76,
+        "desvio_padrao": 21.45
+      },
+      "recursos_carga_real": {
+        "amostras_validas": 3,
+        "max_rss_kib": {
+          "repeticoes": [
+            327192.0,
+            321304.0,
+            323716.0
+          ],
+          "media": 324070.67,
+          "mediana": 323716.0,
+          "desvio_padrao": 2959.98
+        },
+        "max_rss_mib": {
+          "repeticoes": [
+            319.52,
+            313.77,
+            316.13
+          ],
+          "media": 316.47,
+          "mediana": 316.13,
+          "desvio_padrao": 2.89
+        },
+        "cpu_user_s": {
+          "repeticoes": [
+            1.36,
+            1.35,
+            1.34
+          ],
+          "media": 1.35,
+          "mediana": 1.35,
+          "desvio_padrao": 0.01
+        },
+        "cpu_sys_s": {
+          "repeticoes": [
+            0.11,
+            0.11,
+            0.12
+          ],
+          "media": 0.11,
+          "mediana": 0.11,
+          "desvio_padrao": 0.01
+        },
+        "cpu_total_s": {
+          "repeticoes": [
+            1.47,
+            1.46,
+            1.46
+          ],
+          "media": 1.46,
+          "mediana": 1.46,
+          "desvio_padrao": 0.01
+        },
+        "cpu_pct": {
+          "repeticoes": [
+            107.0,
+            109.0,
+            110.0
+          ],
+          "media": 108.67,
+          "mediana": 109.0,
+          "desvio_padrao": 1.53
+        },
+        "minor_faults": {
+          "repeticoes": [
+            18306.0,
+            18449.0,
+            18255.0
+          ],
+          "media": 18336.67,
+          "mediana": 18306.0,
+          "desvio_padrao": 100.57
+        },
+        "major_faults": {
+          "repeticoes": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "media": 0.33,
+          "mediana": 0.0,
+          "desvio_padrao": 0.58
+        },
+        "vol_ctx": {
+          "repeticoes": [
+            189.0,
+            134.0,
+            149.0
+          ],
+          "media": 157.33,
+          "mediana": 149.0,
+          "desvio_padrao": 28.43
+        },
+        "invol_ctx": {
+          "repeticoes": [
+            55.0,
+            44.0,
+            50.0
+          ],
+          "media": 49.67,
+          "mediana": 50.0,
+          "desvio_padrao": 5.51
+        }
+      },
+      "carga_real_artefato": {
+        "verificado": true,
+        "formato": "png (Cycles CPU 320x240, 4 samples)",
+        "tamanho_bytes": 43986,
+        "magic_ok": true
+      },
+      "strace_profile_add": {
+        "total_calls": 1796,
+        "total_errors": 549,
+        "syscalls": {
+          "mmap": {
+            "calls": 390,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 512,
+            "errors": 415
+          },
+          "read": {
+            "calls": 177,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 171,
+            "errors": 122
+          },
+          "clone3": {
+            "calls": 13,
+            "errors": 0
+          },
+          "close": {
+            "calls": 102,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 1,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 95,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 81,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 49,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 4,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 14,
+            "errors": 3
+          },
+          "futex": {
+            "calls": 32,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 17,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 4,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 5,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 14,
+            "errors": 0
+          },
+          "write": {
+            "calls": 11,
+            "errors": 0
+          },
+          "set_robust_list": {
+            "calls": 14,
+            "errors": 0
+          },
+          "getdents64": {
+            "calls": 6,
+            "errors": 0
+          },
+          "mkdir": {
+            "calls": 1,
+            "errors": 0
+          },
+          "munmap": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 2,
+            "errors": 0
+          },
+          "access": {
+            "calls": 8,
+            "errors": 7
+          },
+          "fcntl": {
+            "calls": 8,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 2,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 9,
+            "errors": 0
+          },
+          "connect": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 8,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "readlinkat": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 6,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 2,
+            "errors": 0
+          },
+          "openat2": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 2,
+            "errors": 0
+          },
+          "poll": {
+            "calls": 1,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 1,
+            "errors": 0
+          },
+          "pread64": {
+            "calls": 1,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 1,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 1,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 2,
+            "errors": 2
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 1,
+            "errors": 0
+          },
+          "open": {
+            "calls": 2,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 1,
+            "errors": 0
+          }
+        }
+      },
+      "strace_profile_rollback": {
+        "total_calls": 1709,
+        "total_errors": 542,
+        "syscalls": {
+          "mmap": {
+            "calls": 388,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 505,
+            "errors": 414
+          },
+          "clone3": {
+            "calls": 13,
+            "errors": 0
+          },
+          "newfstatat": {
+            "calls": 162,
+            "errors": 116
+          },
+          "lseek": {
+            "calls": 4,
+            "errors": 0
+          },
+          "read": {
+            "calls": 162,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 81,
+            "errors": 0
+          },
+          "close": {
+            "calls": 94,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 1,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 89,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 49,
+            "errors": 0
+          },
+          "futex": {
+            "calls": 31,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 14,
+            "errors": 0
+          },
+          "madvise": {
+            "calls": 15,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 14,
+            "errors": 3
+          },
+          "set_robust_list": {
+            "calls": 14,
+            "errors": 0
+          },
+          "sendto": {
+            "calls": 2,
+            "errors": 0
+          },
+          "recvmsg": {
+            "calls": 5,
+            "errors": 0
+          },
+          "access": {
+            "calls": 8,
+            "errors": 7
+          },
+          "getdents64": {
+            "calls": 2,
+            "errors": 0
+          },
+          "write": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rename": {
+            "calls": 1,
+            "errors": 0
+          },
+          "symlink": {
+            "calls": 1,
+            "errors": 0
+          },
+          "open": {
+            "calls": 2,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "readlink": {
+            "calls": 3,
+            "errors": 0
+          },
+          "getrandom": {
+            "calls": 6,
+            "errors": 0
+          },
+          "socket": {
+            "calls": 1,
+            "errors": 0
+          },
+          "rt_sigaction": {
+            "calls": 6,
+            "errors": 0
+          },
+          "sysinfo": {
+            "calls": 2,
+            "errors": 0
+          },
+          "unlink": {
+            "calls": 1,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 4,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 2,
+            "errors": 0
+          },
+          "bind": {
+            "calls": 1,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 2,
+            "errors": 0
+          },
+          "flock": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sigaltstack": {
+            "calls": 1,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 2,
+            "errors": 2
+          },
+          "getsockname": {
+            "calls": 1,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 1,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 1,
+            "errors": 0
+          },
+          "sched_getaffinity": {
+            "calls": 1,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 1,
+            "errors": 0
+          },
+          "umask": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 6,
+            "errors": 0
+          }
+        }
+      },
+      "strace_carga_real": {
+        "total_calls": 16133,
+        "total_errors": 3899,
+        "syscalls": {
+          "futex": {
+            "calls": 179,
+            "errors": 3
+          },
+          "sched_yield": {
+            "calls": 2749,
+            "errors": 0
+          },
+          "openat": {
+            "calls": 3317,
+            "errors": 2760
+          },
+          "mmap": {
+            "calls": 1038,
+            "errors": 1
+          },
+          "newfstatat": {
+            "calls": 3109,
+            "errors": 634
+          },
+          "madvise": {
+            "calls": 87,
+            "errors": 0
+          },
+          "rt_sigprocmask": {
+            "calls": 139,
+            "errors": 0
+          },
+          "read": {
+            "calls": 1299,
+            "errors": 0
+          },
+          "wait4": {
+            "calls": 3,
+            "errors": 1
+          },
+          "sched_getaffinity": {
+            "calls": 28,
+            "errors": 0
+          },
+          "clock_gettime": {
+            "calls": 1024,
+            "errors": 0
+          },
+          "munmap": {
+            "calls": 23,
+            "errors": 0
+          },
+          "clone3": {
+            "calls": 29,
+            "errors": 0
+          },
+          "fstat": {
+            "calls": 813,
+            "errors": 0
+          },
+          "close": {
+            "calls": 561,
+            "errors": 0
+          },
+          "statx": {
+            "calls": 55,
+            "errors": 55
+          },
+          "set_robust_list": {
+            "calls": 33,
+            "errors": 0
+          },
+          "mprotect": {
+            "calls": 240,
+            "errors": 0
+          },
+          "rseq": {
+            "calls": 32,
+            "errors": 0
+          },
+          "lseek": {
+            "calls": 534,
+            "errors": 3
+          },
+          "getdents64": {
+            "calls": 106,
+            "errors": 0
+          },
+          "write": {
+            "calls": 55,
+            "errors": 0
+          },
+          "execve": {
+            "calls": 4,
+            "errors": 0
+          },
+          "ioctl": {
+            "calls": 272,
+            "errors": 270
+          },
+          "mkdir": {
+            "calls": 162,
+            "errors": 161
+          },
+          "clone": {
+            "calls": 1,
+            "errors": 0
+          },
+          "prctl": {
+            "calls": 10,
+            "errors": 4
+          },
+          "rt_sigaction": {
+            "calls": 107,
+            "errors": 0
+          },
+          "brk": {
+            "calls": 15,
+            "errors": 0
+          },
+          "fcntl": {
+            "calls": 11,
+            "errors": 1
+          },
+          "access": {
+            "calls": 8,
+            "errors": 4
+          },
+          "readlink": {
+            "calls": 4,
+            "errors": 2
+          },
+          "getrandom": {
+            "calls": 8,
+            "errors": 0
+          },
+          "getpid": {
+            "calls": 12,
+            "errors": 0
+          },
+          "prlimit64": {
+            "calls": 10,
+            "errors": 0
+          },
+          "getppid": {
+            "calls": 6,
+            "errors": 0
+          },
+          "pread64": {
+            "calls": 4,
+            "errors": 0
+          },
+          "getuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "uname": {
+            "calls": 4,
+            "errors": 0
+          },
+          "geteuid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "getgid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "getegid": {
+            "calls": 5,
+            "errors": 0
+          },
+          "gettid": {
+            "calls": 2,
+            "errors": 0
+          },
+          "dup2": {
+            "calls": 3,
+            "errors": 0
+          },
+          "getpgrp": {
+            "calls": 2,
+            "errors": 0
+          },
+          "pipe2": {
+            "calls": 1,
+            "errors": 0
+          },
+          "arch_prctl": {
+            "calls": 4,
+            "errors": 0
+          },
+          "rt_sigreturn": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getresuid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "getresgid": {
+            "calls": 1,
+            "errors": 0
+          },
+          "set_tid_address": {
+            "calls": 4,
+            "errors": 0
+          },
+          "open": {
+            "calls": 2,
+            "errors": 0
+          },
+          "rmdir": {
+            "calls": 1,
+            "errors": 0
+          }
+        }
+      }
+    }
+  },
+  "deduplicacao_fechamentos": {
+    "soma_paths_individuais": 894,
+    "paths_unicos_uniao": 894,
+    "paths_reaproveitados_entre_apps": 0,
+    "paths_comuns_a_todos_apps": 0
+  },
+  "deduplicacao_fechamentos_mesma_revisao": {
+    "apps_avaliados": [
+      "gnome-text-editor",
+      "vlc",
+      "blender"
+    ],
+    "soma_paths_individuais": 917,
+    "paths_unicos_uniao": 470,
+    "paths_reaproveitados_entre_apps": 447,
+    "paths_comuns_a_todos_apps": 176
+  },
+  "coexistencia_e_rollback_dados_externos": {
+    "perfil_a_restaurado_por_rollback": true,
+    "perfil_b_preservado": true,
+    "conteudo_documento_usuario_apos_rollback": "estado=editado-pelo-usuario",
+    "dados_usuario_preservados": true
+  }
+}

@@ -1,0 +1,700 @@
+=== Snap Store API v2: gnome-text-editor (HTTP 200 | canal alvo=latest/stable) ===
+{
+  "publisher": {
+    "display-name": "Ken VanDine",
+    "id": "EH9A6Xg1QtCjYt4v3QlBVTPLAHDvEIn6",
+    "username": "ken-vandine",
+    "validation": "starred"
+  },
+  "canal_alvo": "latest/stable",
+  "stable_amd64": {
+    "channel": {
+      "architecture": "amd64",
+      "name": "stable",
+      "released-at": "2025-07-13T13:51:02.344837+00:00",
+      "risk": "stable",
+      "track": "latest"
+    },
+    "created-at": "2025-05-30T10:21:18.483168+00:00",
+    "download": {
+      "deltas": [],
+      "sha3-384": "c43a5a1c72aca4d7980ae87b187b267f6883fa3149a7383f210f3f10b84a83093372c5b9ccf2d47a823d0603aacd94b6",
+      "size": 1118208,
+      "url": "https://api.snapcraft.io/api/v1/snaps/download/PZj2sEabMQrVUV1HKZmmmXSk3E6wKC9i_53.snap"
+    },
+    "revision": 53,
+    "type": "app",
+    "version": "48.3"
+  },
+  "stable_tracks_amd64": [
+    {
+      "channel": "stable",
+      "version": "48.3",
+      "revision": 53,
+      "confinement": null,
+      "base": null,
+      "download_mib": 1.07
+    }
+  ]
+}
+
+=== Snap inspeção local: gnome-text-editor_53.snap ===
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -s /tmp/so-semana05-cache/snaps/gnome-text-editor_53.snap
+Found a valid SQUASHFS 4:0 superblock on /tmp/so-semana05-cache/snaps/gnome-text-editor_53.snap.
+Creation or last append time Fri May 30 07:19:27 2025
+Filesystem size 1116013 bytes (1089.86 Kbytes / 1.06 Mbytes)
+Compression xz
+Block size 131072
+Filesystem is exportable via NFS
+Inodes are compressed
+Data is compressed
+Uids/Gids (Id table) are compressed
+Fragments are not stored
+Xattrs are not stored
+Duplicates are removed
+Number of fragments 0
+Number of inodes 540
+Number of ids 1
+[Código de saída: 0 | Tempo: 6.51 ms]
+
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -cat /tmp/so-semana05-cache/snaps/gnome-text-editor_53.snap meta/snap.yaml
+name: gnome-text-editor
+title: Text Editor
+version: '48.3'
+summary: Edit text files
+description: GNOME Text Editor is a simple text editor focused on a pleasing default
+  experience.
+license: GPL-3.0-or-later
+architectures:
+- amd64
+base: core24
+assumes:
+- command-chain
+- snapd2.43
+apps:
+  gnome-text-editor:
+    command: usr/bin/gnome-text-editor
+    common-id: org.gnome.TextEditor.desktop
+    plugs:
+    - desktop
+    - desktop-legacy
+    - gsettings
+    - opengl
+    - wayland
+    - x11
+    - home
+    - cups
+    command-chain:
+    - snap/command-chain/gpu-2404-wrapper
+    - snap/command-chain/desktop-launch
+confinement: strict
+grade: stable
+environment:
+  SNAP_DESKTOP_RUNTIME: $SNAP/gnome-platform
+  GTK_USE_PORTAL: '1'
+  LD_LIBRARY_PATH: ${SNAP_LIBRARY_PATH}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}:$SNAP/usr/lib:$SNAP/usr/lib/x86_64-linux-gnu
+  PATH: $SNAP/usr/sbin:$SNAP/usr/bin:$SNAP/sbin:$SNAP/bin:$PATH
+plugs:
+  desktop:
+    mount-host-font-cache: false
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes
+  gnome-46-2404:
+    interface: content
+    target: $SNAP/gnome-platform
+    default-provider: gnome-46-2404
+  gpu-2404:
+    interface: content
+    target: $SNAP/gpu-2404
+    default-provider: mesa-2404
+slots:
+  gnome-text-editor:
+    interface: dbus
+    bus: session
+    name: org.gnome.TextEditor
+hooks:
+  configure:
+    command-chain:
+    - snap/command-chain/hooks-configure-fonts
+    plugs:
+    - desktop
+layout:
+  /usr/share/gnome-text-editor:
+    bind: $SNAP/usr/share/gnome-text-editor
+  /usr/lib/x86_64-linux-gnu/webkit2gtk-4.0:
+    bind: $SNAP/gnome-platform/usr/lib/x86_64-linux-gnu/webkit2gtk-4.0
+  /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1:
+    bind: $SNAP/gnome-platform/usr/lib/x86_64-linux-gnu/webkit2gtk-4.1
+  /usr/share/xml/iso-codes:
+    bind: $SNAP/gnome-platform/usr/share/xml/iso-codes
+  /usr/share/libdrm:
+    bind: $SNAP/gpu-2404/libdrm
+  /usr/share/drirc.d:
+    symlink: $SNAP/gpu-2404/drirc.d
+  /usr/share/X11/XErrorDB:
+    symlink: $SNAP/gpu-2404/X11/XErrorDB
+links:
+  donation:
+  - https://www.gnome.org/donate/
+  issues:
+  - https://gitlab.gnome.org/GNOME/gnome-text-editor/issues
+  source-code:
+  - https://gitlab.gnome.org/GNOME/gnome-text-editor
+  website:
+  - https://apps.gnome.org/TextEditor/
+[Código de saída: 0 | Tempo: 4.18 ms]
+
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -d /tmp/so-s5-snap-gnome-text-editor-_55wotfp/extracted -quiet /tmp/so-semana05-cache/snaps/gnome-text-editor_53.snap
+
+[===============================================================|] 644/644 100%
+[Código de saída: 0 | Tempo: 28.78 ms]
+
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/tmp/so-s5-snap-gnome-text-editor-_55wotfp/extracted/usr/bin/gnome-text-editor" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgio-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgobject-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libglib-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtk-4.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpango-1.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcairo.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtksourceview-5.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libadwaita-1.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libspelling-1.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libeditorconfig.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+[Código de saída: 0 | Tempo: 5.96 ms]
+
+=== Snap Store API v2: vlc (HTTP 200 | canal alvo=latest/stable) ===
+{
+  "publisher": {
+    "display-name": "VideoLAN",
+    "id": "yBzXLuxwoWh5b2tgI8gxjziVNEHLm64z",
+    "username": "videolan",
+    "validation": "verified"
+  },
+  "canal_alvo": "latest/stable",
+  "stable_amd64": {
+    "channel": {
+      "architecture": "amd64",
+      "name": "stable",
+      "released-at": "2026-09-22T13:42:44.025641+00:00",
+      "risk": "stable",
+      "track": "latest"
+    },
+    "created-at": "2026-09-17T13:10:06.110384+00:00",
+    "download": {
+      "deltas": [],
+      "sha3-384": "2c00f12922016b1e94e98b2f127d08fa6598161c6a6ee5e459735991df790b4f5f15e6111decaadc012053538d26cd97",
+      "size": 277643264,
+      "url": "https://api.snapcraft.io/api/v1/snaps/download/RT9mcUhVsRYrDLG8qnvGiy26NKvv6Qkd_4472.snap"
+    },
+    "revision": 4472,
+    "type": "app",
+    "version": "3.0.24-rc1"
+  },
+  "stable_tracks_amd64": [
+    {
+      "channel": "stable",
+      "version": "3.0.24-rc1",
+      "revision": 4472,
+      "confinement": null,
+      "base": null,
+      "download_mib": 264.78
+    }
+  ]
+}
+
+=== Snap inspeção local: vlc_4472.snap ===
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -s /tmp/so-semana05-cache/snaps/vlc_4472.snap
+Found a valid SQUASHFS 4:0 superblock on /tmp/so-semana05-cache/snaps/vlc_4472.snap.
+Creation or last append time Thu Sep 17 10:09:56 2026
+Filesystem size 277641136 bytes (271133.92 Kbytes / 264.78 Mbytes)
+Compression lzo
+Block size 131072
+Filesystem is exportable via NFS
+Inodes are compressed
+Data is compressed
+Uids/Gids (Id table) are compressed
+Fragments are not stored
+Xattrs are not stored
+Duplicates are removed
+Number of fragments 0
+Number of inodes 15363
+Number of ids 1
+[Código de saída: 0 | Tempo: 1.94 ms]
+
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -cat /tmp/so-semana05-cache/snaps/vlc_4472.snap meta/snap.yaml
+name: vlc
+version: 3.0.24-rc1
+summary: Read, capture, broadcast your multimedia streams
+description: |
+  VLC is a free and open source cross-platform multimedia player and
+  framework that plays most multimedia files as well as DVDs, Audio CDs,
+  VCDs, Webcams, Devices and various streaming protocols.
+architectures:
+- amd64
+base: core24
+assumes:
+- command-chain
+- snapd2.58.3
+apps:
+  vlc:
+    command: usr/bin/vlc-snap-wrapper.sh
+    common-id: org.videolan.vlc
+    plugs:
+    - desktop
+    - desktop-legacy
+    - opengl
+    - wayland
+    - x11
+    - audio-playback
+    - unity7
+    - network
+    - network-bind
+    - audio-record
+    - avahi-control
+    - avahi-observe
+    - camera
+    - dot-config-aacs
+    - dvb
+    - hardware-observe
+    - home
+    - mount-observe
+    - media-control
+    - optical-drive
+    - removable-media
+    - screen-inhibit-control
+    - udisks2
+    - jack1
+    - alsa
+    slots:
+    - mpris
+    command-chain:
+    - snap/command-chain/gpu-2404-wrapper
+    - snap/command-chain/desktop-launch
+confinement: strict
+grade: stable
+environment:
+  SNAP_DESKTOP_RUNTIME: $SNAP/kf6
+  GTK_USE_PORTAL: '1'
+  PLATFORM_PLUG: kf6-core24
+  LD_LIBRARY_PATH: ${SNAP_LIBRARY_PATH}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}:$SNAP/usr/lib:$SNAP/usr/lib/x86_64-linux-gnu
+  PATH: $SNAP/usr/sbin:$SNAP/usr/bin:$SNAP/sbin:$SNAP/bin:$PATH
+plugs:
+  desktop:
+    mount-host-font-cache: false
+  dot-config-aacs:
+    interface: personal-files
+    read:
+    - $HOME/.config/aacs
+  gtk-2-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes
+  kf6-core24:
+    content: kf6-core24-all
+    interface: content
+    target: $SNAP/kf6
+    default-provider: kf6-core24
+  gpu-2404:
+    interface: content
+    target: $SNAP/gpu-2404
+    default-provider: mesa-2404
+hooks:
+  configure:
+    command-chain:
+    - snap/command-chain/hooks-configure-desktop
+    plugs:
+    - desktop
+layout:
+  /usr/lib/x86_64-linux-gnu/alsa-lib:
+    bind: $SNAP/usr/lib/x86_64-linux-gnu/alsa-lib
+  /usr/share/alsa:
+    bind: $SNAP/usr/share/alsa
+  /usr/share/X11:
+    symlink: $SNAP/kf6/usr/share/X11
+  /usr/share/qt6:
+    symlink: $SNAP/kf6/usr/share/qt6
+  /usr/share/libdrm:
+    bind: $SNAP/gpu-2404/libdrm
+  /usr/share/drirc.d:
+    symlink: $SNAP/gpu-2404/drirc.d
+[Código de saída: 0 | Tempo: 2.93 ms]
+
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/tmp/so-s5-snap-vlc-pg_0qx8g/extracted/usr/bin/vlc" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libvlc.so.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+[Código de saída: 0 | Tempo: 7.03 ms]
+
+=== Snap Store API v2: blender (HTTP 200 | canal alvo=4.3/stable) ===
+{
+  "publisher": {
+    "display-name": "Blender Foundation",
+    "id": "IEzHQPsJJcDJXVbfCdg5mh4cfFs7Xmhq",
+    "username": "blenderfoundation",
+    "validation": "verified"
+  },
+  "canal_alvo": "4.3/stable",
+  "stable_amd64": {
+    "channel": {
+      "architecture": "amd64",
+      "name": "4.3/stable",
+      "released-at": "2024-12-10T13:21:28.415934+00:00",
+      "risk": "stable",
+      "track": "4.3"
+    },
+    "created-at": "2024-12-10T10:55:46.978456+00:00",
+    "download": {
+      "deltas": [],
+      "sha3-384": "1d1e67ec1690a263ee5a74473bd720a75fb6e559c92d8dea4d84339376a22a57614a0589a6e7d5d329b8cb2b3107495c",
+      "size": 421806080,
+      "url": "https://api.snapcraft.io/api/v1/snaps/download/ZWyHJJiPBBfMKpaaKKrpSgAcupWkHWPz_5647.snap"
+    },
+    "revision": 5647,
+    "type": "app",
+    "version": "4.3.1"
+  },
+  "stable_tracks_amd64": [
+    {
+      "channel": "stable",
+      "version": "5.3.0",
+      "revision": 7998,
+      "confinement": null,
+      "base": null,
+      "download_mib": 429.96
+    },
+    {
+      "channel": "5.2lts/stable",
+      "version": "5.2.4",
+      "revision": 7997,
+      "confinement": null,
+      "base": null,
+      "download_mib": 406.6
+    },
+    {
+      "channel": "5.1/stable",
+      "version": "5.1.2",
+      "revision": 7480,
+      "confinement": null,
+      "base": null,
+      "download_mib": 415.95
+    },
+    {
+      "channel": "5.0/stable",
+      "version": "5.0.1",
+      "revision": 7093,
+      "confinement": null,
+      "base": null,
+      "download_mib": 398.3
+    },
+    {
+      "channel": "4.5lts/stable",
+      "version": "4.5.16",
+      "revision": 7996,
+      "confinement": null,
+      "base": null,
+      "download_mib": 400.97
+    },
+    {
+      "channel": "4.3/stable",
+      "version": "4.3.1",
+      "revision": 5647,
+      "confinement": null,
+      "base": null,
+      "download_mib": 402.27
+    },
+    {
+      "channel": "4.2lts/stable",
+      "version": "4.2.23",
+      "revision": 7625,
+      "confinement": null,
+      "base": null,
+      "download_mib": 380.33
+    },
+    {
+      "channel": "4.1/stable",
+      "version": "4.1.0",
+      "revision": 4697,
+      "confinement": null,
+      "base": null,
+      "download_mib": 354.44
+    },
+    {
+      "channel": "4.0/stable",
+      "version": "4.0.2",
+      "revision": 4300,
+      "confinement": null,
+      "base": null,
+      "download_mib": 322.57
+    },
+    {
+      "channel": "3.6lts/stable",
+      "version": "3.6.23",
+      "revision": 6337,
+      "confinement": null,
+      "base": null,
+      "download_mib": 315.89
+    },
+    {
+      "channel": "3.5/stable",
+      "version": "3.5.1",
+      "revision": 3584,
+      "confinement": null,
+      "base": null,
+      "download_mib": 300.95
+    },
+    {
+      "channel": "3.4/stable",
+      "version": "3.4.1",
+      "revision": 3132,
+      "confinement": null,
+      "base": null,
+      "download_mib": 267.04
+    },
+    {
+      "channel": "3.3lts/stable",
+      "version": "3.3.21",
+      "revision": 5084,
+      "confinement": null,
+      "base": null,
+      "download_mib": 248.27
+    },
+    {
+      "channel": "3.2/stable",
+      "version": "3.2.2",
+      "revision": 2661,
+      "confinement": null,
+      "base": null,
+      "download_mib": 228.14
+    },
+    {
+      "channel": "3.1/stable",
+      "version": "3.1.2",
+      "revision": 2106,
+      "confinement": null,
+      "base": null,
+      "download_mib": 215.36
+    },
+    {
+      "channel": "3.0/stable",
+      "version": "3.0.1",
+      "revision": 1653,
+      "confinement": null,
+      "base": null,
+      "download_mib": 213.45
+    },
+    {
+      "channel": "2.93lts/stable",
+      "version": "2.93.18",
+      "revision": 3688,
+      "confinement": null,
+      "base": null,
+      "download_mib": 195.96
+    },
+    {
+      "channel": "2.92/stable",
+      "version": "2.92.0",
+      "revision": 111,
+      "confinement": null,
+      "base": null,
+      "download_mib": 187.03
+    },
+    {
+      "channel": "2.91/stable",
+      "version": "2.91.2",
+      "revision": 65,
+      "confinement": null,
+      "base": null,
+      "download_mib": 184.07
+    },
+    {
+      "channel": "2.90/stable",
+      "version": "2.90.1",
+      "revision": 47,
+      "confinement": null,
+      "base": null,
+      "download_mib": 179.04
+    },
+    {
+      "channel": "2.83lts/stable",
+      "version": "2.83.20",
+      "revision": 2252,
+      "confinement": null,
+      "base": null,
+      "download_mib": 168.73
+    },
+    {
+      "channel": "2.82/stable",
+      "version": "2.82a",
+      "revision": 37,
+      "confinement": null,
+      "base": null,
+      "download_mib": 162.74
+    },
+    {
+      "channel": "2.81/stable",
+      "version": "2.81a",
+      "revision": 35,
+      "confinement": null,
+      "base": null,
+      "download_mib": 150.81
+    },
+    {
+      "channel": "2.80/stable",
+      "version": "2.80",
+      "revision": 33,
+      "confinement": null,
+      "base": null,
+      "download_mib": 117.79
+    },
+    {
+      "channel": "2.79/stable",
+      "version": "2.79b",
+      "revision": 20,
+      "confinement": null,
+      "base": null,
+      "download_mib": 123.17
+    },
+    {
+      "channel": "2.9/stable",
+      "version": "2.91.2",
+      "revision": 65,
+      "confinement": null,
+      "base": null,
+      "download_mib": 184.07
+    },
+    {
+      "channel": "2.8/stable",
+      "version": "2.83.10",
+      "revision": 58,
+      "confinement": null,
+      "base": null,
+      "download_mib": 162.71
+    }
+  ]
+}
+
+$ /nix/store/qmjllrv5znaiy0bfj63160rxc8qs8nxl-curl-8.23.0-bin/bin/curl -4 -fsSL https://api.snapcraft.io/api/v1/snaps/download/ZWyHJJiPBBfMKpaaKKrpSgAcupWkHWPz_5647.snap -o /tmp/so-semana05-cache/snaps/blender_5647.snap
+[Código de saída: 0 | Tempo: 42793.65 ms]
+
+=== Snap inspeção local: blender_5647.snap ===
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -s /tmp/so-semana05-cache/snaps/blender_5647.snap
+Found a valid SQUASHFS 4:0 superblock on /tmp/so-semana05-cache/snaps/blender_5647.snap.
+Creation or last append time Tue Dec 10 07:49:17 2024
+Filesystem size 421802980 bytes (411916.97 Kbytes / 402.26 Mbytes)
+Compression xz
+Block size 131072
+Filesystem is exportable via NFS
+Inodes are compressed
+Data is compressed
+Uids/Gids (Id table) are compressed
+Fragments are not stored
+Xattrs are not stored
+Duplicates are removed
+Number of fragments 0
+Number of inodes 6862
+Number of ids 1
+[Código de saída: 0 | Tempo: 1.93 ms]
+
+$ /nix/store/cgj65l0kswbz928pq40ybf4jb34yndbi-squashfs-tools-4.7.5/bin/unsquashfs -cat /tmp/so-semana05-cache/snaps/blender_5647.snap meta/snap.yaml
+name: blender
+version: 4.3.1
+summary: Blender is the free and open source 3D creation suite.
+description: |
+  Blender is the free and open source 3D creation suite. It supports the
+  entirety of the 3D pipeline—modeling, rigging, animation, simulation,
+  rendering, compositing and motion tracking, and video editing.
+
+  Blender is a public project, made by hundreds of people from around the
+  world; by studios and individual artists, professionals and hobbyists,
+  scientists, students, VFX experts, animators, game artists, modders, and
+  the list goes on.
+apps:
+  blender:
+    command: ./blender-wrapper
+    common-id: org.blender.Blender
+architectures:
+- amd64
+base: core20
+confinement: classic
+grade: stable
+license: GPL-3.0
+[Código de saída: 0 | Tempo: 3.31 ms]
+
+$ /nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d "/tmp/so-s5-snap-blender-ijbfpacm/extracted/blender" | grep -E "NEEDED|RUNPATH|RPATH" || true
+ 0x0000000000000001 (NEEDED)             Shared library: [libblender_cpu_check.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libtbb.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libutil.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libosdGPU.so.3.6.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libosdCPU.so.3.6.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libX11.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXrender.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXxf86vm.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXfixes.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXi.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libxkbcommon.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libembree4.so.4]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcycles_kernel_oneapi_aot.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libsycl.so.7]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageIO.so.2.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageIO_Util.so.2.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [liboslcomp.so.1.13]
+ 0x0000000000000001 (NEEDED)             Shared library: [liboslexec.so.1.13]
+ 0x0000000000000001 (NEEDED)             Shared library: [liboslquery.so.1.13]
+ 0x0000000000000001 (NEEDED)             Shared library: [liboslnoise.so.1.13]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenColorIO.so.2.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_python311.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageDenoise.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libMaterialXFormat.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libMaterialXCore.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libusd_ms.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenvdb.so.11.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libIex.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenEXR.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenEXRCore.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libIlmThread.so.31]
+ 0x0000000000000001 (NEEDED)             Shared library: [libImath.so.30]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_filesystem.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_regex.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_thread.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_date_time.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_wave.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_locale.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_iostreams.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_system.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_chrono.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_atomic.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_serialization.so.1.82.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libvulkan.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [librt.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN/lib]
+[Código de saída: 0 | Tempo: 6.13 ms]

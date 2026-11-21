@@ -1,0 +1,4034 @@
+{
+  "alinhamento_versoes": "debian",
+  "kernel_lsm_ativos": "lockdown,capability,landlock,yama,apparmor,bpf,ima",
+  "apparmor_ativo_no_kernel": true,
+  "observacao_confinamento": "Mesmo quando o metadado declara confinement=strict (gnome-text-editor, vlc), o confinamento efetivo do Snap depende do módulo LSM AppArmor ativo no kernel; já o Blender declara confinement=classic, abrindo mão do confinamento estrito mesmo em kernels com AppArmor.",
+  "aplicacoes": {
+    "gnome-text-editor": {
+      "snap": "gnome-text-editor",
+      "canal_selecionado": "stable",
+      "publisher": "Ken VanDine",
+      "publisher_validation": "starred",
+      "canais_stable_amd64": [
+        {
+          "channel": "stable",
+          "version": "48.3",
+          "revision": 53,
+          "confinement": null,
+          "base": null,
+          "download_mib": 1.07
+        }
+      ],
+      "versao": "48.3",
+      "revisao": 53,
+      "confinement": "strict",
+      "base": "core24",
+      "download_bytes": 1118208,
+      "download_mib": 1.07,
+      "sha3_384_esperado": "c43a5a1c72aca4d7980ae87b187b267f6883fa3149a7383f210f3f10b84a83093372c5b9ccf2d47a823d0603aacd94b6",
+      "inspecao_local": {
+        "executado": true,
+        "arquivo_cache": "/tmp/so-semana05-cache/snaps/gnome-text-editor_53.snap",
+        "tamanho_snap_bytes": 1118208,
+        "sha3_384_verificado": "c43a5a1c72aca4d7980ae87b187b267f6883fa3149a7383f210f3f10b84a83093372c5b9ccf2d47a823d0603aacd94b6",
+        "sha3_384_coincide": true,
+        "superbloco_squashfs": {
+          "compressor_original": "xz",
+          "block_size_bytes": 131072,
+          "inodes_squashfs": 540,
+          "fragments": 0,
+          "filesystem_size_bytes": 1116013.0
+        },
+        "binario_inspecionado": "usr/bin/gnome-text-editor",
+        "elf": {
+          "needed_count": 12,
+          "needed": [
+            "libm.so.6",
+            "libgio-2.0.so.0",
+            "libgobject-2.0.so.0",
+            "libglib-2.0.so.0",
+            "libgtk-4.so.1",
+            "libpango-1.0.so.0",
+            "libcairo.so.2",
+            "libgtksourceview-5.so.0",
+            "libadwaita-1.so.0",
+            "libspelling-1.so.2",
+            "libeditorconfig.so.0",
+            "libc.so.6"
+          ],
+          "runpath_count": 0,
+          "runpath": [],
+          "rpath": []
+        },
+        "escopo_benchmark_squashfs": "arvore_completa",
+        "amostra_descompactada_bytes": 3124861,
+        "amostra_descompactada_mib": 2.98,
+        "amostra_arquivos": 338,
+        "comparacao_squashfs": {
+          "xz": {
+            "tamanho_imagem_bytes": 851968,
+            "tamanho_imagem_mib": 0.81,
+            "razao_compressao": 0.273,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                141.95,
+                147.22,
+                138.37
+              ],
+              "media": 142.51,
+              "mediana": 141.95,
+              "desvio_padrao": 4.45
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  43588.0,
+                  44488.0,
+                  43420.0
+                ],
+                "media": 43832.0,
+                "mediana": 43588.0,
+                "desvio_padrao": 574.29
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  42.57,
+                  43.45,
+                  42.4
+                ],
+                "media": 42.81,
+                "mediana": 42.57,
+                "desvio_padrao": 0.56
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.83,
+                  0.83,
+                  0.81
+                ],
+                "media": 0.82,
+                "mediana": 0.83,
+                "desvio_padrao": 0.01
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.07,
+                  0.07,
+                  0.08
+                ],
+                "media": 0.07,
+                "mediana": 0.07,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.9,
+                  0.9,
+                  0.89
+                ],
+                "media": 0.9,
+                "mediana": 0.9,
+                "desvio_padrao": 0.01
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  650.0,
+                  631.0,
+                  657.0
+                ],
+                "media": 646.0,
+                "mediana": 650.0,
+                "desvio_padrao": 13.45
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  19481.0,
+                  19407.0,
+                  19225.0
+                ],
+                "media": 19371.0,
+                "mediana": 19407.0,
+                "desvio_padrao": 131.74
+              },
+              "major_faults": {
+                "repeticoes": [
+                  3.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 1.0,
+                "mediana": 0.0,
+                "desvio_padrao": 1.73
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  1095.0,
+                  935.0,
+                  1024.0
+                ],
+                "media": 1018.0,
+                "mediana": 1024.0,
+                "desvio_padrao": 80.17
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  282.0,
+                  369.0,
+                  252.0
+                ],
+                "media": 301.0,
+                "mediana": 282.0,
+                "desvio_padrao": 60.77
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                27.45,
+                25.28,
+                29.84
+              ],
+              "media": 27.52,
+              "mediana": 27.45,
+              "desvio_padrao": 2.28
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  10400.0,
+                  10572.0,
+                  10520.0
+                ],
+                "media": 10497.33,
+                "mediana": 10520.0,
+                "desvio_padrao": 88.21
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  10.16,
+                  10.32,
+                  10.27
+                ],
+                "media": 10.25,
+                "mediana": 10.27,
+                "desvio_padrao": 0.08
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.03,
+                  0.04,
+                  0.03
+                ],
+                "media": 0.03,
+                "mediana": 0.03,
+                "desvio_padrao": 0.01
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.02,
+                  0.02,
+                  0.03
+                ],
+                "media": 0.02,
+                "mediana": 0.02,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.05,
+                  0.06,
+                  0.06
+                ],
+                "media": 0.06,
+                "mediana": 0.06,
+                "desvio_padrao": 0.01
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  257.0,
+                  278.0,
+                  232.0
+                ],
+                "media": 255.67,
+                "mediana": 257.0,
+                "desvio_padrao": 23.03
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  2450.0,
+                  2462.0,
+                  2477.0
+                ],
+                "media": 2463.0,
+                "mediana": 2462.0,
+                "desvio_padrao": 13.53
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  148.0,
+                  121.0,
+                  145.0
+                ],
+                "media": 138.0,
+                "mediana": 145.0,
+                "desvio_padrao": 14.8
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  17.0,
+                  16.0,
+                  11.0
+                ],
+                "media": 14.67,
+                "mediana": 16.0,
+                "desvio_padrao": 3.21
+              }
+            }
+          },
+          "zstd": {
+            "tamanho_imagem_bytes": 929792,
+            "tamanho_imagem_mib": 0.89,
+            "razao_compressao": 0.298,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                104.0,
+                100.38,
+                104.93
+              ],
+              "media": 103.1,
+              "mediana": 104.0,
+              "desvio_padrao": 2.4
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  73076.0,
+                  73396.0,
+                  73544.0
+                ],
+                "media": 73338.67,
+                "mediana": 73396.0,
+                "desvio_padrao": 239.21
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  71.36,
+                  71.68,
+                  71.82
+                ],
+                "media": 71.62,
+                "mediana": 71.68,
+                "desvio_padrao": 0.24
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.5,
+                  0.49,
+                  0.52
+                ],
+                "media": 0.5,
+                "mediana": 0.5,
+                "desvio_padrao": 0.02
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.08,
+                  0.08,
+                  0.06
+                ],
+                "media": 0.07,
+                "mediana": 0.08,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.58,
+                  0.57,
+                  0.58
+                ],
+                "media": 0.58,
+                "mediana": 0.58,
+                "desvio_padrao": 0.01
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  573.0,
+                  583.0,
+                  571.0
+                ],
+                "media": 575.67,
+                "mediana": 573.0,
+                "desvio_padrao": 6.43
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  19003.0,
+                  19060.0,
+                  18510.0
+                ],
+                "media": 18857.67,
+                "mediana": 19003.0,
+                "desvio_padrao": 302.43
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  970.0,
+                  1075.0,
+                  741.0
+                ],
+                "media": 928.67,
+                "mediana": 970.0,
+                "desvio_padrao": 170.79
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  194.0,
+                  124.0,
+                  230.0
+                ],
+                "media": 182.67,
+                "mediana": 194.0,
+                "desvio_padrao": 53.9
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                16.63,
+                16.34,
+                16.68
+              ],
+              "media": 16.55,
+              "mediana": 16.63,
+              "desvio_padrao": 0.18
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  9316.0,
+                  9332.0,
+                  9200.0
+                ],
+                "media": 9282.67,
+                "mediana": 9316.0,
+                "desvio_padrao": 72.04
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  9.1,
+                  9.11,
+                  8.98
+                ],
+                "media": 9.06,
+                "mediana": 9.1,
+                "desvio_padrao": 0.07
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.02,
+                  0.02,
+                  0.02
+                ],
+                "media": 0.02,
+                "mediana": 0.02,
+                "desvio_padrao": 0.0
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.02,
+                  0.02,
+                  0.02
+                ],
+                "media": 0.02,
+                "mediana": 0.02,
+                "desvio_padrao": 0.0
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  206.0,
+                  200.0,
+                  206.0
+                ],
+                "media": 204.0,
+                "mediana": 206.0,
+                "desvio_padrao": 3.46
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  1759.0,
+                  1764.0,
+                  1754.0
+                ],
+                "media": 1759.0,
+                "mediana": 1759.0,
+                "desvio_padrao": 5.0
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  168.0,
+                  193.0,
+                  191.0
+                ],
+                "media": 184.0,
+                "mediana": 191.0,
+                "desvio_padrao": 13.89
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  7.0,
+                  8.0,
+                  7.0
+                ],
+                "media": 7.33,
+                "mediana": 7.0,
+                "desvio_padrao": 0.58
+              }
+            }
+          },
+          "gzip": {
+            "tamanho_imagem_bytes": 1060864,
+            "tamanho_imagem_mib": 1.01,
+            "razao_compressao": 0.339,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                70.63,
+                71.8,
+                73.76
+              ],
+              "media": 72.06,
+              "mediana": 71.8,
+              "desvio_padrao": 1.58
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  29468.0,
+                  30180.0,
+                  29644.0
+                ],
+                "media": 29764.0,
+                "mediana": 29644.0,
+                "desvio_padrao": 370.86
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  28.78,
+                  29.47,
+                  28.95
+                ],
+                "media": 29.07,
+                "mediana": 28.95,
+                "desvio_padrao": 0.36
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.33,
+                  0.33,
+                  0.32
+                ],
+                "media": 0.33,
+                "mediana": 0.33,
+                "desvio_padrao": 0.01
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.03,
+                  0.04,
+                  0.04
+                ],
+                "media": 0.04,
+                "mediana": 0.04,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.36,
+                  0.37,
+                  0.36
+                ],
+                "media": 0.36,
+                "mediana": 0.36,
+                "desvio_padrao": 0.01
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  537.0,
+                  528.0,
+                  511.0
+                ],
+                "media": 525.33,
+                "mediana": 528.0,
+                "desvio_padrao": 13.2
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  7716.0,
+                  7708.0,
+                  7703.0
+                ],
+                "media": 7709.0,
+                "mediana": 7708.0,
+                "desvio_padrao": 6.56
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  923.0,
+                  916.0,
+                  1002.0
+                ],
+                "media": 947.0,
+                "mediana": 923.0,
+                "desvio_padrao": 47.76
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  150.0,
+                  103.0,
+                  137.0
+                ],
+                "media": 130.0,
+                "mediana": 137.0,
+                "desvio_padrao": 24.27
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                17.41,
+                17.96,
+                17.7
+              ],
+              "media": 17.69,
+              "mediana": 17.7,
+              "desvio_padrao": 0.28
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  8736.0,
+                  8760.0,
+                  8628.0
+                ],
+                "media": 8708.0,
+                "mediana": 8736.0,
+                "desvio_padrao": 70.31
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  8.53,
+                  8.55,
+                  8.43
+                ],
+                "media": 8.5,
+                "mediana": 8.53,
+                "desvio_padrao": 0.06
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.01,
+                  0.01,
+                  0.01
+                ],
+                "media": 0.01,
+                "mediana": 0.01,
+                "desvio_padrao": 0.0
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.01,
+                  0.02,
+                  0.02
+                ],
+                "media": 0.02,
+                "mediana": 0.02,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.02,
+                  0.03,
+                  0.03
+                ],
+                "media": 0.03,
+                "mediana": 0.03,
+                "desvio_padrao": 0.01
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  218.0,
+                  225.0,
+                  231.0
+                ],
+                "media": 224.67,
+                "mediana": 225.0,
+                "desvio_padrao": 6.51
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  1678.0,
+                  1685.0,
+                  1679.0
+                ],
+                "media": 1680.67,
+                "mediana": 1679.0,
+                "desvio_padrao": 3.79
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  199.0,
+                  167.0,
+                  159.0
+                ],
+                "media": 175.0,
+                "mediana": 167.0,
+                "desvio_padrao": 21.17
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  10.0,
+                  4.0,
+                  11.0
+                ],
+                "media": 8.33,
+                "mediana": 10.0,
+                "desvio_padrao": 3.79
+              }
+            }
+          }
+        }
+      },
+      "execucao_snapd": {
+        "tempo_instalacao_local_ms": {
+          "repeticoes": [
+            2764.48,
+            2723.89,
+            2758.77
+          ],
+          "media": 2749.05,
+          "mediana": 2758.77,
+          "desvio_padrao": 21.97
+        },
+        "tempo_instalacao_online_inicial_ms": 142619,
+        "tempo_carga_real_ms": {
+          "repeticoes": [
+            434.45,
+            408.56,
+            473.44
+          ],
+          "media": 438.82,
+          "mediana": 434.45,
+          "desvio_padrao": 32.66
+        },
+        "recursos_carga_real": {
+          "amostras_validas": 3,
+          "max_rss_kib": {
+            "repeticoes": [
+              33076.0,
+              34112.0,
+              34024.0
+            ],
+            "media": 33737.33,
+            "mediana": 34024.0,
+            "desvio_padrao": 574.42
+          },
+          "max_rss_mib": {
+            "repeticoes": [
+              32.3,
+              33.31,
+              33.23
+            ],
+            "media": 32.95,
+            "mediana": 33.23,
+            "desvio_padrao": 0.56
+          },
+          "cpu_user_s": {
+            "repeticoes": [
+              0.09,
+              0.08,
+              0.09
+            ],
+            "media": 0.09,
+            "mediana": 0.09,
+            "desvio_padrao": 0.01
+          },
+          "cpu_sys_s": {
+            "repeticoes": [
+              0.16,
+              0.16,
+              0.17
+            ],
+            "media": 0.16,
+            "mediana": 0.16,
+            "desvio_padrao": 0.01
+          },
+          "cpu_total_s": {
+            "repeticoes": [
+              0.25,
+              0.24,
+              0.26
+            ],
+            "media": 0.25,
+            "mediana": 0.25,
+            "desvio_padrao": 0.01
+          },
+          "cpu_pct": {
+            "repeticoes": [
+              59.0,
+              61.0,
+              56.0
+            ],
+            "media": 58.67,
+            "mediana": 59.0,
+            "desvio_padrao": 2.52
+          },
+          "minor_faults": {
+            "repeticoes": [
+              14563.0,
+              14502.0,
+              14666.0
+            ],
+            "media": 14577.0,
+            "mediana": 14563.0,
+            "desvio_padrao": 82.89
+          },
+          "major_faults": {
+            "repeticoes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "media": 0.0,
+            "mediana": 0.0,
+            "desvio_padrao": 0.0
+          },
+          "vol_ctx": {
+            "repeticoes": [
+              9529.0,
+              8512.0,
+              9248.0
+            ],
+            "media": 9096.33,
+            "mediana": 9248.0,
+            "desvio_padrao": 525.19
+          },
+          "invol_ctx": {
+            "repeticoes": [
+              15.0,
+              13.0,
+              26.0
+            ],
+            "media": 18.0,
+            "mediana": 15.0,
+            "desvio_padrao": 7.0
+          }
+        },
+        "carga_real_artefato": {
+          "verificado": true,
+          "saida": "Text Editor 48.3 (48.3)\n\n            GTK: 4.20.4 (Compiled against 4.18.4)\n  GtkSourceView: 5.18.0 (Compiled against 5.16.0)\n\nCopyright 2020-2025 Christian Hergert, et al.\nThis is free software; see the source for copying conditions. There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+        },
+        "strace_carga_real": {
+          "total_calls": 17181,
+          "total_errors": 8165,
+          "syscalls": {
+            "wait4": {
+              "calls": 61,
+              "errors": 29
+            },
+            "access": {
+              "calls": 4952,
+              "errors": 4870
+            },
+            "futex": {
+              "calls": 399,
+              "errors": 53
+            },
+            "openat": {
+              "calls": 2972,
+              "errors": 2340
+            },
+            "nanosleep": {
+              "calls": 404,
+              "errors": 0
+            },
+            "read": {
+              "calls": 918,
+              "errors": 6
+            },
+            "mmap": {
+              "calls": 1270,
+              "errors": 0
+            },
+            "execve": {
+              "calls": 25,
+              "errors": 0
+            },
+            "newfstatat": {
+              "calls": 1110,
+              "errors": 686
+            },
+            "waitid": {
+              "calls": 2,
+              "errors": 1
+            },
+            "clone": {
+              "calls": 45,
+              "errors": 0
+            },
+            "getdents64": {
+              "calls": 126,
+              "errors": 0
+            },
+            "unshare": {
+              "calls": 1,
+              "errors": 0
+            },
+            "close": {
+              "calls": 761,
+              "errors": 0
+            },
+            "rt_sigprocmask": {
+              "calls": 578,
+              "errors": 0
+            },
+            "fstat": {
+              "calls": 546,
+              "errors": 0
+            },
+            "rt_sigaction": {
+              "calls": 1074,
+              "errors": 0
+            },
+            "mprotect": {
+              "calls": 257,
+              "errors": 0
+            },
+            "clone3": {
+              "calls": 19,
+              "errors": 0
+            },
+            "seccomp": {
+              "calls": 11,
+              "errors": 6
+            },
+            "getpid": {
+              "calls": 73,
+              "errors": 0
+            },
+            "munmap": {
+              "calls": 43,
+              "errors": 0
+            },
+            "sigaltstack": {
+              "calls": 75,
+              "errors": 0
+            },
+            "epoll_pwait": {
+              "calls": 26,
+              "errors": 0
+            },
+            "readlink": {
+              "calls": 105,
+              "errors": 101
+            },
+            "fcntl": {
+              "calls": 153,
+              "errors": 2
+            },
+            "brk": {
+              "calls": 91,
+              "errors": 0
+            },
+            "sched_yield": {
+              "calls": 34,
+              "errors": 0
+            },
+            "gettid": {
+              "calls": 53,
+              "errors": 0
+            },
+            "prctl": {
+              "calls": 101,
+              "errors": 10
+            },
+            "rt_sigreturn": {
+              "calls": 56,
+              "errors": 2
+            },
+            "tgkill": {
+              "calls": 26,
+              "errors": 0
+            },
+            "readlinkat": {
+              "calls": 28,
+              "errors": 0
+            },
+            "set_robust_list": {
+              "calls": 74,
+              "errors": 0
+            },
+            "rseq": {
+              "calls": 42,
+              "errors": 0
+            },
+            "write": {
+              "calls": 35,
+              "errors": 0
+            },
+            "epoll_ctl": {
+              "calls": 60,
+              "errors": 12
+            },
+            "pread64": {
+              "calls": 62,
+              "errors": 0
+            },
+            "execveat": {
+              "calls": 1,
+              "errors": 0
+            },
+            "pipe2": {
+              "calls": 21,
+              "errors": 0
+            },
+            "prlimit64": {
+              "calls": 30,
+              "errors": 0
+            },
+            "getuid": {
+              "calls": 46,
+              "errors": 0
+            },
+            "getrandom": {
+              "calls": 25,
+              "errors": 0
+            },
+            "ioctl": {
+              "calls": 23,
+              "errors": 23
+            },
+            "arch_prctl": {
+              "calls": 26,
+              "errors": 0
+            },
+            "getgid": {
+              "calls": 39,
+              "errors": 0
+            },
+            "getegid": {
+              "calls": 38,
+              "errors": 0
+            },
+            "set_tid_address": {
+              "calls": 23,
+              "errors": 0
+            },
+            "geteuid": {
+              "calls": 40,
+              "errors": 0
+            },
+            "dup2": {
+              "calls": 32,
+              "errors": 0
+            },
+            "setrlimit": {
+              "calls": 9,
+              "errors": 0
+            },
+            "lseek": {
+              "calls": 13,
+              "errors": 2
+            },
+            "mount": {
+              "calls": 1,
+              "errors": 0
+            },
+            "symlinkat": {
+              "calls": 3,
+              "errors": 2
+            },
+            "madvise": {
+              "calls": 12,
+              "errors": 0
+            },
+            "epoll_create1": {
+              "calls": 6,
+              "errors": 0
+            },
+            "eventfd2": {
+              "calls": 7,
+              "errors": 0
+            },
+            "statfs": {
+              "calls": 6,
+              "errors": 2
+            },
+            "getrlimit": {
+              "calls": 6,
+              "errors": 0
+            },
+            "socket": {
+              "calls": 4,
+              "errors": 0
+            },
+            "mkdirat": {
+              "calls": 15,
+              "errors": 15
+            },
+            "capset": {
+              "calls": 6,
+              "errors": 0
+            },
+            "sched_getaffinity": {
+              "calls": 9,
+              "errors": 0
+            },
+            "renameat": {
+              "calls": 1,
+              "errors": 0
+            },
+            "capget": {
+              "calls": 7,
+              "errors": 0
+            },
+            "getppid": {
+              "calls": 6,
+              "errors": 0
+            },
+            "fchmodat": {
+              "calls": 1,
+              "errors": 0
+            },
+            "uname": {
+              "calls": 3,
+              "errors": 0
+            },
+            "connect": {
+              "calls": 4,
+              "errors": 2
+            },
+            "umask": {
+              "calls": 6,
+              "errors": 0
+            },
+            "chdir": {
+              "calls": 4,
+              "errors": 0
+            },
+            "flock": {
+              "calls": 5,
+              "errors": 0
+            },
+            "getsockname": {
+              "calls": 2,
+              "errors": 0
+            },
+            "pidfd_open": {
+              "calls": 1,
+              "errors": 0
+            },
+            "faccessat2": {
+              "calls": 2,
+              "errors": 1
+            },
+            "getpgrp": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getgroups": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getcwd": {
+              "calls": 1,
+              "errors": 0
+            },
+            "fchown": {
+              "calls": 2,
+              "errors": 0
+            },
+            "pidfd_send_signal": {
+              "calls": 1,
+              "errors": 0
+            },
+            "alarm": {
+              "calls": 8,
+              "errors": 0
+            },
+            "getresuid": {
+              "calls": 1,
+              "errors": 0
+            },
+            "getresgid": {
+              "calls": 1,
+              "errors": 0
+            },
+            "getpeername": {
+              "calls": 2,
+              "errors": 0
+            },
+            "fchdir": {
+              "calls": 2,
+              "errors": 0
+            },
+            "kill": {
+              "calls": 2,
+              "errors": 0
+            },
+            "fstatfs": {
+              "calls": 1,
+              "errors": 0
+            },
+            "dup3": {
+              "calls": 3,
+              "errors": 0
+            },
+            "setns": {
+              "calls": 2,
+              "errors": 0
+            }
+          }
+        }
+      }
+    },
+    "vlc": {
+      "snap": "vlc",
+      "canal_selecionado": "stable",
+      "publisher": "VideoLAN",
+      "publisher_validation": "verified",
+      "canais_stable_amd64": [
+        {
+          "channel": "stable",
+          "version": "3.0.24-rc1",
+          "revision": 4472,
+          "confinement": null,
+          "base": null,
+          "download_mib": 264.78
+        }
+      ],
+      "versao": "3.0.24-rc1",
+      "revisao": 4472,
+      "confinement": "strict",
+      "base": "core24",
+      "download_bytes": 277643264,
+      "download_mib": 264.78,
+      "sha3_384_esperado": "2c00f12922016b1e94e98b2f127d08fa6598161c6a6ee5e459735991df790b4f5f15e6111decaadc012053538d26cd97",
+      "inspecao_local": {
+        "executado": true,
+        "arquivo_cache": "/tmp/so-semana05-cache/snaps/vlc_4472.snap",
+        "tamanho_snap_bytes": 277643264,
+        "sha3_384_verificado": "2c00f12922016b1e94e98b2f127d08fa6598161c6a6ee5e459735991df790b4f5f15e6111decaadc012053538d26cd97",
+        "sha3_384_coincide": true,
+        "superbloco_squashfs": {
+          "compressor_original": "lzo",
+          "block_size_bytes": 131072,
+          "inodes_squashfs": 15363,
+          "fragments": 0,
+          "filesystem_size_bytes": 277641136.0
+        },
+        "binario_inspecionado": "usr/bin/vlc",
+        "elf": {
+          "needed_count": 2,
+          "needed": [
+            "libvlc.so.5",
+            "libc.so.6"
+          ],
+          "runpath_count": 0,
+          "runpath": [],
+          "rpath": []
+        },
+        "escopo_benchmark_squashfs": "subarvore_meta_e_binario_principal + usr/lib/vlc (snap > 120 MiB; use --full-squashfs-bench para árvore completa)",
+        "amostra_descompactada_bytes": 40871605,
+        "amostra_descompactada_mib": 38.98,
+        "amostra_arquivos": 431,
+        "comparacao_squashfs": {
+          "xz": {
+            "tamanho_imagem_bytes": 11911168,
+            "tamanho_imagem_mib": 11.36,
+            "razao_compressao": 0.291,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                1183.86,
+                1186.78,
+                1294.33
+              ],
+              "media": 1221.66,
+              "mediana": 1186.78,
+              "desvio_padrao": 62.95
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  111244.0,
+                  121356.0,
+                  114012.0
+                ],
+                "media": 115537.33,
+                "mediana": 114012.0,
+                "desvio_padrao": 5225.72
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  108.64,
+                  118.51,
+                  111.34
+                ],
+                "media": 112.83,
+                "mediana": 111.34,
+                "desvio_padrao": 5.1
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  12.3,
+                  12.37,
+                  12.55
+                ],
+                "media": 12.41,
+                "mediana": 12.37,
+                "desvio_padrao": 0.13
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.3,
+                  0.26,
+                  0.27
+                ],
+                "media": 0.28,
+                "mediana": 0.27,
+                "desvio_padrao": 0.02
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  12.6,
+                  12.63,
+                  12.82
+                ],
+                "media": 12.68,
+                "mediana": 12.63,
+                "desvio_padrao": 0.12
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  1067.0,
+                  1066.0,
+                  993.0
+                ],
+                "media": 1042.0,
+                "mediana": 1066.0,
+                "desvio_padrao": 42.44
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  60465.0,
+                  62026.0,
+                  54774.0
+                ],
+                "media": 59088.33,
+                "mediana": 60465.0,
+                "desvio_padrao": 3816.97
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  2102.0,
+                  2150.0,
+                  2040.0
+                ],
+                "media": 2097.33,
+                "mediana": 2102.0,
+                "desvio_padrao": 55.15
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  5617.0,
+                  5627.0,
+                  5574.0
+                ],
+                "media": 5606.0,
+                "mediana": 5617.0,
+                "desvio_padrao": 28.16
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                84.69,
+                85.6,
+                80.45
+              ],
+              "media": 83.58,
+              "mediana": 84.69,
+              "desvio_padrao": 2.75
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  48088.0,
+                  47944.0,
+                  47752.0
+                ],
+                "media": 47928.0,
+                "mediana": 47944.0,
+                "desvio_padrao": 168.57
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  46.96,
+                  46.82,
+                  46.63
+                ],
+                "media": 46.8,
+                "mediana": 46.82,
+                "desvio_padrao": 0.17
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.58,
+                  0.58,
+                  0.58
+                ],
+                "media": 0.58,
+                "mediana": 0.58,
+                "desvio_padrao": 0.0
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.07,
+                  0.07,
+                  0.07
+                ],
+                "media": 0.07,
+                "mediana": 0.07,
+                "desvio_padrao": 0.0
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.65,
+                  0.65,
+                  0.65
+                ],
+                "media": 0.65,
+                "mediana": 0.65,
+                "desvio_padrao": 0.0
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  800.0,
+                  790.0,
+                  851.0
+                ],
+                "media": 813.67,
+                "mediana": 800.0,
+                "desvio_padrao": 32.72
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  11646.0,
+                  11608.0,
+                  11577.0
+                ],
+                "media": 11610.33,
+                "mediana": 11608.0,
+                "desvio_padrao": 34.56
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  536.0,
+                  412.0,
+                  478.0
+                ],
+                "media": 475.33,
+                "mediana": 478.0,
+                "desvio_padrao": 62.04
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  243.0,
+                  237.0,
+                  293.0
+                ],
+                "media": 257.67,
+                "mediana": 243.0,
+                "desvio_padrao": 30.75
+              }
+            }
+          },
+          "zstd": {
+            "tamanho_imagem_bytes": 13152256,
+            "tamanho_imagem_mib": 12.54,
+            "razao_compressao": 0.322,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                775.6,
+                764.85,
+                761.4
+              ],
+              "media": 767.28,
+              "mediana": 764.85,
+              "desvio_padrao": 7.41
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  133088.0,
+                  121688.0,
+                  127176.0
+                ],
+                "media": 127317.33,
+                "mediana": 127176.0,
+                "desvio_padrao": 5701.31
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  129.97,
+                  118.84,
+                  124.2
+                ],
+                "media": 124.34,
+                "mediana": 124.2,
+                "desvio_padrao": 5.57
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  7.71,
+                  7.68,
+                  7.69
+                ],
+                "media": 7.69,
+                "mediana": 7.69,
+                "desvio_padrao": 0.02
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.22,
+                  0.2,
+                  0.2
+                ],
+                "media": 0.21,
+                "mediana": 0.2,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  7.93,
+                  7.88,
+                  7.89
+                ],
+                "media": 7.9,
+                "mediana": 7.89,
+                "desvio_padrao": 0.03
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  1025.0,
+                  1033.0,
+                  1039.0
+                ],
+                "media": 1032.33,
+                "mediana": 1033.0,
+                "desvio_padrao": 7.02
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  43755.0,
+                  43693.0,
+                  45785.0
+                ],
+                "media": 44411.0,
+                "mediana": 43755.0,
+                "desvio_padrao": 1190.32
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  1892.0,
+                  1876.0,
+                  1693.0
+                ],
+                "media": 1820.33,
+                "mediana": 1876.0,
+                "desvio_padrao": 110.56
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  4235.0,
+                  3289.0,
+                  3781.0
+                ],
+                "media": 3768.33,
+                "mediana": 3781.0,
+                "desvio_padrao": 473.13
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                45.28,
+                44.58,
+                49.19
+              ],
+              "media": 46.35,
+              "mediana": 45.28,
+              "desvio_padrao": 2.48
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  47404.0,
+                  47312.0,
+                  47400.0
+                ],
+                "media": 47372.0,
+                "mediana": 47400.0,
+                "desvio_padrao": 52.0
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  46.29,
+                  46.2,
+                  46.29
+                ],
+                "media": 46.26,
+                "mediana": 46.29,
+                "desvio_padrao": 0.05
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.08,
+                  0.09,
+                  0.1
+                ],
+                "media": 0.09,
+                "mediana": 0.09,
+                "desvio_padrao": 0.01
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.09,
+                  0.08,
+                  0.07
+                ],
+                "media": 0.08,
+                "mediana": 0.08,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.17,
+                  0.17,
+                  0.17
+                ],
+                "media": 0.17,
+                "mediana": 0.17,
+                "desvio_padrao": 0.0
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  406.0,
+                  411.0,
+                  387.0
+                ],
+                "media": 401.33,
+                "mediana": 406.0,
+                "desvio_padrao": 12.66
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  11323.0,
+                  11329.0,
+                  11370.0
+                ],
+                "media": 11340.67,
+                "mediana": 11329.0,
+                "desvio_padrao": 25.58
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  1362.0,
+                  1298.0,
+                  1376.0
+                ],
+                "media": 1345.33,
+                "mediana": 1362.0,
+                "desvio_padrao": 41.59
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  20.0,
+                  21.0,
+                  23.0
+                ],
+                "media": 21.33,
+                "mediana": 21.0,
+                "desvio_padrao": 1.53
+              }
+            }
+          },
+          "gzip": {
+            "tamanho_imagem_bytes": 14815232,
+            "tamanho_imagem_mib": 14.13,
+            "razao_compressao": 0.362,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                708.5,
+                734.92,
+                728.62
+              ],
+              "media": 724.01,
+              "mediana": 728.62,
+              "desvio_padrao": 13.8
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  74984.0,
+                  76416.0,
+                  73848.0
+                ],
+                "media": 75082.67,
+                "mediana": 74984.0,
+                "desvio_padrao": 1286.84
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  73.23,
+                  74.62,
+                  72.12
+                ],
+                "media": 73.32,
+                "mediana": 73.23,
+                "desvio_padrao": 1.25
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  7.22,
+                  7.27,
+                  7.26
+                ],
+                "media": 7.25,
+                "mediana": 7.26,
+                "desvio_padrao": 0.03
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.13,
+                  0.13,
+                  0.13
+                ],
+                "media": 0.13,
+                "mediana": 0.13,
+                "desvio_padrao": 0.0
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  7.35,
+                  7.4,
+                  7.39
+                ],
+                "media": 7.38,
+                "mediana": 7.39,
+                "desvio_padrao": 0.03
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  1041.0,
+                  1010.0,
+                  1017.0
+                ],
+                "media": 1022.67,
+                "mediana": 1017.0,
+                "desvio_padrao": 16.26
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  21341.0,
+                  22210.0,
+                  21697.0
+                ],
+                "media": 21749.33,
+                "mediana": 21697.0,
+                "desvio_padrao": 436.86
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  1777.0,
+                  1320.0,
+                  1839.0
+                ],
+                "media": 1645.33,
+                "mediana": 1777.0,
+                "desvio_padrao": 283.45
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  3501.0,
+                  3301.0,
+                  3618.0
+                ],
+                "media": 3473.33,
+                "mediana": 3501.0,
+                "desvio_padrao": 160.3
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                56.27,
+                52.93,
+                59.11
+              ],
+              "media": 56.1,
+              "mediana": 56.27,
+              "desvio_padrao": 3.09
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  46760.0,
+                  46696.0,
+                  46620.0
+                ],
+                "media": 46692.0,
+                "mediana": 46696.0,
+                "desvio_padrao": 70.09
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  45.66,
+                  45.6,
+                  45.53
+                ],
+                "media": 45.6,
+                "mediana": 45.6,
+                "desvio_padrao": 0.07
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.18,
+                  0.19,
+                  0.18
+                ],
+                "media": 0.18,
+                "mediana": 0.18,
+                "desvio_padrao": 0.01
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.08,
+                  0.07,
+                  0.09
+                ],
+                "media": 0.08,
+                "mediana": 0.08,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.26,
+                  0.26,
+                  0.27
+                ],
+                "media": 0.26,
+                "mediana": 0.26,
+                "desvio_padrao": 0.01
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  489.0,
+                  527.0,
+                  487.0
+                ],
+                "media": 501.0,
+                "mediana": 489.0,
+                "desvio_padrao": 22.54
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  11179.0,
+                  11177.0,
+                  11175.0
+                ],
+                "media": 11177.0,
+                "mediana": 11177.0,
+                "desvio_padrao": 2.0
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  1049.0,
+                  1217.0,
+                  1184.0
+                ],
+                "media": 1150.0,
+                "mediana": 1184.0,
+                "desvio_padrao": 89.01
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  50.0,
+                  62.0,
+                  38.0
+                ],
+                "media": 50.0,
+                "mediana": 50.0,
+                "desvio_padrao": 12.0
+              }
+            }
+          }
+        }
+      },
+      "execucao_snapd": {
+        "tempo_instalacao_local_ms": {
+          "repeticoes": [
+            6678.56,
+            6943.99,
+            7070.58
+          ],
+          "media": 6897.71,
+          "mediana": 6943.99,
+          "desvio_padrao": 200.07
+        },
+        "tempo_instalacao_online_inicial_ms": 297687,
+        "tempo_carga_real_ms": {
+          "repeticoes": [
+            459.29,
+            436.29,
+            444.45
+          ],
+          "media": 446.68,
+          "mediana": 444.45,
+          "desvio_padrao": 11.66
+        },
+        "recursos_carga_real": {
+          "amostras_validas": 3,
+          "max_rss_kib": {
+            "repeticoes": [
+              41164.0,
+              40568.0,
+              40440.0
+            ],
+            "media": 40724.0,
+            "mediana": 40568.0,
+            "desvio_padrao": 386.39
+          },
+          "max_rss_mib": {
+            "repeticoes": [
+              40.2,
+              39.62,
+              39.49
+            ],
+            "media": 39.77,
+            "mediana": 39.62,
+            "desvio_padrao": 0.38
+          },
+          "cpu_user_s": {
+            "repeticoes": [
+              0.15,
+              0.16,
+              0.15
+            ],
+            "media": 0.15,
+            "mediana": 0.15,
+            "desvio_padrao": 0.01
+          },
+          "cpu_sys_s": {
+            "repeticoes": [
+              0.13,
+              0.13,
+              0.14
+            ],
+            "media": 0.13,
+            "mediana": 0.13,
+            "desvio_padrao": 0.01
+          },
+          "cpu_total_s": {
+            "repeticoes": [
+              0.28,
+              0.29,
+              0.29
+            ],
+            "media": 0.29,
+            "mediana": 0.29,
+            "desvio_padrao": 0.01
+          },
+          "cpu_pct": {
+            "repeticoes": [
+              64.0,
+              67.0,
+              66.0
+            ],
+            "media": 65.67,
+            "mediana": 66.0,
+            "desvio_padrao": 1.53
+          },
+          "minor_faults": {
+            "repeticoes": [
+              16476.0,
+              16451.0,
+              16410.0
+            ],
+            "media": 16445.67,
+            "mediana": 16451.0,
+            "desvio_padrao": 33.32
+          },
+          "major_faults": {
+            "repeticoes": [
+              15.0,
+              0.0,
+              0.0
+            ],
+            "media": 5.0,
+            "mediana": 0.0,
+            "desvio_padrao": 8.66
+          },
+          "vol_ctx": {
+            "repeticoes": [
+              5218.0,
+              4457.0,
+              4652.0
+            ],
+            "media": 4775.67,
+            "mediana": 4652.0,
+            "desvio_padrao": 395.29
+          },
+          "invol_ctx": {
+            "repeticoes": [
+              22.0,
+              22.0,
+              26.0
+            ],
+            "media": 23.33,
+            "mediana": 22.0,
+            "desvio_padrao": 2.31
+          }
+        },
+        "carga_real_artefato": {
+          "verificado": true,
+          "formato": "ogg/vorbis",
+          "tamanho_bytes": 11543,
+          "magic_ok": true
+        },
+        "strace_carga_real": {
+          "total_calls": 15935,
+          "total_errors": 3499,
+          "syscalls": {
+            "futex": {
+              "calls": 680,
+              "errors": 99
+            },
+            "wait4": {
+              "calls": 64,
+              "errors": 30
+            },
+            "openat": {
+              "calls": 3282,
+              "errors": 2331
+            },
+            "rt_sigtimedwait": {
+              "calls": 1,
+              "errors": 0
+            },
+            "nanosleep": {
+              "calls": 416,
+              "errors": 0
+            },
+            "mmap": {
+              "calls": 1908,
+              "errors": 0
+            },
+            "newfstatat": {
+              "calls": 1755,
+              "errors": 850
+            },
+            "read": {
+              "calls": 965,
+              "errors": 8
+            },
+            "execve": {
+              "calls": 27,
+              "errors": 0
+            },
+            "waitid": {
+              "calls": 2,
+              "errors": 1
+            },
+            "munmap": {
+              "calls": 304,
+              "errors": 0
+            },
+            "close": {
+              "calls": 1130,
+              "errors": 2
+            },
+            "clone": {
+              "calls": 47,
+              "errors": 0
+            },
+            "fstat": {
+              "calls": 865,
+              "errors": 0
+            },
+            "rt_sigaction": {
+              "calls": 1116,
+              "errors": 0
+            },
+            "mprotect": {
+              "calls": 542,
+              "errors": 0
+            },
+            "rt_sigprocmask": {
+              "calls": 635,
+              "errors": 0
+            },
+            "getdents64": {
+              "calls": 126,
+              "errors": 0
+            },
+            "unshare": {
+              "calls": 1,
+              "errors": 0
+            },
+            "seccomp": {
+              "calls": 11,
+              "errors": 6
+            },
+            "clone3": {
+              "calls": 29,
+              "errors": 0
+            },
+            "epoll_pwait": {
+              "calls": 28,
+              "errors": 0
+            },
+            "fcntl": {
+              "calls": 174,
+              "errors": 3
+            },
+            "sigaltstack": {
+              "calls": 73,
+              "errors": 0
+            },
+            "gettid": {
+              "calls": 62,
+              "errors": 0
+            },
+            "set_robust_list": {
+              "calls": 88,
+              "errors": 0
+            },
+            "brk": {
+              "calls": 91,
+              "errors": 0
+            },
+            "write": {
+              "calls": 104,
+              "errors": 0
+            },
+            "sched_yield": {
+              "calls": 37,
+              "errors": 0
+            },
+            "prctl": {
+              "calls": 102,
+              "errors": 10
+            },
+            "rseq": {
+              "calls": 54,
+              "errors": 0
+            },
+            "readlink": {
+              "calls": 63,
+              "errors": 58
+            },
+            "epoll_ctl": {
+              "calls": 60,
+              "errors": 12
+            },
+            "rt_sigreturn": {
+              "calls": 49,
+              "errors": 3
+            },
+            "lseek": {
+              "calls": 79,
+              "errors": 3
+            },
+            "access": {
+              "calls": 65,
+              "errors": 27
+            },
+            "execveat": {
+              "calls": 1,
+              "errors": 0
+            },
+            "getpid": {
+              "calls": 80,
+              "errors": 0
+            },
+            "pipe2": {
+              "calls": 25,
+              "errors": 0
+            },
+            "pread64": {
+              "calls": 66,
+              "errors": 0
+            },
+            "eventfd2": {
+              "calls": 35,
+              "errors": 0
+            },
+            "dup3": {
+              "calls": 50,
+              "errors": 0
+            },
+            "readlinkat": {
+              "calls": 17,
+              "errors": 0
+            },
+            "prlimit64": {
+              "calls": 34,
+              "errors": 0
+            },
+            "tgkill": {
+              "calls": 22,
+              "errors": 0
+            },
+            "getrandom": {
+              "calls": 27,
+              "errors": 0
+            },
+            "madvise": {
+              "calls": 23,
+              "errors": 0
+            },
+            "connect": {
+              "calls": 8,
+              "errors": 6
+            },
+            "arch_prctl": {
+              "calls": 28,
+              "errors": 0
+            },
+            "getuid": {
+              "calls": 50,
+              "errors": 0
+            },
+            "ioctl": {
+              "calls": 26,
+              "errors": 26
+            },
+            "readv": {
+              "calls": 30,
+              "errors": 0
+            },
+            "set_tid_address": {
+              "calls": 25,
+              "errors": 0
+            },
+            "poll": {
+              "calls": 31,
+              "errors": 0
+            },
+            "mkdirat": {
+              "calls": 15,
+              "errors": 15
+            },
+            "symlinkat": {
+              "calls": 3,
+              "errors": 2
+            },
+            "geteuid": {
+              "calls": 43,
+              "errors": 0
+            },
+            "dup2": {
+              "calls": 34,
+              "errors": 0
+            },
+            "socket": {
+              "calls": 8,
+              "errors": 0
+            },
+            "getgid": {
+              "calls": 41,
+              "errors": 0
+            },
+            "setrlimit": {
+              "calls": 9,
+              "errors": 0
+            },
+            "statfs": {
+              "calls": 6,
+              "errors": 2
+            },
+            "getrlimit": {
+              "calls": 6,
+              "errors": 0
+            },
+            "getegid": {
+              "calls": 39,
+              "errors": 0
+            },
+            "capset": {
+              "calls": 6,
+              "errors": 0
+            },
+            "sched_getaffinity": {
+              "calls": 11,
+              "errors": 0
+            },
+            "epoll_create1": {
+              "calls": 6,
+              "errors": 0
+            },
+            "renameat": {
+              "calls": 1,
+              "errors": 0
+            },
+            "fadvise64": {
+              "calls": 9,
+              "errors": 1
+            },
+            "capget": {
+              "calls": 7,
+              "errors": 0
+            },
+            "mount": {
+              "calls": 1,
+              "errors": 0
+            },
+            "umask": {
+              "calls": 8,
+              "errors": 0
+            },
+            "getppid": {
+              "calls": 9,
+              "errors": 0
+            },
+            "flock": {
+              "calls": 5,
+              "errors": 0
+            },
+            "getsockname": {
+              "calls": 2,
+              "errors": 0
+            },
+            "alarm": {
+              "calls": 9,
+              "errors": 0
+            },
+            "fchmodat": {
+              "calls": 1,
+              "errors": 0
+            },
+            "chdir": {
+              "calls": 4,
+              "errors": 0
+            },
+            "uname": {
+              "calls": 4,
+              "errors": 0
+            },
+            "fchown": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getpgrp": {
+              "calls": 3,
+              "errors": 0
+            },
+            "pidfd_open": {
+              "calls": 1,
+              "errors": 0
+            },
+            "faccessat2": {
+              "calls": 2,
+              "errors": 1
+            },
+            "setsockopt": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getgroups": {
+              "calls": 2,
+              "errors": 0
+            },
+            "memfd_create": {
+              "calls": 1,
+              "errors": 0
+            },
+            "sendto": {
+              "calls": 1,
+              "errors": 1
+            },
+            "getpeername": {
+              "calls": 2,
+              "errors": 0
+            },
+            "ftruncate": {
+              "calls": 1,
+              "errors": 0
+            },
+            "fchdir": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getcwd": {
+              "calls": 1,
+              "errors": 0
+            },
+            "mkdir": {
+              "calls": 2,
+              "errors": 2
+            },
+            "getresuid": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getresgid": {
+              "calls": 2,
+              "errors": 0
+            },
+            "setns": {
+              "calls": 2,
+              "errors": 0
+            },
+            "pidfd_send_signal": {
+              "calls": 1,
+              "errors": 0
+            },
+            "fstatfs": {
+              "calls": 2,
+              "errors": 0
+            },
+            "kill": {
+              "calls": 2,
+              "errors": 0
+            },
+            "rename": {
+              "calls": 1,
+              "errors": 0
+            },
+            "mlock": {
+              "calls": 1,
+              "errors": 0
+            }
+          }
+        }
+      }
+    },
+    "blender": {
+      "snap": "blender",
+      "canal_selecionado": "4.3/stable",
+      "publisher": "Blender Foundation",
+      "publisher_validation": "verified",
+      "canais_stable_amd64": [
+        {
+          "channel": "stable",
+          "version": "5.3.0",
+          "revision": 7998,
+          "confinement": null,
+          "base": null,
+          "download_mib": 429.96
+        },
+        {
+          "channel": "5.2lts/stable",
+          "version": "5.2.4",
+          "revision": 7997,
+          "confinement": null,
+          "base": null,
+          "download_mib": 406.6
+        },
+        {
+          "channel": "5.1/stable",
+          "version": "5.1.2",
+          "revision": 7480,
+          "confinement": null,
+          "base": null,
+          "download_mib": 415.95
+        },
+        {
+          "channel": "5.0/stable",
+          "version": "5.0.1",
+          "revision": 7093,
+          "confinement": null,
+          "base": null,
+          "download_mib": 398.3
+        },
+        {
+          "channel": "4.5lts/stable",
+          "version": "4.5.16",
+          "revision": 7996,
+          "confinement": null,
+          "base": null,
+          "download_mib": 400.97
+        },
+        {
+          "channel": "4.3/stable",
+          "version": "4.3.1",
+          "revision": 5647,
+          "confinement": null,
+          "base": null,
+          "download_mib": 402.27
+        },
+        {
+          "channel": "4.2lts/stable",
+          "version": "4.2.23",
+          "revision": 7625,
+          "confinement": null,
+          "base": null,
+          "download_mib": 380.33
+        },
+        {
+          "channel": "4.1/stable",
+          "version": "4.1.0",
+          "revision": 4697,
+          "confinement": null,
+          "base": null,
+          "download_mib": 354.44
+        },
+        {
+          "channel": "4.0/stable",
+          "version": "4.0.2",
+          "revision": 4300,
+          "confinement": null,
+          "base": null,
+          "download_mib": 322.57
+        },
+        {
+          "channel": "3.6lts/stable",
+          "version": "3.6.23",
+          "revision": 6337,
+          "confinement": null,
+          "base": null,
+          "download_mib": 315.89
+        },
+        {
+          "channel": "3.5/stable",
+          "version": "3.5.1",
+          "revision": 3584,
+          "confinement": null,
+          "base": null,
+          "download_mib": 300.95
+        },
+        {
+          "channel": "3.4/stable",
+          "version": "3.4.1",
+          "revision": 3132,
+          "confinement": null,
+          "base": null,
+          "download_mib": 267.04
+        },
+        {
+          "channel": "3.3lts/stable",
+          "version": "3.3.21",
+          "revision": 5084,
+          "confinement": null,
+          "base": null,
+          "download_mib": 248.27
+        },
+        {
+          "channel": "3.2/stable",
+          "version": "3.2.2",
+          "revision": 2661,
+          "confinement": null,
+          "base": null,
+          "download_mib": 228.14
+        },
+        {
+          "channel": "3.1/stable",
+          "version": "3.1.2",
+          "revision": 2106,
+          "confinement": null,
+          "base": null,
+          "download_mib": 215.36
+        },
+        {
+          "channel": "3.0/stable",
+          "version": "3.0.1",
+          "revision": 1653,
+          "confinement": null,
+          "base": null,
+          "download_mib": 213.45
+        },
+        {
+          "channel": "2.93lts/stable",
+          "version": "2.93.18",
+          "revision": 3688,
+          "confinement": null,
+          "base": null,
+          "download_mib": 195.96
+        },
+        {
+          "channel": "2.92/stable",
+          "version": "2.92.0",
+          "revision": 111,
+          "confinement": null,
+          "base": null,
+          "download_mib": 187.03
+        },
+        {
+          "channel": "2.91/stable",
+          "version": "2.91.2",
+          "revision": 65,
+          "confinement": null,
+          "base": null,
+          "download_mib": 184.07
+        },
+        {
+          "channel": "2.90/stable",
+          "version": "2.90.1",
+          "revision": 47,
+          "confinement": null,
+          "base": null,
+          "download_mib": 179.04
+        },
+        {
+          "channel": "2.83lts/stable",
+          "version": "2.83.20",
+          "revision": 2252,
+          "confinement": null,
+          "base": null,
+          "download_mib": 168.73
+        },
+        {
+          "channel": "2.82/stable",
+          "version": "2.82a",
+          "revision": 37,
+          "confinement": null,
+          "base": null,
+          "download_mib": 162.74
+        },
+        {
+          "channel": "2.81/stable",
+          "version": "2.81a",
+          "revision": 35,
+          "confinement": null,
+          "base": null,
+          "download_mib": 150.81
+        },
+        {
+          "channel": "2.80/stable",
+          "version": "2.80",
+          "revision": 33,
+          "confinement": null,
+          "base": null,
+          "download_mib": 117.79
+        },
+        {
+          "channel": "2.79/stable",
+          "version": "2.79b",
+          "revision": 20,
+          "confinement": null,
+          "base": null,
+          "download_mib": 123.17
+        },
+        {
+          "channel": "2.9/stable",
+          "version": "2.91.2",
+          "revision": 65,
+          "confinement": null,
+          "base": null,
+          "download_mib": 184.07
+        },
+        {
+          "channel": "2.8/stable",
+          "version": "2.83.10",
+          "revision": 58,
+          "confinement": null,
+          "base": null,
+          "download_mib": 162.71
+        }
+      ],
+      "versao": "4.3.1",
+      "revisao": 5647,
+      "confinement": "classic",
+      "base": "core20",
+      "download_bytes": 421806080,
+      "download_mib": 402.27,
+      "sha3_384_esperado": "1d1e67ec1690a263ee5a74473bd720a75fb6e559c92d8dea4d84339376a22a57614a0589a6e7d5d329b8cb2b3107495c",
+      "inspecao_local": {
+        "executado": true,
+        "arquivo_cache": "/tmp/so-semana05-cache/snaps/blender_5647.snap",
+        "tamanho_snap_bytes": 421806080,
+        "sha3_384_verificado": "1d1e67ec1690a263ee5a74473bd720a75fb6e559c92d8dea4d84339376a22a57614a0589a6e7d5d329b8cb2b3107495c",
+        "sha3_384_coincide": true,
+        "superbloco_squashfs": {
+          "compressor_original": "xz",
+          "block_size_bytes": 131072,
+          "inodes_squashfs": 6862,
+          "fragments": 0,
+          "filesystem_size_bytes": 421802980.0
+        },
+        "binario_inspecionado": "blender",
+        "elf": {
+          "needed_count": 52,
+          "needed": [
+            "libblender_cpu_check.so",
+            "libtbb.so.2",
+            "libutil.so.1",
+            "libpthread.so.0",
+            "libdl.so.2",
+            "libm.so.6",
+            "libosdGPU.so.3.6.0",
+            "libosdCPU.so.3.6.0",
+            "libX11.so.6",
+            "libXrender.so.1",
+            "libXxf86vm.so.1",
+            "libXfixes.so.3",
+            "libXi.so.6",
+            "libxkbcommon.so.0",
+            "libembree4.so.4",
+            "libcycles_kernel_oneapi_aot.so",
+            "libsycl.so.7",
+            "libOpenImageIO.so.2.5",
+            "libOpenImageIO_Util.so.2.5",
+            "liboslcomp.so.1.13",
+            "liboslexec.so.1.13",
+            "liboslquery.so.1.13",
+            "liboslnoise.so.1.13",
+            "libOpenColorIO.so.2.3",
+            "libboost_python311.so.1.82.0",
+            "libOpenImageDenoise.so.2",
+            "libMaterialXFormat.so.1",
+            "libMaterialXCore.so.1",
+            "libusd_ms.so",
+            "libopenvdb.so.11.0",
+            "libIex.so.31",
+            "libOpenEXR.so.31",
+            "libOpenEXRCore.so.31",
+            "libIlmThread.so.31",
+            "libImath.so.30",
+            "libboost_filesystem.so.1.82.0",
+            "libboost_regex.so.1.82.0",
+            "libboost_thread.so.1.82.0",
+            "libboost_date_time.so.1.82.0",
+            "libboost_wave.so.1.82.0",
+            "libboost_locale.so.1.82.0",
+            "libboost_iostreams.so.1.82.0",
+            "libboost_system.so.1.82.0",
+            "libboost_chrono.so.1.82.0",
+            "libboost_atomic.so.1.82.0",
+            "libboost_serialization.so.1.82.0",
+            "libvulkan.so.1",
+            "librt.so.1",
+            "libstdc++.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2",
+            "libgcc_s.so.1"
+          ],
+          "runpath_count": 1,
+          "runpath": [
+            "$ORIGIN/lib"
+          ],
+          "rpath": []
+        },
+        "escopo_benchmark_squashfs": "subarvore_meta_e_binario_principal (snap > 120 MiB; use --full-squashfs-bench para árvore completa)",
+        "amostra_descompactada_bytes": 149277043,
+        "amostra_descompactada_mib": 142.36,
+        "amostra_arquivos": 4,
+        "comparacao_squashfs": {
+          "xz": {
+            "tamanho_imagem_bytes": 48861184,
+            "tamanho_imagem_mib": 46.6,
+            "razao_compressao": 0.327,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                4168.39,
+                4215.21,
+                4278.9
+              ],
+              "media": 4220.83,
+              "mediana": 4215.21,
+              "desvio_padrao": 55.47
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  186996.0,
+                  190204.0,
+                  181332.0
+                ],
+                "media": 186177.33,
+                "mediana": 186996.0,
+                "desvio_padrao": 4492.3
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  182.61,
+                  185.75,
+                  177.08
+                ],
+                "media": 181.81,
+                "mediana": 182.61,
+                "desvio_padrao": 4.39
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  44.92,
+                  45.08,
+                  45.11
+                ],
+                "media": 45.04,
+                "mediana": 45.08,
+                "desvio_padrao": 0.1
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  1.13,
+                  0.93,
+                  1.15
+                ],
+                "media": 1.07,
+                "mediana": 1.13,
+                "desvio_padrao": 0.12
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  46.05,
+                  46.01,
+                  46.26
+                ],
+                "media": 46.11,
+                "mediana": 46.05,
+                "desvio_padrao": 0.13
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  1105.0,
+                  1092.0,
+                  1081.0
+                ],
+                "media": 1092.67,
+                "mediana": 1092.0,
+                "desvio_padrao": 12.01
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  263423.0,
+                  207922.0,
+                  268195.0
+                ],
+                "media": 246513.33,
+                "mediana": 263423.0,
+                "desvio_padrao": 33506.14
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  3530.0,
+                  3349.0,
+                  3396.0
+                ],
+                "media": 3425.0,
+                "mediana": 3396.0,
+                "desvio_padrao": 93.92
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  22762.0,
+                  22828.0,
+                  22962.0
+                ],
+                "media": 22850.67,
+                "mediana": 22828.0,
+                "desvio_padrao": 101.91
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                251.08,
+                332.88,
+                309.79
+              ],
+              "media": 297.92,
+              "mediana": 309.79,
+              "desvio_padrao": 42.17
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  153436.0,
+                  153288.0,
+                  153604.0
+                ],
+                "media": 153442.67,
+                "mediana": 153436.0,
+                "desvio_padrao": 158.11
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  149.84,
+                  149.7,
+                  150.0
+                ],
+                "media": 149.85,
+                "mediana": 149.84,
+                "desvio_padrao": 0.15
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  2.25,
+                  2.24,
+                  2.25
+                ],
+                "media": 2.25,
+                "mediana": 2.25,
+                "desvio_padrao": 0.01
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.2,
+                  0.29,
+                  0.29
+                ],
+                "media": 0.26,
+                "mediana": 0.29,
+                "desvio_padrao": 0.05
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  2.45,
+                  2.53,
+                  2.54
+                ],
+                "media": 2.51,
+                "mediana": 2.53,
+                "desvio_padrao": 0.05
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  987.0,
+                  767.0,
+                  827.0
+                ],
+                "media": 860.33,
+                "mediana": 827.0,
+                "desvio_padrao": 113.72
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  38183.0,
+                  38517.0,
+                  38242.0
+                ],
+                "media": 38314.0,
+                "mediana": 38242.0,
+                "desvio_padrao": 178.26
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  1402.0,
+                  794.0,
+                  902.0
+                ],
+                "media": 1032.67,
+                "mediana": 902.0,
+                "desvio_padrao": 324.38
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  1414.0,
+                  899.0,
+                  1056.0
+                ],
+                "media": 1123.0,
+                "mediana": 1056.0,
+                "desvio_padrao": 263.96
+              }
+            }
+          },
+          "zstd": {
+            "tamanho_imagem_bytes": 53170176,
+            "tamanho_imagem_mib": 50.71,
+            "razao_compressao": 0.356,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                2771.47,
+                2757.19,
+                2874.39
+              ],
+              "media": 2801.02,
+              "mediana": 2771.47,
+              "desvio_padrao": 63.94
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  189388.0,
+                  188416.0,
+                  192144.0
+                ],
+                "media": 189982.67,
+                "mediana": 189388.0,
+                "desvio_padrao": 1933.83
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  184.95,
+                  184.0,
+                  187.64
+                ],
+                "media": 185.53,
+                "mediana": 184.95,
+                "desvio_padrao": 1.89
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  29.32,
+                  29.35,
+                  29.41
+                ],
+                "media": 29.36,
+                "mediana": 29.35,
+                "desvio_padrao": 0.05
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.38,
+                  0.38,
+                  0.39
+                ],
+                "media": 0.38,
+                "mediana": 0.38,
+                "desvio_padrao": 0.01
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  29.7,
+                  29.73,
+                  29.8
+                ],
+                "media": 29.74,
+                "mediana": 29.73,
+                "desvio_padrao": 0.05
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  1072.0,
+                  1079.0,
+                  1037.0
+                ],
+                "media": 1062.67,
+                "mediana": 1072.0,
+                "desvio_padrao": 22.5
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  50931.0,
+                  50685.0,
+                  50373.0
+                ],
+                "media": 50663.0,
+                "mediana": 50685.0,
+                "desvio_padrao": 279.65
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  2977.0,
+                  2867.0,
+                  3074.0
+                ],
+                "media": 2972.67,
+                "mediana": 2977.0,
+                "desvio_padrao": 103.57
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  14740.0,
+                  15113.0,
+                  14720.0
+                ],
+                "media": 14857.67,
+                "mediana": 14740.0,
+                "desvio_padrao": 221.35
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                234.53,
+                755.29,
+                169.25
+              ],
+              "media": 386.36,
+              "mediana": 234.53,
+              "desvio_padrao": 321.17
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  156936.0,
+                  157240.0,
+                  157104.0
+                ],
+                "media": 157093.33,
+                "mediana": 157104.0,
+                "desvio_padrao": 152.28
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  153.26,
+                  153.55,
+                  153.42
+                ],
+                "media": 153.41,
+                "mediana": 153.42,
+                "desvio_padrao": 0.15
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.34,
+                  0.35,
+                  0.36
+                ],
+                "media": 0.35,
+                "mediana": 0.35,
+                "desvio_padrao": 0.01
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.35,
+                  0.41,
+                  0.26
+                ],
+                "media": 0.34,
+                "mediana": 0.35,
+                "desvio_padrao": 0.08
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.69,
+                  0.76,
+                  0.62
+                ],
+                "media": 0.69,
+                "mediana": 0.69,
+                "desvio_padrao": 0.07
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  299.0,
+                  241.0,
+                  378.0
+                ],
+                "media": 306.0,
+                "mediana": 299.0,
+                "desvio_padrao": 68.77
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  38720.0,
+                  38725.0,
+                  38716.0
+                ],
+                "media": 38720.33,
+                "mediana": 38720.0,
+                "desvio_padrao": 4.51
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  2438.0,
+                  2538.0,
+                  2577.0
+                ],
+                "media": 2517.67,
+                "mediana": 2538.0,
+                "desvio_padrao": 71.7
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  202.0,
+                  202.0,
+                  216.0
+                ],
+                "media": 206.67,
+                "mediana": 202.0,
+                "desvio_padrao": 8.08
+              }
+            }
+          },
+          "gzip": {
+            "tamanho_imagem_bytes": 58494976,
+            "tamanho_imagem_mib": 55.79,
+            "razao_compressao": 0.392,
+            "tempo_compressao_ms": {
+              "repeticoes": [
+                1582.95,
+                1634.12,
+                1630.16
+              ],
+              "media": 1615.74,
+              "mediana": 1630.16,
+              "desvio_padrao": 28.47
+            },
+            "recursos_compressao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  162608.0,
+                  155064.0,
+                  156520.0
+                ],
+                "media": 158064.0,
+                "mediana": 156520.0,
+                "desvio_padrao": 4001.99
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  158.8,
+                  151.43,
+                  152.85
+                ],
+                "media": 154.36,
+                "mediana": 152.85,
+                "desvio_padrao": 3.91
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  16.48,
+                  16.46,
+                  16.49
+                ],
+                "media": 16.48,
+                "mediana": 16.48,
+                "desvio_padrao": 0.02
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.27,
+                  0.26,
+                  0.24
+                ],
+                "media": 0.26,
+                "mediana": 0.26,
+                "desvio_padrao": 0.02
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  16.75,
+                  16.72,
+                  16.73
+                ],
+                "media": 16.73,
+                "mediana": 16.73,
+                "desvio_padrao": 0.02
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  1060.0,
+                  1024.0,
+                  1028.0
+                ],
+                "media": 1037.33,
+                "mediana": 1028.0,
+                "desvio_padrao": 19.73
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  41921.0,
+                  40771.0,
+                  40614.0
+                ],
+                "media": 41102.0,
+                "mediana": 40771.0,
+                "desvio_padrao": 713.61
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  2230.0,
+                  1861.0,
+                  1673.0
+                ],
+                "media": 1921.33,
+                "mediana": 1861.0,
+                "desvio_padrao": 283.36
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  9282.0,
+                  8594.0,
+                  7621.0
+                ],
+                "media": 8499.0,
+                "mediana": 8594.0,
+                "desvio_padrao": 834.57
+              }
+            },
+            "tempo_extracao_ms": {
+              "repeticoes": [
+                141.1,
+                164.15,
+                164.84
+              ],
+              "media": 156.7,
+              "mediana": 164.15,
+              "desvio_padrao": 13.51
+            },
+            "recursos_extracao": {
+              "amostras_validas": 3,
+              "max_rss_kib": {
+                "repeticoes": [
+                  155912.0,
+                  155988.0,
+                  155868.0
+                ],
+                "media": 155922.67,
+                "mediana": 155912.0,
+                "desvio_padrao": 60.71
+              },
+              "max_rss_mib": {
+                "repeticoes": [
+                  152.26,
+                  152.33,
+                  152.21
+                ],
+                "media": 152.27,
+                "mediana": 152.26,
+                "desvio_padrao": 0.06
+              },
+              "cpu_user_s": {
+                "repeticoes": [
+                  0.69,
+                  0.69,
+                  0.69
+                ],
+                "media": 0.69,
+                "mediana": 0.69,
+                "desvio_padrao": 0.0
+              },
+              "cpu_sys_s": {
+                "repeticoes": [
+                  0.22,
+                  0.25,
+                  0.24
+                ],
+                "media": 0.24,
+                "mediana": 0.24,
+                "desvio_padrao": 0.02
+              },
+              "cpu_total_s": {
+                "repeticoes": [
+                  0.91,
+                  0.94,
+                  0.93
+                ],
+                "media": 0.93,
+                "mediana": 0.93,
+                "desvio_padrao": 0.02
+              },
+              "cpu_pct": {
+                "repeticoes": [
+                  656.0,
+                  582.0,
+                  573.0
+                ],
+                "media": 603.67,
+                "mediana": 582.0,
+                "desvio_padrao": 45.54
+              },
+              "minor_faults": {
+                "repeticoes": [
+                  38480.0,
+                  38492.0,
+                  38477.0
+                ],
+                "media": 38483.0,
+                "mediana": 38480.0,
+                "desvio_padrao": 7.94
+              },
+              "major_faults": {
+                "repeticoes": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "media": 0.0,
+                "mediana": 0.0,
+                "desvio_padrao": 0.0
+              },
+              "vol_ctx": {
+                "repeticoes": [
+                  1939.0,
+                  2467.0,
+                  2030.0
+                ],
+                "media": 2145.33,
+                "mediana": 2030.0,
+                "desvio_padrao": 282.26
+              },
+              "invol_ctx": {
+                "repeticoes": [
+                  464.0,
+                  420.0,
+                  342.0
+                ],
+                "media": 408.67,
+                "mediana": 420.0,
+                "desvio_padrao": 61.78
+              }
+            }
+          }
+        }
+      },
+      "execucao_snapd": {
+        "tempo_instalacao_local_ms": {
+          "repeticoes": [
+            5751.56,
+            5251.04,
+            5422.94
+          ],
+          "media": 5475.18,
+          "mediana": 5422.94,
+          "desvio_padrao": 254.32
+        },
+        "tempo_instalacao_online_inicial_ms": 64104,
+        "tempo_carga_real_ms": {
+          "repeticoes": [
+            666.13,
+            612.33,
+            642.99
+          ],
+          "media": 640.48,
+          "mediana": 642.99,
+          "desvio_padrao": 26.99
+        },
+        "recursos_carga_real": {
+          "amostras_validas": 3,
+          "max_rss_kib": {
+            "repeticoes": [
+              304768.0,
+              300372.0,
+              302556.0
+            ],
+            "media": 302565.33,
+            "mediana": 302556.0,
+            "desvio_padrao": 2198.01
+          },
+          "max_rss_mib": {
+            "repeticoes": [
+              297.62,
+              293.33,
+              295.46
+            ],
+            "media": 295.47,
+            "mediana": 295.46,
+            "desvio_padrao": 2.15
+          },
+          "cpu_user_s": {
+            "repeticoes": [
+              0.69,
+              0.67,
+              0.68
+            ],
+            "media": 0.68,
+            "mediana": 0.68,
+            "desvio_padrao": 0.01
+          },
+          "cpu_sys_s": {
+            "repeticoes": [
+              0.14,
+              0.12,
+              0.12
+            ],
+            "media": 0.13,
+            "mediana": 0.12,
+            "desvio_padrao": 0.01
+          },
+          "cpu_total_s": {
+            "repeticoes": [
+              0.83,
+              0.79,
+              0.8
+            ],
+            "media": 0.81,
+            "mediana": 0.8,
+            "desvio_padrao": 0.02
+          },
+          "cpu_pct": {
+            "repeticoes": [
+              125.0,
+              130.0,
+              126.0
+            ],
+            "media": 127.0,
+            "mediana": 126.0,
+            "desvio_padrao": 2.65
+          },
+          "minor_faults": {
+            "repeticoes": [
+              20268.0,
+              20334.0,
+              20330.0
+            ],
+            "media": 20310.67,
+            "mediana": 20330.0,
+            "desvio_padrao": 37.0
+          },
+          "major_faults": {
+            "repeticoes": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "media": 0.0,
+            "mediana": 0.0,
+            "desvio_padrao": 0.0
+          },
+          "vol_ctx": {
+            "repeticoes": [
+              1981.0,
+              1318.0,
+              1954.0
+            ],
+            "media": 1751.0,
+            "mediana": 1954.0,
+            "desvio_padrao": 375.23
+          },
+          "invol_ctx": {
+            "repeticoes": [
+              662.0,
+              246.0,
+              436.0
+            ],
+            "media": 448.0,
+            "mediana": 436.0,
+            "desvio_padrao": 208.26
+          }
+        },
+        "carga_real_artefato": {
+          "verificado": true,
+          "formato": "png (Cycles CPU 320x240, 4 samples)",
+          "tamanho_bytes": 43986,
+          "magic_ok": true
+        },
+        "strace_carga_real": {
+          "total_calls": 13307,
+          "total_errors": 748,
+          "syscalls": {
+            "futex": {
+              "calls": 465,
+              "errors": 44
+            },
+            "sched_yield": {
+              "calls": 4233,
+              "errors": 0
+            },
+            "wait4": {
+              "calls": 5,
+              "errors": 2
+            },
+            "nanosleep": {
+              "calls": 204,
+              "errors": 1
+            },
+            "mmap": {
+              "calls": 661,
+              "errors": 1
+            },
+            "stat": {
+              "calls": 1258,
+              "errors": 222
+            },
+            "clone3": {
+              "calls": 42,
+              "errors": 0
+            },
+            "rt_sigprocmask": {
+              "calls": 229,
+              "errors": 0
+            },
+            "waitid": {
+              "calls": 2,
+              "errors": 1
+            },
+            "madvise": {
+              "calls": 183,
+              "errors": 0
+            },
+            "openat": {
+              "calls": 571,
+              "errors": 108
+            },
+            "execve": {
+              "calls": 8,
+              "errors": 0
+            },
+            "read": {
+              "calls": 997,
+              "errors": 3
+            },
+            "sched_getaffinity": {
+              "calls": 32,
+              "errors": 0
+            },
+            "clock_gettime": {
+              "calls": 1024,
+              "errors": 0
+            },
+            "mprotect": {
+              "calls": 178,
+              "errors": 0
+            },
+            "munmap": {
+              "calls": 47,
+              "errors": 0
+            },
+            "write": {
+              "calls": 59,
+              "errors": 0
+            },
+            "set_robust_list": {
+              "calls": 48,
+              "errors": 0
+            },
+            "close": {
+              "calls": 480,
+              "errors": 0
+            },
+            "fstat": {
+              "calls": 631,
+              "errors": 0
+            },
+            "rt_sigaction": {
+              "calls": 415,
+              "errors": 0
+            },
+            "getdents64": {
+              "calls": 102,
+              "errors": 0
+            },
+            "rseq": {
+              "calls": 48,
+              "errors": 0
+            },
+            "newfstatat": {
+              "calls": 144,
+              "errors": 89
+            },
+            "ioctl": {
+              "calls": 223,
+              "errors": 223
+            },
+            "lseek": {
+              "calls": 443,
+              "errors": 5
+            },
+            "sigaltstack": {
+              "calls": 40,
+              "errors": 0
+            },
+            "prctl": {
+              "calls": 52,
+              "errors": 5
+            },
+            "fcntl": {
+              "calls": 113,
+              "errors": 0
+            },
+            "getpid": {
+              "calls": 25,
+              "errors": 0
+            },
+            "gettid": {
+              "calls": 29,
+              "errors": 0
+            },
+            "tgkill": {
+              "calls": 13,
+              "errors": 0
+            },
+            "epoll_pwait": {
+              "calls": 14,
+              "errors": 0
+            },
+            "epoll_ctl": {
+              "calls": 43,
+              "errors": 12
+            },
+            "rt_sigreturn": {
+              "calls": 16,
+              "errors": 3
+            },
+            "getrlimit": {
+              "calls": 3,
+              "errors": 0
+            },
+            "pread64": {
+              "calls": 32,
+              "errors": 0
+            },
+            "clone": {
+              "calls": 5,
+              "errors": 0
+            },
+            "readlinkat": {
+              "calls": 13,
+              "errors": 0
+            },
+            "seccomp": {
+              "calls": 9,
+              "errors": 6
+            },
+            "readlink": {
+              "calls": 5,
+              "errors": 2
+            },
+            "brk": {
+              "calls": 20,
+              "errors": 0
+            },
+            "access": {
+              "calls": 13,
+              "errors": 8
+            },
+            "open": {
+              "calls": 2,
+              "errors": 0
+            },
+            "setrlimit": {
+              "calls": 6,
+              "errors": 0
+            },
+            "vfork": {
+              "calls": 2,
+              "errors": 0
+            },
+            "prlimit64": {
+              "calls": 12,
+              "errors": 0
+            },
+            "pipe2": {
+              "calls": 4,
+              "errors": 0
+            },
+            "eventfd2": {
+              "calls": 3,
+              "errors": 0
+            },
+            "epoll_create1": {
+              "calls": 3,
+              "errors": 0
+            },
+            "getuid": {
+              "calls": 6,
+              "errors": 0
+            },
+            "mkdir": {
+              "calls": 4,
+              "errors": 3
+            },
+            "uname": {
+              "calls": 3,
+              "errors": 0
+            },
+            "mkdirat": {
+              "calls": 6,
+              "errors": 6
+            },
+            "getrandom": {
+              "calls": 7,
+              "errors": 0
+            },
+            "connect": {
+              "calls": 2,
+              "errors": 2
+            },
+            "arch_prctl": {
+              "calls": 8,
+              "errors": 0
+            },
+            "set_tid_address": {
+              "calls": 7,
+              "errors": 0
+            },
+            "capset": {
+              "calls": 4,
+              "errors": 0
+            },
+            "pidfd_open": {
+              "calls": 1,
+              "errors": 0
+            },
+            "umask": {
+              "calls": 6,
+              "errors": 0
+            },
+            "statfs": {
+              "calls": 4,
+              "errors": 2
+            },
+            "socket": {
+              "calls": 2,
+              "errors": 0
+            },
+            "capget": {
+              "calls": 5,
+              "errors": 0
+            },
+            "pidfd_send_signal": {
+              "calls": 1,
+              "errors": 0
+            },
+            "faccessat2": {
+              "calls": 1,
+              "errors": 0
+            },
+            "geteuid": {
+              "calls": 5,
+              "errors": 0
+            },
+            "dup2": {
+              "calls": 3,
+              "errors": 0
+            },
+            "rmdir": {
+              "calls": 1,
+              "errors": 0
+            },
+            "getgid": {
+              "calls": 3,
+              "errors": 0
+            },
+            "getcwd": {
+              "calls": 1,
+              "errors": 0
+            },
+            "chdir": {
+              "calls": 3,
+              "errors": 0
+            },
+            "getgroups": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getresuid": {
+              "calls": 1,
+              "errors": 0
+            },
+            "getresgid": {
+              "calls": 1,
+              "errors": 0
+            },
+            "fchdir": {
+              "calls": 1,
+              "errors": 0
+            },
+            "getegid": {
+              "calls": 2,
+              "errors": 0
+            },
+            "getppid": {
+              "calls": 2,
+              "errors": 0
+            },
+            "lstat": {
+              "calls": 2,
+              "errors": 0
+            },
+            "flock": {
+              "calls": 1,
+              "errors": 0
+            },
+            "dup3": {
+              "calls": 3,
+              "errors": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "execucao_snapd": {
+    "snap_version": "snap          2.78+ubuntu24.04\nsnapd         2.78+ubuntu24.04\nseries        16\nubuntu        24.04\nkernel        7.3.4\narchitecture  amd64",
+    "snap_list": "Name               Version                         Rev    Tracking       Publisher            Notes\nbare               1.0                             5      latest/stable  canonical**          base\nblender            4.3.1                           5647   4.3/stable     blenderfoundation**  classic\ncore               16-2.61.4-20260225              17292  latest/stable  canonical**          core\ncore20             20261023                        3015   latest/stable  canonical**          base\ncore24             20261022                        2307   latest/stable  canonical**          base\ngnome-46-2404      0+git.b31ceab-sdk0+git.ef6f7e9  177    latest/stable  canonical**          -\ngnome-text-editor  48.3                            53     latest/stable  ken-vandine*         -\ngtk-common-themes  0.1-81-g442e511                 1535   latest/stable  canonical**          -\nhello-world        6.4                             29     latest/stable  canonical**          -\nkf6-core24         6.11.2-6.31.0-6.7.5-26.08.2     69     latest/stable  kde**                -\nmesa-2404          25.2.8-snap288                  1839   latest/stable  canonical**          -\nsnapd              2.78                            28332  latest/stable  canonical**          snapd\nvlc                3.0.24-rc1                      4472   latest/stable  videolan**           -"
+  },
+  "tamanho_snaps_disco_bytes": {
+    "bare_5.snap": 4096,
+    "blender_5647.snap": 421806080,
+    "core20_3015.snap": 66895872,
+    "core24_2307.snap": 70086656,
+    "core_17292.snap": 110305280,
+    "gnome-46-2404_177.snap": 645951488,
+    "gnome-text-editor_53.snap": 1118208,
+    "gtk-common-themes_1535.snap": 96141312,
+    "hello-world_29.snap": 20480,
+    "kf6-core24_69.snap": 1744183296,
+    "mesa-2404_1839.snap": 421507072,
+    "snapd_28332.snap": 34091008,
+    "vlc_4472.snap": 277643264
+  }
+}

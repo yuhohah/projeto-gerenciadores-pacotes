@@ -1,0 +1,1360 @@
+=== Preparação da imagem base e índices APT (debian:trixie-slim) ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm -v /tmp/so-semana05-cache/debian/apt-lists:/lists debian:trixie-slim bash -c set -e; cat /etc/os-release; apt-get --version | head -n 1; dpkg --version | head -n 1; apt-get update -qq; cp -a /var/lib/apt/lists/. /lists/
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.7
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+apt 3.0.4 (amd64)
+Debian 'dpkg' package management program version 1.22.22 (amd64).
+[Código de saída: 0 | Tempo: 4037.91 ms]
+
+=== Debian: download prévio e metadados de gnome-text-editor ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-gnome-text-editor:/archives debian:trixie-slim bash -c 
+set -e
+cp -a /lists/. /var/lib/apt/lists/
+apt-cache show gnome-text-editor | grep -E '^(Package|Version|Installed-Size|Depends|Recommends):' | head -n 15
+echo "--- apt-get install -s --no-install-recommends gnome-text-editor ---"
+apt-get install -s --no-install-recommends gnome-text-editor | tail -n 10
+apt-get install --download-only --no-install-recommends -y -o Dir::Cache::Archives=/archives gnome-text-editor
+
+Package: gnome-text-editor
+Version: 48.3-3
+Installed-Size: 2722
+Depends: libadwaita-1-0 (>= 1.6.0), libc6 (>= 2.34), libcairo2 (>= 1.15.12), libeditorconfig0 (>= 0.11.0), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.17.3), libgtksourceview-5-0 (>= 5.15.0), libpango-1.0-0 (>= 1.14.0), libspelling-1-2 (>= 0.3.0), dconf-gsettings-backend | gsettings-backend
+--- apt-get install -s --no-install-recommends gnome-text-editor ---
+Conf libgtksourceview-5-common (5.16.0-1 Debian:13.7/stable [all])
+Conf libgtksourceview-5-0 (5.16.0-1 Debian:13.7/stable [amd64])
+Conf hunspell-en-us (1:2020.12.07-4 Debian:13.7/stable [all])
+Conf libaspell15 (0.60.8.1-4 Debian:13.7/stable [amd64])
+Conf libhunspell-1.7-0 (1.7.2+really1.7.2-10+b4 Debian:13.7/stable [amd64])
+Conf libenchant-2-2 (2.8.2+dfsg1-3 Debian:13.7/stable [amd64])
+Conf libicu76 (76.1-4 Debian:13.7/stable [amd64])
+Conf libspelling-common (0.4.8-1 Debian:13.7/stable [all])
+Conf libspelling-1-2 (0.4.8-1 Debian:13.7/stable [amd64])
+Conf gnome-text-editor (48.3-3 Debian:13.7/stable [amd64])
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  adwaita-icon-theme dbus dbus-bin dbus-daemon dbus-session-bus-common
+  dbus-system-bus-common dbus-user-session dconf-gsettings-backend
+  dconf-service dictionaries-common emacsen-common fontconfig
+  fontconfig-config fonts-dejavu-core fonts-dejavu-mono gtk-update-icon-cache
+  hicolor-icon-theme hunspell-en-us libadwaita-1-0 libapparmor1 libappstream5
+  libaspell15 libatomic1 libavahi-client3 libavahi-common-data
+  libavahi-common3 libbrotli1 libcairo-gobject2 libcairo-script-interpreter2
+  libcairo2 libcloudproviders0 libcolord2 libcom-err2 libcups2t64
+  libcurl3t64-gnutls libdatrie1 libdbus-1-3 libdconf1 libdeflate0
+  libeditorconfig0 libenchant-2-2 libepoxy0 libexpat1 libffi8 libfontconfig1
+  libfreetype6 libfribidi0 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common
+  libgles2 libglib2.0-0t64 libglvnd0 libgnutls30t64 libgraphene-1.0-0
+  libgraphite2-3 libgssapi-krb5-2 libgtk-4-1 libgtk-4-common
+  libgtksourceview-5-0 libgtksourceview-5-common libharfbuzz-subset0
+  libharfbuzz0b libhunspell-1.7-0 libicu76 libidn2-0 libjbig0 libjpeg62-turbo
+  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 liblcms2-2 libldap2
+  liblerc4 liblzo2-2 libncursesw6 libnghttp2-14 libnghttp3-9 libngtcp2-16
+  libngtcp2-crypto-gnutls8 libp11-kit0 libpam-systemd libpango-1.0-0
+  libpangocairo-1.0-0 libpangoft2-1.0-0 libpixman-1-0 libpng16-16t64
+  libproc2-0 libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules-db libsharpyuv0
+  libspelling-1-2 libspelling-common libssh2-1t64 libstemmer0d
+  libsystemd-shared libtasn1-6 libtext-iconv-perl libthai-data libthai0
+  libtiff6 libunistring5 libvulkan1 libwayland-client0 libwayland-egl1
+  libwebp7 libx11-6 libx11-data libxau6 libxcb-render0 libxcb-shm0 libxcb1
+  libxcursor1 libxdamage1 libxdmcp6 libxext6 libxfixes3 libxi6 libxinerama1
+  libxkbcommon0 libxml2 libxmlb2 libxrandr2 libxrender1 libyaml-0-2 procps
+  shared-mime-info systemd systemd-sysv xkb-data
+Suggested packages:
+  adwaita-icon-theme-legacy ispell | aspell | hunspell wordlist hunspell
+  openoffice.org-hunspell | openoffice.org-core aspell colord cups-common
+  libenchant-2-voikko low-memory-monitor gnutls-bin krb5-doc krb5-user gvfs
+  liblcms2-utils libcryptsetup12 libtss2-rc0t64 libarchive13t64 libbpf1
+  libdw1t64 libelf1t64 libfido2-1 libgcrypt20 libip4tc2 libpwquality1
+  libqrencode4 systemd-container systemd-homed systemd-userdbd systemd-boot
+  systemd-resolved systemd-repart libtss2-tcti-device0 polkitd
+Recommended packages:
+  librsvg2-common aspell-en | aspell-dictionary | aspell6a-dictionary
+  ca-certificates enchant-2 libgdk-pixbuf2.0-bin libglib2.0-data xdg-user-dirs
+  libgtk-4-bin iso-codes libgtk-4-media-gstreamer krb5-locales libldap-common
+  libgpm2 publicsuffix libsasl2-modules libkmod2 mesa-vulkan-drivers
+  | vulkan-icd psmisc linux-sysctl-defaults systemd-timesyncd | time-daemon
+  systemd-cryptsetup libnss-systemd
+The following NEW packages will be installed:
+  adwaita-icon-theme dbus dbus-bin dbus-daemon dbus-session-bus-common
+  dbus-system-bus-common dbus-user-session dconf-gsettings-backend
+  dconf-service dictionaries-common emacsen-common fontconfig
+  fontconfig-config fonts-dejavu-core fonts-dejavu-mono gnome-text-editor
+  gtk-update-icon-cache hicolor-icon-theme hunspell-en-us libadwaita-1-0
+  libapparmor1 libappstream5 libaspell15 libatomic1 libavahi-client3
+  libavahi-common-data libavahi-common3 libbrotli1 libcairo-gobject2
+  libcairo-script-interpreter2 libcairo2 libcloudproviders0 libcolord2
+  libcom-err2 libcups2t64 libcurl3t64-gnutls libdatrie1 libdbus-1-3 libdconf1
+  libdeflate0 libeditorconfig0 libenchant-2-2 libepoxy0 libexpat1 libffi8
+  libfontconfig1 libfreetype6 libfribidi0 libgdk-pixbuf-2.0-0
+  libgdk-pixbuf2.0-common libgles2 libglib2.0-0t64 libglvnd0 libgnutls30t64
+  libgraphene-1.0-0 libgraphite2-3 libgssapi-krb5-2 libgtk-4-1 libgtk-4-common
+  libgtksourceview-5-0 libgtksourceview-5-common libharfbuzz-subset0
+  libharfbuzz0b libhunspell-1.7-0 libicu76 libidn2-0 libjbig0 libjpeg62-turbo
+  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 liblcms2-2 libldap2
+  liblerc4 liblzo2-2 libncursesw6 libnghttp2-14 libnghttp3-9 libngtcp2-16
+  libngtcp2-crypto-gnutls8 libp11-kit0 libpam-systemd libpango-1.0-0
+  libpangocairo-1.0-0 libpangoft2-1.0-0 libpixman-1-0 libpng16-16t64
+  libproc2-0 libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules-db libsharpyuv0
+  libspelling-1-2 libspelling-common libssh2-1t64 libstemmer0d
+  libsystemd-shared libtasn1-6 libtext-iconv-perl libthai-data libthai0
+  libtiff6 libunistring5 libvulkan1 libwayland-client0 libwayland-egl1
+  libwebp7 libx11-6 libx11-data libxau6 libxcb-render0 libxcb-shm0 libxcb1
+  libxcursor1 libxdamage1 libxdmcp6 libxext6 libxfixes3 libxi6 libxinerama1
+  libxkbcommon0 libxml2 libxmlb2 libxrandr2 libxrender1 libyaml-0-2 procps
+  shared-mime-info systemd systemd-sysv xkb-data
+0 upgraded, 133 newly installed, 0 to remove and 1 not upgraded.
+Need to get 0 B/47.2 MB of archives.
+After this operation, 188 MB of additional disk space will be used.
+Download complete and in download only mode
+[Código de saída: 0 | Tempo: 7199.61 ms]
+
+=== Debian: repetição 1 (instalação offline + carga real + GNU time) de gnome-text-editor ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm --network=none -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-gnome-text-editor:/archives:ro -v /tmp/so-s5-debian-work-e2ukgm40/gnome-text-editor-rep1:/tmp/work -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+export DEBIAN_FRONTEND=noninteractive
+cp -a /lists/. /var/lib/apt/lists/
+t0=$(date +%s%N)
+"/nix/store/bndiwbkvmpf6wzbms9nay1bmz2b56jmb-time-1.10/bin/time" -f '{"wall_s":%e,"user_s":%U,"sys_s":%S,"cpu_pct":"%P","max_rss_kib":%M,"minor_faults":%R,"major_faults":%F,"vol_ctx":%w,"invol_ctx":%c}' -o /tmp/work/time-install.json   apt-get install -y --no-download --no-install-recommends -o Dir::Cache::Archives=/archives gnome-text-editor >/dev/null
+t1=$(date +%s%N)
+echo $(( (t1 - t0) / 1000000 ))
+t2=$(date +%s%N)
+"/nix/store/bndiwbkvmpf6wzbms9nay1bmz2b56jmb-time-1.10/bin/time" -f '{"wall_s":%e,"user_s":%U,"sys_s":%S,"cpu_pct":"%P","max_rss_kib":%M,"minor_faults":%R,"major_faults":%F,"vol_ctx":%w,"invol_ctx":%c}' -o /tmp/work/time-workload.json "/usr/bin/gnome-text-editor" --version >/dev/null
+t3=$(date +%s%N)
+echo $(( (t3 - t2) / 1000000 ))
+
+15317
+34
+[stderr]
+W: chown to _apt:root of directory /archives/partial failed - SetupAPTPartialDirectory (30: Read-only file system)
+W: chmod 0700 of directory /archives/partial failed - SetupAPTPartialDirectory (30: Read-only file system)
+W: Not using locking for read only lock file /archives/lock
+[Código de saída: 0 | Tempo: 15770.05 ms]
+
+GNU time (instalação): {"wall_s": 15.31, "cpu_user_s": 5.04, "cpu_sys_s": 3.43, "cpu_total_s": 8.47, "cpu_pct": 55.0, "max_rss_kib": 84756, "max_rss_mib": 82.77, "minor_faults": 407974, "major_faults": 178, "vol_ctx": 20363, "invol_ctx": 437}
+
+GNU time (carga real): {"wall_s": 0.03, "cpu_user_s": 0.02, "cpu_sys_s": 0.0, "cpu_total_s": 0.02, "cpu_pct": 96.0, "max_rss_kib": 25748, "max_rss_mib": 25.14, "minor_faults": 1482, "major_faults": 1, "vol_ctx": 1, "invol_ctx": 0}
+
+=== Debian: strace da instalação + carga real + ELF/FHS de gnome-text-editor ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm --network=none --cap-add=SYS_PTRACE -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-gnome-text-editor:/archives:ro -v /tmp/so-s5-debian-work-e2ukgm40/gnome-text-editor-trace:/tmp/work -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+export DEBIAN_FRONTEND=noninteractive
+cp -a /lists/. /var/lib/apt/lists/
+kib_before=$(dpkg-query -W -f='${Installed-Size}\n' | awk '{s+=$1} END {print s+0}')
+usr_before=$(du -sb /usr | awk '{print $1}')
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f apt-get install -y --no-download --no-install-recommends -o Dir::Cache::Archives=/archives gnome-text-editor >/dev/null
+kib_after=$(dpkg-query -W -f='${Installed-Size}\n' | awk '{s+=$1} END {print s+0}')
+usr_after=$(du -sb /usr | awk '{print $1}')
+echo "=== INSTALLED_DELTA_KIB ==="
+echo $(( kib_after - kib_before ))
+echo "=== USR_DELTA_BYTES ==="
+echo $(( usr_after - usr_before ))
+echo "=== DPKG_COUNT ==="
+dpkg -L gnome-text-editor | wc -l
+echo "=== READELF ==="
+/nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d /usr/bin/gnome-text-editor | grep -E "NEEDED|RUNPATH|RPATH" || true
+echo "=== LDD_COUNT ==="
+ldd /usr/bin/gnome-text-editor | wc -l
+echo "=== VERSION ==="
+"/usr/bin/gnome-text-editor" --version 2>&1 | head -n 3 || true
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f -o /tmp/work/strace-workload.txt "/usr/bin/gnome-text-editor" --version >/dev/null 2>&1 || true
+
+=== INSTALLED_DELTA_KIB ===
+184053
+=== USR_DELTA_BYTES ===
+151125450
+=== DPKG_COUNT ===
+455
+=== READELF ===
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgio-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgobject-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libglib-2.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtk-4.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpango-1.0.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libcairo.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgtksourceview-5.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libadwaita-1.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libspelling-1.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libeditorconfig.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+=== LDD_COUNT ===
+112
+=== VERSION ===
+Text Editor 48.3 (48.3)
+
+            GTK: 4.18.6 (Compiled against 4.18.6)
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 17 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 18 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 19 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 20 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 21 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 22 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 23 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 24 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 25 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 26 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 27 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 28 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 29 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 30 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 31 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 32 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 33 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 34 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 35 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 36 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 37 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 38 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 39 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 40 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 41 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 42 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 43 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 44 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 45 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 46 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 47 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 48 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 49 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 50 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 51 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 52 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 53 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 54 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 55 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 56 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 57 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 58 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 59 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 60 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 61 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 62 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 63 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 64 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 65 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 66 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 67 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 68 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 69 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 70 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 71 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 72 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 73 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 74 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 75 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 76 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 77 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 78 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 79 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 80 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 81 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 82 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 83 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 84 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 85 attach
+... [truncado: 157006 chars totais] ...
+320044          13     23038      1010 openat
+  2.06    0.288591          11     24628           write
+  1.78    0.249018          18     13585      7105 rename
+  1.65    0.231956         146      1583       684 execve
+  1.62    0.227629           3     57569           read
+  1.03    0.144272           5     28638     19313 newfstatat
+  0.93    0.131140           6     20207           mmap
+  0.93    0.130994           4     27132         4 close
+  0.79    0.110230          47      2306           munmap
+  0.75    0.105643           6     17001     16999 rmdir
+  0.70    0.098558          33      2948           getdents64
+  0.52    0.072978          24      2926           fsync
+  0.39    0.055044          24      2259       928 mkdir
+  0.39    0.054410           3     15059           fstat
+  0.29    0.041107          11      3718           pselect6
+  0.25    0.035661           5      5945           mprotect
+  0.25    0.035430           7      4782           utimensat
+  0.24    0.033008           2     11369      5790 lseek
+  0.20    0.027755           3      8593      7882 ioctl
+  0.19    0.026554          26      1018       146 unlink
+  0.17    0.024317          26       927           fdatasync
+  0.17    0.023282           7      3147           fchown
+  0.14    0.019105           5      3308           fchmod
+  0.13    0.018791           2      6445           rt_sigprocmask
+  0.12    0.016676          19       835           ftruncate
+  0.10    0.014622           3      4354           brk
+  0.10    0.014321           2      4931         5 fcntl
+  0.09    0.012213          30       401         4 unlinkat
+  0.08    0.010811          23       452           symlink
+  0.07    0.009607           8      1180         1 chown
+  0.06    0.009064           3      2529           sync_file_range
+  0.06    0.008550           7      1185         1 chmod
+  0.05    0.007514           2      3127         1 rt_sigaction
+  0.04    0.006084           8       681           pipe2
+  0.04    0.005808           3      1796           pread64
+  0.04    0.005739           4      1309      1123 access
+  0.04    0.005110           9       559       559 connect
+  0.03    0.004757           8       549       416 statfs
+  0.03    0.004194           7       559           socket
+  0.03    0.003893           1      2519           set_robust_list
+  0.03    0.003732          46        81           vfork
+  0.03    0.003621           3      1166           rseq
+  0.02    0.003110           3       913           getrandom
+  0.02    0.002991           4       660       598 readlink
+  0.02    0.002879           4       636           statx
+  0.02    0.002815           3       909           prlimit64
+  0.02    0.002813           9       312           lchown
+  0.02    0.002671           2       899           arch_prctl
+  0.02    0.002525           2       899           set_tid_address
+  0.02    0.002518           3       788           umask
+  0.02    0.002243          11       188       161 mkdirat
+  0.01    0.001602           4       333           fstatfs
+  0.01    0.001080           2       474           geteuid
+  0.01    0.001036           3       267           madvise
+  0.01    0.000993           6       146           fchownat
+  0.01    0.000852           1       574           dup2
+  0.01    0.000733          38        19         1 link
+  0.00    0.000652           2       275           getuid
+  0.00    0.000633           4       137           rt_sigreturn
+  0.00    0.000571           2       253           getgid
+  0.00    0.000501           4       114           mremap
+  0.00    0.000427           2       198           chdir
+  0.00    0.000408           2       204           getegid
+  0.00    0.000361           1       267       267 clone3
+  0.00    0.000324          23        14         6 symlinkat
+  0.00    0.000322           9        34           readlinkat
+  0.00    0.000317           2       149        72 prctl
+  0.00    0.000240          26         9           renameat
+  0.00    0.000237           0       267           sched_getaffinity
+  0.00    0.000232           2        96           getpid
+  0.00    0.000189           2        65           getppid
+  0.00    0.000159           1       134           dup
+  0.00    0.000152           5        26         7 faccessat2
+  0.00    0.000151           6        23           fchmodat2
+  0.00    0.000112           7        16           copy_file_range
+  0.00    0.000101          16         6           setsid
+  0.00    0.000082           8        10           writev
+  0.00    0.000055          18         3           fallocate
+  0.00    0.000049           4        11           getcwd
+  0.00    0.000044           1        30           dup3
+  0.00    0.000040           3        11           gettid
+  0.00    0.000039           1        23           flock
+  0.00    0.000036          18         2           setxattr
+  0.00    0.000031           2        12           name_to_handle_at
+  0.00    0.000023          11         2         2 getxattr
+  0.00    0.000022           2         9         8 fadvise64
+  0.00    0.000020           2         9         9 kill
+  0.00    0.000013           3         4           fchdir
+  0.00    0.000013           6         2           setresgid
+  0.00    0.000012           3         4         2 setsockopt
+  0.00    0.000012           6         2           setgroups
+  0.00    0.000012           6         2           setresuid
+  0.00    0.000011          11         1           clock_nanosleep
+  0.00    0.000008           2         4           getsockopt
+  0.00    0.000005           5         1           sigaltstack
+  0.00    0.000003           3         1           getgroups
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         2           uname
+  0.00    0.000000           0         2           sysinfo
+------ ----------- ----------- --------- --------- ------------------
+100.00   14.026799          40    344242     64195 total
+[Código de saída: 0 | Tempo: 125594.27 ms]
+
+=== Debian: strace -c -f da carga real (gnome-text-editor) ===
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 55.85    0.004214           8       493           mmap
+ 18.78    0.001417          12       114         1 openat
+  7.55    0.000570           5       112           read
+  7.17    0.000541           4       113           close
+  5.87    0.000443           3       114           fstat
+  2.69    0.000203           1       112           mprotect
+  0.37    0.000028           4         6           brk
+  0.33    0.000025           4         6         4 prctl
+  0.28    0.000021           1        11           futex
+  0.13    0.000010           2         5           write
+  0.13    0.000010           5         2         2 statfs
+  0.12    0.000009           4         2           getrandom
+  0.11    0.000008           8         1           munmap
+  0.11    0.000008           4         2           rt_sigprocmask
+  0.11    0.000008           4         2           pread64
+  0.11    0.000008           8         1         1 newfstatat
+  0.05    0.000004           2         2         2 access
+  0.05    0.000004           4         1           arch_prctl
+  0.05    0.000004           4         1           rseq
+  0.04    0.000003           3         1           set_tid_address
+  0.04    0.000003           3         1           set_robust_list
+  0.03    0.000002           2         1         1 ioctl
+  0.03    0.000002           2         1           prlimit64
+  0.00    0.000000           0         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.007545           6      1105        11 total
+
+
+=== Debian: download prévio e metadados de vlc ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-vlc:/archives debian:trixie-slim bash -c 
+set -e
+cp -a /lists/. /var/lib/apt/lists/
+apt-cache show vlc | grep -E '^(Package|Version|Installed-Size|Depends|Recommends):' | head -n 15
+echo "--- apt-get install -s --no-install-recommends vlc ---"
+apt-get install -s --no-install-recommends vlc | tail -n 10
+apt-get install --download-only --no-install-recommends -y -o Dir::Cache::Archives=/archives vlc
+
+Package: vlc
+Version: 3.0.24-0+deb13u1
+Installed-Size: 204
+Depends: vlc-bin (= 3.0.24-0+deb13u1), vlc-plugin-base (= 3.0.24-0+deb13u1), vlc-plugin-qt (= 3.0.24-0+deb13u1), vlc-plugin-video-output (= 3.0.24-0+deb13u1)
+Recommends: vlc-l10n (= 3.0.24-0+deb13u1), vlc-plugin-access-extra (= 3.0.24-0+deb13u1), vlc-plugin-notify (= 3.0.24-0+deb13u1), vlc-plugin-samba (= 3.0.24-0+deb13u1), vlc-plugin-skins2 (= 3.0.24-0+deb13u1), vlc-plugin-video-splitter (= 3.0.24-0+deb13u1), vlc-plugin-visualization (= 3.0.24-0+deb13u1)
+Package: vlc
+Version: 3.0.23-0+deb13u1
+Installed-Size: 198
+Depends: vlc-bin (= 3.0.23-0+deb13u1), vlc-plugin-base (= 3.0.23-0+deb13u1), vlc-plugin-qt (= 3.0.23-0+deb13u1), vlc-plugin-video-output (= 3.0.23-0+deb13u1)
+Recommends: vlc-l10n (= 3.0.23-0+deb13u1), vlc-plugin-access-extra (= 3.0.23-0+deb13u1), vlc-plugin-notify (= 3.0.23-0+deb13u1), vlc-plugin-samba (= 3.0.23-0+deb13u1), vlc-plugin-skins2 (= 3.0.23-0+deb13u1), vlc-plugin-video-splitter (= 3.0.23-0+deb13u1), vlc-plugin-visualization (= 3.0.23-0+deb13u1)
+--- apt-get install -s --no-install-recommends vlc ---
+Conf libvlc5 (3.0.24-0+deb13u1 Debian-Security:13/stable-security [amd64])
+Conf libvlc-bin (3.0.24-0+deb13u1 Debian-Security:13/stable-security [amd64])
+Conf libwayland-egl1 (1.23.1-3 Debian:13.7/stable [amd64])
+Conf libxcb-xv0 (1.17.0-2+b1 Debian:13.7/stable [amd64])
+Conf vlc-bin (3.0.24-0+deb13u1 Debian-Security:13/stable-security [amd64])
+Conf vlc-data (3.0.24-0+deb13u1 Debian-Security:13/stable-security [all])
+Conf vlc-plugin-base (3.0.24-0+deb13u1 Debian-Security:13/stable-security [amd64])
+Conf vlc-plugin-qt (3.0.24-0+deb13u1 Debian-Security:13/stable-security [amd64])
+Conf vlc-plugin-video-output (3.0.24-0+deb13u1 Debian-Security:13/stable-security [amd64])
+Conf vlc (3.0.24-0+deb13u1 Debian-Security:13/stable-security [amd64])
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  fontconfig fontconfig-config fonts-dejavu-core fonts-dejavu-mono libaa1
+  libaom3 libarchive13t64 libaribb24-0t64 libasound2-data libasound2t64
+  libass9 libasyncns0 libatomic1 libavahi-client3 libavahi-common-data
+  libavahi-common3 libavc1394-0 libavcodec61 libavformat61 libavutil59
+  libbluray2 libbrotli1 libcaca0 libcairo-gobject2 libcairo2 libcddb2
+  libchromaprint1 libcjson1 libcodec2-1.2 libcom-err2 libdatrie1 libdav1d7
+  libdbus-1-3 libdc1394-25 libdeflate0 libdouble-conversion3 libdrm-amdgpu1
+  libdrm-common libdrm-intel1 libdrm2 libdvbpsi10 libdvdnav4 libdvdread8t64
+  libebml5 libedit2 libegl-mesa0 libegl1 libelf1t64 libevdev2 libexpat1
+  libfaad2 libffi8 libflac14 libfontconfig1 libfreetype6 libfribidi0 libgbm1
+  libgcrypt20 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgl1
+  libgl1-mesa-dri libgles2 libglib2.0-0t64 libglvnd0 libglx-mesa0 libglx0
+  libgme0 libgnutls30t64 libgomp1 libgpg-error0 libgpm2 libgraphite2-3 libgsm1
+  libgssapi-krb5-2 libgudev-1.0-0 libharfbuzz0b libhwy1t64 libice6 libicu76
+  libidn12 libidn2-0 libinput-bin libinput10 libixml11t64 libjbig0
+  libjpeg62-turbo libjxl0.11 libk5crypto3 libkate1 libkeyutils1 libkrb5-3
+  libkrb5support0 liblcms2-2 liblerc4 liblirc-client0t64 libllvm19 liblua5.2-0
+  libmad0 libmatroska7 libmbedcrypto16 libmd4c0 libmp3lame0 libmpcdec6
+  libmpg123-0t64 libmtdev1t64 libmtp-common libmtp9t64 libmysofa1 libncurses6
+  libncursesw6 libnfs14 libnorm1t64 libnuma1 libogg0 libopenjp2-7
+  libopenmpt-modplug1 libopenmpt0t64 libopus0 libp11-kit0 libpango-1.0-0
+  libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0 libpcre2-16-0
+  libpgm-5.3-0t64 libpixman-1-0 libpng16-16t64 libpostproc58
+  libprotobuf-lite32t64 libpulse0 libqt5core5t64 libqt5dbus5t64 libqt5gui5t64
+  libqt5network5t64 libqt5svg5 libqt5widgets5t64 libqt5x11extras5 librabbitmq4
+  librav1e0.7 libraw1394-11 libresid-builder0c2a librist4 librsvg2-2
+  libsamplerate0 libsecret-1-0 libsecret-common libsensors-config libsensors5
+  libsharpyuv0 libshine3 libshout3 libsidplay2 libslang2 libsm6 libsnappy1v5
+  libsndfile1 libsodium23 libsoxr0 libspatialaudio0t64 libspeex1 libspeexdsp1
+  libsrt1.5-gnutls libssh-4 libssh2-1t64 libsvtav1enc2 libswresample5
+  libswscale8 libtag2 libtasn1-6 libthai-data libthai0 libtheora0
+  libtheoradec1 libtheoraenc1 libtiff6 libtwolame0 libudfread0 libunibreak6
+  libunistring5 libupnp17t64 libusb-1.0-0 libva-drm2 libva-wayland2
+  libva-x11-2 libva2 libvdpau1 libvlc-bin libvlc5 libvlccore9 libvorbis0a
+  libvorbisenc2 libvorbisfile3 libvpl2 libvpx9 libvulkan1 libwacom-common
+  libwacom9 libwayland-client0 libwayland-egl1 libwayland-server0 libwebp7
+  libwebpmux3 libx11-6 libx11-data libx11-xcb1 libx264-164 libx265-215 libxau6
+  libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1
+  libxcb-present0 libxcb-randr0 libxcb-render-util0 libxcb-render0
+  libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxcb-xfixes0
+  libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 libxcb-xv0 libxcb1 libxdmcp6
+  libxext6 libxfixes3 libxkbcommon-x11-0 libxkbcommon0 libxml2 libxrender1
+  libxshmfence1 libxvidcore4 libxxf86vm1 libz3-4 libzmq5 libzvbi-common
+  libzvbi0t64 mesa-libgallium ocl-icd-libopencl1 shared-mime-info vlc-bin
+  vlc-data vlc-plugin-base vlc-plugin-qt vlc-plugin-video-output x11-common
+  xkb-data
+Suggested packages:
+  lrzip alsa-utils libasound2-plugins libcuda1 libnvcuvid1 libnvidia-encode1
+  libbluray-bdj libdvdcss2 rng-tools low-memory-monitor gnutls-bin gpm
+  krb5-doc krb5-user liblcms2-utils lirc opus-tools pciutils pulseaudio
+  qgnomeplatform-qt5 qt5-image-formats-plugins libraw1394-doc librsvg2-bin
+  lm-sensors speex libwacom-bin opencl-icd vlc-plugin-fluidsynth
+  vlc-plugin-jack vlc-plugin-pipewire vlc-plugin-svg
+Recommended packages:
+  alsa-ucm-conf alsa-topology-conf libaacs0 dbus libgdk-pixbuf2.0-bin
+  libglib2.0-data xdg-user-dirs libgpg-error-l10n krb5-locales libmtp-runtime
+  udev qttranslations5-l10n qt5-gtk-platformtheme qtwayland5 librsvg2-common
+  va-driver-all | va-driver vdpau-driver-all | vdpau-driver libproxy-tools
+  mesa-vulkan-drivers | vulkan-icd vlc-l10n vlc-plugin-access-extra
+  vlc-plugin-notify vlc-plugin-samba vlc-plugin-skins2
+  vlc-plugin-video-splitter vlc-plugin-visualization xdg-utils
+The following NEW packages will be installed:
+  fontconfig fontconfig-config fonts-dejavu-core fonts-dejavu-mono libaa1
+  libaom3 libarchive13t64 libaribb24-0t64 libasound2-data libasound2t64
+  libass9 libasyncns0 libatomic1 libavahi-client3 libavahi-common-data
+  libavahi-common3 libavc1394-0 libavcodec61 libavformat61 libavutil59
+  libbluray2 libbrotli1 libcaca0 libcairo-gobject2 libcairo2 libcddb2
+  libchromaprint1 libcjson1 libcodec2-1.2 libcom-err2 libdatrie1 libdav1d7
+  libdbus-1-3 libdc1394-25 libdeflate0 libdouble-conversion3 libdrm-amdgpu1
+  libdrm-common libdrm-intel1 libdrm2 libdvbpsi10 libdvdnav4 libdvdread8t64
+  libebml5 libedit2 libegl-mesa0 libegl1 libelf1t64 libevdev2 libexpat1
+  libfaad2 libffi8 libflac14 libfontconfig1 libfreetype6 libfribidi0 libgbm1
+  libgcrypt20 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgl1
+  libgl1-mesa-dri libgles2 libglib2.0-0t64 libglvnd0 libglx-mesa0 libglx0
+  libgme0 libgnutls30t64 libgomp1 libgpg-error0 libgpm2 libgraphite2-3 libgsm1
+  libgssapi-krb5-2 libgudev-1.0-0 libharfbuzz0b libhwy1t64 libice6 libicu76
+  libidn12 libidn2-0 libinput-bin libinput10 libixml11t64 libjbig0
+  libjpeg62-turbo libjxl0.11 libk5crypto3 libkate1 libkeyutils1 libkrb5-3
+  libkrb5support0 liblcms2-2 liblerc4 liblirc-client0t64 libllvm19 liblua5.2-0
+  libmad0 libmatroska7 libmbedcrypto16 libmd4c0 libmp3lame0 libmpcdec6
+  libmpg123-0t64 libmtdev1t64 libmtp-common libmtp9t64 libmysofa1 libncurses6
+  libncursesw6 libnfs14 libnorm1t64 libnuma1 libogg0 libopenjp2-7
+  libopenmpt-modplug1 libopenmpt0t64 libopus0 libp11-kit0 libpango-1.0-0
+  libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0 libpcre2-16-0
+  libpgm-5.3-0t64 libpixman-1-0 libpng16-16t64 libpostproc58
+  libprotobuf-lite32t64 libpulse0 libqt5core5t64 libqt5dbus5t64 libqt5gui5t64
+  libqt5network5t64 libqt5svg5 libqt5widgets5t64 libqt5x11extras5 librabbitmq4
+  librav1e0.7 libraw1394-11 libresid-builder0c2a librist4 librsvg2-2
+  libsamplerate0 libsecret-1-0 libsecret-common libsensors-config libsensors5
+  libsharpyuv0 libshine3 libshout3 libsidplay2 libslang2 libsm6 libsnappy1v5
+  libsndfile1 libsodium23 libsoxr0 libspatialaudio0t64 libspeex1 libspeexdsp1
+  libsrt1.5-gnutls libssh-4 libssh2-1t64 libsvtav1enc2 libswresample5
+  libswscale8 libtag2 libtasn1-6 libthai-data libthai0 libtheora0
+  libtheoradec1 libtheoraenc1 libtiff6 libtwolame0 libudfread0 libunibreak6
+  libunistring5 libupnp17t64 libusb-1.0-0 libva-drm2 libva-wayland2
+  libva-x11-2 libva2 libvdpau1 libvlc-bin libvlc5 libvlccore9 libvorbis0a
+  libvorbisenc2 libvorbisfile3 libvpl2 libvpx9 libvulkan1 libwacom-common
+  libwacom9 libwayland-client0 libwayland-egl1 libwayland-server0 libwebp7
+  libwebpmux3 libx11-6 libx11-data libx11-xcb1 libx264-164 libx265-215 libxau6
+  libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1
+  libxcb-present0 libxcb-randr0 libxcb-render-util0 libxcb-render0
+  libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-util1 libxcb-xfixes0
+  libxcb-xinerama0 libxcb-xinput0 libxcb-xkb1 libxcb-xv0 libxcb1 libxdmcp6
+  libxext6 libxfixes3 libxkbcommon-x11-0 libxkbcommon0 libxml2 libxrender1
+  libxshmfence1 libxvidcore4 libxxf86vm1 libz3-4 libzmq5 libzvbi-common
+  libzvbi0t64 mesa-libgallium ocl-icd-libopencl1 shared-mime-info vlc vlc-bin
+  vlc-data vlc-plugin-base vlc-plugin-qt vlc-plugin-video-output x11-common
+  xkb-data
+0 upgraded, 253 newly installed, 0 to remove and 1 not upgraded.
+Need to get 0 B/135 MB of archives.
+After this operation, 501 MB of additional disk space will be used.
+Download complete and in download only mode
+[Código de saída: 0 | Tempo: 8061.48 ms]
+
+=== Debian: repetição 1 (instalação offline + carga real + GNU time) de vlc ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm --network=none -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-vlc:/archives:ro -v /tmp/so-s5-debian-work-e2ukgm40/vlc-rep1:/tmp/work -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+export DEBIAN_FRONTEND=noninteractive
+cp -a /lists/. /var/lib/apt/lists/
+t0=$(date +%s%N)
+"/nix/store/bndiwbkvmpf6wzbms9nay1bmz2b56jmb-time-1.10/bin/time" -f '{"wall_s":%e,"user_s":%U,"sys_s":%S,"cpu_pct":"%P","max_rss_kib":%M,"minor_faults":%R,"major_faults":%F,"vol_ctx":%w,"invol_ctx":%c}' -o /tmp/work/time-install.json   apt-get install -y --no-download --no-install-recommends -o Dir::Cache::Archives=/archives vlc >/dev/null
+t1=$(date +%s%N)
+echo $(( (t1 - t0) / 1000000 ))
+t2=$(date +%s%N)
+chmod 777 /tmp/work && rm -f /tmp/work/out.ogg /tmp/work/out.wav && su -s /bin/sh nobody -c /tmp/work/run-vlc.sh
+t3=$(date +%s%N)
+echo $(( (t3 - t2) / 1000000 ))
+
+27834
+222
+[stderr]
+W: chown to _apt:root of directory /archives/partial failed - SetupAPTPartialDirectory (30: Read-only file system)
+W: chmod 0700 of directory /archives/partial failed - SetupAPTPartialDirectory (30: Read-only file system)
+W: Not using locking for read only lock file /archives/lock
+[Código de saída: 0 | Tempo: 31747.18 ms]
+
+GNU time (instalação): {"wall_s": 27.83, "cpu_user_s": 9.65, "cpu_sys_s": 5.66, "cpu_total_s": 15.31, "cpu_pct": 55.0, "max_rss_kib": 184704, "max_rss_mib": 180.38, "minor_faults": 660629, "major_faults": 0, "vol_ctx": 39803, "invol_ctx": 620}
+
+GNU time (carga real): {"wall_s": 0.2, "cpu_user_s": 0.07, "cpu_sys_s": 0.03, "cpu_total_s": 0.1, "cpu_pct": 57.0, "max_rss_kib": 41024, "max_rss_mib": 40.06, "minor_faults": 3466, "major_faults": 2, "vol_ctx": 67, "invol_ctx": 5}
+
+=== Debian: strace da instalação + carga real + ELF/FHS de vlc ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm --network=none --cap-add=SYS_PTRACE -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-vlc:/archives:ro -v /tmp/so-s5-debian-work-e2ukgm40/vlc-trace:/tmp/work -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+export DEBIAN_FRONTEND=noninteractive
+cp -a /lists/. /var/lib/apt/lists/
+kib_before=$(dpkg-query -W -f='${Installed-Size}\n' | awk '{s+=$1} END {print s+0}')
+usr_before=$(du -sb /usr | awk '{print $1}')
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f apt-get install -y --no-download --no-install-recommends -o Dir::Cache::Archives=/archives vlc >/dev/null
+kib_after=$(dpkg-query -W -f='${Installed-Size}\n' | awk '{s+=$1} END {print s+0}')
+usr_after=$(du -sb /usr | awk '{print $1}')
+echo "=== INSTALLED_DELTA_KIB ==="
+echo $(( kib_after - kib_before ))
+echo "=== USR_DELTA_BYTES ==="
+echo $(( usr_after - usr_before ))
+echo "=== DPKG_COUNT ==="
+dpkg -L vlc | wc -l
+echo "=== READELF ==="
+/nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d /usr/bin/vlc | grep -E "NEEDED|RUNPATH|RPATH" || true
+echo "=== LDD_COUNT ==="
+ldd /usr/bin/vlc | wc -l
+echo "=== VERSION ==="
+"/usr/bin/vlc" --version 2>&1 | head -n 3 || true
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f -u nobody -o /tmp/work/strace-workload.txt "/usr/bin/vlc" -I dummy --no-video --aout=dummy --play-and-exit /tmp/work/in.wav '--sout' '#transcode{acodec=vorb,ab=128,channels=1,samplerate=44100}:std{access=file,mux=ogg,dst=/tmp/work/out.ogg}' vlc://quit >/dev/null 2>&1 || true
+
+=== INSTALLED_DELTA_KIB ===
+489065
+=== USR_DELTA_BYTES ===
+473085661
+=== DPKG_COUNT ===
+36
+=== READELF ===
+ 0x0000000000000001 (NEEDED)             Shared library: [libvlc.so.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+=== LDD_COUNT ===
+10
+=== VERSION ===
+VLC is not supposed to be run as root. Sorry.
+If you need to use real-time priorities and/or privileged TCP ports
+you can use /usr/bin/vlc-wrapper (make sure it is Set-UID root and
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 17 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 18 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 19 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 20 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 21 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 22 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 23 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 24 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 25 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 26 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 27 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 28 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 29 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 30 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 31 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 32 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 33 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 34 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 35 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 36 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 37 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 38 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 39 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 40 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 41 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 42 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 43 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 44 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 45 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 46 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 47 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 48 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 49 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 50 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 51 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 52 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 53 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 54 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 55 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 56 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 57 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 58 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 59 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 60 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 61 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 62 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 63 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 64 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 65 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 66 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 67 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 68 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 69 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 70 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 71 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 72 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 73 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 74 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 75 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 76 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 77 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 78 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 79 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 80 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 81 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 82 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 83 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 84 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 85 attach
+... [truncado: 265448 chars totais] ...
+y file system)
+W: chmod 0700 of directory /archives/partial failed - SetupAPTPartialDirectory (30: Read-only file system)
+W: Not using locking for read only lock file /archives/lock
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 72.39   15.267505        2571      5937       564 wait4
+  7.06    1.487970          57     25864      1527 futex
+  2.71    0.572493         197      2892           clone
+  2.71    0.572350          10     52747           write
+  1.87    0.394862          14     26860      1026 openat
+  1.67    0.351841           3     93450           read
+  1.66    0.350451         131      2662      1265 execve
+  1.30    0.273517          21     12463      5340 rename
+  1.09    0.229603          53      4280           munmap
+  1.08    0.226799           6     33129           mmap
+  1.07    0.225350          84      2676           getdents64
+  0.80    0.167785           4     34375         3 close
+  0.63    0.132380           5     26191     14960 newfstatat
+  0.56    0.118264          22      5354           fsync
+  0.46    0.096373           6     15558     15557 rmdir
+  0.32    0.068242           3     19234           fstat
+  0.28    0.060065           6      9798           mprotect
+  0.20    0.041382          22      1851       264 unlink
+  0.16    0.033162           6      4863           utimensat
+  0.15    0.030746           2     10917           rt_sigprocmask
+  0.14    0.030453          17      1693       903 mkdir
+  0.14    0.029035           2     10274      4976 lseek
+  0.14    0.028540          18      1556           ftruncate
+  0.13    0.026627          28       921           fdatasync
+  0.12    0.026213           6      3759           fchown
+  0.11    0.023479           3      7508         4 fcntl
+  0.11    0.022207           5      4026           fchmod
+  0.10    0.022029          28       763         3 unlinkat
+  0.09    0.019189           6      2962           pselect6
+  0.09    0.018752           3      5613           brk
+  0.07    0.015340          26       584           symlink
+  0.05    0.009714           8      1087           pipe2
+  0.04    0.009464           3      2792           pread64
+  0.04    0.009090           8      1023      1023 connect
+  0.04    0.008409           3      2570           sync_file_range
+  0.04    0.007798           4      1896      1711 access
+  0.04    0.007508           7      1023           socket
+  0.03    0.006965           7       873       620 statfs
+  0.03    0.006809           3      1915      1061 ioctl
+  0.03    0.005886           1      4288           set_robust_list
+  0.03    0.005762           3      1911           rseq
+  0.02    0.004691           3      1400           getrandom
+  0.02    0.004436           3      1401           prlimit64
+  0.02    0.004291           3      1397           arch_prctl
+  0.02    0.004067           2      1397           set_tid_address
+  0.02    0.003798           7       524         1 chown
+  0.02    0.003645           3       932       894 readlink
+  0.02    0.003350           6       528         1 chmod
+  0.02    0.003196           1      1777           rt_sigaction
+  0.01    0.003101           2      1068           umask
+  0.01    0.002711           8       330           lchown
+  0.01    0.002150           4       514           madvise
+  0.01    0.001647           6       253           fchownat
+  0.01    0.001318           4       279           fstatfs
+  0.01    0.001150           4       253       253 mkdirat
+  0.00    0.001025           2       416           geteuid
+  0.00    0.000855          25        34           vfork
+  0.00    0.000757           1       746           dup2
+  0.00    0.000618           1       507       507 clone3
+  0.00    0.000412           0       509           sched_getaffinity
+  0.00    0.000390           1       284           chdir
+  0.00    0.000368           1       254           dup
+  0.00    0.000328           2       137           getuid
+  0.00    0.000296           2       127           getgid
+  0.00    0.000217          12        17           link
+  0.00    0.000207           3        65           rt_sigreturn
+  0.00    0.000188           0       190           mremap
+  0.00    0.000145           1        80           getegid
+  0.00    0.000130           2        59           getpid
+  0.00    0.000098           2        37           getppid
+  0.00    0.000085           1        67        44 prctl
+  0.00    0.000030           2        11         1 faccessat2
+  0.00    0.000021          10         2           setsid
+  0.00    0.000019           2         8           dup3
+  0.00    0.000012           2         5           getcwd
+  0.00    0.000012           6         2           sysinfo
+  0.00    0.000012           6         2           setresuid
+  0.00    0.000012           6         2           setresgid
+  0.00    0.000011           5         2           setgroups
+  0.00    0.000009           0        13           flock
+  0.00    0.000008           2         3           uname
+  0.00    0.000007           3         2           fchdir
+  0.00    0.000007           3         2         1 fadvise64
+  0.00    0.000006           6         1           clock_nanosleep
+  0.00    0.000005           5         1           getresuid
+  0.00    0.000004           1         4         4 kill
+  0.00    0.000004           4         1           getgroups
+  0.00    0.000004           4         1           getresgid
+  0.00    0.000000           0         1           bind
+  0.00    0.000000           0         4         2 setsockopt
+  0.00    0.000000           0         4           getsockopt
+  0.00    0.000000           0         1           gettid
+  0.00    0.000000           0         3           symlinkat
+  0.00    0.000000           0         1           readlinkat
+------ ----------- ----------- --------- --------- ------------------
+100.00   21.090262          45    465796     52515 total
+[Código de saída: 0 | Tempo: 32842.42 ms]
+
+=== Debian: strace -c -f da carga real (vlc) ===
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 57.52    0.097050         367       264        50 futex
+ 25.17    0.042462       42462         1           rt_sigtimedwait
+  5.25    0.008851           7      1155           mmap
+  2.88    0.004866          10       465        30 openat
+  1.87    0.003162          12       261           munmap
+  1.30    0.002195           4       499           mprotect
+  1.25    0.002103           4       435        34 newfstatat
+  1.25    0.002102           4       455           read
+  1.08    0.001819           3       463           close
+  0.94    0.001593           3       438           fstat
+  0.25    0.000415           5        74           getdents64
+  0.20    0.000330         330         1           execve
+  0.18    0.000296           4        72           rt_sigprocmask
+  0.16    0.000265           5        49           write
+  0.15    0.000261          26        10           clone
+  0.11    0.000180           3        46           dup3
+  0.09    0.000150           2        58           lseek
+  0.08    0.000139           5        26           readv
+  0.06    0.000109           9        11           set_robust_list
+  0.04    0.000070           2        26           eventfd2
+  0.03    0.000052           4        11           rseq
+  0.03    0.000050           1        26           poll
+  0.03    0.000044           4        10           gettid
+  0.02    0.000039           3        10           madvise
+  0.02    0.000030           5         6         6 ioctl
+  0.01    0.000023           3         7           rt_sigaction
+  0.01    0.000015           2         6           fadvise64
+  0.01    0.000013           6         2         2 access
+  0.01    0.000011           1         6           fcntl
+  0.00    0.000007           3         2           sched_getaffinity
+  0.00    0.000006           6         1           fstatfs
+  0.00    0.000004           0         8           brk
+  0.00    0.000002           2         1           arch_prctl
+  0.00    0.000002           2         1           set_tid_address
+  0.00    0.000002           1         2           getrandom
+  0.00    0.000000           0         2           pread64
+  0.00    0.000000           0         1           alarm
+  0.00    0.000000           0         5           getpid
+  0.00    0.000000           0         1         1 mkdir
+  0.00    0.000000           0         1           geteuid
+  0.00    0.000000           0         1           getresuid
+  0.00    0.000000           0         1           getresgid
+  0.00    0.000000           0         2         2 statfs
+  0.00    0.000000           0         6         4 prctl
+  0.00    0.000000           0         4           tgkill
+  0.00    0.000000           0         1           pipe2
+  0.00    0.000000           0         1           prlimit64
+  0.00    0.000000           0         1         1 clone3
+------ ----------- ----------- --------- --------- ------------------
+100.00    0.168718          34      4935       130 total
+
+
+=== Debian: download prévio e metadados de blender ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-blender:/archives debian:trixie-slim bash -c 
+set -e
+cp -a /lists/. /var/lib/apt/lists/
+apt-cache show blender | grep -E '^(Package|Version|Installed-Size|Depends|Recommends):' | head -n 15
+echo "--- apt-get install -s --no-install-recommends blender ---"
+apt-get install -s --no-install-recommends blender | tail -n 10
+apt-get install --download-only --no-install-recommends -y -o Dir::Cache::Archives=/archives blender
+
+Package: blender
+Version: 4.3.2+dfsg-2
+Installed-Size: 92911
+Depends: blender-data (= 4.3.2+dfsg-2), fonts-dejavu, libavcodec61 (>= 7:7.0), libavdevice61 (>= 7:7.0), libavformat61 (>= 7:7.0), libavutil59 (>= 7:7.0), libboost-locale1.83.0 (>= 1.83.0), libc6 (>= 2.38), libembree4-4 (>= 4.3.3+dfsg), libepoxy0 (>= 1.5.4), libfftw3-double3 (>= 3.3.10), libfftw3-single3 (>= 3.3.10), libfreetype6 (>= 2.9.1), libgcc-s1 (>= 4.0), libgmp10 (>= 2:6.3.0+dfsg), libgomp1 (>= 6), libimath-3-1-29t64 (>= 3.1.12), libjack-jackd2-0 (>= 1.9.10+20150825) | libjack-0.125, libjemalloc2 (>= 5.3.0), libjpeg62-turbo (>= 1.3.1), libopenal1 (>= 1.14), libopencolorio2.1t64 (>= 2.1.3+dfsg), libopenexr-3-1-30 (>= 3.1.5), libopenimageio2.5 (>= 2.5.16.0+dfsg), libopenjp2-7 (>= 2.0.0), libopenvdb10.0t64 (>= 10.0.1), libopenxr-loader1 (>= 1.0.3), libosdcpu3.6.0 (>= 3.6.0), libosdgpu3.6.0 (>= 3.6.0), libpng16-16t64 (>= 1.6.46), libpotrace0, libpugixml1v5 (>= 1.6), libpulse0 (>= 0.99.1), libpython3.13 (>= 3.13.0~rc3), libshaderc1 (>= 2022.2-1), libsndfile1 (>= 1.0.20), libspnav0 (>= 1.0), libstdc++6 (>= 14), libswscale8 (>= 7:7.0), libtbb12 (>= 2022.0.0), libvulkan1 (>= 1.3.204.0), libwebp7 (>= 1.5.0), libx11-6, libxfixes3 (>= 1:4.0.1), libxi6 (>= 2:1.1.2), libxxf86vm1, libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.3.4)
+--- apt-get install -s --no-install-recommends blender ---
+Conf libjsoncpp26 (1.9.6-3 Debian:13.7/stable [amd64])
+Conf libopenxr-loader1 (1.1.47~ds-2 Debian:13.7/stable [amd64])
+Conf libosdcpu3.6.0 (3.6.0-3 Debian:13.7/stable [amd64])
+Conf libosdgpu3.6.0 (3.6.0-3 Debian:13.7/stable [amd64])
+Conf libpotrace0 (1.16-2+b2 Debian:13.7/stable [amd64])
+Conf libpugixml1v5 (1.14-2 Debian:13.7/stable [amd64])
+Conf libpython3.13 (3.13.5-2+deb13u5 Debian:13.7/stable [amd64])
+Conf libshaderc1 (2025.2-1 Debian:13.7/stable [amd64])
+Conf libspnav0 (1.2-1 Debian:13.7/stable [amd64])
+Conf blender (4.3.2+dfsg-2 Debian:13.7/stable [amd64])
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  adduser blender-data dcmtk-data dirmngr fontconfig fontconfig-config
+  fonts-dejavu fonts-dejavu-core fonts-dejavu-extra fonts-dejavu-mono
+  gdal-data gdal-plugins gnupg gnupg-l10n gpg gpg-agent gpgconf gpgsm
+  iso-codes libabsl20240722 libaec0 libaom3 libarmadillo14 libarpack2t64
+  libasound2-data libasound2t64 libass9 libassuan9 libasyncns0 libatomic1
+  libavc1394-0 libavcodec61 libavdevice61 libavfilter10 libavformat61
+  libavif16 libavutil59 libblas3 libblosc1 libbluray2 libboost-iostreams1.83.0
+  libboost-locale1.83.0 libboost-thread1.83.0 libbrotli1 libbs2b0 libcaca0
+  libcairo-gobject2 libcairo2 libcap2-bin libcdio-cdda2t64
+  libcdio-paranoia2t64 libcdio19t64 libcfitsio10t64 libcharls2 libchromaprint1
+  libcjson1 libcodec2-1.2 libcom-err2 libcurl3t64-gnutls libcurl4t64
+  libdatrie1 libdav1d7 libdbus-1-3 libdc1394-25 libdcmtk19 libde265-0
+  libdecor-0-0 libdeflate0 libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm2
+  libdvdnav4 libdvdread8t64 libedit2 libelf1t64 libembree4-4 libepoxy0
+  libexif12 libexpat1 libffi8 libfftw3-double3 libfftw3-single3 libflac14
+  libflite1 libfontconfig1 libfreetype6 libfreexl1 libfribidi0 libfyba0t64
+  libgav1-1 libgbm1 libgcrypt20 libgd3 libgdal36 libgdcm3.0t64
+  libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgeos-c1t64 libgeos3.13.1
+  libgeotiff5 libgfortran5 libgif7 libgl1 libgl1-mesa-dri libglib2.0-0t64
+  libglvnd0 libglx-mesa0 libglx0 libgme0 libgnutls30t64 libgomp1 libgpg-error0
+  libgpgme11t64 libgpgmepp6t64 libgphoto2-6t64 libgphoto2-port12t64
+  libgraphite2-3 libgsm1 libgssapi-krb5-2 libgstreamer-plugins-base1.0-0
+  libgstreamer1.0-0 libharfbuzz0b libhdf4-0-alt libhdf5-310 libhdf5-hl-310
+  libheif-plugin-dav1d libheif-plugin-libde265 libheif1 libhwloc15 libhwy1t64
+  libicu76 libidn2-0 libiec61883-0 libimagequant0 libimath-3-1-29t64
+  libjack-jackd2-0 libjbig0 libjemalloc2 libjpeg62-turbo libjson-c5
+  libjsoncpp26 libjxl0.11 libk5crypto3 libkeyutils1 libkmlbase1t64
+  libkmldom1t64 libkmlengine1t64 libkrb5-3 libkrb5support0 libksba8 liblapack3
+  liblcms2-2 libldap2 liblerc4 liblilv-0-0 libllvm19 liblog4cplus-2.0.5t64
+  libltdl7 libmariadb3 libmbedcrypto16 libminizip1t64 libmp3lame0
+  libmpg123-0t64 libmysofa1 libncursesw6 libnetcdf22 libnghttp2-14
+  libnghttp3-9 libngtcp2-16 libngtcp2-crypto-gnutls8 libnorm1t64 libnpth0t64
+  libnspr4 libnss3 libnuma1 libodbc2 libodbcinst2 libogdi4.1 libogg0
+  libopenal-data libopenal1 libopencolorio2.1t64 libopencv-core410
+  libopencv-imgcodecs410 libopencv-imgproc410 libopencv-videoio410
+  libopenexr-3-1-30 libopenimageio2.5 libopenjp2-7 libopenmpt0t64
+  libopenvdb10.0t64 libopenxr-loader1 libopus0 liborc-0.4-0t64 libosdcpu3.6.0
+  libosdgpu3.6.0 libp11-kit0 libpango-1.0-0 libpangocairo-1.0-0
+  libpangoft2-1.0-0 libpciaccess0 libpgm-5.3-0t64 libpixman-1-0 libplacebo349
+  libpng16-16t64 libpocketsphinx3 libpoppler147 libpostproc58 libpotrace0
+  libpq5 libproj25 libpsl5t64 libpugixml1v5 libpulse0 libpystring0
+  libpython3-stdlib libpython3.13 libpython3.13-minimal libpython3.13-stdlib
+  libqhull-r8.0 librabbitmq4 librav1e0.7 libraw1394-11 libraw23t64
+  libreadline8t64 librist4 librsvg2-2 librtmp1 librttopo1 librubberband2
+  libsamplerate0 libsasl2-2 libsasl2-modules-db libsdl2-2.0-0
+  libsensors-config libsensors5 libserd-0-0 libshaderc1 libsharpyuv0 libshine3
+  libslang2 libsnappy1v5 libsndfile1 libsocket++1 libsodium23 libsord-0-0
+  libsoxr0 libspatialite8t64 libspeex1 libsphinxbase3t64 libspnav0
+  libsratom-0-0 libsrt1.5-gnutls libssh-4 libssh2-1t64 libsvtav1enc2
+  libswresample5 libswscale8 libsz2 libtasn1-6 libtbb12 libtbbbind-2-5
+  libtbbmalloc2 libthai-data libthai0 libtheoradec1 libtheoraenc1 libtiff6
+  libtirpc-common libtirpc3t64 libtwolame0 libudfread0 libunibreak6
+  libunistring5 liburiparser1 libusb-1.0-0 libva-drm2 libva-x11-2 libva2
+  libvdpau1 libvidstab1.1 libvorbis0a libvorbisenc2 libvorbisfile3 libvpl2
+  libvpx9 libvulkan1 libwayland-client0 libwayland-cursor0 libwayland-e
+... [truncado: 13455 chars totais] ...
+plugin-svtenc libhwloc-contrib-plugins jackd2
+  liblcms2-utils odbc-postgresql tdsodbc ogdi-bin libportaudio2 libsndio7.0
+  opus-tools pciutils proj-bin pulseaudio libraw1394-doc librsvg2-bin
+  xdg-utils lm-sensors serdi sordi speex spacenavd opencl-icd pinentry-doc
+  python3-doc python3-tk python3-venv python3.13-venv python3.13-doc binutils
+  binfmt-support readline-doc
+Recommended packages:
+  gnupg-utils gpg-wks-client gpgv alsa-ucm-conf alsa-topology-conf libaacs0
+  libpam-cap ca-certificates dbus default-libdecor-0-plugin-1
+  | libdecor-0-plugin-1 proj-bin libgdk-pixbuf2.0-bin libglib2.0-data
+  xdg-user-dirs libgpg-error-l10n libgphoto2-l10n gstreamer1.0-plugins-base
+  libheif-plugin-x265 libheif-plugin-aomenc libhwloc-plugins krb5-locales
+  libldap-common libgpm2 libodbccr2 pocketsphinx-en-us poppler-data
+  publicsuffix librsvg2-common libsasl2-modules va-driver-all | va-driver
+  vdpau-driver-all | vdpau-driver mesa-vulkan-drivers | vulkan-icd
+The following NEW packages will be installed:
+  adduser blender blender-data dcmtk-data dirmngr fontconfig fontconfig-config
+  fonts-dejavu fonts-dejavu-core fonts-dejavu-extra fonts-dejavu-mono
+  gdal-data gdal-plugins gnupg gnupg-l10n gpg gpg-agent gpgconf gpgsm
+  iso-codes libabsl20240722 libaec0 libaom3 libarmadillo14 libarpack2t64
+  libasound2-data libasound2t64 libass9 libassuan9 libasyncns0 libatomic1
+  libavc1394-0 libavcodec61 libavdevice61 libavfilter10 libavformat61
+  libavif16 libavutil59 libblas3 libblosc1 libbluray2 libboost-iostreams1.83.0
+  libboost-locale1.83.0 libboost-thread1.83.0 libbrotli1 libbs2b0 libcaca0
+  libcairo-gobject2 libcairo2 libcap2-bin libcdio-cdda2t64
+  libcdio-paranoia2t64 libcdio19t64 libcfitsio10t64 libcharls2 libchromaprint1
+  libcjson1 libcodec2-1.2 libcom-err2 libcurl3t64-gnutls libcurl4t64
+  libdatrie1 libdav1d7 libdbus-1-3 libdc1394-25 libdcmtk19 libde265-0
+  libdecor-0-0 libdeflate0 libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm2
+  libdvdnav4 libdvdread8t64 libedit2 libelf1t64 libembree4-4 libepoxy0
+  libexif12 libexpat1 libffi8 libfftw3-double3 libfftw3-single3 libflac14
+  libflite1 libfontconfig1 libfreetype6 libfreexl1 libfribidi0 libfyba0t64
+  libgav1-1 libgbm1 libgcrypt20 libgd3 libgdal36 libgdcm3.0t64
+  libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgeos-c1t64 libgeos3.13.1
+  libgeotiff5 libgfortran5 libgif7 libgl1 libgl1-mesa-dri libglib2.0-0t64
+  libglvnd0 libglx-mesa0 libglx0 libgme0 libgnutls30t64 libgomp1 libgpg-error0
+  libgpgme11t64 libgpgmepp6t64 libgphoto2-6t64 libgphoto2-port12t64
+  libgraphite2-3 libgsm1 libgssapi-krb5-2 libgstreamer-plugins-base1.0-0
+  libgstreamer1.0-0 libharfbuzz0b libhdf4-0-alt libhdf5-310 libhdf5-hl-310
+  libheif-plugin-dav1d libheif-plugin-libde265 libheif1 libhwloc15 libhwy1t64
+  libicu76 libidn2-0 libiec61883-0 libimagequant0 libimath-3-1-29t64
+  libjack-jackd2-0 libjbig0 libjemalloc2 libjpeg62-turbo libjson-c5
+  libjsoncpp26 libjxl0.11 libk5crypto3 libkeyutils1 libkmlbase1t64
+  libkmldom1t64 libkmlengine1t64 libkrb5-3 libkrb5support0 libksba8 liblapack3
+  liblcms2-2 libldap2 liblerc4 liblilv-0-0 libllvm19 liblog4cplus-2.0.5t64
+  libltdl7 libmariadb3 libmbedcrypto16 libminizip1t64 libmp3lame0
+  libmpg123-0t64 libmysofa1 libncursesw6 libnetcdf22 libnghttp2-14
+  libnghttp3-9 libngtcp2-16 libngtcp2-crypto-gnutls8 libnorm1t64 libnpth0t64
+  libnspr4 libnss3 libnuma1 libodbc2 libodbcinst2 libogdi4.1 libogg0
+  libopenal-data libopenal1 libopencolorio2.1t64 libopencv-core410
+  libopencv-imgcodecs410 libopencv-imgproc410 libopencv-videoio410
+  libopenexr-3-1-30 libopenimageio2.5 libopenjp2-7 libopenmpt0t64
+  libopenvdb10.0t64 libopenxr-loader1 libopus0 liborc-0.4-0t64 libosdcpu3.6.0
+  libosdgpu3.6.0 libp11-kit0 libpango-1.0-0 libpangocairo-1.0-0
+  libpangoft2-1.0-0 libpciaccess0 libpgm-5.3-0t64 libpixman-1-0 libplacebo349
+  libpng16-16t64 libpocketsphinx3 libpoppler147 libpostproc58 libpotrace0
+  libpq5 libproj25 libpsl5t64 libpugixml1v5 libpulse0 libpystring0
+  libpython3-stdlib libpython3.13 libpython3.13-minimal libpython3.13-stdlib
+  libqhull-r8.0 librabbitmq4 librav1e0.7 libraw1394-11 libraw23t64
+  libreadline8t64 librist4 librsvg2-2 librtmp1 librttopo1 librubberband2
+  libsamplerate0 libsasl2-2 libsasl2-modules-db libsdl2-2.0-0
+  libsensors-config libsensors5 libserd-0-0 libshaderc1 libsharpyuv0 libshine3
+  libslang2 libsnappy1v5 libsndfile1 libsocket++1 libsodium23 libsord-0-0
+  libsoxr0 libspatialite8t64 libspeex1 libsphinxbase3t64 libspnav0
+  libsratom-0-0 libsrt1.5-gnutls libssh-4 libssh2-1t64 libsvtav1enc2
+  libswresample5 libswscale8 libsz2 libtasn1-6 libtbb12 libtbbbind-2-5
+  libtbbmalloc2 libthai-data libthai0 libtheoradec1 libtheoraenc1 libtiff6
+  libtirpc-common libtirpc3t64 libtwolame0 libudfread0 libunibreak6
+  libunistring5 liburiparser1 libusb-1.0-0 libva-drm2 libva-x11-2 libva2
+  libvdpau1 libvidstab1.1 libvorbis0a libvorbisenc2 libvorbisfile3 libvpl2
+  libvpx9 libvulkan1 libwayland-client0 libwayland-cursor0 libwayland-egl1
+  libwayland-server0 libwebp7 libwebpdemux2 libwebpmux3 libwrap0 libx11-6
+  libx11-data libx11-xcb1 libx264-164 libx265-215 libxau6 libxcb-dri3-0
+  libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-render0 libxcb-shape0
+  libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxcursor1 libxdmcp6
+  libxerces-c3.2t64 libxext6 libxfixes3 libxi6 libxkbcommon0 libxml2 libxpm4
+  libxrandr2 libxrender1 libxshmfence1 libxss1 libxv1 libxvidcore4 libxxf86vm1
+  libyaml-cpp0.8 libyuv0 libz3-4 libzimg2 libzix-0-0 libzmq5 libzvbi-common
+  libzvbi0t64 mariadb-common media-types mesa-libgallium mysql-common netbase
+  ocl-icd-libopencl1 pinentry-curses proj-data python3 python3-minimal
+  python3.13 python3.13-minimal readline-common shared-mime-info
+  unixodbc-common x11-common xkb-data
+The following packages will be upgraded:
+  zlib1g
+1 upgraded, 354 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/295 MB of archives.
+After this operation, 1147 MB of additional disk space will be used.
+Download complete and in download only mode
+[Código de saída: 0 | Tempo: 9848.06 ms]
+
+=== Debian: repetição 1 (instalação offline + carga real + GNU time) de blender ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm --network=none -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-blender:/archives:ro -v /tmp/so-s5-debian-work-e2ukgm40/blender-rep1:/tmp/work -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+export DEBIAN_FRONTEND=noninteractive
+cp -a /lists/. /var/lib/apt/lists/
+t0=$(date +%s%N)
+"/nix/store/bndiwbkvmpf6wzbms9nay1bmz2b56jmb-time-1.10/bin/time" -f '{"wall_s":%e,"user_s":%U,"sys_s":%S,"cpu_pct":"%P","max_rss_kib":%M,"minor_faults":%R,"major_faults":%F,"vol_ctx":%w,"invol_ctx":%c}' -o /tmp/work/time-install.json   apt-get install -y --no-download --no-install-recommends -o Dir::Cache::Archives=/archives blender >/dev/null
+t1=$(date +%s%N)
+echo $(( (t1 - t0) / 1000000 ))
+t2=$(date +%s%N)
+rm -f /tmp/work/render.png && "/nix/store/bndiwbkvmpf6wzbms9nay1bmz2b56jmb-time-1.10/bin/time" -f '{"wall_s":%e,"user_s":%U,"sys_s":%S,"cpu_pct":"%P","max_rss_kib":%M,"minor_faults":%R,"major_faults":%F,"vol_ctx":%w,"invol_ctx":%c}' -o /tmp/work/time-workload.json "/usr/bin/blender" --background --factory-startup --python-expr 'import bpy, sys; out = sys.argv[-1]; s = bpy.context.scene; s.render.engine = '"'"'CYCLES'"'"'; s.cycles.device = '"'"'CPU'"'"'; s.cycles.samples = 4; s.cycles.use_denoising = False; s.render.resolution_x = 320; s.render.resolution_y = 240; s.render.resolution_percentage = 100; s.render.threads_mode = '"'"'FIXED'"'"'; s.render.threads = 4; s.render.image_settings.file_format = '"'"'PNG'"'"'; s.render.filepath = out; bpy.ops.render.render(write_still=True)' -- /tmp/work/render.png >/dev/null 2>&1 && test -s /tmp/work/render.png
+t3=$(date +%s%N)
+echo $(( (t3 - t2) / 1000000 ))
+
+41292
+1907
+[stderr]
+W: chown to _apt:root of directory /archives/partial failed - SetupAPTPartialDirectory (30: Read-only file system)
+W: chmod 0700 of directory /archives/partial failed - SetupAPTPartialDirectory (30: Read-only file system)
+W: Not using locking for read only lock file /archives/lock
+[Código de saída: 0 | Tempo: 43980.53 ms]
+
+GNU time (instalação): {"wall_s": 41.28, "cpu_user_s": 18.75, "cpu_sys_s": 9.13, "cpu_total_s": 27.88, "cpu_pct": 67.0, "max_rss_kib": 184872, "max_rss_mib": 180.54, "minor_faults": 1225257, "major_faults": 16, "vol_ctx": 71865, "invol_ctx": 1168}
+
+GNU time (carga real): {"wall_s": 1.9, "cpu_user_s": 1.91, "cpu_sys_s": 0.18, "cpu_total_s": 2.09, "cpu_pct": 110.0, "max_rss_kib": 359456, "max_rss_mib": 351.03, "minor_faults": 18761, "major_faults": 8, "vol_ctx": 156, "invol_ctx": 938}
+
+=== Debian: strace da instalação + carga real + ELF/FHS de blender ===
+$ /nix/store/3rjb3q34s4yly52k4k8vc684nzbjn1ak-docker-29.9.2/bin/docker run --rm --network=none --cap-add=SYS_PTRACE -v /tmp/so-semana05-cache/debian/apt-lists:/lists:ro -v /tmp/so-semana05-cache/debian/archives-blender:/archives:ro -v /tmp/so-s5-debian-work-e2ukgm40/blender-trace:/tmp/work -v /nix/store:/nix/store:ro debian:trixie-slim bash -c 
+set -e
+export DEBIAN_FRONTEND=noninteractive
+cp -a /lists/. /var/lib/apt/lists/
+kib_before=$(dpkg-query -W -f='${Installed-Size}\n' | awk '{s+=$1} END {print s+0}')
+usr_before=$(du -sb /usr | awk '{print $1}')
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f apt-get install -y --no-download --no-install-recommends -o Dir::Cache::Archives=/archives blender >/dev/null
+kib_after=$(dpkg-query -W -f='${Installed-Size}\n' | awk '{s+=$1} END {print s+0}')
+usr_after=$(du -sb /usr | awk '{print $1}')
+echo "=== INSTALLED_DELTA_KIB ==="
+echo $(( kib_after - kib_before ))
+echo "=== USR_DELTA_BYTES ==="
+echo $(( usr_after - usr_before ))
+echo "=== DPKG_COUNT ==="
+dpkg -L blender | wc -l
+echo "=== READELF ==="
+/nix/store/45qppvrgigcmyjina7a6p82f2pf5kzmr-binutils-2.46/bin/readelf -d /usr/bin/blender | grep -E "NEEDED|RUNPATH|RPATH" || true
+echo "=== LDD_COUNT ==="
+ldd /usr/bin/blender | wc -l
+echo "=== VERSION ==="
+"/usr/bin/blender" --version 2>&1 | head -n 3 || true
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace -c -f -o /tmp/work/strace-workload.txt "/usr/bin/blender" --background --factory-startup --python-expr 'import bpy, sys; out = sys.argv[-1]; s = bpy.context.scene; s.render.engine = '"'"'CYCLES'"'"'; s.cycles.device = '"'"'CPU'"'"'; s.cycles.samples = 4; s.cycles.use_denoising = False; s.render.resolution_x = 320; s.render.resolution_y = 240; s.render.resolution_percentage = 100; s.render.threads_mode = '"'"'FIXED'"'"'; s.render.threads = 4; s.render.image_settings.file_format = '"'"'PNG'"'"'; s.render.filepath = out; bpy.ops.render.render(write_still=True)' -- /tmp/work/render.png >/dev/null 2>&1 || true
+
+=== INSTALLED_DELTA_KIB ===
+1120200
+=== USR_DELTA_BYTES ===
+1028459480
+=== DPKG_COUNT ===
+12
+=== READELF ===
+ 0x0000000000000001 (NEEDED)             Shared library: [libtbb.so.12]
+ 0x0000000000000001 (NEEDED)             Shared library: [libjemalloc.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpng16.so.16]
+ 0x0000000000000001 (NEEDED)             Shared library: [libosdGPU.so.3.6.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libosdCPU.so.3.6.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libspnav.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libX11.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXxf86vm.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXfixes.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libXi.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenxr_loader.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageIO.so.2.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenImageIO_Util.so.2.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libjpeg.so.62]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenjp2.so.7]
+ 0x0000000000000001 (NEEDED)             Shared library: [libwebp.so.7]
+ 0x0000000000000001 (NEEDED)             Shared library: [libembree4.so.4]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenColorIO.so.2.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpotrace.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavcodec.so.61]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavdevice.so.61]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavformat.so.61]
+ 0x0000000000000001 (NEEDED)             Shared library: [libavutil.so.59]
+ 0x0000000000000001 (NEEDED)             Shared library: [libswscale.so.8]
+ 0x0000000000000001 (NEEDED)             Shared library: [libjack.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libsndfile.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenal.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpulse.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libopenvdb.so.10.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libIex-3_1.so.30]
+ 0x0000000000000001 (NEEDED)             Shared library: [libOpenEXR-3_1.so.30]
+ 0x0000000000000001 (NEEDED)             Shared library: [libImath-3_1.so.29]
+ 0x0000000000000001 (NEEDED)             Shared library: [libboost_locale.so.1.83.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpugixml.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libepoxy.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libvulkan.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libshaderc.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfreetype.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libpython3.13.so.1.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfftw3f.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfftw3.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libfftw3f_threads.so.3]
+ 0x0000000000000001 (NEEDED)             Shared library: [libz.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libzstd.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgmp.so.10]
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgomp.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+=== LDD_COUNT ===
+372
+=== VERSION ===
+Blender 4.3.2
+[stderr]
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 17 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 18 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 19 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 20 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 21 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 22 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 23 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 24 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 25 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 26 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 27 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 28 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 29 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 30 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 31 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 32 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 33 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 34 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 35 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 36 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 37 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 38 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 39 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 40 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 41 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 42 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 43 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 44 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 45 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 46 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 47 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 48 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 49 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 50 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 51 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 52 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 53 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 54 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 55 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 56 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 57 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 58 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 59 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 60 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 61 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 62 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 63 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 64 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 65 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 66 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 67 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 68 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 69 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 70 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 71 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 72 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 73 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 74 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 75 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 76 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 77 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 78 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 79 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 80 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 81 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 82 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 83 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 84 attached
+/nix/store/kig9ni2ybdpw927lb7j908bbni1cwq1a-strace-7.3/bin/strace: Process 85 attach
+... [truncado: 380684 chars totais] ...
+ 0.557923          13     40684      1685 openat
+  1.51    0.550879         143      3841      1781 execve
+  1.17    0.424632          76      5568           munmap
+  1.10    0.402398         103      3878           getdents64
+  1.09    0.398272          19     20414      9623 rename
+  0.90    0.326890           7     44841           mmap
+  0.67    0.244938           4     51172         7 close
+  0.60    0.219652           4     49221     30356 newfstatat
+  0.46    0.165907          22      7516           fsync
+  0.41    0.148083           5     25039     25037 rmdir
+  0.27    0.099498           3     29871           fstat
+  0.23    0.082240           6     13377           mprotect
+  0.17    0.062191          23      2620       377 unlink
+  0.14    0.050317           2     19398      9187 lseek
+  0.14    0.049667           6      7349           utimensat
+  0.13    0.047559           3     15763           rt_sigprocmask
+  0.13    0.047440          17      2709      1469 mkdir
+  0.11    0.039667          18      2185           ftruncate
+  0.10    0.037916           6      5605           fchown
+  0.09    0.033731           3      9218           brk
+  0.09    0.033554           3     11018         4 fcntl
+  0.09    0.032863          30      1065         5 unlinkat
+  0.09    0.032266           7      4496           pselect6
+  0.09    0.031588           5      5990           fchmod
+  0.07    0.024009          25       932           symlink
+  0.06    0.023585          25       921           fdatasync
+  0.04    0.014242           3      4118           pread64
+  0.04    0.013846           8      1553           pipe2
+  0.04    0.013002           2      4495      2906 ioctl
+  0.04    0.012828           8      1439      1439 connect
+  0.03    0.012253           3      3957           sync_file_range
+  0.03    0.011712           4      2706      2510 access
+  0.03    0.011357           9      1247       892 statfs
+  0.03    0.010519           7      1439           socket
+  0.03    0.009786           3      2791           rseq
+  0.03    0.009154           1      6160           set_robust_list
+  0.02    0.007676           1      4750           rt_sigaction
+  0.02    0.007026           3      2078           getrandom
+  0.02    0.006543           3      2086           prlimit64
+  0.02    0.006286           3      2060           arch_prctl
+  0.02    0.006059           2      2060           set_tid_address
+  0.02    0.006054           4      1357      1295 readlink
+  0.02    0.005846           7       815         1 chown
+  0.01    0.005278           6       831         1 chmod
+  0.01    0.005050           8       567           lchown
+  0.01    0.004432           2      1527           umask
+  0.01    0.004200          38       109           vfork
+  0.01    0.003383           4       731           madvise
+  0.01    0.002298           6       357           fchownat
+  0.01    0.002073           2       895           geteuid
+  0.01    0.002043           5       380           fstatfs
+  0.00    0.001556           4       355       355 mkdirat
+  0.00    0.001333           1      1112           dup2
+  0.00    0.001159          33        35           link
+  0.00    0.001054           4       262           mremap
+  0.00    0.000942           2       470           getuid
+  0.00    0.000909           1       715       715 clone3
+  0.00    0.000797           1       436           getgid
+  0.00    0.000689           4       167           rt_sigreturn
+  0.00    0.000637           1       428           chdir
+  0.00    0.000613           1       356           dup
+  0.00    0.000612           0       711           sched_getaffinity
+  0.00    0.000580           1       362           getegid
+  0.00    0.000318           1       169           getpid
+  0.00    0.000228           2        79           getppid
+  0.00    0.000137           1        91        60 prctl
+  0.00    0.000129          12        10           setsid
+  0.00    0.000122          15         8           open
+  0.00    0.000063           4        15         3 faccessat2
+  0.00    0.000052          17         3           symlinkat
+  0.00    0.000044           5         8           poll
+  0.00    0.000033           3        11           getcwd
+  0.00    0.000033           3        10           gettid
+  0.00    0.000031          15         2           copy_file_range
+  0.00    0.000025          25         1           readlinkat
+  0.00    0.000022          22         1           fsetxattr
+  0.00    0.000021           2         8         6 fadvise64
+  0.00    0.000019           1        13           flock
+  0.00    0.000017          17         1           statx
+  0.00    0.000015           3         4           getsockopt
+  0.00    0.000015          15         1           clock_nanosleep
+  0.00    0.000015           1         8           dup3
+  0.00    0.000014           7         2           sysinfo
+  0.00    0.000014           4         3           capget
+  0.00    0.000012           3         4         2 setsockopt
+  0.00    0.000008           2         3           uname
+  0.00    0.000008           2         4           sigaltstack
+  0.00    0.000008           1         8           close_range
+  0.00    0.000007           3         2           flistxattr
+  0.00    0.000006           1         4         4 kill
+  0.00    0.000006           6         1           capset
+  0.00    0.000004           4         1           fchdir
+  0.00    0.000003           1         2           setresgid
+  0.00    0.000002           1         2           setgroups
+  0.00    0.000002           1         2           setresuid
+  0.00    0.000002           1         2           epoll_create1
+  0.00    0.000001           1         1           bind
+  0.00    0.000001           1         1           getgroups
+  0.00    0.000000           0         2           fchmodat
+------ ----------- ----------- --------- --------- ------------------
+100.00   36.416564          47    763399     92789 total
+[Código de saída: 0 | Tempo: 63654.61 ms]
+
+=== Debian: strace -c -f da carga real (blender) ===
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ------------------
+ 95.22    2.175958       10027       217         7 futex
+  2.37    0.054163          30      1781           sched_yield
+  0.64    0.014524           8      1811         1 mmap
+  0.32    0.007247           6      1037       207 openat
+  0.25    0.005719           4      1409           read
+  0.17    0.003909           2      1735       350 newfstatat
+  0.13    0.003049          21       143           rt_sigprocmask
+  0.12    0.002655           3       839           close
+  0.10    0.002297           2      1024           clock_gettime
+  0.09    0.002145           2      1043           fstat
+  0.09    0.002094          27        76           madvise
+  0.07    0.001671          50        33           clone
+  0.06    0.001408           6       218           write
+  0.05    0.001132        1132         1           wait4
+  0.05    0.001076           2       414           mprotect
+  0.04    0.001006           6       161           rename
+  0.04    0.000856          25        34           rseq
+  0.03    0.000798          23        34           set_robust_list
+  0.03    0.000619          22        27           mkdir
+  0.03    0.000618          36        17           sched_getaffinity
+  0.02    0.000524          14        36           munmap
+  0.02    0.000412           5        76           getdents64
+  0.02    0.000404           0       437           lseek
+  0.01    0.000202         101         2           execve
+  0.01    0.000198           0       219       219 ioctl
+  0.01    0.000117          11        10         4 prctl
+  0.00    0.000055          55         1           rmdir
+  0.00    0.000031          15         2         2 connect
+  0.00    0.000029           9         3           open
+  0.00    0.000027          13         2           socket
+  0.00    0.000024           0        76           rt_sigaction
+  0.00    0.000018           1        10           fcntl
+  0.00    0.000015           3         4           pread64
+  0.00    0.000014           2         5           brk
+  0.00    0.000013           2         6           getpid
+  0.00    0.000011           3         3         3 access
+  0.00    0.000010           3         3           geteuid
+  0.00    0.000010           3         3           getrandom
+  0.00    0.000007           2         3           dup2
+  0.00    0.000007           3         2         2 statfs
+  0.00    0.000005           1         5           prlimit64
+  0.00    0.000004           2         2           gettid
+  0.00    0.000003           0         4         2 readlink
+  0.00    0.000003           3         1           getuid
+  0.00    0.000003           3         1           getgid
+  0.00    0.000003           3         1           getegid
+  0.00    0.000003           3         1           getppid
+  0.00    0.000003           1         2           arch_prctl
+  0.00    0.000003           1         2           set_tid_address
+  0.00    0.000000           0         1           uname
+  0.00    0.000000           0         1           pipe2
+  0.00    0.000000           0         2         2 clone3
+------ ----------- ----------- --------- --------- ------------------
+100.00    2.285102         176     12980       799 total
+
